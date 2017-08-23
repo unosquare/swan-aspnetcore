@@ -12,8 +12,6 @@ matrix:
       mono: none
       dotnet: 2.0.0
 install:
-  - npm install maildev
   - dotnet restore
 script:
-  - node ./mail.js &
   - dotnet test ./test/Unosquare.Swan.AspNetCore.Test/Unosquare.Swan.AspNetCore.Test.csproj -f netcoreapp2.0
