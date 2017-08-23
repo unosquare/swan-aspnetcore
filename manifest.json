@@ -1,0 +1,359 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/projects/swan-aspnetcore",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html",
+          "hash": "4xsgIHToBoty2VgtCh0j8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.ActionFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.Swan.AspNetCore.ActionFlags.html",
+          "hash": "NAAIPv1mkYCkFo8mrsyWyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.AuditTrailController-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html",
+          "hash": "XatWGzNdsMjvOiQHwaJ4lQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.BasicRoleStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.Swan.AspNetCore.BasicRoleStore.html",
+          "hash": "c+6OJirV2GH+PoHyB25x4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.BasicUserStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.Swan.AspNetCore.BasicUserStore.html",
+          "hash": "8E5DSw9boRJJSDyO+MSw4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.BusinessDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.Swan.AspNetCore.BusinessDbContext.html",
+          "hash": "4/J8Szf/xXb7kQDeUai57Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.BusinessRuleAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.Swan.AspNetCore.BusinessRuleAttribute.html",
+          "hash": "mPHTFuURcvYPWPRDTTQKqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.BusinessRulesController-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.Swan.AspNetCore.BusinessRulesController-1.html",
+          "hash": "Nw8dP8K/6Vw9gx0C3ppcpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.Swan.AspNetCore.Extensions.html",
+          "hash": "8M5KdI6HrqVuLjiQfV6sVg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.IBusinessDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.Swan.AspNetCore.IBusinessDbContext.html",
+          "hash": "W0z70PKpuQtPntxbwEANwA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.IBusinessRulesController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.Swan.AspNetCore.IBusinessRulesController.html",
+          "hash": "i3xM5coPUQMCP0oD7VzSug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger-2.html",
+          "hash": "O8pS9zK0ILHgzihqGpYUig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerOptions.html",
+          "hash": "SJPuY5rQzkVYHabwBxd2uQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider-2.html",
+          "hash": "V1Z6Obmj2sQyD1nmIof7lw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.Logger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.Swan.AspNetCore.Logger.html",
+          "hash": "qmuiK7aW5dSlNeHf9f4D+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.Models.ApplicationRole.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.Swan.AspNetCore.Models.ApplicationRole.html",
+          "hash": "fN6UHJeSl4bENT8bW+LDjA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.Models.ApplicationUser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.Swan.AspNetCore.Models.ApplicationUser.html",
+          "hash": "Zncd5awNhG8qHQUlqndiQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.html",
+          "hash": "Nefr76dF00tp4JvPappcsQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.Models.LogEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.Swan.AspNetCore.Models.LogEntry.html",
+          "hash": "HrVLgdliZKSLCOlsD6uf/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.Swan.AspNetCore.Models.html",
+          "hash": "Re1trDlWx2ueN86U5vn2JQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.TokenProviderMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.Swan.AspNetCore.TokenProviderMiddleware.html",
+          "hash": "rcT6ua/5b+M9eloQliGEVg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.TokenProviderOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.Swan.AspNetCore.TokenProviderOptions.html",
+          "hash": "Y/ARLff3Ign0TRI3oyDZ5w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.Swan.AspNetCore.html",
+          "hash": "lmZPQxamX9881/+0zgNOeg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "9Gbm1n5nr3UhPWH3dZojsw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "OA/88bANmJVSJ1RbmUd9dQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "RestApiDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {}
+}
