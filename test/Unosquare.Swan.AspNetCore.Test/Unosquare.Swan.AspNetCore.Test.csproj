@@ -12,4 +12,8 @@
     <PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Unosquare.Swan.AspNetCore\Unosquare.Swan.AspNetCore.csproj" />
+  </ItemGroup>
+
 </Project>
