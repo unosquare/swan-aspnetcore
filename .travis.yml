@@ -1,0 +1,19 @@
+language: csharp
+notifications:
+  slack: unolabs:cbusXPH6pBwZ35rVDzi4k4ve
+matrix:
+  include:
+    - os: linux
+      dotnet: 2.0.0
+      mono: latest
+      dist: trusty
+      sudo: false
+    - os: osx
+      mono: none
+      dotnet: 2.0.0
+install:
+  - npm install maildev
+  - dotnet restore
+script:
+  - node ./mail.js &
+  - dotnet test ./test/Unosquare.Swan.AspNetCore.Test/Unosquare.Swan.AspNetCore.Test.csproj -f netcoreapp2.0
