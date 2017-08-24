@@ -14,18 +14,18 @@ namespace Unosquare.Swan.AspNetCore.Test
     public class BasicUserStoreTest
     {
         private readonly CancellationToken ct = new CancellationToken();
-        private readonly ApplicationUserMock _mock = new ApplicationUserMock();
-        private readonly List<ApplicationUser> _users = new ApplicationUserMock().GetUsers();
+        private static readonly ApplicationUserMock _mock = new ApplicationUserMock();
+        private readonly List<ApplicationUser> _users = _mock.GetUsers();
+        private readonly BasicUserStore _userStore = new BasicUserStore();
 
         [TestMethod]
         public async Task CreateAsyncTest()
         {
-            var userStore = new BasicUserStore();
             var user = _mock.GetUser();
             var userId = user.UserId;
 
-            var result = await userStore.CreateAsync(user, ct);
-            var data = await userStore.FindByIdAsync(user.UserId, ct);
+            var result = await _userStore.CreateAsync(user, ct);
+            var data = await _userStore.FindByIdAsync(user.UserId, ct);
 
             Assert.IsTrue(result.Succeeded);
             Assert.AreEqual(user, data);
@@ -35,13 +35,12 @@ namespace Unosquare.Swan.AspNetCore.Test
         [TestMethod]
         public async Task UpdateAsyncTest()
         {
-            var userStore = new BasicUserStore();
             var user = _mock.GetUser();
-            await userStore.CreateAsync(user, ct);
+            await _userStore.CreateAsync(user, ct);
 
             user.UserName = "Changed";
-            var result = await userStore.UpdateAsync(user, ct);
-            var userName = await userStore.GetUserNameAsync(user, ct);
+            var result = await _userStore.UpdateAsync(user, ct);
+            var userName = await _userStore.GetUserNameAsync(user, ct);
 
             Assert.IsTrue(result.Succeeded);
             Assert.AreEqual(user.UserName, userName);
@@ -50,12 +49,11 @@ namespace Unosquare.Swan.AspNetCore.Test
         [TestMethod]
         public async Task DeleteAsyncTest()
         {
-            var userStore = new BasicUserStore();
             var user = _mock.GetUser();
-            await userStore.CreateAsync(user, ct);
+            await _userStore.CreateAsync(user, ct);
 
-            var result = await userStore.DeleteAsync(user, ct);
-            var data = await userStore.FindByIdAsync(user.UserId, ct);
+            var result = await _userStore.DeleteAsync(user, ct);
+            var data = await _userStore.FindByIdAsync(user.UserId, ct);
 
             Assert.IsTrue(result.Succeeded);
             Assert.IsNull(data);
@@ -64,13 +62,12 @@ namespace Unosquare.Swan.AspNetCore.Test
         [TestMethod]
         public async Task FindByIdAsyncTest()
         {
-            var userStore = new BasicUserStore();
             var user = _mock.GetUser();
-            await userStore.CreateAsync(user, ct);
+            await _userStore.CreateAsync(user, ct);
             foreach (var u in _users)
-                await userStore.CreateAsync(u, ct);
+                await _userStore.CreateAsync(u, ct);
 
-            var userData = await userStore.FindByIdAsync(user.UserId, ct);
+            var userData = await _userStore.FindByIdAsync(user.UserId, ct);
 
             Assert.AreEqual(user, userData);
         }
@@ -78,13 +75,12 @@ namespace Unosquare.Swan.AspNetCore.Test
         [TestMethod]
         public async Task FindByNameAsyncTest()
         {
-            var userStore = new BasicUserStore();
             var user = _mock.GetUser();
-            await userStore.CreateAsync(user, ct);
+            await _userStore.CreateAsync(user, ct);
             foreach (var u in _users)
-                await userStore.CreateAsync(u, ct);
+                await _userStore.CreateAsync(u, ct);
 
-            var userData = await userStore.FindByNameAsync(user.UserName, ct);
+            var userData = await _userStore.FindByNameAsync(user.UserName, ct);
 
             Assert.AreEqual(user, userData);
         }
@@ -92,11 +88,10 @@ namespace Unosquare.Swan.AspNetCore.Test
         [TestMethod]
         public async Task GetUserIdAsyncTest()
         {
-            var userStore = new BasicUserStore();
             var user = _mock.GetUser();
-            await userStore.CreateAsync(user, ct);
+            await _userStore.CreateAsync(user, ct);
 
-            var userId = await userStore.GetUserIdAsync(user, ct);
+            var userId = await _userStore.GetUserIdAsync(user, ct);
 
             Assert.AreEqual(user.UserId, userId);
         }
@@ -104,11 +99,10 @@ namespace Unosquare.Swan.AspNetCore.Test
         [TestMethod]
         public async Task GetUserNameAsyncTest()
         {
-            var userStore = new BasicUserStore();
             var user = _mock.GetUser();
-            await userStore.CreateAsync(user, ct);
+            await _userStore.CreateAsync(user, ct);
 
-            var userName = await userStore.GetUserNameAsync(user, ct);
+            var userName = await _userStore.GetUserNameAsync(user, ct);
 
             Assert.AreEqual(user.UserName, userName);
         }
@@ -116,11 +110,10 @@ namespace Unosquare.Swan.AspNetCore.Test
         [TestMethod]
         public async Task GetNormalizedUserNameAsyncTest()
         {
-            var userStore = new BasicUserStore();
             var user = _mock.GetUser();
-            await userStore.CreateAsync(user, ct);
+            await _userStore.CreateAsync(user, ct);
 
-            var userName = await userStore.GetNormalizedUserNameAsync(user, ct);
+            var userName = await _userStore.GetNormalizedUserNameAsync(user, ct);
 
             Assert.AreEqual(user.UserName, userName);
         }
@@ -128,11 +121,10 @@ namespace Unosquare.Swan.AspNetCore.Test
         [TestMethod]
         public async Task GetPasswordHashAsyncTest()
         {
-            var userStore = new BasicUserStore();
             var user = _mock.GetUser();
-            await userStore.CreateAsync(user, ct);
+            await _userStore.CreateAsync(user, ct);
 
-            var passwordHash = await userStore.GetPasswordHashAsync(user, ct);
+            var passwordHash = await _userStore.GetPasswordHashAsync(user, ct);
 
             Assert.AreEqual(user.PasswordHash, passwordHash);
         }
@@ -140,11 +132,10 @@ namespace Unosquare.Swan.AspNetCore.Test
         [TestMethod]
         public async Task HasPasswordAsyncTest()
         {
-            var userStore = new BasicUserStore();
             var user = _mock.GetUser();
-            await userStore.CreateAsync(user, ct);
+            await _userStore.CreateAsync(user, ct);
 
-            var hasPassword = await userStore.HasPasswordAsync(user, ct);
+            var hasPassword = await _userStore.HasPasswordAsync(user, ct);
 
             Assert.IsTrue(hasPassword);
         }
@@ -152,12 +143,11 @@ namespace Unosquare.Swan.AspNetCore.Test
         [TestMethod]
         public async Task SetUserNameAsyncTest()
         {
-            var userStore = new BasicUserStore();
             var user = _mock.GetUser();
-            await userStore.CreateAsync(user, ct);
+            await _userStore.CreateAsync(user, ct);
 
-            await userStore.SetUserNameAsync(user, "Changed", ct);
-            var userName = await userStore.GetUserNameAsync(user, ct);
+            await _userStore.SetUserNameAsync(user, "Changed", ct);
+            var userName = await _userStore.GetUserNameAsync(user, ct);
 
             Assert.AreEqual(user.UserName, userName);
         }
@@ -165,12 +155,11 @@ namespace Unosquare.Swan.AspNetCore.Test
         [TestMethod]
         public async Task SetNormalizedUserNameAsyncTest()
         {
-            var userStore = new BasicUserStore();
             var user = _mock.GetUser();
-            await userStore.CreateAsync(user, ct);
+            await _userStore.CreateAsync(user, ct);
 
-            await userStore.SetNormalizedUserNameAsync(user, "Changed", ct);
-            var userName = await userStore.GetUserNameAsync(user, ct);
+            await _userStore.SetNormalizedUserNameAsync(user, "Changed", ct);
+            var userName = await _userStore.GetUserNameAsync(user, ct);
 
             Assert.AreEqual(user.UserName, userName);
         }
@@ -178,12 +167,11 @@ namespace Unosquare.Swan.AspNetCore.Test
         [TestMethod]
         public async Task SetPasswordHashAsyncTest()
         {
-            var userStore = new BasicUserStore();
             var user = _mock.GetUser();
-            await userStore.CreateAsync(user, ct);
+            await _userStore.CreateAsync(user, ct);
 
-            await userStore.SetNormalizedUserNameAsync(user, "Changed", ct);
-            var userName = await userStore.GetUserNameAsync(user, ct);
+            await _userStore.SetNormalizedUserNameAsync(user, "Changed", ct);
+            var userName = await _userStore.GetUserNameAsync(user, ct);
 
             Assert.AreEqual(user.UserName, userName);
         }
@@ -191,24 +179,22 @@ namespace Unosquare.Swan.AspNetCore.Test
         [TestMethod]
         public async Task GetPhoneNumberAsyncTest()
         {
-            var userStore = new BasicUserStore();
             var user = _mock.GetUser();
-            await userStore.CreateAsync(user, ct);
+            await _userStore.CreateAsync(user, ct);
 
-            var userPhone = await userStore.GetPhoneNumberAsync(user, ct);
-            
+            var userPhone = await _userStore.GetPhoneNumberAsync(user, ct);
+
             Assert.AreEqual(user.PhoneNumber, userPhone);
         }
 
         [TestMethod]
         public async Task SetPhoneNumberAsyncTest()
         {
-            var userStore = new BasicUserStore();
             var user = _mock.GetUser();
-            await userStore.CreateAsync(user, ct);
+            await _userStore.CreateAsync(user, ct);
 
-            await userStore.SetPhoneNumberAsync(user, "9876543210", ct);
-            var userPhone = await userStore.GetPhoneNumberAsync(user, ct);
+            await _userStore.SetPhoneNumberAsync(user, "9876543210", ct);
+            var userPhone = await _userStore.GetPhoneNumberAsync(user, ct);
 
             Assert.AreEqual(user.PhoneNumber, userPhone);
         }
@@ -216,11 +202,10 @@ namespace Unosquare.Swan.AspNetCore.Test
         [TestMethod]
         public async Task GetPhoneNumberConfirmedAsyncTest()
         {
-            var userStore = new BasicUserStore();
             var user = _mock.GetUser();
-            await userStore.CreateAsync(user, ct);
+            await _userStore.CreateAsync(user, ct);
 
-            var userPhoneConfirmed = await userStore.GetPhoneNumberConfirmedAsync(user, ct);
+            var userPhoneConfirmed = await _userStore.GetPhoneNumberConfirmedAsync(user, ct);
 
             Assert.IsTrue(userPhoneConfirmed);
             Assert.AreEqual(user.PhoneNumberConfirmed, userPhoneConfirmed);
@@ -229,12 +214,11 @@ namespace Unosquare.Swan.AspNetCore.Test
         [TestMethod]
         public async Task SetPhoneNumberConfirmedAsyncTest()
         {
-            var userStore = new BasicUserStore();
             var user = _mock.GetUser();
-            await userStore.CreateAsync(user, ct);
+            await _userStore.CreateAsync(user, ct);
 
-            await userStore.SetPhoneNumberConfirmedAsync(user, false, ct);
-            var userPhoneConfirmed = await userStore.GetPhoneNumberConfirmedAsync(user, ct);
+            await _userStore.SetPhoneNumberConfirmedAsync(user, false, ct);
+            var userPhoneConfirmed = await _userStore.GetPhoneNumberConfirmedAsync(user, ct);
 
             Assert.IsFalse(userPhoneConfirmed);
             Assert.AreEqual(user.PhoneNumberConfirmed, userPhoneConfirmed);
@@ -243,12 +227,11 @@ namespace Unosquare.Swan.AspNetCore.Test
         [TestMethod]
         public async Task SetTwoFactorEnabledAsyncTest()
         {
-            var userStore = new BasicUserStore();
             var user = _mock.GetUser();
-            await userStore.CreateAsync(user, ct);
+            await _userStore.CreateAsync(user, ct);
 
-            await userStore.SetTwoFactorEnabledAsync(user, true, ct);
-            var twoFactor = await userStore.GetTwoFactorEnabledAsync(user, ct);
+            await _userStore.SetTwoFactorEnabledAsync(user, true, ct);
+            var twoFactor = await _userStore.GetTwoFactorEnabledAsync(user, ct);
 
             Assert.IsTrue(twoFactor);
             Assert.AreEqual(user.TwoFactorEnabled, twoFactor);
@@ -257,11 +240,10 @@ namespace Unosquare.Swan.AspNetCore.Test
         [TestMethod]
         public async Task GetTwoFactorEnabledAsyncTest()
         {
-            var userStore = new BasicUserStore();
             var user = _mock.GetUser();
-            await userStore.CreateAsync(user, ct);
+            await _userStore.CreateAsync(user, ct);
 
-            var twoFactor = await userStore.GetTwoFactorEnabledAsync(user, ct);
+            var twoFactor = await _userStore.GetTwoFactorEnabledAsync(user, ct);
 
             Assert.IsFalse(twoFactor);
             Assert.AreEqual(user.TwoFactorEnabled, twoFactor);
@@ -270,11 +252,10 @@ namespace Unosquare.Swan.AspNetCore.Test
         [TestMethod]
         public async Task GetLoginsAsyncTest()
         {
-            var userStore = new BasicUserStore();
             var user = _mock.GetUser();
-            await userStore.CreateAsync(user, ct);
+            await _userStore.CreateAsync(user, ct);
 
-            var userLogin = await userStore.GetLoginsAsync(user, ct);
+            var userLogin = await _userStore.GetLoginsAsync(user, ct);
 
             // Assertion to 0 because the method return an empty list
             Assert.AreEqual(0, userLogin.Count);
@@ -283,38 +264,35 @@ namespace Unosquare.Swan.AspNetCore.Test
         [TestMethod]
         public void FindByLoginAsyncTest()
         {
-            var userStore = new BasicUserStore();
 
             Assert.ThrowsException<NotImplementedException>(() =>
             {
-                return userStore.FindByLoginAsync("loginProvider", "providerkey", ct);
+                return _userStore.FindByLoginAsync("loginProvider", "providerkey", ct);
             });
         }
 
         [TestMethod]
         public async Task AddLoginAsyncTest()
         {
-            var userStore = new BasicUserStore();
             var user = _mock.GetUser();
-            await userStore.CreateAsync(user, ct);
+            await _userStore.CreateAsync(user, ct);
             var userLoginInfo = new UserLoginInfo("loginProv", "providerkey", "Name");
 
             Assert.ThrowsException<NotImplementedException>(() =>
             {
-                return userStore.AddLoginAsync(user, userLoginInfo, ct);
+                return _userStore.AddLoginAsync(user, userLoginInfo, ct);
             });
         }
 
         [TestMethod]
         public async Task RemoveLoginAsyncTest()
         {
-            var userStore = new BasicUserStore();
             var user = _mock.GetUser();
-            await userStore.CreateAsync(user, ct);
+            await _userStore.CreateAsync(user, ct);
 
             Assert.ThrowsException<NotImplementedException>(() =>
             {
-                return userStore.RemoveLoginAsync(user,"loginProvider","providerKey",ct);
+                return _userStore.RemoveLoginAsync(user, "loginProvider", "providerKey", ct);
             });
         }
     }
