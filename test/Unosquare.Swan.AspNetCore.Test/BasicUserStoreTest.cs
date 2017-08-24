@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using Unosquare.Swan.AspNetCore.Models;
 
 namespace Unosquare.Swan.AspNetCore.Test
@@ -10,7 +11,7 @@ namespace Unosquare.Swan.AspNetCore.Test
     [TestClass]
     public class BasicUserStoreTest
     {
-        private readonly CancellationToken cancellatinToken = new CancellationToken();
+        private readonly CancellationToken ct = new CancellationToken();
         private readonly ApplicationUser _user = new ApplicationUser
         {
             UserId = "1",
@@ -27,7 +28,7 @@ namespace Unosquare.Swan.AspNetCore.Test
         {
             var userStore = new BasicUserStore();
 
-            var result = await userStore.CreateAsync(_user, cancellatinToken);
+            var result = await userStore.CreateAsync(_user, ct);
 
             Assert.IsNotNull(result);
             Assert.IsTrue(result.IsCompleted);
