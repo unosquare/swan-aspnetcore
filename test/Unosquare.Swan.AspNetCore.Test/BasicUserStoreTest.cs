@@ -23,11 +23,11 @@ namespace Unosquare.Swan.AspNetCore.Test
         };
 
         [TestMethod]
-        public void CreateAsyncTest()
+        public async Task CreateAsyncTest()
         {
             var userStore = new BasicUserStore();
 
-            var result = userStore.CreateAsync(_user, cancellatinToken);
+            var result = await userStore.CreateAsync(_user, cancellatinToken);
 
             Assert.IsNotNull(result);
             Assert.IsTrue(result.IsCompleted);
