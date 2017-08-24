@@ -6,6 +6,7 @@
     <AssemblyTitle>Unosquare SWAN AspNet Core</AssemblyTitle>
     <VersionPrefix>0.9.2</VersionPrefix>
     <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
+    <DebugType>Full</DebugType>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>Unosquare.Swan.AspNetCore</AssemblyName>
     <PackageId>Unosquare.Swan.AspNetCore</PackageId>
