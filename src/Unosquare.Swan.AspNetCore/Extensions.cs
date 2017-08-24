@@ -1,8 +1,8 @@
 ﻿namespace Unosquare.Swan.AspNetCore
 {
+    using Microsoft.AspNetCore.Authentication.JwtBearer;
     using Formatters;
     using Logger;
-    using Microsoft.AspNetCore.Authentication.Cookies;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Diagnostics;
     using Microsoft.AspNetCore.Http;
@@ -28,18 +28,19 @@
         /// </summary>
         public const string JsonMimeType = "application/json";
 
+        // TODO: Do we need this?
         /// <summary>
         /// Setups the cookies.
         /// </summary>
         /// <param name="identityOptions">The identity options.</param>
-        public static void SetupCookies(this IdentityOptions identityOptions)
-        {
-            identityOptions.Cookies.ApplicationCookie.Events = new CookieAuthenticationEvents
-            {
-                // Skip the login
-                OnRedirectToLogin = context => Task.FromResult(0)
-            };
-        }
+        //public static void SetupCookies(this IdentityOptions identityOptions)
+        //{
+        //    identityOptions.Cookies.ApplicationCookie.Events = new CookieAuthenticationEvents
+        //    {
+        //        // Skip the login
+        //        OnRedirectToLogin = context => Task.FromResult(0)
+        //    };
+        //}
 
         /// <summary>
         /// Uses the json exception handler.
@@ -116,8 +117,6 @@
 
             app.UseJwtBearerAuthentication(new JwtBearerOptions
             {
-                AutomaticAuthenticate = true,
-                AutomaticChallenge = true,
                 TokenValidationParameters = validationParameter
             });
 
