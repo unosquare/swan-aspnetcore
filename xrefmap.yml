@@ -830,18 +830,6 @@ references:
   commentId: F:Unosquare.Swan.AspNetCore.Extensions.JsonMimeType
   fullName: Unosquare.Swan.AspNetCore.Extensions.JsonMimeType
   nameWithType: Extensions.JsonMimeType
-- uid: Unosquare.Swan.AspNetCore.Extensions.SetupCookies(IdentityOptions)
-  name: SetupCookies(IdentityOptions)
-  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_SetupCookies_IdentityOptions_
-  commentId: M:Unosquare.Swan.AspNetCore.Extensions.SetupCookies(IdentityOptions)
-  fullName: Unosquare.Swan.AspNetCore.Extensions.SetupCookies(IdentityOptions)
-  nameWithType: Extensions.SetupCookies(IdentityOptions)
-- uid: Unosquare.Swan.AspNetCore.Extensions.SetupCookies*
-  name: SetupCookies
-  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_SetupCookies_
-  commentId: Overload:Unosquare.Swan.AspNetCore.Extensions.SetupCookies
-  fullName: Unosquare.Swan.AspNetCore.Extensions.SetupCookies
-  nameWithType: Extensions.SetupCookies
 - uid: Unosquare.Swan.AspNetCore.Extensions.UseAuditTrail*
   name: UseAuditTrail
   href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_UseAuditTrail_
