@@ -16,18 +16,25 @@ namespace Unosquare.Swan.AspNetCore.Sample.Controllers
         {
             _context = context;
         }
-        
+
         [HttpGet]
         public IActionResult Get()
         {
-            _context.Products.AddRange(
-                new[]
-                {
-                    new Product { Name = "Gatorade" },
-                    new Product { Name = "Red Bull"},
-                    new Product { Name = "Powerade"},
-                    new Product { Name = "Electrolit" }
-                });
+            var products = new List<Product>()
+            {
+                new Product { Name = "Gatorade" },
+                new Product { Name = "Red Bull"},
+                new Product { Name = "Powerade"},
+                new Product { Name = "Electrolit" }
+            };
+
+            return Ok(products.ToArray());
+        }
+        
+        [HttpPost]
+        public IActionResult Post([FromBody] Product[] values)
+        {
+            _context.Products.AddRange(values);
 
             _context.SaveChanges();
             return Ok();

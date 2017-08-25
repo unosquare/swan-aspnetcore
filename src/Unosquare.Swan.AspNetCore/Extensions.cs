@@ -115,11 +115,6 @@
                 ForceHttps = forceHttps
             }));
 
-            app.UseJwtBearerAuthentication(new JwtBearerOptions
-            {
-                TokenValidationParameters = validationParameter
-            });
-
             return app;
         }
 

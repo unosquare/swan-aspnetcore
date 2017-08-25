@@ -15,6 +15,7 @@
     using System.Text;
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Http;
+    using Microsoft.AspNetCore.Authentication.JwtBearer;
 
     public class Startup
     {
@@ -31,6 +32,7 @@
 
         public IConfigurationRoot Configuration { get; }
 
+        
         // This method gets called by the runtime. Use this method to add services to the container
         public void ConfigureServices(IServiceCollection services)
         {
@@ -38,8 +40,14 @@
 
             // Add framework services.
             services.AddDbContext<SampleDbContext>(options => options.UseSqlServer(Configuration["ConnectionString"]));
-            // Setup a basic stores for Identity and remove Cookies redirects to /Login
-            services.AddIdentity<BasicUserStore, BasicRoleStore>(options => options.SetupCookies()).AddDefaultTokenProviders();
+            // Using Authentication services
+            services.AddAuthentication()
+                // Configure the app to use Jwt Bearer Authentication
+                .AddJwtBearer(option => new JwtBearerOptions {
+                    Authority = String.Format(Configuration["AzureAd:AadInstance"], Configuration["AzureAD:Tenant"]),
+                    Audience = Configuration["AzureAd:Audience"]
+                });
+
 
             services.AddOptions();
             services.AddMvc();
@@ -56,7 +64,7 @@
             // Response an exception as JSON at error
             app.UseJsonExceptionHandler();
 
-            app.UseIdentity();
+            app.UseAuthentication();
 
             // Use the bearer token provider and check Admin and Passw.ord as valid credentials
             app.UseBearerTokenProvider(new TokenValidationParameters
