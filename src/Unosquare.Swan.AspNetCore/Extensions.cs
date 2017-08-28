@@ -17,6 +17,7 @@
     using System.Net;
     using System.Security.Claims;
     using System.Threading.Tasks;
+    using Microsoft.Extensions.DependencyInjection;
 
     /// <summary>
     /// Extensions methods to implement SWAN providers
@@ -92,7 +93,7 @@
         /// <param name="expiration">The expiration.</param>
         /// <param name="forceHttps">if set to <c>true</c> [force HTTPS].</param>
         /// <returns></returns>
-        public static IApplicationBuilder UseBearerTokenProvider(this IApplicationBuilder app,
+        public static IApplicationBuilder UseBearerTokenAuthentication(this IApplicationBuilder app,
             TokenValidationParameters validationParameter,
             Func<string, string, string, string, Task<ClaimsIdentity>> identityResolver,
             Func<ClaimsIdentity, Dictionary<string, object>, Task<Dictionary<string, object>>> bearerTokenResolver =
@@ -115,20 +116,10 @@
                 ForceHttps = forceHttps
             }));
 
+            app.UseMiddleware<AuthenticateSchemeMiddleware>(JwtBearerDefaults.AuthenticationScheme);
+
             return app;
         }
-
-        /// <summary>
-        /// Uses the authentication scheme.
-        /// </summary>
-        /// <param name="app">The application.</param>
-        /// <param name="scheme">The scheme.</param>
-        /// <returns></returns>
-        public static IApplicationBuilder UseAuthenticationScheme(this IApplicationBuilder app, string scheme)
-        {
-            return app.UseMiddleware<AuthenticateSchemeMiddleware>(scheme);
-        }
- 
 
         /// <summary>
         /// Uses the fallback to redirect everything without extension.
@@ -170,6 +161,28 @@
             context.AddController(new AuditTrailController<T, TEntity>((T)context, currentUserId));
 
             return context;
+        }
+
+        /// <summary>
+        /// Adds the bearer token authentication.
+        /// </summary>
+        /// <param name="services">The services.</param>
+        /// <param name="validationParameters">The validation parameters.</param>
+        /// <returns></returns>
+        public static IServiceCollection AddBearerTokenAuthentication(this IServiceCollection services, TokenValidationParameters validationParameters)
+        {
+            // Add Authentication services
+            services.AddAuthentication(options => {
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            // Configure the app to use Jwt Bearer Authentication
+            .AddJwtBearer(options => {
+                options.TokenValidationParameters = validationParameters;
+            });
+
+            return services;
         }
     }
 }

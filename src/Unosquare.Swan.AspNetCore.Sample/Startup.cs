@@ -57,16 +57,8 @@
             // Add framework services.
             services.AddDbContext<SampleDbContext>(options => options.UseSqlServer(Configuration["ConnectionString"]));
 
-            // Add Authentication services
-            services.AddAuthentication(options => {
-                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-            // Configure the app to use Jwt Bearer Authentication
-            .AddJwtBearer(options => {
-                options.TokenValidationParameters = ValidationParameters;
-            });
+            // Extension method to add Bearer authentication
+            services.AddBearerTokenAuthentication(ValidationParameters);
 
             // Add Authorization services
             // Only for custome rules
@@ -88,11 +80,10 @@
             app.UseJsonExceptionHandler();
 
             // Use Authentication capabilities
-            app.UseAuthentication().
-                UseAuthenticationScheme(JwtBearerDefaults.AuthenticationScheme);
+            app.UseAuthentication();
 
             // Use the bearer token provider and check Admin and Pass.word as valid credentials
-            app.UseBearerTokenProvider(
+            app.UseBearerTokenAuthentication(
                 ValidationParameters,
                 (username, password, grantType, clientId) =>
                 {
