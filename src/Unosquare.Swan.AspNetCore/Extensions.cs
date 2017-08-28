@@ -119,6 +119,18 @@
         }
 
         /// <summary>
+        /// Uses the authentication scheme.
+        /// </summary>
+        /// <param name="app">The application.</param>
+        /// <param name="scheme">The scheme.</param>
+        /// <returns></returns>
+        public static IApplicationBuilder UseAuthenticationScheme(this IApplicationBuilder app, string scheme)
+        {
+            return app.UseMiddleware<AuthenticateSchemeMiddleware>(scheme);
+        }
+ 
+
+        /// <summary>
         /// Uses the fallback to redirect everything without extension.
         /// </summary>
         /// <param name="app">The application.</param>

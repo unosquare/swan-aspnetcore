@@ -4,9 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Unosquare.Swan.AspNetCore.Sample.Database;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Unosquare.Swan.AspNetCore.Sample.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     public class ProductController : Controller
     {
@@ -30,7 +32,7 @@ namespace Unosquare.Swan.AspNetCore.Sample.Controllers
 
             return Ok(products.ToArray());
         }
-        
+
         [HttpPost]
         public IActionResult Post([FromBody] Product[] values)
         {
@@ -39,7 +41,7 @@ namespace Unosquare.Swan.AspNetCore.Sample.Controllers
             _context.SaveChanges();
             return Ok();
         }
-        
+
         [HttpPut("{id}")]
         public IActionResult Edit(int id)
         {
