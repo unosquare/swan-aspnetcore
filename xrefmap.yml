@@ -809,6 +809,18 @@ references:
   commentId: T:Unosquare.Swan.AspNetCore.Extensions
   fullName: Unosquare.Swan.AspNetCore.Extensions
   nameWithType: Extensions
+- uid: Unosquare.Swan.AspNetCore.Extensions.AddBearerTokenAuthentication(IServiceCollection,TokenValidationParameters)
+  name: AddBearerTokenAuthentication(IServiceCollection, TokenValidationParameters)
+  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_AddBearerTokenAuthentication_IServiceCollection_TokenValidationParameters_
+  commentId: M:Unosquare.Swan.AspNetCore.Extensions.AddBearerTokenAuthentication(IServiceCollection,TokenValidationParameters)
+  fullName: Unosquare.Swan.AspNetCore.Extensions.AddBearerTokenAuthentication(IServiceCollection, TokenValidationParameters)
+  nameWithType: Extensions.AddBearerTokenAuthentication(IServiceCollection, TokenValidationParameters)
+- uid: Unosquare.Swan.AspNetCore.Extensions.AddBearerTokenAuthentication*
+  name: AddBearerTokenAuthentication
+  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_AddBearerTokenAuthentication_
+  commentId: Overload:Unosquare.Swan.AspNetCore.Extensions.AddBearerTokenAuthentication
+  fullName: Unosquare.Swan.AspNetCore.Extensions.AddBearerTokenAuthentication
+  nameWithType: Extensions.AddBearerTokenAuthentication
 - uid: Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework*
   name: AddEntityFramework
   href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_AddEntityFramework_
@@ -845,33 +857,21 @@ references:
   fullName.vb: Unosquare.Swan.AspNetCore.Extensions.UseAuditTrail(Of T, TEntity)(Unosquare.Swan.AspNetCore.IBusinessDbContext, System.String)
   nameWithType: Extensions.UseAuditTrail<T, TEntity>(IBusinessDbContext, String)
   nameWithType.vb: Extensions.UseAuditTrail(Of T, TEntity)(IBusinessDbContext, String)
-- uid: Unosquare.Swan.AspNetCore.Extensions.UseAuthenticationScheme(IApplicationBuilder,System.String)
-  name: UseAuthenticationScheme(IApplicationBuilder, String)
-  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_UseAuthenticationScheme_IApplicationBuilder_System_String_
-  commentId: M:Unosquare.Swan.AspNetCore.Extensions.UseAuthenticationScheme(IApplicationBuilder,System.String)
-  fullName: Unosquare.Swan.AspNetCore.Extensions.UseAuthenticationScheme(IApplicationBuilder, System.String)
-  nameWithType: Extensions.UseAuthenticationScheme(IApplicationBuilder, String)
-- uid: Unosquare.Swan.AspNetCore.Extensions.UseAuthenticationScheme*
-  name: UseAuthenticationScheme
-  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_UseAuthenticationScheme_
-  commentId: Overload:Unosquare.Swan.AspNetCore.Extensions.UseAuthenticationScheme
-  fullName: Unosquare.Swan.AspNetCore.Extensions.UseAuthenticationScheme
-  nameWithType: Extensions.UseAuthenticationScheme
-- uid: Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenProvider(IApplicationBuilder,TokenValidationParameters,System.Func{System.String,System.String,System.String,System.String,System.Threading.Tasks.Task{System.Security.Claims.ClaimsIdentity}},System.Func{System.Security.Claims.ClaimsIdentity,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.Tasks.Task{System.Collections.Generic.Dictionary{System.String,System.Object}}},System.TimeSpan,System.Boolean)
-  name: UseBearerTokenProvider(IApplicationBuilder, TokenValidationParameters, Func<String, String, String, String, Task<ClaimsIdentity>>, Func<ClaimsIdentity, Dictionary<String, Object>, Task<Dictionary<String, Object>>>, TimeSpan, Boolean)
-  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_UseBearerTokenProvider_IApplicationBuilder_TokenValidationParameters_System_Func_System_String_System_String_System_String_System_String_System_Threading_Tasks_Task_System_Security_Claims_ClaimsIdentity___System_Func_System_Security_Claims_ClaimsIdentity_System_Collections_Generic_Dictionary_System_String_System_Object__System_Threading_Tasks_Task_System_Collections_Generic_Dictionary_System_String_System_Object____System_TimeSpan_System_Boolean_
-  commentId: M:Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenProvider(IApplicationBuilder,TokenValidationParameters,System.Func{System.String,System.String,System.String,System.String,System.Threading.Tasks.Task{System.Security.Claims.ClaimsIdentity}},System.Func{System.Security.Claims.ClaimsIdentity,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.Tasks.Task{System.Collections.Generic.Dictionary{System.String,System.Object}}},System.TimeSpan,System.Boolean)
-  name.vb: UseBearerTokenProvider(IApplicationBuilder, TokenValidationParameters, Func(Of String, String, String, String, Task(Of ClaimsIdentity)), Func(Of ClaimsIdentity, Dictionary(Of String, Object), Task(Of Dictionary(Of String, Object))), TimeSpan, Boolean)
-  fullName: Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenProvider(IApplicationBuilder, TokenValidationParameters, System.Func<System.String, System.String, System.String, System.String, System.Threading.Tasks.Task<System.Security.Claims.ClaimsIdentity>>, System.Func<System.Security.Claims.ClaimsIdentity, System.Collections.Generic.Dictionary<System.String, System.Object>, System.Threading.Tasks.Task<System.Collections.Generic.Dictionary<System.String, System.Object>>>, System.TimeSpan, System.Boolean)
-  fullName.vb: Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenProvider(IApplicationBuilder, TokenValidationParameters, System.Func(Of System.String, System.String, System.String, System.String, System.Threading.Tasks.Task(Of System.Security.Claims.ClaimsIdentity)), System.Func(Of System.Security.Claims.ClaimsIdentity, System.Collections.Generic.Dictionary(Of System.String, System.Object), System.Threading.Tasks.Task(Of System.Collections.Generic.Dictionary(Of System.String, System.Object))), System.TimeSpan, System.Boolean)
-  nameWithType: Extensions.UseBearerTokenProvider(IApplicationBuilder, TokenValidationParameters, Func<String, String, String, String, Task<ClaimsIdentity>>, Func<ClaimsIdentity, Dictionary<String, Object>, Task<Dictionary<String, Object>>>, TimeSpan, Boolean)
-  nameWithType.vb: Extensions.UseBearerTokenProvider(IApplicationBuilder, TokenValidationParameters, Func(Of String, String, String, String, Task(Of ClaimsIdentity)), Func(Of ClaimsIdentity, Dictionary(Of String, Object), Task(Of Dictionary(Of String, Object))), TimeSpan, Boolean)
-- uid: Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenProvider*
-  name: UseBearerTokenProvider
-  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_UseBearerTokenProvider_
-  commentId: Overload:Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenProvider
-  fullName: Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenProvider
-  nameWithType: Extensions.UseBearerTokenProvider
+- uid: Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenAuthentication(IApplicationBuilder,TokenValidationParameters,System.Func{System.String,System.String,System.String,System.String,System.Threading.Tasks.Task{System.Security.Claims.ClaimsIdentity}},System.Func{System.Security.Claims.ClaimsIdentity,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.Tasks.Task{System.Collections.Generic.Dictionary{System.String,System.Object}}},System.TimeSpan,System.Boolean)
+  name: UseBearerTokenAuthentication(IApplicationBuilder, TokenValidationParameters, Func<String, String, String, String, Task<ClaimsIdentity>>, Func<ClaimsIdentity, Dictionary<String, Object>, Task<Dictionary<String, Object>>>, TimeSpan, Boolean)
+  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_UseBearerTokenAuthentication_IApplicationBuilder_TokenValidationParameters_System_Func_System_String_System_String_System_String_System_String_System_Threading_Tasks_Task_System_Security_Claims_ClaimsIdentity___System_Func_System_Security_Claims_ClaimsIdentity_System_Collections_Generic_Dictionary_System_String_System_Object__System_Threading_Tasks_Task_System_Collections_Generic_Dictionary_System_String_System_Object____System_TimeSpan_System_Boolean_
+  commentId: M:Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenAuthentication(IApplicationBuilder,TokenValidationParameters,System.Func{System.String,System.String,System.String,System.String,System.Threading.Tasks.Task{System.Security.Claims.ClaimsIdentity}},System.Func{System.Security.Claims.ClaimsIdentity,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.Tasks.Task{System.Collections.Generic.Dictionary{System.String,System.Object}}},System.TimeSpan,System.Boolean)
+  name.vb: UseBearerTokenAuthentication(IApplicationBuilder, TokenValidationParameters, Func(Of String, String, String, String, Task(Of ClaimsIdentity)), Func(Of ClaimsIdentity, Dictionary(Of String, Object), Task(Of Dictionary(Of String, Object))), TimeSpan, Boolean)
+  fullName: Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenAuthentication(IApplicationBuilder, TokenValidationParameters, System.Func<System.String, System.String, System.String, System.String, System.Threading.Tasks.Task<System.Security.Claims.ClaimsIdentity>>, System.Func<System.Security.Claims.ClaimsIdentity, System.Collections.Generic.Dictionary<System.String, System.Object>, System.Threading.Tasks.Task<System.Collections.Generic.Dictionary<System.String, System.Object>>>, System.TimeSpan, System.Boolean)
+  fullName.vb: Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenAuthentication(IApplicationBuilder, TokenValidationParameters, System.Func(Of System.String, System.String, System.String, System.String, System.Threading.Tasks.Task(Of System.Security.Claims.ClaimsIdentity)), System.Func(Of System.Security.Claims.ClaimsIdentity, System.Collections.Generic.Dictionary(Of System.String, System.Object), System.Threading.Tasks.Task(Of System.Collections.Generic.Dictionary(Of System.String, System.Object))), System.TimeSpan, System.Boolean)
+  nameWithType: Extensions.UseBearerTokenAuthentication(IApplicationBuilder, TokenValidationParameters, Func<String, String, String, String, Task<ClaimsIdentity>>, Func<ClaimsIdentity, Dictionary<String, Object>, Task<Dictionary<String, Object>>>, TimeSpan, Boolean)
+  nameWithType.vb: Extensions.UseBearerTokenAuthentication(IApplicationBuilder, TokenValidationParameters, Func(Of String, String, String, String, Task(Of ClaimsIdentity)), Func(Of ClaimsIdentity, Dictionary(Of String, Object), Task(Of Dictionary(Of String, Object))), TimeSpan, Boolean)
+- uid: Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenAuthentication*
+  name: UseBearerTokenAuthentication
+  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_UseBearerTokenAuthentication_
+  commentId: Overload:Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenAuthentication
+  fullName: Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenAuthentication
+  nameWithType: Extensions.UseBearerTokenAuthentication
 - uid: Unosquare.Swan.AspNetCore.Extensions.UseFallback(IApplicationBuilder,System.String,System.Func{PathString,System.Boolean})
   name: UseFallback(IApplicationBuilder, String, Func<PathString, Boolean>)
   href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_UseFallback_IApplicationBuilder_System_String_System_Func_PathString_System_Boolean__
