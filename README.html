@@ -81,6 +81,82 @@ Our philosophy is that SWAN should have no external dependencies, it should be c
 <h2 id="nuget-installation">NuGet Installation:</h2>
 <p><a href="https://badge.fury.io/nu/Unosquare.AspNetCore.Swan"><img src="https://badge.fury.io/nu/Unosquare.Swan.AspNetCore.svg" alt="NuGet version"></a></p>
 <pre><code>PM&gt; Install-Package Unosquare.Swan.AspNetCore
+</code></pre><h1 id="swan-aspnet-core-2">Swan ASP.NET Core 2</h1>
+<p>A set of libraries to use with Net Core 2 applications. Also, includes a configure middleware and extension to setup your project. Net core 2 came with a lot of changes, including authentication and authorization, here with Swan Asp Net Core 2 is easy to configure and start working on your project.</p>
+<h2 id="the-extension-class">The <code>Extension</code> class</h2>
+<p>Here we can find very useful code to use in our project configuration. All of this you can use it in your Startup.cs file, see our <a href="https://github.com/unosquare/swan-aspnetcore/tree/master/src/Unosquare.Swan.AspNetCore.Sample">Sample Project</a> for more reference.</p>
+<h4 id="example-0-validation-parameters">Example 0: Validation Parameters</h4>
+<p>It&#39;s use to verify the parameters of the authentication. Is use in the <code>UseBearerTokenAuthentication</code> and <code>AddBearerTokenAuthentication</code></p>
+<pre><code class="lang-csharp">ValidationParameters = new TokenValidationParameters()
+{
+    ValidateIssuerSigningKey = true,
+    // You can modify this key in the appsettings.json
+    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration[&quot;SymmetricSecurityKey&quot;])),
+
+    ValidateIssuer = true,
+    ValidIssuer = &quot;ValidIssuer&quot;,
+
+    ValidateAudience = true,
+    ValidAudience = &quot;ValidAudience&quot;,
+
+    ValidateLifetime = true,
+
+    ClockSkew = TimeSpan.Zero
+};
+</code></pre><h3 id="in-your-configureservices-method">In your <code>ConfigureServices</code> method</h3>
+<p>In this method, you can configure the services of your application.</p>
+<pre><code class="lang-csharp">// This method gets called by the runtime. Use this method to add services to the container
+public void ConfigureServices(IServiceCollection services)
+{
+    ...
+}
+</code></pre><h4 id="example-1-the-addbearertokenauthentication">Example 1: The <code>AddBearerTokenAuthentication</code></h4>
+<p>This is required to use the Authentication that comes with core 2 applications.</p>
+<pre><code class="lang-csharp">// Extension method to add Bearer authentication
+services.AddBearerTokenAuthentication(ValidationParameters);
+</code></pre><h3 id="in-your-configure-method">In your <code>Configure</code> method</h3>
+<p>Here is where you configure your app</p>
+<pre><code class="lang-csharp"> // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
+public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+{
+    ...
+}
+</code></pre><h4 id="example-1-the-addentityframework">Example 1: The <code>AddEntityFramework</code></h4>
+<p>Adds an entity framework logger. This logger is used in the <code>Configure</code> method of your Startup.cs file.</p>
+<pre><code class="lang-csharp">// you need to declare as parameter of type ILoggerFactory
+loggerFactory.AddEntityFramework&lt;SampleDbContext, Models.LogEntry&gt;(app.ApplicationServices);
+</code></pre><h4 id="example-2-the-usejsonexceptionhandler">Example 2: The <code>UseJsonExceptionHandler</code></h4>
+<p>Is very useful to see exceptions in JSON format. </p>
+<pre><code class="lang-csharp">// Response an exception as JSON at error
+app.UseJsonExceptionHandler();
+</code></pre><h4 id="example-3-the-usebearertokenauthentication">Example 3: The <code>UseBearerTokenAuthentication</code></h4>
+<p>This is important because it gives the application to use authentication and authorization with JWT (JSON Web tokens). See Example 0 for the ValidationParameters.</p>
+<p>With this configuration you just need to add the data annotation [Authorize] to your API to say that the user needs to be authorized to access that part of your project.</p>
+<pre><code class="lang-csharp">// Use the bearer token provider and check Admin and Pass.word as valid credentials
+app.UseBearerTokenAuthentication(
+    ValidationParameters,
+    (username, password, grantType, clientId) =&gt;
+    {
+        if (username != &quot;Admin&quot; || password != &quot;Pass.word&quot;)
+            return Task.FromResult&lt;ClaimsIdentity&gt;(null);
+
+        var claim = new ClaimsIdentity(&quot;Bearer&quot;);
+        claim.AddClaim(new Claim(ClaimTypes.Name, username));
+
+        return Task.FromResult(claim);
+    }, (identity, obj) =&gt;
+    {
+        // This action is optional
+        obj[&quot;test&quot;] = &quot;OK&quot;;
+        return Task.FromResult(obj);
+    });
+</code></pre><h4 id="example-4-the-usefallback">Example 4: The <code>UseFallback</code></h4>
+<p>Uses the fallback to redirect everything without extension.</p>
+<pre><code class="lang-csharp">// Redirect anything without extension to index.html
+app.UseFallback();
+</code></pre><h4 id="example-5-the-useaudittrail">Example 5: The <code>UseAuditTrail</code></h4>
+<p>This is an extension method to add AuditTrail to a DbContext.</p>
+<pre><code class="lang-csharp">// TODO: Example
 </code></pre></article>
           </div>
           
