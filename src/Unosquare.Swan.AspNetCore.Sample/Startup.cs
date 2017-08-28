@@ -79,9 +79,6 @@
             // Response an exception as JSON at error
             app.UseJsonExceptionHandler();
 
-            // Use Authentication capabilities
-            app.UseAuthentication();
-
             // Use the bearer token provider and check Admin and Pass.word as valid credentials
             app.UseBearerTokenAuthentication(
                 ValidationParameters,

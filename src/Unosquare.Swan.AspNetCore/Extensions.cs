@@ -104,6 +104,10 @@
             if (bearerTokenResolver == null)
                 bearerTokenResolver = (identity, input) => Task.FromResult(input);
 
+            // Use Authentication capabilities
+            app.UseAuthentication();
+
+            // Middlewere for aunthenticate bearer token
             app.UseMiddleware<TokenProviderMiddleware>(Options.Create(new TokenProviderOptions
             {
                 Audience = validationParameter.ValidAudience,
@@ -116,6 +120,7 @@
                 ForceHttps = forceHttps
             }));
 
+            // Middlewere to use authorization
             app.UseMiddleware<AuthenticateSchemeMiddleware>(JwtBearerDefaults.AuthenticationScheme);
 
             return app;
