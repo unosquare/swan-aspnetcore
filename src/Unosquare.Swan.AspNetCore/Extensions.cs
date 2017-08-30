@@ -29,20 +29,6 @@
         /// </summary>
         public const string JsonMimeType = "application/json";
 
-        // TODO: Do we need this?
-        /// <summary>
-        /// Setups the cookies.
-        /// </summary>
-        /// <param name="identityOptions">The identity options.</param>
-        //public static void SetupCookies(this IdentityOptions identityOptions)
-        //{
-        //    identityOptions.Cookies.ApplicationCookie.Events = new CookieAuthenticationEvents
-        //    {
-        //        // Skip the login
-        //        OnRedirectToLogin = context => Task.FromResult(0)
-        //    };
-        //}
-
         /// <summary>
         /// Uses the json exception handler.
         /// </summary>
