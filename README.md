@@ -12,7 +12,7 @@ A set of libraries to use with ASP.NET Core 2.0 applications. Also, includes a c
 NuGet Installation:
 -------------------
 
-[![NuGet version](https://badge.fury.io/nu/Unosquare.Swan.AspNetCore.svg)](https://badge.fury.io/nu/Unosquare.AspNetCore.Swan)
+[![NuGet version](https://badge.fury.io/nu/Unosquare.Swan.AspNetCore.svg)](https://badge.fury.io/nu/Unosquare.Swan.AspNetCore)
 
 ```
 PM> Install-Package Unosquare.Swan.AspNetCore
