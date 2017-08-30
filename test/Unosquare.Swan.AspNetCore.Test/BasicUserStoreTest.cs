@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Unosquare.Swan.AspNetCore.Models;
@@ -10,7 +9,7 @@ using Unosquare.Swan.AspNetCore.Test.Mocks;
 
 namespace Unosquare.Swan.AspNetCore.Test
 {
-    [TestClass]
+    [TestFixture]
     public class BasicUserStoreTest
     {
         private readonly CancellationToken ct = new CancellationToken();
@@ -18,7 +17,7 @@ namespace Unosquare.Swan.AspNetCore.Test
         private readonly List<ApplicationUser> _users = _mock.GetUsers();
         private readonly BasicUserStore _userStore = new BasicUserStore();
 
-        [TestMethod]
+        [Test]
         public async Task CreateAsyncTest()
         {
             var user = _mock.GetUser();
@@ -32,7 +31,7 @@ namespace Unosquare.Swan.AspNetCore.Test
             Assert.AreNotEqual(userId, data.UserId);
         }
 
-        [TestMethod]
+        [Test]
         public async Task UpdateAsyncTest()
         {
             var user = _mock.GetUser();
@@ -46,7 +45,7 @@ namespace Unosquare.Swan.AspNetCore.Test
             Assert.AreEqual(user.UserName, userName);
         }
 
-        [TestMethod]
+        [Test]
         public async Task DeleteAsyncTest()
         {
             var user = _mock.GetUser();
@@ -59,7 +58,7 @@ namespace Unosquare.Swan.AspNetCore.Test
             Assert.IsNull(data);
         }
 
-        [TestMethod]
+        [Test]
         public async Task FindByIdAsyncTest()
         {
             var user = _mock.GetUser();
@@ -72,7 +71,7 @@ namespace Unosquare.Swan.AspNetCore.Test
             Assert.AreEqual(user, userData);
         }
 
-        [TestMethod]
+        [Test]
         public async Task FindByNameAsyncTest()
         {
             var user = _mock.GetUser();
@@ -82,10 +81,10 @@ namespace Unosquare.Swan.AspNetCore.Test
 
             var userData = await _userStore.FindByNameAsync(user.UserName, ct);
 
-            Assert.AreEqual(user, userData);
+            Assert.AreEqual(user.Name, userData.Name);
         }
 
-        [TestMethod]
+        [Test]
         public async Task GetUserIdAsyncTest()
         {
             var user = _mock.GetUser();
@@ -96,7 +95,7 @@ namespace Unosquare.Swan.AspNetCore.Test
             Assert.AreEqual(user.UserId, userId);
         }
 
-        [TestMethod]
+        [Test]
         public async Task GetUserNameAsyncTest()
         {
             var user = _mock.GetUser();
@@ -107,7 +106,7 @@ namespace Unosquare.Swan.AspNetCore.Test
             Assert.AreEqual(user.UserName, userName);
         }
 
-        [TestMethod]
+        [Test]
         public async Task GetNormalizedUserNameAsyncTest()
         {
             var user = _mock.GetUser();
@@ -118,7 +117,7 @@ namespace Unosquare.Swan.AspNetCore.Test
             Assert.AreEqual(user.UserName, userName);
         }
 
-        [TestMethod]
+        [Test]
         public async Task GetPasswordHashAsyncTest()
         {
             var user = _mock.GetUser();
@@ -129,7 +128,7 @@ namespace Unosquare.Swan.AspNetCore.Test
             Assert.AreEqual(user.PasswordHash, passwordHash);
         }
 
-        [TestMethod]
+        [Test]
         public async Task HasPasswordAsyncTest()
         {
             var user = _mock.GetUser();
@@ -140,7 +139,7 @@ namespace Unosquare.Swan.AspNetCore.Test
             Assert.IsTrue(hasPassword);
         }
 
-        [TestMethod]
+        [Test]
         public async Task SetUserNameAsyncTest()
         {
             var user = _mock.GetUser();
@@ -152,7 +151,7 @@ namespace Unosquare.Swan.AspNetCore.Test
             Assert.AreEqual(user.UserName, userName);
         }
 
-        [TestMethod]
+        [Test]
         public async Task SetNormalizedUserNameAsyncTest()
         {
             var user = _mock.GetUser();
@@ -164,7 +163,7 @@ namespace Unosquare.Swan.AspNetCore.Test
             Assert.AreEqual(user.UserName, userName);
         }
 
-        [TestMethod]
+        [Test]
         public async Task SetPasswordHashAsyncTest()
         {
             var user = _mock.GetUser();
@@ -176,7 +175,7 @@ namespace Unosquare.Swan.AspNetCore.Test
             Assert.AreEqual(user.UserName, userName);
         }
 
-        [TestMethod]
+        [Test]
         public async Task GetPhoneNumberAsyncTest()
         {
             var user = _mock.GetUser();
@@ -187,7 +186,7 @@ namespace Unosquare.Swan.AspNetCore.Test
             Assert.AreEqual(user.PhoneNumber, userPhone);
         }
 
-        [TestMethod]
+        [Test]
         public async Task SetPhoneNumberAsyncTest()
         {
             var user = _mock.GetUser();
@@ -199,7 +198,7 @@ namespace Unosquare.Swan.AspNetCore.Test
             Assert.AreEqual(user.PhoneNumber, userPhone);
         }
 
-        [TestMethod]
+        [Test]
         public async Task GetPhoneNumberConfirmedAsyncTest()
         {
             var user = _mock.GetUser();
@@ -211,7 +210,7 @@ namespace Unosquare.Swan.AspNetCore.Test
             Assert.AreEqual(user.PhoneNumberConfirmed, userPhoneConfirmed);
         }
 
-        [TestMethod]
+        [Test]
         public async Task SetPhoneNumberConfirmedAsyncTest()
         {
             var user = _mock.GetUser();
@@ -224,7 +223,7 @@ namespace Unosquare.Swan.AspNetCore.Test
             Assert.AreEqual(user.PhoneNumberConfirmed, userPhoneConfirmed);
         }
 
-        [TestMethod]
+        [Test]
         public async Task SetTwoFactorEnabledAsyncTest()
         {
             var user = _mock.GetUser();
@@ -237,7 +236,7 @@ namespace Unosquare.Swan.AspNetCore.Test
             Assert.AreEqual(user.TwoFactorEnabled, twoFactor);
         }
 
-        [TestMethod]
+        [Test]
         public async Task GetTwoFactorEnabledAsyncTest()
         {
             var user = _mock.GetUser();
@@ -249,7 +248,7 @@ namespace Unosquare.Swan.AspNetCore.Test
             Assert.AreEqual(user.TwoFactorEnabled, twoFactor);
         }
 
-        [TestMethod]
+        [Test]
         public async Task GetLoginsAsyncTest()
         {
             var user = _mock.GetUser();
@@ -261,38 +260,38 @@ namespace Unosquare.Swan.AspNetCore.Test
             Assert.AreEqual(0, userLogin.Count);
         }
 
-        [TestMethod]
+        [Test]
         public void FindByLoginAsyncTest()
         {
 
-            Assert.ThrowsException<NotImplementedException>(() =>
+            Assert.Throws<NotImplementedException>(() =>
             {
-                return _userStore.FindByLoginAsync("loginProvider", "providerkey", ct);
+                _userStore.FindByLoginAsync("loginProvider", "providerkey", ct);
             });
         }
 
-        [TestMethod]
+        [Test]
         public async Task AddLoginAsyncTest()
         {
             var user = _mock.GetUser();
             await _userStore.CreateAsync(user, ct);
             var userLoginInfo = new UserLoginInfo("loginProv", "providerkey", "Name");
 
-            Assert.ThrowsException<NotImplementedException>(() =>
+            Assert.Throws<NotImplementedException>(() =>
             {
-                return _userStore.AddLoginAsync(user, userLoginInfo, ct);
+                 _userStore.AddLoginAsync(user, userLoginInfo, ct);
             });
         }
 
-        [TestMethod]
+        [Test]
         public async Task RemoveLoginAsyncTest()
         {
             var user = _mock.GetUser();
             await _userStore.CreateAsync(user, ct);
 
-            Assert.ThrowsException<NotImplementedException>(() =>
+            Assert.Throws<NotImplementedException>(() =>
             {
-                return _userStore.RemoveLoginAsync(user, "loginProvider", "providerKey", ct);
+                _userStore.RemoveLoginAsync(user, "loginProvider", "providerKey", ct);
             });
         }
     }
