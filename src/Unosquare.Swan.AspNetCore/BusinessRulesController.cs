@@ -1,10 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Linq;
-using System.Reflection;
-
-namespace Unosquare.Swan.AspNetCore
+﻿namespace Unosquare.Swan.AspNetCore
 {
+    using Microsoft.EntityFrameworkCore;
+    using System;
+    using System.Linq;
+    using System.Reflection;
+
     /// <summary>
     /// Represents a Business Rules Controller
     /// </summary>

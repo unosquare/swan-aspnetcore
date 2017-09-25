@@ -43,7 +43,7 @@ namespace Unosquare.Swan.AspNetCore.Test.Mocks
                 PhoneNumberConfirmed = true,
                 PasswordHash = "PasswordHash",
                 TwoFactorEnabled = false
-            }; ;
+            };
         }
     }
 }
