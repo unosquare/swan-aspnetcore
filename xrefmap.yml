@@ -661,11 +661,11 @@ references:
   commentId: Overload:Unosquare.Swan.AspNetCore.BusinessDbContext.SaveChanges
   fullName: Unosquare.Swan.AspNetCore.BusinessDbContext.SaveChanges
   nameWithType: BusinessDbContext.SaveChanges
-- uid: Unosquare.Swan.AspNetCore.BusinessDbContext.SaveChangesAsync(CancellationToken)
+- uid: Unosquare.Swan.AspNetCore.BusinessDbContext.SaveChangesAsync(System.Threading.CancellationToken)
   name: SaveChangesAsync(CancellationToken)
-  href: api/Unosquare.Swan.AspNetCore.BusinessDbContext.html#Unosquare_Swan_AspNetCore_BusinessDbContext_SaveChangesAsync_CancellationToken_
-  commentId: M:Unosquare.Swan.AspNetCore.BusinessDbContext.SaveChangesAsync(CancellationToken)
-  fullName: Unosquare.Swan.AspNetCore.BusinessDbContext.SaveChangesAsync(CancellationToken)
+  href: api/Unosquare.Swan.AspNetCore.BusinessDbContext.html#Unosquare_Swan_AspNetCore_BusinessDbContext_SaveChangesAsync_System_Threading_CancellationToken_
+  commentId: M:Unosquare.Swan.AspNetCore.BusinessDbContext.SaveChangesAsync(System.Threading.CancellationToken)
+  fullName: Unosquare.Swan.AspNetCore.BusinessDbContext.SaveChangesAsync(System.Threading.CancellationToken)
   nameWithType: BusinessDbContext.SaveChangesAsync(CancellationToken)
 - uid: Unosquare.Swan.AspNetCore.BusinessDbContext.SaveChangesAsync*
   name: SaveChangesAsync

@@ -281,13 +281,13 @@ changes to entity instances before saving to the underlying database. This can b
   
   
   <a id="Unosquare_Swan_AspNetCore_BusinessDbContext_SaveChangesAsync_" data-uid="Unosquare.Swan.AspNetCore.BusinessDbContext.SaveChangesAsync*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_BusinessDbContext_SaveChangesAsync_CancellationToken_" data-uid="Unosquare.Swan.AspNetCore.BusinessDbContext.SaveChangesAsync(CancellationToken)">SaveChangesAsync(CancellationToken)</h4>
+  <h4 id="Unosquare_Swan_AspNetCore_BusinessDbContext_SaveChangesAsync_System_Threading_CancellationToken_" data-uid="Unosquare.Swan.AspNetCore.BusinessDbContext.SaveChangesAsync(System.Threading.CancellationToken)">SaveChangesAsync(CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Asynchronously saves all changes made in this context to the database.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Task&lt;int&gt; SaveChangesAsync(CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override Task&lt;int&gt; SaveChangesAsync(CancellationToken cancellationToken = default (CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -300,7 +300,7 @@ changes to entity instances before saving to the underlying database. This can b
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>A <span class="xref">System.Threading.CancellationToken</span> to observe while waiting for the task to complete.</p>
 </td>
@@ -317,14 +317,14 @@ changes to entity instances before saving to the underlying database. This can b
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><p>A task that represents the asynchronous save operation. The task result contains the
 number of state entries written to the database.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="Unosquare_Swan_AspNetCore_BusinessDbContext_SaveChangesAsync_CancellationToken__remarks">Remarks</h5>
+  <h5 id="Unosquare_Swan_AspNetCore_BusinessDbContext_SaveChangesAsync_System_Threading_CancellationToken__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
 This method will automatically call <span class="xref">Microsoft.EntityFrameworkCore.ChangeTracking.ChangeTracker.DetectChanges</span> to discover any
 changes to entity instances before saving to the underlying database. This can be disabled via
