@@ -6,7 +6,7 @@
 
     class BusinessDbContextMock : BusinessDbContext
     {
-        public BusinessDbContextMock(DbContextOptions<BusinessDbContextMock> options, IHttpContextAccessor httpContextAccessor)
+        public BusinessDbContextMock(DbContextOptions<BusinessDbContextMock> options)
             : base(options)
         {
             var auditController = new AuditTrailController<BusinessDbContextMock, AuditTrailMock>(this,

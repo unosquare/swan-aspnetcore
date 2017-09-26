@@ -10,7 +10,6 @@
     class BusinessDbTest
     {
         private readonly DbContextOptions<BusinessDbContextMock> options;
-        private HttpContextAccessor _httpAccessor = new HttpContextAccessor();
 
         public BusinessDbTest()
         {
@@ -22,7 +21,7 @@
         [Test]
         public async Task AddControllerTest()
         {         
-            using (var context = new BusinessDbContextMock(options, _httpAccessor))
+            using (var context = new BusinessDbContextMock(options))
             {
                 var businessController = new BusinessRulesControllerTest(context);
 
@@ -43,7 +42,7 @@
         {
             var businessController = new BusinessRulesControllerTest();
 
-            using (var context = new BusinessDbContextMock(options, _httpAccessor))
+            using (var context = new BusinessDbContextMock(options))
             {
                 var controller = context.ContainsController(businessController);
                 Assert.IsFalse(controller);
@@ -67,7 +66,7 @@
         {
             var product = new ProductMock();
 
-            using (var context = new BusinessDbContextMock(options, _httpAccessor))
+            using (var context = new BusinessDbContextMock(options))
             {
                 var productCount = await context.Products.CountAsync();
 

@@ -46,13 +46,5 @@ namespace Unosquare.Swan.AspNetCore.Test.Mocks
                 TwoFactorEnabled = false
             };
         }
-
-        public ClaimsIdentity GetAdmin()
-        {
-            return new ClaimsIdentity(new Claim[] 
-            {
-                new Claim(ClaimTypes.Name, "Admin")
-            }, "Test");
-        }
     }
 }
