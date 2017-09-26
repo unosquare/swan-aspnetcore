@@ -65,24 +65,20 @@
         [Test]
         public async Task RunBussinesRulesControllerTest()
         {
-            var user = new SampleUser();
+            var product = new ProductMock();
 
             using (var context = new BusinessDbContextMock(options, _httpAccessor))
             {
-                var userCount = await context.Users.CountAsync();
-                var managerCount = await context.Manager.CountAsync();
+                var productCount = await context.Products.CountAsync();
 
-                Assert.AreNotEqual(0, userCount, "Zero user entities");
-                Assert.AreNotEqual(0, managerCount, "Zero manager entities");
+                Assert.AreNotEqual(0, productCount, "Zero user entities");
 
                 var businessController = new BusinessRulesControllerTest(context);
                 businessController.RunBusinessRules();
 
-                userCount = await context.Users.CountAsync();
-                managerCount = await context.Manager.CountAsync();
+                productCount = await context.Products.CountAsync();
 
-                Assert.AreEqual(1, userCount, "One user entity");
-                Assert.AreEqual(1, managerCount, "One manager entity");
+                Assert.AreEqual(1, productCount, "One user entity");
 
                 await context.SaveChangesAsync();
             }

@@ -10,15 +10,14 @@
             : base(options)
         {
             var auditController = new AuditTrailController<BusinessDbContextMock, AuditTrailMock>(this,
-                httpContextAccessor?.HttpContext?.User?.Identity?.Name);
-            auditController.AddTypes(ActionFlags.Create, new[] { typeof(SampleUser) });
+                "Admin");
+            auditController.AddTypes(ActionFlags.Create, new[] { typeof(ProductMock) });
 
             AddController(auditController);
         }
 
         public DbSet<LogEntry> LogEntries { get; set; }
         public DbSet<AuditTrailMock> AuditTrailEntries { get; set; }
-        public DbSet<SampleUser> Users { get; set; }
-        public DbSet<SampleManager> Manager { get; set; }
+        public DbSet<ProductMock> Products { get; set; }
     }
 }

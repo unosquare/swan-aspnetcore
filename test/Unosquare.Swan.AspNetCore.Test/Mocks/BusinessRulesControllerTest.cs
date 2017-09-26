@@ -17,10 +17,8 @@
 
         public void RunBusinessRules()
         {
-            var manager = new SampleManager();
-            var user = new SampleUser();
-            Context.Add(manager);
-            Context.Add(user);
+            var product = new ProductMock().GetProduct();
+            Context.Add(product);
         }
     }
 }

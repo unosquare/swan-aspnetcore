@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Claims;
 using System.Text;
 using Unosquare.Swan.AspNetCore.Models;
 
@@ -44,6 +45,14 @@ namespace Unosquare.Swan.AspNetCore.Test.Mocks
                 PasswordHash = "PasswordHash",
                 TwoFactorEnabled = false
             };
+        }
+
+        public ClaimsIdentity GetAdmin()
+        {
+            return new ClaimsIdentity(new Claim[] 
+            {
+                new Claim(ClaimTypes.Name, "Admin")
+            }, "Test");
         }
     }
 }
