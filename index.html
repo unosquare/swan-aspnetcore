@@ -116,7 +116,8 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
         });
 }
 </code></pre><h3 id="entityframeworklogger">EntityFrameworkLogger</h3>
-<p>Represents a Logger using EntityFramework. Adds an entity framework logger. It will help you log to your Database everything necessary to know what’s going on in your application. This logger is used in the <code>Configure</code> method of your Startup.cs file.</p>
+<p>Represents a Logger using EntityFramework. Adds an entity framework logger. It will help you log to your Database everything necessary to know what’s going on in your application. This logger is used in the <code>Configure</code> method of your Startup.cs file.
+With this you just add your configuration section and then add in the entity framework, your database context and the models that you use for log entries into your database, then you just pass the application services.</p>
 <pre><code class="lang-csharp">public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
 {
     // Log levels set in your configuration
@@ -141,11 +142,12 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
         public DbSet&lt;AuditTrailEntry&gt; AuditTrailEntries { get; set; }
     }
 </code></pre><h3 id="usejsonexceptionhandler">UseJsonExceptionHandler</h3>
-<p>It&#39;s very useful to see exceptions in JSON format. You can use this extension to add a very good way to debug your application, you just need to add this to your application builder in the Configure method of your Startup.cs</p>
+<p>It&#39;s very useful to see exceptions in JSON format. You can use this extension to add a very good way to debug your application, you just need to add this to your application builder in the Configure method of your Startup.cs.
+When an error occurs the exception handles the error and send a response with a 500 status code, or any other acording to the exception type.</p>
 <pre><code class="lang-csharp">// Response an exception as JSON at error
 app.UseJsonExceptionHandler();
 </code></pre><h3 id="usefallback">UseFallback</h3>
-<p>Uses the fallback to redirect everything without extension. When the application encountered something without an extension this will help to redirect to the index page or where ever you define to.</p>
+<p>Uses the fallback to redirect everything without extension. When the application encountered something without an extension this will help to redirect to the index page or where ever you define to. It&#39;s like when a url that is not handled it will automatically redirect to the fallback, the default is index.html.</p>
 <pre><code class="lang-csharp">// Redirect anything without extension to index.html
 app.UseFallback();
 </code></pre></article>
