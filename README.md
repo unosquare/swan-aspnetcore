@@ -67,6 +67,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
 ### EntityFrameworkLogger
 
 Represents a Logger using EntityFramework. Adds an entity framework logger. It will help you log to your Database everything necessary to know what’s going on in your application. This logger is used in the `Configure` method of your Startup.cs file.
+With this you just add your configuration section and then add in the entity framework, your database context and the models that you use for log entries into your database, then you just pass the application services.
 
 ```csharp
 public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
@@ -101,7 +102,8 @@ public class SampleDbContext : BusinessDbContext
 
 ### UseJsonExceptionHandler
 
-It's very useful to see exceptions in JSON format. You can use this extension to add a very good way to debug your application, you just need to add this to your application builder in the Configure method of your Startup.cs
+It's very useful to see exceptions in JSON format. You can use this extension to add a very good way to debug your application, you just need to add this to your application builder in the Configure method of your Startup.cs.
+When an error occurs the exception handles the error and send a response with a 500 status code, or any other acording to the exception type.
 
 ```csharp
 // Response an exception as JSON at error
@@ -110,7 +112,7 @@ app.UseJsonExceptionHandler();
 
 ### UseFallback
 
-Uses the fallback to redirect everything without extension. When the application encountered something without an extension this will help to redirect to the index page or where ever you define to.
+Uses the fallback to redirect everything without extension. When the application encountered something without an extension this will help to redirect to the index page or where ever you define to. It's like when a url that is not handled it will automatically redirect to the fallback, the default is index.html.
 
 ```csharp
 // Redirect anything without extension to index.html
