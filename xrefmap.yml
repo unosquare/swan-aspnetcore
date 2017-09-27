@@ -127,6 +127,36 @@ references:
   fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of T, TEntity).OnEntityUpdated
   nameWithType: AuditTrailController<T, TEntity>.OnEntityUpdated
   nameWithType.vb: AuditTrailController(Of T, TEntity).OnEntityUpdated
+- uid: Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware
+  name: AuthenticateSchemeMiddleware
+  href: api/Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.html
+  commentId: T:Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware
+  fullName: Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware
+  nameWithType: AuthenticateSchemeMiddleware
+- uid: Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.#ctor(RequestDelegate,System.String)
+  name: AuthenticateSchemeMiddleware(RequestDelegate, String)
+  href: api/Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.html#Unosquare_Swan_AspNetCore_AuthenticateSchemeMiddleware__ctor_RequestDelegate_System_String_
+  commentId: M:Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.#ctor(RequestDelegate,System.String)
+  fullName: Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.AuthenticateSchemeMiddleware(RequestDelegate, System.String)
+  nameWithType: AuthenticateSchemeMiddleware.AuthenticateSchemeMiddleware(RequestDelegate, String)
+- uid: Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.#ctor*
+  name: AuthenticateSchemeMiddleware
+  href: api/Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.html#Unosquare_Swan_AspNetCore_AuthenticateSchemeMiddleware__ctor_
+  commentId: Overload:Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.#ctor
+  fullName: Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.AuthenticateSchemeMiddleware
+  nameWithType: AuthenticateSchemeMiddleware.AuthenticateSchemeMiddleware
+- uid: Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.Invoke(HttpContext)
+  name: Invoke(HttpContext)
+  href: api/Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.html#Unosquare_Swan_AspNetCore_AuthenticateSchemeMiddleware_Invoke_HttpContext_
+  commentId: M:Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.Invoke(HttpContext)
+  fullName: Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.Invoke(HttpContext)
+  nameWithType: AuthenticateSchemeMiddleware.Invoke(HttpContext)
+- uid: Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.Invoke*
+  name: Invoke
+  href: api/Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.html#Unosquare_Swan_AspNetCore_AuthenticateSchemeMiddleware_Invoke_
+  commentId: Overload:Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.Invoke
+  fullName: Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.Invoke
+  nameWithType: AuthenticateSchemeMiddleware.Invoke
 - uid: Unosquare.Swan.AspNetCore.BasicRoleStore
   name: BasicRoleStore
   href: api/Unosquare.Swan.AspNetCore.BasicRoleStore.html

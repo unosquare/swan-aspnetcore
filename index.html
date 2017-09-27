@@ -81,9 +81,9 @@
 <pre><code>PM&gt; Install-Package Unosquare.Swan.AspNetCore
 </code></pre><h2 id="use-cases">Use Cases</h2>
 <p>Here we can find very useful code to use in our project configuration. All of this you can use it in your Startup.cs file, see our <a href="https://github.com/unosquare/swan-aspnetcore/tree/master/src/Unosquare.Swan.AspNetCore.Sample">Sample Project</a> for more reference.</p>
-<h3 id="add-bearertokenauthentication-and-use-bearertokenauthentication">Add BearerTokenAuthentication and Use BearerTokenAuthentication</h3>
-<p>Add BearerTokenAuthentication adds the services that are going to be used in your application. This method uses the Jwt schemes and adds a JwtBearer with the Token Validation Parameters that you configure. Jwt stands for <a href="https://jwt.io/introduction/">JSON Web Tokens</a></p>
-<p>Use BearerTokenAuthentication is important because it gives the application the requirements to use authentication and authorization with JWT.</p>
+<h3 id="using-bearer-token-authentication">Using Bearer Token Authentication</h3>
+<p>The extension method AddBearerTokenAuthentication adds the services that are going to be used in your application. This method uses the Jwt schemes and adds a JwtBearer with the Token Validation Parameters that you configure. Jwt stands for <a href="https://jwt.io/introduction/">JSON Web Tokens</a></p>
+<p>The extension method UseBearerTokenAuthentication is important because it gives the application the requirements to use authentication and authorization with JWT.</p>
 <p>With this configuration, you just need to add the data annotation [Authorize] to your API to say that the user needs to be authorized to access that part of your project.</p>
 <p>This two are used together because you need to add the bearer token authentication to the services to use the bearer token authentication in your application. You just need to added in your <code>ConfigureServices</code> and your <code>Configure</code>.</p>
 <pre><code class="lang-csharp">// This method gets called by the runtime. Use this method to add services to the container
@@ -115,8 +115,8 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
             return Task.FromResult(obj);
         });
 }
-</code></pre><h3 id="entityframeworklogger">EntityFrameworkLogger</h3>
-<p>Represents a Logger using EntityFramework. Adds an entity framework logger. It will help you log to your Database everything necessary to know what’s going on in your application. This logger is used in the <code>Configure</code> method of your Startup.cs file.
+</code></pre><h3 id="using-entityframeworklogger">Using EntityFrameworkLogger</h3>
+<p>The EntityFrameworkLogger adds a Logging subsystem using Entity Framework. It will help you log to your Database everything necessary to know what’s going on in your application. This logger is used in the <code>Configure</code> method of your Startup.cs file.
 With this you just add your configuration section and then add in the entity framework, your database context and the models that you use for log entries into your database, then you just pass the application services.</p>
 <pre><code class="lang-csharp">public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
 {
@@ -125,8 +125,17 @@ With this you just add your configuration section and then add in the entity fra
     // Here we add the entity framework with the database and the model to utilize
     loggerFactory.AddEntityFramework&lt;SampleDbContext, Models.LogEntry&gt;(app.ApplicationServices);
 }
+</code></pre><h3 id="using-businessdbcontext">Using BusinessDbContext</h3>
+<p>The BusinessDbContext run business rules when you save changes to the database. It&#39;s helpful because if you want to modify an entity every time you save changes to the database, you can create a controller to do that. Your Db Context must inheritance from the BusinessDbContext in order to have this functionality and then you can add, remove and check for controllers using your context.</p>
+<pre><code class="lang-csharp"> public class SampleDbContext : BusinessDbContext
+    {
+        public SampleDbContext(DbContextOptions&lt;SampleDbContext&gt; options)
+            : base(options)
+        {
+        }
+    }
 </code></pre><h3 id="audittrail">AuditTrail</h3>
-<p><a href="https://github.com/unosquare/ef-enterpriseextensions">Audit Trails</a> is a task to save the changes to any operation perform in a record. In other words, capture what change between any data saving. This operation is important in many system and you can accomplish with these extensions easily. The AuditTrailController can be attached to your BusinessDbContext and setup which Entities will be recorded in the three CRUD actions supported, create, update and delete.</p>
+<p><a href="https://github.com/unosquare/ef-enterpriseextensions">Audit Trails</a> is a business rule to save the changes to any operation perform in a record. In other words, capture what change between any data saving. This operation is important in many system and you can accomplish with these extensions easily. The AuditTrailController can be attached to your BusinessDbContext and setup which Entities will be recorded in the three CRUD actions supported, create, update and delete.</p>
 <pre><code class="lang-csharp">public class SampleDbContext : BusinessDbContext
     {
          public SampleDbContext(DbContextOptions&lt;SampleDbContext&gt; options, IHttpContextAccessor httpContextAccessor)
@@ -143,11 +152,11 @@ With this you just add your configuration section and then add in the entity fra
     }
 </code></pre><h3 id="usejsonexceptionhandler">UseJsonExceptionHandler</h3>
 <p>It&#39;s very useful to see exceptions in JSON format. You can use this extension to add a very good way to debug your application, you just need to add this to your application builder in the Configure method of your Startup.cs.
-When an error occurs the exception handles the error and send a response with a 500 status code, or any other acording to the exception type.</p>
+When an error occurs, the exception handles the error and send a response with a 500-status code, or any other according to the exception type.</p>
 <pre><code class="lang-csharp">// Response an exception as JSON at error
 app.UseJsonExceptionHandler();
 </code></pre><h3 id="usefallback">UseFallback</h3>
-<p>Uses the fallback to redirect everything without extension. When the application encountered something without an extension this will help to redirect to the index page or where ever you define to. It&#39;s like when a url that is not handled it will automatically redirect to the fallback, the default is index.html.</p>
+<p>Uses the fallback to redirect everything without extension. When the application encountered something without an extension this will help to redirect to the index page or where ever you define to. It&#39;s like when a URL that is not handled it will automatically redirect to the fallback, the default is index.html.</p>
 <pre><code class="lang-csharp">// Redirect anything without extension to index.html
 app.UseFallback();
 </code></pre></article>
