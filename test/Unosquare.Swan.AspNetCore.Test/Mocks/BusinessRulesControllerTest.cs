@@ -2,23 +2,17 @@
 {
     using System;
 
-    class BusinessRulesControllerTest : IBusinessRulesController
+    class BusinessRulesControllerTest : BusinessRulesController<BusinessDbContextMock>
     {
-        public BusinessDbContextMock Context { get; protected set; }
-
-        public BusinessRulesControllerTest()
+        public BusinessRulesControllerTest(BusinessDbContextMock instance)
+            : base(instance)
         {
         }
 
-        public BusinessRulesControllerTest(BusinessDbContextMock context)
+        [BusinessRule(typeof(ProductMock), ActionFlags.Create)]
+        public void UpdateProduct(ProductMock product)
         {
-            Context = context;
-        }
-
-        public void RunBusinessRules()
-        {
-            var product = new ProductMock().GetProduct();
-            Context.Add(product);
+            product.Name += " (VALID)";
         }
     }
 }

@@ -19,7 +19,7 @@
         }
 
         [Test]
-        public async Task AddControllerTest()
+        public void ContainsControllerTest()
         {         
             using (var context = new BusinessDbContextMock(options))
             {
@@ -27,43 +27,41 @@
 
                 var controller = context.ContainsController(businessController);
                 Assert.IsFalse(controller);
-
-                context.AddController(businessController);
-
-                controller = context.ContainsController(businessController);
-                Assert.IsTrue(controller);
-
-                await context.SaveChangesAsync();
             }
         }
 
         [Test]
-        public async Task RemoveControllerTest()
-        {
-            var businessController = new BusinessRulesControllerTest();
-
+        public void AddControllerTest()
+        {         
             using (var context = new BusinessDbContextMock(options))
             {
-                var controller = context.ContainsController(businessController);
-                Assert.IsFalse(controller);
-
+                var businessController = new BusinessRulesControllerTest(context);
                 context.AddController(businessController);
 
-                controller = context.ContainsController(businessController);
+                var controller = context.ContainsController(businessController);
                 Assert.IsTrue(controller);
+            }
+        }
 
+        [Test]
+        public void RemoveControllerTest()
+        {
+            using (var context = new BusinessDbContextMock(options))
+            {
+                var businessController = new BusinessRulesControllerTest(context);
+
+                context.AddController(businessController);
                 context.RemoveController(businessController);
 
-                controller = context.ContainsController(businessController);
+                var controller = context.ContainsController(businessController);
                 Assert.IsFalse(controller);
-
-                await context.SaveChangesAsync();
             }
         }
 
         [Test]
         public async Task RunBussinesRulesControllerTest()
         {
+            // TODO: Rewrite test to verify the product new name
             var product = new ProductMock();
 
             using (var context = new BusinessDbContextMock(options))
@@ -73,8 +71,7 @@
                 Assert.AreNotEqual(0, productCount, "Zero user entities");
 
                 var businessController = new BusinessRulesControllerTest(context);
-                businessController.RunBusinessRules();
-
+                
                 productCount = await context.Products.CountAsync();
 
                 Assert.AreEqual(1, productCount, "One user entity");

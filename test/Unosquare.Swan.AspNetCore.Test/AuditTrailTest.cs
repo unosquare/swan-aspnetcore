@@ -3,26 +3,22 @@
     using Microsoft.AspNetCore.Http;
     using Microsoft.EntityFrameworkCore;
     using NUnit.Framework;
+    using System.Linq;
     using System.Threading.Tasks;
     using Unosquare.Swan.AspNetCore.Test.Mocks;
 
     [TestFixture]
     class AuditTrailTest
     {
-        private readonly DbContextOptions<BusinessDbContextMock> options;
-        private HttpContextAccessor _httpAccessor = new HttpContextAccessor();
+        private DbContextOptions<BusinessDbContextMock> options;
         private ProductMock product;
-
-        public AuditTrailTest()
-        {
-            var builder = new DbContextOptionsBuilder<BusinessDbContextMock>()
-                .UseInMemoryDatabase("AuditTestDb");
-            options = builder.Options;
-        }
 
         [SetUp]
         public void SetUp()
         {
+            var builder = new DbContextOptionsBuilder<BusinessDbContextMock>()
+                .UseInMemoryDatabase("AuditTestDb");
+            options = builder.Options;
             product = new ProductMock().GetProduct();
         }
     
@@ -35,8 +31,7 @@
 
                 await context.SaveChangesAsync();
 
-                Assert.IsNotEmpty(context.AuditTrailEntries);
-                Assert.Greater(context.AuditTrailEntries.Local.Count,0);
+                Assert.IsTrue(context.AuditTrailEntries.Any());
             }
         }
 
@@ -53,6 +48,8 @@
                 Assert.Greater(context.AuditTrailEntries.Local.Count, 0);
             }
         }
+
+        // TODO: Retrieve AuditTrail entity and check state
 
         [Test]
         public void UpdatedChangesEntityTest()
