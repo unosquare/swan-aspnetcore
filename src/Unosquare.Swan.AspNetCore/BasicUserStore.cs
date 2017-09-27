@@ -328,7 +328,7 @@
         }
 
         /// <summary>
-        /// Retrieves the associated logins for the specified <param ref="user" />.
+        /// Retrieves the associated logins for the specified <see ref="user" />.
         /// </summary>
         /// <param name="user">The user whose associated logins to retrieve.</param>
         /// <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> used to propagate notifications that the operation should be canceled.</param>
@@ -351,7 +351,7 @@
         /// <returns>
         /// The <see cref="T:System.Threading.Tasks.Task" /> for the asynchronous operation, containing the user, if any which matched the specified login provider and key.
         /// </returns>
-        /// <exception cref="System.NotImplementedException"></exception>
+        /// <exception cref="System.NotImplementedException">Throws NotImplementedException</exception>
         public Task<ApplicationUser> FindByLoginAsync(string loginProvider, string providerKey, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
@@ -366,7 +366,7 @@
         /// <returns>
         /// The <see cref="T:System.Threading.Tasks.Task" /> that represents the asynchronous operation.
         /// </returns>
-        /// <exception cref="System.NotImplementedException"></exception>
+        /// <exception cref="System.NotImplementedException">Throws NotImplementedException</exception>
         public Task AddLoginAsync(ApplicationUser user, UserLoginInfo login, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
@@ -383,7 +383,7 @@
         /// <returns>
         /// The <see cref="T:System.Threading.Tasks.Task" /> that represents the asynchronous operation.
         /// </returns>
-        /// <exception cref="System.NotImplementedException"></exception>
+        /// <exception cref="System.NotImplementedException">Throws NotImplementedException</exception>
         public Task RemoveLoginAsync(ApplicationUser user, string loginProvider, string providerKey, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
@@ -392,6 +392,8 @@
         /// <summary>
         /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
         /// </summary>
-        public void Dispose() { }
+        public void Dispose()
+        {
+        }
     }
 }

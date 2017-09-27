@@ -82,8 +82,7 @@
         public static IApplicationBuilder UseBearerTokenAuthentication(this IApplicationBuilder app,
             TokenValidationParameters validationParameter,
             Func<string, string, string, string, Task<ClaimsIdentity>> identityResolver,
-            Func<ClaimsIdentity, Dictionary<string, object>, Task<Dictionary<string, object>>> bearerTokenResolver =
-                null,
+            Func<ClaimsIdentity, Dictionary<string, object>, Task<Dictionary<string, object>>> bearerTokenResolver = null,
             TimeSpan expiration = default(TimeSpan),
             bool forceHttps = true)
         {
@@ -143,8 +142,10 @@
         /// <summary>
         /// Extension method to add AuditTrail to a DbContext
         /// </summary>
-        /// <param name="context"></param>
-        /// <param name="currentUserId"></param>
+        /// <typeparam name="T">The context</typeparam>
+        /// <typeparam name="TEntity">The type of the entity.</typeparam>
+        /// <param name="context">The Db context</param>
+        /// <param name="currentUserId">The Id of the principal claim</param>
         /// <returns></returns>
         public static IBusinessDbContext UseAuditTrail<T, TEntity>(this IBusinessDbContext context, string currentUserId)
             where T : DbContext
@@ -163,13 +164,16 @@
         public static IServiceCollection AddBearerTokenAuthentication(this IServiceCollection services, TokenValidationParameters validationParameters)
         {
             // Add Authentication services
-            services.AddAuthentication(options => {
+            services.AddAuthentication(options => 
+            {
                 options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             })
+
             // Configure the app to use Jwt Bearer Authentication
-            .AddJwtBearer(options => {
+            .AddJwtBearer(options => 
+            {
                 options.TokenValidationParameters = validationParameters;
             });
 

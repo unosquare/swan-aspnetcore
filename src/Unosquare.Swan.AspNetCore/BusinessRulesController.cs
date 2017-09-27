@@ -46,19 +46,11 @@
     /// <summary>
     /// 
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">The Db context</typeparam>
     /// <seealso cref="Unosquare.Swan.AspNetCore.IBusinessRulesController" />
     public abstract class BusinessRulesController<T> : IBusinessRulesController
         where T : DbContext
     {
-        /// <summary>
-        /// Gets or sets the context.
-        /// </summary>
-        /// <value>
-        /// The context.
-        /// </value>
-        public T Context { get; protected set; }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="BusinessRulesController{T}"/> class.
         /// </summary>
@@ -67,6 +59,14 @@
         {
             Context = context;
         }
+
+        /// <summary>
+        /// Gets or sets the context.
+        /// </summary>
+        /// <value>
+        /// The context.
+        /// </value>
+        public T Context { get; protected set; }
 
         /// <summary>
         /// Runs the business rules.
@@ -87,7 +87,7 @@
         /// Gets the type of the entity.
         /// </summary>
         /// <param name="entity">The entity.</param>
-        /// <returns></returns>
+        /// <returns>The type of the current instance</returns>
         public Type GetEntityType(object entity)
         {
             return entity.GetType();

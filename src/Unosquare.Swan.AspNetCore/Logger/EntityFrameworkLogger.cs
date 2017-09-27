@@ -70,9 +70,9 @@
         private Func<string, LogLevel, bool> GetFilter(IOptions<EntityFrameworkLoggerOptions> options)
         {
             if (options != null)
-                return ((category, level) => GetFilter(options.Value, category, level));
+                return (category, level) => GetFilter(options.Value, category, level);
 
-            return ((category, level) => true);
+            return (category, level) => true;
         }
 
         private static bool GetFilter(EntityFrameworkLoggerOptions options, string category, LogLevel level)
@@ -87,14 +87,13 @@
         /// <summary>
         /// Writes a log entry.
         /// </summary>
-        /// <typeparam name="TState"></typeparam>
+        /// <typeparam name="TState">Entry state</typeparam>
         /// <param name="logLevel">Entry will be written on this level.</param>
         /// <param name="eventId">Id of the event.</param>
         /// <param name="state">The entry to be written. Can be also an object.</param>
         /// <param name="exception">The exception related to this entry.</param>
         /// <param name="formatter">Function to create a <c>string</c> message of the <paramref name="state" /> and <paramref name="exception" />.</param>
-        public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception,
-            Func<TState, Exception, string> formatter)
+        public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
         {
             if (_name.StartsWith("Microsoft.EntityFrameworkCore") || IsEnabled(logLevel) == false) return;
 
@@ -140,6 +139,7 @@
                 {
                     log.HostAddress = "Disposed";
                 }
+
                 log.Url = httpContext.Request.Path;
             }
 
@@ -158,7 +158,7 @@
         /// <summary>
         /// Begins a logical operation scope.
         /// </summary>
-        /// <typeparam name="TState"></typeparam>
+        /// <typeparam name="TState">Entry state</typeparam>
         /// <param name="state">The identifier for the scope.</param>
         /// <returns>
         /// An IDisposable that ends the logical operation scope on dispose.

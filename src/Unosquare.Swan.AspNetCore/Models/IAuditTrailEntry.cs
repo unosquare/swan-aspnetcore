@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Unosquare.Swan.AspNetCore.Models
+﻿namespace Unosquare.Swan.AspNetCore.Models
 {
+    using System;
+
     /// <summary>
     /// Represents an AuditTrail Entry
     /// </summary>
@@ -17,6 +14,7 @@ namespace Unosquare.Swan.AspNetCore.Models
         /// The user identifier.
         /// </value>
         string UserId { get; set; }
+        
         /// <summary>
         /// Gets or sets the name of the table.
         /// </summary>
@@ -24,6 +22,7 @@ namespace Unosquare.Swan.AspNetCore.Models
         /// The name of the table.
         /// </value>
         string TableName { get; set; }
+
         /// <summary>
         /// Gets or sets the action.
         /// </summary>
@@ -31,6 +30,7 @@ namespace Unosquare.Swan.AspNetCore.Models
         /// The action.
         /// </value>
         int Action { get; set; }
+
         /// <summary>
         /// Gets or sets the json body.
         /// </summary>
@@ -38,6 +38,7 @@ namespace Unosquare.Swan.AspNetCore.Models
         /// The json body.
         /// </value>
         string JsonBody { get; set; }
+
         /// <summary>
         /// Gets or sets the date created.
         /// </summary>

@@ -1,24 +1,35 @@
-﻿using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Unosquare.Swan.AspNetCore
+﻿namespace Unosquare.Swan.AspNetCore
 {
-    class AuthenticateSchemeMiddleware
+    using Microsoft.AspNetCore.Authentication;
+    using Microsoft.AspNetCore.Http;
+    using System;
+    using System.Threading.Tasks;
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public class AuthenticateSchemeMiddleware
     {
         private readonly RequestDelegate _next;
         private readonly string _scheme;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AuthenticateSchemeMiddleware"/> class.
+        /// </summary>
+        /// <param name="next">The next.</param>
+        /// <param name="scheme">The scheme.</param>
+        /// <exception cref="ArgumentNullException">scheme</exception>
         public AuthenticateSchemeMiddleware(RequestDelegate next, string scheme)
         {
             _next = next;
             _scheme = scheme ?? throw new ArgumentNullException(nameof(scheme));
         }
 
+        /// <summary>
+        /// Invokes the specified HTTP context.
+        /// </summary>
+        /// <param name="httpContext">The HTTP context.</param>
+        /// <returns></returns>
         public async Task Invoke(HttpContext httpContext)
         {
             var result = await httpContext.AuthenticateAsync(_scheme);

@@ -151,7 +151,7 @@
                     new Claim(JwtRegisteredClaimNames.Iat, now.ToUnixEpochDate().ToString(), ClaimValueTypes.Integer64)
                 });
 
-                //Add claim role
+                // Add claim role
                 var additionalClaims = await _options.ClaimResolver(identity);
 
                 if (additionalClaims != null) claims.AddRange(additionalClaims);
@@ -234,7 +234,7 @@
         /// </summary>
         /// <param name="description">The description.</param>
         /// <param name="error">The error.</param>
-        /// <returns></returns>
+        /// <returns>The error in JSON format</returns>
         private static string SerializeError(string description, string error = "invalid_grant")
         {
             return Json.Serialize(new

@@ -1,6 +1,5 @@
 ﻿namespace Unosquare.Swan.AspNetCore.Test
 {
-    using Microsoft.AspNetCore.Http;
     using Microsoft.EntityFrameworkCore;
     using NUnit.Framework;
     using System.Linq;
@@ -12,6 +11,7 @@
     {
         private DbContextOptions<BusinessDbContextMock> options;
         private ProductMock product;
+        int count;
 
         [SetUp]
         public void SetUp()
@@ -28,10 +28,15 @@
             using (var context = new BusinessDbContextMock(options))
             {
                 context.Products.Add(product);
-
                 await context.SaveChangesAsync();
+                count++;
+
+                var auditTrail = context.AuditTrailEntries.Where(x => x.UserId == "Admin");
+                var action = auditTrail.FirstOrDefault(x => x.AuditId == count);
 
                 Assert.IsTrue(context.AuditTrailEntries.Any());
+                Assert.AreEqual(count, auditTrail.Count());
+                Assert.AreEqual(1, action.Action, "Where 1 means Create");
             }
         }
 
@@ -41,42 +46,37 @@
             using (var context = new BusinessDbContextMock(options))
             {
                 context.Products.Add(product);
-
                 context.SaveChanges();
+                count++;
 
-                Assert.IsNotEmpty(context.AuditTrailEntries);
-                Assert.Greater(context.AuditTrailEntries.Local.Count, 0);
+                var auditTrail = context.AuditTrailEntries.Where(x => x.UserId == "Admin");
+                var action = auditTrail.FirstOrDefault(x => x.AuditId == count);
+
+                Assert.IsTrue(context.AuditTrailEntries.Any());
+                Assert.AreEqual(count, auditTrail.Count());
+                Assert.AreEqual(1, action.Action, "Where 1 means Create");
             }
         }
-
-        // TODO: Retrieve AuditTrail entity and check state
 
         [Test]
         public void UpdatedChangesEntityTest()
         {
-            var newProductName = "New Product";
             using (var context = new BusinessDbContextMock(options))
             {
                 context.Products.Add(product);
-
                 context.SaveChanges();
+                count++;
 
-                var findProduct = context.Products.Find(product.ProductID);
-
-                Assert.IsNotEmpty(context.AuditTrailEntries);
-                Assert.AreEqual(product, findProduct);
-                Assert.Greater(context.AuditTrailEntries.Local.Count, 0);
-
-                product.Name = newProductName;
                 context.Update(product);
-
                 context.SaveChanges();
+                count++;
 
-                findProduct = context.Products.Find(product.ProductID);
+                var auditTrail = context.AuditTrailEntries.Where(x => x.UserId == "Admin");
+                var action = auditTrail.FirstOrDefault(x => x.AuditId == count);
 
-                Assert.IsNotEmpty(context.AuditTrailEntries);
-                Assert.AreEqual(newProductName, findProduct.Name);
-                Assert.Greater(context.AuditTrailEntries.Local.Count, 0);
+                Assert.IsTrue(context.AuditTrailEntries.Any());
+                Assert.AreEqual(count, auditTrail.Count());
+                Assert.AreEqual(2, action.Action, "Where 2 means Update");
             }
         }
 
@@ -86,24 +86,19 @@
             using (var context = new BusinessDbContextMock(options))
             {
                 context.Products.Add(product);
-
                 context.SaveChanges();
-
-                var findProduct = context.Products.Find(product.ProductID);
-
-                Assert.IsNotEmpty(context.AuditTrailEntries);
-                Assert.AreEqual(product, findProduct);
-                Assert.Greater(context.AuditTrailEntries.Local.Count, 0);
+                count++;
 
                 context.Remove(product);
-
                 context.SaveChanges();
+                count++;
 
-                findProduct = context.Products.Find(product.ProductID);
+                var auditTrail = context.AuditTrailEntries.Where(x => x.UserId == "Admin");
+                var action = auditTrail.FirstOrDefault(x => x.AuditId == count);
 
-                Assert.IsNotEmpty(context.AuditTrailEntries);
-                Assert.IsNull(findProduct);
-                Assert.Greater(context.AuditTrailEntries.Local.Count, 0);
+                Assert.IsTrue(context.AuditTrailEntries.Any());
+                Assert.AreEqual(count, auditTrail.Count());
+                Assert.AreEqual(3, action.Action, "Where 3 means Delete");
             }
         }
     }

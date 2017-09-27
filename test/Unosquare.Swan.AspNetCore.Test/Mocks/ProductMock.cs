@@ -9,6 +9,7 @@
         public int ProductID { get; set; }
 
         public string Name { get; set; }
+        public string ActionFlag { get; set; }
 
         private readonly Random rnd = new Random();
 
@@ -18,7 +19,8 @@
             return new ProductMock()
             {
                 ProductID = r,
-                Name = "Product" + r
+                Name = "Product" + r,
+                ActionFlag = ""
             };
         }
     }

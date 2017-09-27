@@ -34,7 +34,7 @@
         /// Creates the logger.
         /// </summary>
         /// <param name="name">The name.</param>
-        /// <returns></returns>
+        /// <returns>Instance of EntityFrameworkLogger</returns>
         public ILogger CreateLogger(string name)
         {
             return new EntityFrameworkLogger<TDbContext, TLog>(name, _filter, _serviceProvider);
@@ -43,7 +43,9 @@
         /// <summary>
         /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
         /// </summary>
-        public void Dispose() { }
+        public void Dispose()
+        {
+        }
     }
 
     /// <summary>
