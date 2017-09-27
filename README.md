@@ -66,7 +66,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
 
 ### Using EntityFrameworkLogger
 
-The EntityFrameworkLogger adds a Logging subsystem using Entity Framework. It will help you log to your Database everything necessary to know what’s going on in your application. This logger is used in the `Configure` method of your Startup.cs file.
+The EntityFrameworkLogger represents a Logger based on Entity Framework and adds a Logging subsystem. It will help you log to your Database everything necessary to know what’s going on in your application. This logger is used in the `Configure` method of your Startup.cs file.
 With this you just add your configuration section and then add in the entity framework, your database context and the models that you use for log entries into your database, then you just pass the application services.
 
 ```csharp
@@ -113,8 +113,9 @@ public class SampleDbContext : BusinessDbContext
         public DbSet<AuditTrailEntry> AuditTrailEntries { get; set; }
     }
 ```
+### Additional Extension Methods
 
-### UseJsonExceptionHandler
+#### The JsonExceptionHandler
 
 It's very useful to see exceptions in JSON format. You can use this extension to add a very good way to debug your application, you just need to add this to your application builder in the Configure method of your Startup.cs.
 When an error occurs, the exception handles the error and send a response with a 500-status code, or any other according to the exception type.
@@ -124,7 +125,7 @@ When an error occurs, the exception handles the error and send a response with a
 app.UseJsonExceptionHandler();
 ```
 
-### UseFallback
+#### The Fallback
 
 Uses the fallback to redirect everything without extension. When the application encountered something without an extension this will help to redirect to the index page or where ever you define to. It's like when a URL that is not handled it will automatically redirect to the fallback, the default is index.html.
 
