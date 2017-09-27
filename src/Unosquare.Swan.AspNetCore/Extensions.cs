@@ -33,7 +33,7 @@
         /// Uses the json exception handler.
         /// </summary>
         /// <param name="app">The application.</param>
-        /// <returns></returns>
+        /// <returns>The exception handler</returns>
         public static IApplicationBuilder UseJsonExceptionHandler(this IApplicationBuilder app)
         {
             return app.UseExceptionHandler(errorApp =>
@@ -56,7 +56,7 @@
         /// <param name="factory">The factory.</param>
         /// <param name="serviceProvider">The service provider.</param>
         /// <param name="filter">The filter.</param>
-        /// <returns></returns>
+        /// <returns>The logger factory</returns>
         /// <exception cref="ArgumentNullException">factory</exception>
         public static ILoggerFactory AddEntityFramework<TDbContext, TLog>(this ILoggerFactory factory, IServiceProvider serviceProvider, Func<string, LogLevel, bool> filter = null)
             where TDbContext : DbContext
@@ -78,7 +78,7 @@
         /// <param name="bearerTokenResolver">The bearer token resolver.</param>
         /// <param name="expiration">The expiration.</param>
         /// <param name="forceHttps">if set to <c>true</c> [force HTTPS].</param>
-        /// <returns></returns>
+        /// <returns>The application build with bearer token authentication</returns>
         public static IApplicationBuilder UseBearerTokenAuthentication(this IApplicationBuilder app,
             TokenValidationParameters validationParameter,
             Func<string, string, string, string, Task<ClaimsIdentity>> identityResolver,
@@ -117,7 +117,7 @@
         /// <param name="app">The application.</param>
         /// <param name="fallbackPath">The fallback path.</param>
         /// <param name="ignoreCheck">The ignore check.</param>
-        /// <returns></returns>
+        /// <returns>The application builder with the fallback</returns>
         public static IApplicationBuilder UseFallback(this IApplicationBuilder app, string fallbackPath = "/index.html", Func<PathString, bool> ignoreCheck = null)
         {
             if (ignoreCheck == null)
@@ -146,7 +146,7 @@
         /// <typeparam name="TEntity">The type of the entity.</typeparam>
         /// <param name="context">The Db context</param>
         /// <param name="currentUserId">The Id of the principal claim</param>
-        /// <returns></returns>
+        /// <returns>The Db context with the audit controller</returns>
         public static IBusinessDbContext UseAuditTrail<T, TEntity>(this IBusinessDbContext context, string currentUserId)
             where T : DbContext
         {
@@ -160,7 +160,7 @@
         /// </summary>
         /// <param name="services">The services.</param>
         /// <param name="validationParameters">The validation parameters.</param>
-        /// <returns></returns>
+        /// <returns>The service with bearer token authentication</returns>
         public static IServiceCollection AddBearerTokenAuthentication(this IServiceCollection services, TokenValidationParameters validationParameters)
         {
             // Add Authentication services

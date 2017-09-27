@@ -43,7 +43,7 @@
         /// Invokes the specified context.
         /// </summary>
         /// <param name="context">The context.</param>
-        /// <returns></returns>
+        /// <returns>The token to the specific context</returns>
         public Task Invoke(HttpContext context)
         {
             // Check if we are getting a new token

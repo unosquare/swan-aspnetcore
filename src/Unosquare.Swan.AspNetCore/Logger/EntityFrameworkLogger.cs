@@ -22,9 +22,9 @@
         where TLog : LogEntry, new()
         where TDbContext : DbContext
     {
-        readonly string _name;
-        readonly Func<string, LogLevel, bool> _filter;
-        readonly IServiceProvider _services;
+        private readonly string _name;
+        private readonly Func<string, LogLevel, bool> _filter;
+        private readonly IServiceProvider _services;
         private readonly ConcurrentQueue<TLog> _entryQueue = new ConcurrentQueue<TLog>();
 
         /// <summary>

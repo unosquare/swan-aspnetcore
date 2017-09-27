@@ -2,26 +2,24 @@
 {
     using Microsoft.EntityFrameworkCore;
     using NUnit.Framework;
-    using System.Linq;
     using System.Threading.Tasks;
     using Unosquare.Swan.AspNetCore.Test.Mocks;
 
     [TestFixture]
     class BusinessDbTest
     {
-        private readonly DbContextOptions<BusinessDbContextMock> options;
-
-        public BusinessDbTest()
+        private BusinessDbContextMock SetupDatabase(string name)
         {
             var builder = new DbContextOptionsBuilder<BusinessDbContextMock>()
-                .UseInMemoryDatabase("TestDb");
-            options = builder.Options;
+               .UseInMemoryDatabase(name);
+            var options = builder.Options;
+            return new BusinessDbContextMock(options);
         }
 
         [Test]
         public void ContainsControllerTest()
-        {         
-            using (var context = new BusinessDbContextMock(options))
+        {
+            using (var context = SetupDatabase(nameof(ContainsControllerTest)))
             {
                 var businessController = new BusinessRulesControllerTest(context);
 
@@ -32,8 +30,8 @@
 
         [Test]
         public void AddControllerTest()
-        {         
-            using (var context = new BusinessDbContextMock(options))
+        {
+            using (var context = SetupDatabase(nameof(ContainsControllerTest)))
             {
                 var businessController = new BusinessRulesControllerTest(context);
                 context.AddController(businessController);
@@ -46,7 +44,7 @@
         [Test]
         public void RemoveControllerTest()
         {
-            using (var context = new BusinessDbContextMock(options))
+            using (var context = SetupDatabase(nameof(ContainsControllerTest)))
             {
                 var businessController = new BusinessRulesControllerTest(context);
 
@@ -63,7 +61,7 @@
         {
             var product = new ProductMock().GetProduct();
 
-            using (var context = new BusinessDbContextMock(options))
+            using (var context = SetupDatabase(nameof(ContainsControllerTest)))
             {
                 var businessController = new BusinessRulesControllerTest(context);
 
@@ -81,7 +79,7 @@
         {
             var product = new ProductMock().GetProduct();
 
-            using (var context = new BusinessDbContextMock(options))
+            using (var context = SetupDatabase(nameof(ContainsControllerTest)))
             {
                 var businessController = new BusinessRulesControllerTest(context);
 
@@ -102,7 +100,7 @@
         {
             var product = new ProductMock().GetProduct();
 
-            using (var context = new BusinessDbContextMock(options))
+            using (var context = SetupDatabase(nameof(ContainsControllerTest)))
             {
                 var businessController = new BusinessRulesControllerTest(context);
 

@@ -9,96 +9,89 @@
     [TestFixture]
     class AuditTrailTest
     {
-        private DbContextOptions<BusinessDbContextMock> options;
         private ProductMock product;
-        int count;
+
+        private BusinessDbContextMock SetupDatabase(string name)
+        {
+            var builder = new DbContextOptionsBuilder<BusinessDbContextMock>()
+               .UseInMemoryDatabase(name);
+            var options = builder.Options;
+            return new BusinessDbContextMock(options);
+        }
 
         [SetUp]
         public void SetUp()
         {
-            var builder = new DbContextOptionsBuilder<BusinessDbContextMock>()
-                .UseInMemoryDatabase("AuditTestDb");
-            options = builder.Options;
             product = new ProductMock().GetProduct();
         }
-    
-        [Test]
-        public async Task SaveChangesAsyncEntityTest()
-        {
-            using (var context = new BusinessDbContextMock(options))
-            {
-                context.Products.Add(product);
-                await context.SaveChangesAsync();
-                count++;
 
-                var auditTrail = context.AuditTrailEntries.Where(x => x.UserId == "Admin");
-                var action = auditTrail.FirstOrDefault(x => x.AuditId == count);
+        [Test]
+        public async Task SaveChangesEntityTestAsync()
+        {
+            using (var context = SetupDatabase(nameof(SaveChangesEntityTestAsync)))
+            {
+                context.Add(product);
+                await context.SaveChangesAsync();
+
+                var audit = context.AuditTrailEntries.Last();
 
                 Assert.IsTrue(context.AuditTrailEntries.Any());
-                Assert.AreEqual(count, auditTrail.Count());
-                Assert.AreEqual(1, action.Action, "Where 1 means Create");
+                Assert.AreEqual(1, audit.Action, "Where 1 means Create");
             }
         }
 
         [Test]
         public void SaveChangesEntityTest()
         {
-            using (var context = new BusinessDbContextMock(options))
+            var options = SetupDatabase(nameof(SaveChangesEntityTest));
+            using (var context = options)
             {
-                context.Products.Add(product);
+            
+                context.Add(product);
                 context.SaveChanges();
-                count++;
 
-                var auditTrail = context.AuditTrailEntries.Where(x => x.UserId == "Admin");
-                var action = auditTrail.FirstOrDefault(x => x.AuditId == count);
+                var audit = context.AuditTrailEntries.Last();
 
                 Assert.IsTrue(context.AuditTrailEntries.Any());
-                Assert.AreEqual(count, auditTrail.Count());
-                Assert.AreEqual(1, action.Action, "Where 1 means Create");
+                Assert.AreEqual(1, audit.Action, "Where 1 means Create");
             }
         }
 
         [Test]
         public void UpdatedChangesEntityTest()
         {
-            using (var context = new BusinessDbContextMock(options))
+            var options = SetupDatabase(nameof(UpdatedChangesEntityTest));
+            using (var context = options)
             {
-                context.Products.Add(product);
+                context.Add(product);
                 context.SaveChanges();
-                count++;
 
                 context.Update(product);
                 context.SaveChanges();
-                count++;
 
-                var auditTrail = context.AuditTrailEntries.Where(x => x.UserId == "Admin");
-                var action = auditTrail.FirstOrDefault(x => x.AuditId == count);
+                var audit = context.AuditTrailEntries.Last();
 
                 Assert.IsTrue(context.AuditTrailEntries.Any());
-                Assert.AreEqual(count, auditTrail.Count());
-                Assert.AreEqual(2, action.Action, "Where 2 means Update");
+                Assert.AreEqual(2, audit.Action, "Where 2 means Update");
             }
         }
 
         [Test]
         public void DeleteChangesEntityTest()
         {
-            using (var context = new BusinessDbContextMock(options))
+            var options = SetupDatabase(nameof(DeleteChangesEntityTest));
+            using (var context = options)
             {
-                context.Products.Add(product);
+                context.Add(product);
                 context.SaveChanges();
-                count++;
 
                 context.Remove(product);
                 context.SaveChanges();
-                count++;
 
-                var auditTrail = context.AuditTrailEntries.Where(x => x.UserId == "Admin");
-                var action = auditTrail.FirstOrDefault(x => x.AuditId == count);
+                var audit = context.AuditTrailEntries.Last();
 
                 Assert.IsTrue(context.AuditTrailEntries.Any());
-                Assert.AreEqual(count, auditTrail.Count());
-                Assert.AreEqual(3, action.Action, "Where 3 means Delete");
+                Assert.AreEqual(3, audit.Action, "Where 3 means Delete");
             }
         }
     }

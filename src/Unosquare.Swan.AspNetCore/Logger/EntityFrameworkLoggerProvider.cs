@@ -16,8 +16,8 @@
         where TLog : LogEntry, new()
         where TDbContext : DbContext
     {
-        readonly Func<string, LogLevel, bool> _filter;
-        readonly IServiceProvider _serviceProvider;
+        private readonly Func<string, LogLevel, bool> _filter;
+        private readonly IServiceProvider _serviceProvider;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="EntityFrameworkLoggerProvider{TDbContext, TLog}"/> class.

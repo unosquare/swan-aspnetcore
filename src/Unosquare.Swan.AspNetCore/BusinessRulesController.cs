@@ -44,7 +44,7 @@
     }
 
     /// <summary>
-    /// 
+    /// Represent the controller of the business rules
     /// </summary>
     /// <typeparam name="T">The Db context</typeparam>
     /// <seealso cref="Unosquare.Swan.AspNetCore.IBusinessRulesController" />

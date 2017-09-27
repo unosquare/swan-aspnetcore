@@ -6,7 +6,7 @@
     using System.Threading.Tasks;
 
     /// <summary>
-    /// 
+    /// Represents the authenticate scheme to the middleware 
     /// </summary>
     public class AuthenticateSchemeMiddleware
     {
@@ -29,7 +29,7 @@
         /// Invokes the specified HTTP context.
         /// </summary>
         /// <param name="httpContext">The HTTP context.</param>
-        /// <returns></returns>
+        /// <returns>The httpcontext with the authenticate scheme</returns>
         public async Task Invoke(HttpContext httpContext)
         {
             var result = await httpContext.AuthenticateAsync(_scheme);
