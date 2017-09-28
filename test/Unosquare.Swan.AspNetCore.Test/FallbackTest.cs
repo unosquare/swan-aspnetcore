@@ -3,7 +3,6 @@
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.TestHost;
     using NUnit.Framework;
-    using System.IO;
     using System.Net;
     using System.Net.Http;
     using System.Threading.Tasks;
@@ -17,7 +16,6 @@
         public FallbackTest()
         {
             _server = new TestServer(new WebHostBuilder()
-                .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseStartup<StartupFallbackMock>());
             _client = _server.CreateClient();
         }
