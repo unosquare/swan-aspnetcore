@@ -6,6 +6,7 @@
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.DependencyInjection.Extensions;
+    using Microsoft.Extensions.Logging;
     using NUnit.Framework;
     using System.Linq;
     using System.Net.Http;
@@ -16,6 +17,7 @@
     {
         private readonly TestServer _server;
         private readonly HttpClient _client;
+        private ILoggerFactory loggerFactory;
 
         private BusinessDbContextMock SetupDatabase(string name)
         {
@@ -27,11 +29,16 @@
 
         public EFLoggerTests()
         {
+            // TODO: use loggerFactory
+            loggerFactory = new LoggerFactory();
             _server = new TestServer(new WebHostBuilder()
-                .UseStartup<StartupEFLoggerMock>()
+                .Configure(app =>
+               {
+                   loggerFactory.AddEntityFramework<BusinessDbContextMock, Models.LogEntry>(app.ApplicationServices);
+               })
                 .ConfigureServices( services => 
                 {
-                    services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();                    
+                    services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
                     services.AddEntityFrameworkInMemoryDatabase();
                 }));
             _client = _server.CreateClient();
