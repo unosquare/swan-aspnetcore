@@ -43,8 +43,7 @@
         [Test]
         public void SaveChangesEntityTest()
         {
-            var options = SetupDatabase(nameof(SaveChangesEntityTest));
-            using (var context = options)
+            using (var context = SetupDatabase(nameof(SaveChangesEntityTest)))
             {
             
                 context.Add(product);
@@ -60,8 +59,7 @@
         [Test]
         public void UpdatedChangesEntityTest()
         {
-            var options = SetupDatabase(nameof(UpdatedChangesEntityTest));
-            using (var context = options)
+            using (var context = SetupDatabase(nameof(UpdatedChangesEntityTest)))
             {
                 context.Add(product);
                 context.SaveChanges();
@@ -79,8 +77,7 @@
         [Test]
         public void DeleteChangesEntityTest()
         {
-            var options = SetupDatabase(nameof(DeleteChangesEntityTest));
-            using (var context = options)
+            using (var context = SetupDatabase(nameof(DeleteChangesEntityTest)))
             {
                 context.Add(product);
                 context.SaveChanges();
