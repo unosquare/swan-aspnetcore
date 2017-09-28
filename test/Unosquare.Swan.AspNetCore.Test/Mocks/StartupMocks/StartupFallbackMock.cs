@@ -23,7 +23,7 @@ namespace Unosquare.Swan.AspNetCore.Test.Mocks.StartupMocks
                         await context.Response.WriteAsync("Products!!");
                         break;
                     case "/":
-                        await context.Response.WriteAsync("Fallback!!");
+                        await context.Response.WriteAsync("Root!!");
                         break;
                     default:
                         context.Response.StatusCode = (int)HttpStatusCode.NotFound;

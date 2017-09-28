@@ -31,7 +31,7 @@
             var responseString = await response.Content.ReadAsStringAsync();
 
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
-            Assert.AreEqual("Fallback!!", responseString);
+            Assert.AreEqual("Root!!", responseString);
         }
 
         [Test]
@@ -54,7 +54,7 @@
             var responseString = await response.Content.ReadAsStringAsync();
 
             Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);
-            Assert.AreEqual("Fallback!!", responseString, "Redirect to the fallback");
+            Assert.AreEqual("Root!!", responseString, "Redirect to the fallback");
         }
     }
 }
