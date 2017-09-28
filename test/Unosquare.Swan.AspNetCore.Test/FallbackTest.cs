@@ -49,13 +49,12 @@
         [Test]
         public async Task FallbackValuesRouteTest()
         {
-            var response = await _client.GetAsync("/api/values");
-            response.EnsureSuccessStatusCode();
+            var response = await _client.GetAsync("/fallback");
 
             var responseString = await response.Content.ReadAsStringAsync();
 
-            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
-            Assert.AreEqual("Fallback!!", responseString, "There is no values api");
+            Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);
+            Assert.AreEqual("Fallback!!", responseString, "Redirect to the fallback");
         }
     }
 }

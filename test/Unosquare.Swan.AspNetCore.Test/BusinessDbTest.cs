@@ -31,7 +31,7 @@
         [Test]
         public void AddControllerTest()
         {
-            using (var context = SetupDatabase(nameof(ContainsControllerTest)))
+            using (var context = SetupDatabase(nameof(AddControllerTest)))
             {
                 var businessController = new BusinessRulesControllerTest(context);
                 context.AddController(businessController);
@@ -44,7 +44,7 @@
         [Test]
         public void RemoveControllerTest()
         {
-            using (var context = SetupDatabase(nameof(ContainsControllerTest)))
+            using (var context = SetupDatabase(nameof(RemoveControllerTest)))
             {
                 var businessController = new BusinessRulesControllerTest(context);
 
@@ -61,7 +61,7 @@
         {
             var product = new ProductMock().GetProduct();
 
-            using (var context = SetupDatabase(nameof(ContainsControllerTest)))
+            using (var context = SetupDatabase(nameof(CreateEntityControllerTest)))
             {
                 var businessController = new BusinessRulesControllerTest(context);
 
@@ -79,7 +79,7 @@
         {
             var product = new ProductMock().GetProduct();
 
-            using (var context = SetupDatabase(nameof(ContainsControllerTest)))
+            using (var context = SetupDatabase(nameof(UpdateEntityControllerTest)))
             {
                 var businessController = new BusinessRulesControllerTest(context);
 
@@ -100,7 +100,7 @@
         {
             var product = new ProductMock().GetProduct();
 
-            using (var context = SetupDatabase(nameof(ContainsControllerTest)))
+            using (var context = SetupDatabase(nameof(DeleteEntityControllerTest)))
             {
                 var businessController = new BusinessRulesControllerTest(context);
 

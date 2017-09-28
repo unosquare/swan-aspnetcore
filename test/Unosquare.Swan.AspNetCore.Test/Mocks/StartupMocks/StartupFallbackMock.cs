@@ -7,6 +7,7 @@ namespace Unosquare.Swan.AspNetCore.Test.Mocks.StartupMocks
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Logging;
+    using System.Net;
 
     class StartupFallbackMock
     {
@@ -21,8 +22,11 @@ namespace Unosquare.Swan.AspNetCore.Test.Mocks.StartupMocks
                     case "/api/products":
                         await context.Response.WriteAsync("Products!!");
                         break;
-                    default:
+                    case "/":
                         await context.Response.WriteAsync("Fallback!!");
+                        break;
+                    default:
+                        context.Response.StatusCode = (int)HttpStatusCode.NotFound;
                         break;
                 }
             });
