@@ -6,19 +6,17 @@
     public class ProductMock
     {
         [Key]
-        public int ProductID { get; set; }
+        public int ProductId { get; set; }
 
         public string Name { get; set; }
         public string ActionFlag { get; set; }
-
-        private readonly Random rnd = new Random();
-
-        public ProductMock GetProduct()
+        
+        public static ProductMock GetProduct()
         {
-            var r = rnd.Next(0,100);
+            var r = new Random().Next(0,100);
             return new ProductMock()
             {
-                ProductID = r,
+                ProductId = r,
                 Name = "Product" + r,
                 ActionFlag = ""
             };

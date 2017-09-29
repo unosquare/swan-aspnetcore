@@ -2,7 +2,7 @@
 {
     using System;
     using System.ComponentModel.DataAnnotations;
-    using Unosquare.Swan.AspNetCore.Models;
+    using Models;
 
     public class AuditTrailMock : IAuditTrailEntry
     {

@@ -3,7 +3,7 @@
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.TestHost;
-    using Swan.Formatters;
+    using Formatters;
     using NUnit.Framework;
     using System.Net;
     using System.Net.Http;

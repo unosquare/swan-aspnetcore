@@ -3,7 +3,7 @@
     using Microsoft.EntityFrameworkCore;
     using NUnit.Framework;
     using System.Threading.Tasks;
-    using Unosquare.Swan.AspNetCore.Test.Mocks;
+    using Mocks;
 
     [TestFixture]
     class BusinessDbTest
@@ -59,7 +59,7 @@
         [Test]
         public async Task CreateEntityControllerTest()
         {
-            var product = new ProductMock().GetProduct();
+            var product = ProductMock.GetProduct();
 
             using (var context = SetupDatabase(nameof(CreateEntityControllerTest)))
             {
@@ -77,7 +77,7 @@
         [Test]
         public async Task UpdateEntityControllerTest()
         {
-            var product = new ProductMock().GetProduct();
+            var product = ProductMock.GetProduct();
 
             using (var context = SetupDatabase(nameof(UpdateEntityControllerTest)))
             {
@@ -98,7 +98,7 @@
         [Test]
         public async Task DeleteEntityControllerTest()
         {
-            var product = new ProductMock().GetProduct();
+            var product = ProductMock.GetProduct();
 
             using (var context = SetupDatabase(nameof(DeleteEntityControllerTest)))
             {

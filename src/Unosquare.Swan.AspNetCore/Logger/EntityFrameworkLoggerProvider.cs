@@ -36,9 +36,7 @@
         /// <param name="name">The name.</param>
         /// <returns>Instance of EntityFrameworkLogger</returns>
         public ILogger CreateLogger(string name)
-        {
-            return new EntityFrameworkLogger<TDbContext, TLog>(name, _filter, _serviceProvider);
-        }
+            => new EntityFrameworkLogger<TDbContext, TLog>(name, _filter, _serviceProvider);
 
         /// <summary>
         /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.

@@ -6,7 +6,7 @@
     using System.Net;
     using System.Net.Http;
     using System.Threading.Tasks;
-    using Unosquare.Swan.AspNetCore.Test.Mocks.StartupMocks;
+    using Mocks.StartupMocks;
 
     class FallbackTest
     {

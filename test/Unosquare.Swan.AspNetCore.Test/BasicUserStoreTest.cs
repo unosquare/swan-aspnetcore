@@ -6,8 +6,8 @@
     using System.Collections.Generic;
     using System.Threading;
     using System.Threading.Tasks;
-    using Unosquare.Swan.AspNetCore.Models;
-    using Unosquare.Swan.AspNetCore.Test.Mocks;
+    using Models;
+    using Mocks;
 
     [TestFixture]
     public class BasicUserStoreTest

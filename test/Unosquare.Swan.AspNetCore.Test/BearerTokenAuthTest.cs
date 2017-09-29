@@ -11,7 +11,7 @@
     using System.Security.Claims;
     using System.Text;
     using System.Threading.Tasks;
-    using Unosquare.Swan.AspNetCore.Test.Mocks.StartupMocks;
+    using Mocks.StartupMocks;
 
     class BearerTokenAuthTest
     {

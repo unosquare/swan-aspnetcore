@@ -2,7 +2,7 @@
 {
     using Microsoft.AspNetCore.Http;
     using Microsoft.EntityFrameworkCore;
-    using Unosquare.Swan.AspNetCore.Models;
+    using Models;
 
     class BusinessDbContextMock : BusinessDbContext
     {

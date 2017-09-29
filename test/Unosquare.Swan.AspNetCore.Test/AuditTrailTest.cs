@@ -1,10 +1,10 @@
 ﻿namespace Unosquare.Swan.AspNetCore.Test
 {
     using Microsoft.EntityFrameworkCore;
+    using Mocks;
     using NUnit.Framework;
     using System.Linq;
     using System.Threading.Tasks;
-    using Unosquare.Swan.AspNetCore.Test.Mocks;
 
     [TestFixture]
     class AuditTrailTest
@@ -22,7 +22,7 @@
         [SetUp]
         public void SetUp()
         {
-            product = new ProductMock().GetProduct();
+            product = ProductMock.GetProduct();
         }
 
         [Test]
