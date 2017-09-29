@@ -12,6 +12,7 @@
         /// The maximum exception length
         /// </summary>
         public const int MaximumExceptionLength = 2000;
+
         /// <summary>
         /// The maximum message length
         /// </summary>

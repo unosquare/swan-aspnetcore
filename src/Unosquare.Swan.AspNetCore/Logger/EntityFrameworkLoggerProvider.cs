@@ -16,8 +16,8 @@
         where TLog : LogEntry, new()
         where TDbContext : DbContext
     {
-        readonly Func<string, LogLevel, bool> _filter;
-        readonly IServiceProvider _serviceProvider;
+        private readonly Func<string, LogLevel, bool> _filter;
+        private readonly IServiceProvider _serviceProvider;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="EntityFrameworkLoggerProvider{TDbContext, TLog}"/> class.
@@ -34,16 +34,16 @@
         /// Creates the logger.
         /// </summary>
         /// <param name="name">The name.</param>
-        /// <returns></returns>
+        /// <returns>Instance of EntityFrameworkLogger</returns>
         public ILogger CreateLogger(string name)
-        {
-            return new EntityFrameworkLogger<TDbContext, TLog>(name, _filter, _serviceProvider);
-        }
+            => new EntityFrameworkLogger<TDbContext, TLog>(name, _filter, _serviceProvider);
 
         /// <summary>
         /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
         /// </summary>
-        public void Dispose() { }
+        public void Dispose()
+        {
+        }
     }
 
     /// <summary>

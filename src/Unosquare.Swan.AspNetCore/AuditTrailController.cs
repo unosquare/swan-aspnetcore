@@ -1,18 +1,19 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using Unosquare.Swan.AspNetCore.Models;
-using Unosquare.Swan.Formatters;
-
-namespace Unosquare.Swan.AspNetCore
+﻿namespace Unosquare.Swan.AspNetCore
 {
+    using Microsoft.EntityFrameworkCore;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Unosquare.Swan.AspNetCore.Models;
+    using Unosquare.Swan.Formatters;
+
     /// <summary>
     /// Represents an AuditTrail controller to use with BusinessDbContext
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">The Db context</typeparam>
     /// <typeparam name="TEntity">The type of the entity.</typeparam>
-    public class AuditTrailController<T, TEntity> : BusinessRulesController<T> where T : DbContext
+    public class AuditTrailController<T, TEntity> : BusinessRulesController<T> 
+        where T : DbContext
     {
         private readonly List<Type> _validCreateTypes = new List<Type>();
         private readonly List<Type> _validUpdateTypes = new List<Type>();
@@ -24,7 +25,8 @@ namespace Unosquare.Swan.AspNetCore
         /// </summary>
         /// <param name="context">The context.</param>
         /// <param name="currentUserId">The current user identifier.</param>
-        public AuditTrailController(T context, string currentUserId) : base(context)
+        public AuditTrailController(T context, string currentUserId) 
+            : base(context)
         {
             _currentUserId = currentUserId;
         }
@@ -100,6 +102,7 @@ namespace Unosquare.Swan.AspNetCore
             instance.DateCreated = DateTime.UtcNow;
             instance.Action = (int) flag;
             instance.UserId = _currentUserId;
+
             // TODO: Why the legacy doesn't save the body at delete method
             instance.JsonBody = Json.Serialize(entity);
 

@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-
-namespace Unosquare.Swan.AspNetCore
+﻿namespace Unosquare.Swan.AspNetCore
 {
+    using System.Collections.Generic;
+    using System.Threading;
+    using System.Threading.Tasks;
+    using Microsoft.EntityFrameworkCore;
+
     /// <summary>
     /// Represents a abstract class to create DbContext using Business Rules
     /// </summary>

@@ -1,14 +1,14 @@
-﻿using Microsoft.AspNetCore.Identity;
-using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
-using Unosquare.Swan.AspNetCore.Models;
-using Unosquare.Swan.AspNetCore.Test.Mocks;
-
-namespace Unosquare.Swan.AspNetCore.Test
+﻿namespace Unosquare.Swan.AspNetCore.Test
 {
+    using Microsoft.AspNetCore.Identity;
+    using NUnit.Framework;
+    using System;
+    using System.Collections.Generic;
+    using System.Threading;
+    using System.Threading.Tasks;
+    using Models;
+    using Mocks;
+
     [TestFixture]
     public class BasicUserStoreTest
     {

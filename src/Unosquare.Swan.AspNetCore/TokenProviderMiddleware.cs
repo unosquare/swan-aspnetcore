@@ -43,7 +43,7 @@
         /// Invokes the specified context.
         /// </summary>
         /// <param name="context">The context.</param>
-        /// <returns></returns>
+        /// <returns>The token to the specific context</returns>
         public Task Invoke(HttpContext context)
         {
             // Check if we are getting a new token
@@ -66,21 +66,20 @@
                 return GenerateToken(context);
             }
 
-            if (context.Request.Headers.ContainsKey("Authorization"))
+            if (!context.Request.Headers.ContainsKey("Authorization")) return _next(context);
+
+            var bearerToken = context.Request.Headers["Authorization"].FirstOrDefault(x => x.StartsWith("Bearer"));
+
+            if (bearerToken == null) return _next(context);
+            bearerToken = bearerToken.Split(' ')[1];
+            var handler = new JwtSecurityTokenHandler();
+            var token = handler.ReadToken(bearerToken) as JwtSecurityToken;
+
+            if (DateTime.UtcNow > token?.ValidTo)
             {
-                var bearerToken = context.Request.Headers["Authorization"].FirstOrDefault(x => x.StartsWith("Bearer"));
-
-                if (bearerToken == null) return _next(context);
-                bearerToken = bearerToken.Split(' ')[1];
-                var handler = new JwtSecurityTokenHandler();
-                var token = handler.ReadToken(bearerToken) as JwtSecurityToken;
-
-                if (DateTime.UtcNow > token?.ValidTo)
-                {
-                    context.Response.ContentType = Extensions.JsonMimeType;
-                    context.Response.StatusCode = 401;
-                    return context.Response.WriteAsync(SerializeError("The access token provided has expired.", "invalid_token"));
-                }
+                context.Response.ContentType = Extensions.JsonMimeType;
+                context.Response.StatusCode = 401;
+                return context.Response.WriteAsync(SerializeError("The access token provided has expired.", "invalid_token"));
             }
 
             return _next(context);
@@ -96,9 +95,8 @@
             if (grantType == "refresh_token")
             {
                 var refreshToken = context.Request.Form["refresh_token"];
-                Guid guidToken;
 
-                if (Guid.TryParse(refreshToken, out guidToken) == false || _refreshTokens.ContainsKey(guidToken) == false)
+                if (Guid.TryParse(refreshToken, out var guidToken) == false || _refreshTokens.ContainsKey(guidToken) == false)
                 {
                     context.Response.StatusCode = 401;
                     await context.Response.WriteAsync(SerializeError("Invalid refresh token."));
@@ -151,7 +149,7 @@
                     new Claim(JwtRegisteredClaimNames.Iat, now.ToUnixEpochDate().ToString(), ClaimValueTypes.Integer64)
                 });
 
-                //Add claim role
+                // Add claim role
                 var additionalClaims = await _options.ClaimResolver(identity);
 
                 if (additionalClaims != null) claims.AddRange(additionalClaims);
@@ -234,12 +232,12 @@
         /// </summary>
         /// <param name="description">The description.</param>
         /// <param name="error">The error.</param>
-        /// <returns></returns>
+        /// <returns>The error in JSON format</returns>
         private static string SerializeError(string description, string error = "invalid_grant")
         {
             return Json.Serialize(new
             {
-                error = error,
+                error,
                 error_description = description
             });
         }

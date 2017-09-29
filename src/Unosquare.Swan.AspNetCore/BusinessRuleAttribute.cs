@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Unosquare.Swan.AspNetCore
+﻿namespace Unosquare.Swan.AspNetCore
 {
+    using System;
+
     /// <summary>
     /// defines a combination of actions in a CRUD pattern
     /// </summary>
@@ -12,14 +12,17 @@ namespace Unosquare.Swan.AspNetCore
         /// None action
         /// </summary>
         None = 0x0,
+
         /// <summary>
         /// Create action
         /// </summary>
         Create = 0x1,
+
         /// <summary>
         /// Update action
         /// </summary>
         Update = 0x2,
+
         /// <summary>
         /// Delete Action
         /// </summary>
@@ -35,21 +38,6 @@ namespace Unosquare.Swan.AspNetCore
     public class BusinessRuleAttribute : Attribute
     {
         /// <summary>
-        /// Gets or sets the entity types.
-        /// </summary>
-        /// <value>
-        /// The entity types.
-        /// </value>
-        public Type[] EntityTypes { get; protected set; }
-        /// <summary>
-        /// Gets or sets the action.
-        /// </summary>
-        /// <value>
-        /// The action.
-        /// </value>
-        public ActionFlags Action { get; protected set; }
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="BusinessRuleAttribute"/> class.
         /// </summary>
         /// <param name="actionFlags">The action flags.</param>
@@ -57,6 +45,7 @@ namespace Unosquare.Swan.AspNetCore
         {
             this.Action = actionFlags;
         }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BusinessRuleAttribute"/> class.
         /// </summary>
@@ -77,5 +66,21 @@ namespace Unosquare.Swan.AspNetCore
             : this(new[] { entityType}, actionFlags)
         {
         }
+
+        /// <summary>
+        /// Gets or sets the entity types.
+        /// </summary>
+        /// <value>
+        /// The entity types.
+        /// </value>
+        public Type[] EntityTypes { get; protected set; }
+
+        /// <summary>
+        /// Gets or sets the action.
+        /// </summary>
+        /// <value>
+        /// The action.
+        /// </value>
+        public ActionFlags Action { get; protected set; }
     }
 }

@@ -22,9 +22,9 @@
         where TLog : LogEntry, new()
         where TDbContext : DbContext
     {
-        readonly string _name;
-        readonly Func<string, LogLevel, bool> _filter;
-        readonly IServiceProvider _services;
+        private readonly string _name;
+        private readonly Func<string, LogLevel, bool> _filter;
+        private readonly IServiceProvider _services;
         private readonly ConcurrentQueue<TLog> _entryQueue = new ConcurrentQueue<TLog>();
 
         /// <summary>
@@ -51,10 +51,10 @@
                             db.ChangeTracker.AutoDetectChangesEnabled = false;
                             while (_entryQueue.Count > 0)
                             {
-                                TLog entry;
-                                if (_entryQueue.TryDequeue(out entry))
+                                if (_entryQueue.TryDequeue(out var entry))
                                     db.Set<TLog>().Add(entry);
                             }
+
                             await db.SaveChangesAsync();
                         }
                         catch
@@ -67,34 +67,35 @@
             });
         }
 
-        private Func<string, LogLevel, bool> GetFilter(IOptions<EntityFrameworkLoggerOptions> options)
-        {
-            if (options != null)
-                return ((category, level) => GetFilter(options.Value, category, level));
+        /// <summary>
+        /// Checks if the given <paramref name="logLevel" /> is enabled.
+        /// </summary>
+        /// <param name="logLevel">level to be checked.</param>
+        /// <returns>
+        ///   <c>true</c> if enabled.
+        /// </returns>
+        public bool IsEnabled(LogLevel logLevel) => _filter(_name, logLevel);
 
-            return ((category, level) => true);
-        }
-
-        private static bool GetFilter(EntityFrameworkLoggerOptions options, string category, LogLevel level)
-        {
-            var filter = options.Filters?.Keys.FirstOrDefault(category.StartsWith);
-            if (filter != null)
-                return (int) options.Filters[filter] <= (int) level;
-
-            return true;
-        }
+        /// <summary>
+        /// Begins a logical operation scope.
+        /// </summary>
+        /// <typeparam name="TState">Entry state</typeparam>
+        /// <param name="state">The identifier for the scope.</param>
+        /// <returns>
+        /// An IDisposable that ends the logical operation scope on dispose.
+        /// </returns>
+        public IDisposable BeginScope<TState>(TState state) => new NoopDisposable();
 
         /// <summary>
         /// Writes a log entry.
         /// </summary>
-        /// <typeparam name="TState"></typeparam>
+        /// <typeparam name="TState">Entry state</typeparam>
         /// <param name="logLevel">Entry will be written on this level.</param>
         /// <param name="eventId">Id of the event.</param>
         /// <param name="state">The entry to be written. Can be also an object.</param>
         /// <param name="exception">The exception related to this entry.</param>
         /// <param name="formatter">Function to create a <c>string</c> message of the <paramref name="state" /> and <paramref name="exception" />.</param>
-        public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception,
-            Func<TState, Exception, string> formatter)
+        public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
         {
             if (_name.StartsWith("Microsoft.EntityFrameworkCore") || IsEnabled(logLevel) == false) return;
 
@@ -140,30 +141,29 @@
                 {
                     log.HostAddress = "Disposed";
                 }
+
                 log.Url = httpContext.Request.Path;
             }
 
             _entryQueue.Enqueue(log);
         }
 
-        /// <summary>
-        /// Checks if the given <paramref name="logLevel" /> is enabled.
-        /// </summary>
-        /// <param name="logLevel">level to be checked.</param>
-        /// <returns>
-        ///   <c>true</c> if enabled.
-        /// </returns>
-        public bool IsEnabled(LogLevel logLevel) => _filter(_name, logLevel);
+        private static bool GetFilter(EntityFrameworkLoggerOptions options, string category, LogLevel level)
+        {
+            var filter = options.Filters?.Keys.FirstOrDefault(category.StartsWith);
+            if (filter != null)
+                return (int)options.Filters[filter] <= (int)level;
 
-        /// <summary>
-        /// Begins a logical operation scope.
-        /// </summary>
-        /// <typeparam name="TState"></typeparam>
-        /// <param name="state">The identifier for the scope.</param>
-        /// <returns>
-        /// An IDisposable that ends the logical operation scope on dispose.
-        /// </returns>
-        public IDisposable BeginScope<TState>(TState state) => new NoopDisposable();
+            return true;
+        }
+
+        private Func<string, LogLevel, bool> GetFilter(IOptions<EntityFrameworkLoggerOptions> options)
+        {
+            if (options != null)
+                return (category, level) => GetFilter(options.Value, category, level);
+
+            return (category, level) => true;
+        }
 
         private class NoopDisposable : IDisposable
         {
