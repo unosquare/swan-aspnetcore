@@ -17,18 +17,6 @@
         public class JsonError
         {
             public string Message { get; set; }
-            public object Data { get; set; }
-            public string InnerException { get; set; }
-            public string TargetSite { get; set; }
-            public string StackTrace { get; set; }
-            public string HelpLink { get; set; }
-            public string Source { get; set; }
-            public string IPForWatsonBuckets { get; set; }
-            public string WatsonBuckets { get; set; }
-            public string RemoteStackTrace { get; set; }
-            public string HResult { get; set; }
-            public bool IsTransient { get; set; }
-
         }
 
         public JsonExceptionHandlerTests()
@@ -38,13 +26,11 @@
                 {
                     app.UseJsonExceptionHandler();
 
-                    app.Run((context) =>
-                    {
-                        throw new System.Exception("Test Exception");
-                    });
+                    app.Run((context) => throw new System.Exception("Test Exception"));
                 }));
             _client = _server.CreateClient();
         }
+
         [Test]
         public async Task JsonExceptionHandlerTest()
         {

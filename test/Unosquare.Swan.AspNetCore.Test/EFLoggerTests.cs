@@ -19,15 +19,7 @@
     {
         private readonly TestServer _server;
         private readonly HttpClient _client;
-
-        private BusinessDbContextMock SetupDatabase()
-        {
-            var builder = new DbContextOptionsBuilder<BusinessDbContextMock>()
-               .UseInMemoryDatabase(nameof(EFLoggerTests));
-
-            return new BusinessDbContextMock(builder.Options);
-        }
-
+        
         public EFLoggerTests()
         {
             _server = new TestServer(new WebHostBuilder()
@@ -38,6 +30,7 @@
 
                    app.Run(async (context) =>
                    {
+                       await Task.Delay(150);
                        await context.Response.WriteAsync(
                            app.ApplicationServices.GetService<BusinessDbContextMock>().Set< Models.LogEntry>().Count().ToString());
                    });
@@ -59,7 +52,6 @@
         public async Task EFLoggerDbTest()
         {
             var data = await _client.GetStringAsync("/");
-            await Task.Delay(500); // wait a little to allow the job fill log
             Assert.Greater(int.Parse(data), 0);
         }
     }
