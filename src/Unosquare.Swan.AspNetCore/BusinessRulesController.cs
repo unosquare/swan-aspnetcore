@@ -88,10 +88,7 @@
         /// </summary>
         /// <param name="entity">The entity.</param>
         /// <returns>The type of the current instance</returns>
-        public Type GetEntityType(object entity)
-        {
-            return entity.GetType();
-        }
+        public Type GetEntityType(object entity) => entity.GetType();
 
         private void ExecuteBusinessRulesMethods(EntityState state, ActionFlags action, MethodInfo[] methodInfoSet)
         {
@@ -105,13 +102,13 @@
 
                 var methods = methodInfoSet.Where(m => m.GetCustomAttributes(typeof(BusinessRuleAttribute), true)
                     .Select(a => a as BusinessRuleAttribute)
-                    .Any(b => (b.EntityTypes == null ||
+                    .Any(b => b != null && (b.EntityTypes == null ||
                                b.EntityTypes.Any(t => t == entityType)) &&
                                b.Action == action));
 
                 foreach (var methodInfo in methods)
                 {
-                    methodInfo.Invoke(this, new[] {entity});
+                    methodInfo.Invoke(this, new[] { entity });
                 }
             }
         }

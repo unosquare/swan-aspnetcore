@@ -11,27 +11,26 @@
     using System.Security.Claims;
     using System.Text;
     using System.Threading.Tasks;
-    using Mocks.StartupMocks;
 
     class BearerTokenAuthTest
     {
         private readonly TestServer _server;
         private readonly HttpClient _client;
-        private TokenValidationParameters ValidationParameters = new TokenValidationParameters()
+        private readonly TokenValidationParameters _validationParameters = new TokenValidationParameters()
         {
             ValidateIssuerSigningKey = true,
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("SETUPAVALIDSECURITYKEYHERE")),
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("SETUPAVALIDSECURITYKEYHERE")),
 
-                ValidateIssuer = true,
-                ValidIssuer = "IdentityCore",
+            ValidateIssuer = true,
+            ValidIssuer = "IdentityCore",
 
-                ValidateAudience = true,
-                ValidAudience = "Unosquare",
+            ValidateAudience = true,
+            ValidAudience = "Unosquare",
 
-                ValidateLifetime = true,
+            ValidateLifetime = true,
 
-                ClockSkew = TimeSpan.Zero
-            };
+            ClockSkew = TimeSpan.Zero
+        };
 
         public BearerTokenAuthTest()
         {
@@ -39,7 +38,7 @@
                 .Configure(app =>
                 {
                     app.UseBearerTokenAuthentication(
-                       ValidationParameters,
+                       _validationParameters,
                        (username, password, grantType, clientId) =>
                        {
                            if (username != "Admin" || password != "Pass.word")
@@ -58,7 +57,7 @@
                 })
                 .ConfigureServices(services =>
                 {
-                    services.AddBearerTokenAuthentication(ValidationParameters);
+                    services.AddBearerTokenAuthentication(_validationParameters);
                 }))
             {
                 BaseAddress = new Uri("https://localhost/")
@@ -78,7 +77,7 @@
 
             var httpMessage = new HttpRequestMessage(HttpMethod.Post, "/api/token");
             httpMessage.Headers.Add("Accept", "application/x-www-form-urlencoded");
-            httpMessage.Content = new FormUrlEncodedContent(body);            
+            httpMessage.Content = new FormUrlEncodedContent(body);
 
             var response = await _client.SendAsync(httpMessage);
             var responseString = await response.Content.ReadAsStringAsync();

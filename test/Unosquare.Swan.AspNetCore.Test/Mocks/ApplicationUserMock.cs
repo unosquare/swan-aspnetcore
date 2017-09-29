@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Security.Claims;
-using System.Text;
 using Unosquare.Swan.AspNetCore.Models;
 
 namespace Unosquare.Swan.AspNetCore.Test.Mocks
 {
     class ApplicationUserMock
     {
-        private List<string> Names { get; set; } = new List<string> { "aaron", "abdul", "abe", "abel", "abraham", "adam", "adan", "adolfo", "adolph", "adrian", "abby", "abigail", "adele", "adrian" };
+        private List<string> Names { get; } = new List<string> { "aaron", "abdul", "abe", "abel", "abraham", "adam", "adan", "adolfo", "adolph", "adrian", "abby", "abigail", "adele", "adrian" };
         private readonly Random rnd = new Random();
-        private List<ApplicationUser> _users = new List<ApplicationUser>();
+        private readonly List<ApplicationUser> _users = new List<ApplicationUser>();
 
         public List<ApplicationUser> GetUsers()
         {
-            for (int i = 0; i < 50; i++)
+            for (var i = 0; i < 50; i++)
             {
                 var r = rnd.Next(Names.Count);
 
