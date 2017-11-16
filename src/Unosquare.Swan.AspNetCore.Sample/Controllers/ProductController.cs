@@ -1,10 +1,8 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Unosquare.Swan.AspNetCore.Sample.Database;
-using Microsoft.AspNetCore.Authorization;
 
 namespace Unosquare.Swan.AspNetCore.Sample.Controllers
 {

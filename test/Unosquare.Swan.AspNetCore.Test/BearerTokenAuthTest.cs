@@ -16,7 +16,7 @@
     {
         private readonly TestServer _server;
         private readonly HttpClient _client;
-        private readonly TokenValidationParameters _validationParameters = new TokenValidationParameters()
+        private readonly TokenValidationParameters _validationParameters = new TokenValidationParameters
         {
             ValidateIssuerSigningKey = true,
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("SETUPAVALIDSECURITYKEYHERE")),
@@ -34,41 +34,43 @@
 
         public BearerTokenAuthTest()
         {
-            _server = new TestServer(new WebHostBuilder()
-                .Configure(app =>
-                {
-                    app.UseBearerTokenAuthentication(
-                       _validationParameters,
-                       (username, password, grantType, clientId) =>
-                       {
-                           if (username != "Admin" || password != "Pass.word")
-                               return Task.FromResult<ClaimsIdentity>(null);
+            _server = new TestServer(
+                new WebHostBuilder()
+                    .Configure(app =>
+                    {
+                        app.UseBearerTokenAuthentication(
+                            _validationParameters,
+                            (username, password, grantType, clientId) =>
+                            {
+                                if (username != "Admin" || password != "Pass.word")
+                                    return Task.FromResult<ClaimsIdentity>(null);
 
-                           var claim = new ClaimsIdentity("Bearer");
-                           claim.AddClaim(new Claim(ClaimTypes.Name, username));
+                                var claim = new ClaimsIdentity("Bearer");
+                                claim.AddClaim(new Claim(ClaimTypes.Name, username));
 
-                           return Task.FromResult(claim);
-                       }, (identity, obj) =>
-                       {
-                           // This action is optional
-                           obj["test"] = "OK";
-                           return Task.FromResult(obj);
-                       });
-                })
-                .ConfigureServices(services =>
-                {
-                    services.AddBearerTokenAuthentication(_validationParameters);
-                }))
+                                return Task.FromResult(claim);
+                            }, (identity, obj) =>
+                            {
+                                // This action is optional
+                                obj["test"] = "OK";
+                                return Task.FromResult(obj);
+                            });
+                    })
+                    .ConfigureServices(services =>
+                    {
+                        services.AddBearerTokenAuthentication(_validationParameters);
+                    }))
             {
                 BaseAddress = new Uri("https://localhost/")
             };
+
             _client = _server.CreateClient();
         }
 
         [Test]
         public async Task TokenTest()
         {
-            var body = new List<KeyValuePair<string, string>>()
+            var body = new List<KeyValuePair<string, string>>
             {
                 new KeyValuePair<string, string>("username","Admin"),
                 new KeyValuePair<string, string>("password","Pass.word"),
@@ -89,7 +91,7 @@
         [Test]
         public async Task UnauthorizedTokenTest()
         {
-            var body = new List<KeyValuePair<string, string>>()
+            var body = new List<KeyValuePair<string, string>>
             {
                 new KeyValuePair<string, string>("username","Admin"),
                 new KeyValuePair<string, string>("password","pass.word"),
@@ -110,7 +112,7 @@
         [Test]
         public async Task InvalidRefreshTokenTest()
         {
-            var body = new List<KeyValuePair<string, string>>()
+            var body = new List<KeyValuePair<string, string>>
             {
                 new KeyValuePair<string, string>("username","Admin"),
                 new KeyValuePair<string, string>("password","Pass.word"),

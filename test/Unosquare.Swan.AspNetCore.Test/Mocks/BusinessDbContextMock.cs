@@ -1,6 +1,5 @@
 ﻿namespace Unosquare.Swan.AspNetCore.Test.Mocks
 {
-    using Microsoft.AspNetCore.Http;
     using Microsoft.EntityFrameworkCore;
     using Models;
 

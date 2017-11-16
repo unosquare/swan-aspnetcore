@@ -9,7 +9,7 @@
     [TestFixture]
     class AuditTrailTest
     {
-        private ProductMock product;
+        private ProductMock _product;
 
         private BusinessDbContextMock SetupDatabase(string name)
         {
@@ -22,7 +22,7 @@
         [SetUp]
         public void SetUp()
         {
-            product = ProductMock.GetProduct();
+            _product = ProductMock.GetProduct();
         }
 
         [Test]
@@ -30,7 +30,7 @@
         {
             using (var context = SetupDatabase(nameof(SaveChangesEntityTestAsync)))
             {
-                context.Add(product);
+                context.Add(_product);
                 await context.SaveChangesAsync();
 
                 var audit = context.AuditTrailEntries.Last();
@@ -46,7 +46,7 @@
             using (var context = SetupDatabase(nameof(SaveChangesEntityTest)))
             {
             
-                context.Add(product);
+                context.Add(_product);
                 context.SaveChanges();
 
                 var audit = context.AuditTrailEntries.Last();
@@ -61,10 +61,10 @@
         {
             using (var context = SetupDatabase(nameof(UpdatedChangesEntityTest)))
             {
-                context.Add(product);
+                context.Add(_product);
                 context.SaveChanges();
 
-                context.Update(product);
+                context.Update(_product);
                 context.SaveChanges();
 
                 var audit = context.AuditTrailEntries.Last();
@@ -79,10 +79,10 @@
         {
             using (var context = SetupDatabase(nameof(DeleteChangesEntityTest)))
             {
-                context.Add(product);
+                context.Add(_product);
                 context.SaveChanges();
 
-                context.Remove(product);
+                context.Remove(_product);
                 context.SaveChanges();
 
                 var audit = context.AuditTrailEntries.Last();

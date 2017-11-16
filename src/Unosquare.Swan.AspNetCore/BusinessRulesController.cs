@@ -92,7 +92,9 @@
 
         private void ExecuteBusinessRulesMethods(EntityState state, ActionFlags action, MethodInfo[] methodInfoSet)
         {
-            var selfTrackingEntries = Context.ChangeTracker.Entries().Where(x => x.State == state).ToList();
+            var selfTrackingEntries = Context.ChangeTracker.Entries()
+                .Where(x => x.State == state)
+                .ToList();
 
             foreach (var entry in selfTrackingEntries)
             {
@@ -103,12 +105,12 @@
                 var methods = methodInfoSet.Where(m => m.GetCustomAttributes(typeof(BusinessRuleAttribute), true)
                     .Select(a => a as BusinessRuleAttribute)
                     .Any(b => b != null && (b.EntityTypes == null ||
-                               b.EntityTypes.Any(t => t == entityType)) &&
-                               b.Action == action));
+                                            b.EntityTypes.Any(t => t == entityType)) &&
+                              b.Action == action));
 
                 foreach (var methodInfo in methods)
                 {
-                    methodInfo.Invoke(this, new[] { entity });
+                    methodInfo.Invoke(this, new[] {entity});
                 }
             }
         }

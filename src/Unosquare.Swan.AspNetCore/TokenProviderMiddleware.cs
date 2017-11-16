@@ -85,6 +85,63 @@
             return _next(context);
         }
 
+        private static void ThrowIfInvalidOptions(TokenProviderOptions options)
+        {
+            if (string.IsNullOrEmpty(options.Path))
+            {
+                throw new ArgumentNullException(nameof(TokenProviderOptions.Path));
+            }
+
+            if (string.IsNullOrEmpty(options.Issuer))
+            {
+                throw new ArgumentNullException(nameof(TokenProviderOptions.Issuer));
+            }
+
+            if (string.IsNullOrEmpty(options.Audience))
+            {
+                throw new ArgumentNullException(nameof(TokenProviderOptions.Audience));
+            }
+
+            if (options.Expiration == TimeSpan.Zero)
+            {
+                throw new ArgumentException("Must be a non-zero TimeSpan.", nameof(TokenProviderOptions.Expiration));
+            }
+
+            if (options.IdentityResolver == null)
+            {
+                throw new ArgumentNullException(nameof(TokenProviderOptions.IdentityResolver));
+            }
+
+            if (options.SigningCredentials == null)
+            {
+                throw new ArgumentNullException(nameof(TokenProviderOptions.SigningCredentials));
+            }
+
+            if (options.NonceGenerator == null)
+            {
+                throw new ArgumentNullException(nameof(TokenProviderOptions.NonceGenerator));
+            }
+
+            if (options.IdentityResolver == null)
+            {
+                throw new ArgumentNullException(nameof(TokenProviderOptions.IdentityResolver));
+            }
+
+            if (options.BearerTokenResolver == null)
+            {
+                throw new ArgumentNullException(nameof(TokenProviderOptions.BearerTokenResolver));
+            }
+        }
+        
+        private static string SerializeError(string description, string error = "invalid_grant")
+        {
+            return Json.Serialize(new 
+            {
+                error,
+                error_description = description
+            });
+        }
+
         private async Task GenerateToken(HttpContext context)
         {
             JwtSecurityToken jwt;
@@ -177,69 +234,6 @@
             _refreshTokens.Add(refreshTokenGuid, jwt);
 
             await context.Response.WriteAsync(Json.Serialize(await _options.BearerTokenResolver(identity, responseInfo)));
-        }
-
-        private static void ThrowIfInvalidOptions(TokenProviderOptions options)
-        {
-            if (string.IsNullOrEmpty(options.Path))
-            {
-                throw new ArgumentNullException(nameof(TokenProviderOptions.Path));
-            }
-
-            if (string.IsNullOrEmpty(options.Issuer))
-            {
-                throw new ArgumentNullException(nameof(TokenProviderOptions.Issuer));
-            }
-
-            if (string.IsNullOrEmpty(options.Audience))
-            {
-                throw new ArgumentNullException(nameof(TokenProviderOptions.Audience));
-            }
-
-            if (options.Expiration == TimeSpan.Zero)
-            {
-                throw new ArgumentException("Must be a non-zero TimeSpan.", nameof(TokenProviderOptions.Expiration));
-            }
-
-            if (options.IdentityResolver == null)
-            {
-                throw new ArgumentNullException(nameof(TokenProviderOptions.IdentityResolver));
-            }
-
-            if (options.SigningCredentials == null)
-            {
-                throw new ArgumentNullException(nameof(TokenProviderOptions.SigningCredentials));
-            }
-
-            if (options.NonceGenerator == null)
-            {
-                throw new ArgumentNullException(nameof(TokenProviderOptions.NonceGenerator));
-            }
-
-            if (options.IdentityResolver == null)
-            {
-                throw new ArgumentNullException(nameof(TokenProviderOptions.IdentityResolver));
-            }
-
-            if (options.BearerTokenResolver == null)
-            {
-                throw new ArgumentNullException(nameof(TokenProviderOptions.BearerTokenResolver));
-            }
-        }
-
-        /// <summary>
-        /// Serializes the error.
-        /// </summary>
-        /// <param name="description">The description.</param>
-        /// <param name="error">The error.</param>
-        /// <returns>The error in JSON format</returns>
-        private static string SerializeError(string description, string error = "invalid_grant")
-        {
-            return Json.Serialize(new
-            {
-                error,
-                error_description = description
-            });
         }
     }
 }

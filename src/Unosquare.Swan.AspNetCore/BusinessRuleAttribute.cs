@@ -43,7 +43,7 @@
         /// <param name="actionFlags">The action flags.</param>
         public BusinessRuleAttribute(ActionFlags actionFlags)
         {
-            this.Action = actionFlags;
+            Action = actionFlags;
         }
 
         /// <summary>
@@ -53,8 +53,8 @@
         /// <param name="actionFlags">The action flags.</param>
         public BusinessRuleAttribute(Type[] entityTypes, ActionFlags actionFlags)
         {
-            this.EntityTypes = entityTypes;
-            this.Action = actionFlags;
+            EntityTypes = entityTypes;
+            Action = actionFlags;
         }
 
         /// <summary>

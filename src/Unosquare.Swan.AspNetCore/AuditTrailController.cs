@@ -4,8 +4,8 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Unosquare.Swan.AspNetCore.Models;
-    using Unosquare.Swan.Formatters;
+    using Models;
+    using Formatters;
 
     /// <summary>
     /// Represents an AuditTrail controller to use with BusinessDbContext

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Unosquare.Swan.AspNetCore.Sample.Database
+﻿namespace Unosquare.Swan.AspNetCore.Sample.Database
 {
+    using System.ComponentModel.DataAnnotations;
+
     public class Product
     {
         [Key]
