@@ -8,12 +8,12 @@
     using System.Net;
     using System.Net.Http;
     using System.Threading.Tasks;
-
-
+    
     public class JsonExceptionHandlerTests
     {
         private readonly TestServer _server;
         private readonly HttpClient _client;
+
         public class JsonError
         {
             public string Message { get; set; }
