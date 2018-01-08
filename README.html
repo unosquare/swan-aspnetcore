@@ -8,7 +8,7 @@
     <title> Swan ASP.NET Core 2: Stuff We All Need | Unosquare SWAN ASPNetCore </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content=" Swan ASP.NET Core 2: Stuff We All Need | Unosquare SWAN ASPNetCore ">
-    <meta name="generator" content="docfx 2.28.3.0">
+    <meta name="generator" content="docfx 2.29.1.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -80,12 +80,12 @@
 <p><a href="https://badge.fury.io/nu/Unosquare.Swan.AspNetCore"><img src="https://badge.fury.io/nu/Unosquare.Swan.AspNetCore.svg" alt="NuGet version"></a></p>
 <pre><code>PM&gt; Install-Package Unosquare.Swan.AspNetCore
 </code></pre><h2 id="use-cases">Use Cases</h2>
-<p>Here we can find very useful code to use in our project configuration. All of this you can use it in your Startup.cs file, see our <a href="https://github.com/unosquare/swan-aspnetcore/tree/master/src/Unosquare.Swan.AspNetCore.Sample">Sample Project</a> for more reference.</p>
+<p>Here we can find a very useful code to use in our project configuration. All of this you can use it in your Startup.cs file, see our <a href="https://github.com/unosquare/swan-aspnetcore/tree/master/src/Unosquare.Swan.AspNetCore.Sample">Sample Project</a> for more reference.</p>
 <h3 id="using-bearer-token-authentication">Using Bearer Token Authentication</h3>
 <p>The extension method AddBearerTokenAuthentication adds the services that are going to be used in your application. This method uses the Jwt schemes and adds a JwtBearer with the Token Validation Parameters that you configure. Jwt stands for <a href="https://jwt.io/introduction/">JSON Web Tokens</a></p>
 <p>The extension method UseBearerTokenAuthentication is important because it gives the application the requirements to use authentication and authorization with JWT.</p>
 <p>With this configuration, you just need to add the data annotation [Authorize] to your API to say that the user needs to be authorized to access that part of your project.</p>
-<p>This two are used together because you need to add the bearer token authentication to the services to use the bearer token authentication in your application. You just need to added in your <code>ConfigureServices</code> and your <code>Configure</code>.</p>
+<p>This two are used together because you need to add the bearer token authentication to the services to use the bearer token authentication in your application. You just need to add in your <code>ConfigureServices</code> and your <code>Configure</code>.</p>
 <pre><code class="lang-csharp">// This method gets called by the runtime. Use this method to add services to the container
 public void ConfigureServices(IServiceCollection services)
 {
@@ -116,7 +116,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
         });
 }
 </code></pre><h3 id="using-entityframeworklogger">Using EntityFrameworkLogger</h3>
-<p>The EntityFrameworkLogger represents a Logger based on Entity Framework and adds a Logging subsystem. It will help you log to your Database everything necessary to know what’s going on in your application. This logger is used in the <code>Configure</code> method of your Startup.cs file.
+<p>The EntityFrameworkLogger represents a Logger based on Entity Framework and adds a Logging subsystem. It will help you log into your Database everything necessary to know what’s going on in your application. This logger is used in the <code>Configure</code> method of your Startup.cs file.
 With this you just add your configuration section and then add in the entity framework, your database context and the models that you use for log entries into your database, then you just pass the application services.</p>
 <pre><code class="lang-csharp">public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
 {
@@ -135,7 +135,7 @@ With this you just add your configuration section and then add in the entity fra
         }
     }
 </code></pre><h3 id="audittrail">AuditTrail</h3>
-<p><a href="https://github.com/unosquare/ef-enterpriseextensions">Audit Trails</a> is a business rule to save the changes to any operation perform in a record. In other words, capture what change between any data saving. This operation is important in many system and you can accomplish with these extensions easily. The AuditTrailController can be attached to your BusinessDbContext and setup which Entities will be recorded in the three CRUD actions supported, create, update and delete.</p>
+<p><a href="https://github.com/unosquare/ef-enterpriseextensions">Audit Trails</a> is a business rule to save the changes to any operation performed in a record. In other words, capture what change between any data saving. This operation is important in many systems and you can accomplish with these extensions easily. The AuditTrailController can be attached to your BusinessDbContext and setup which Entities will be recorded in the three CRUD actions supported, create, update and delete.</p>
 <pre><code class="lang-csharp">public class SampleDbContext : BusinessDbContext
     {
          public SampleDbContext(DbContextOptions&lt;SampleDbContext&gt; options, IHttpContextAccessor httpContextAccessor)
@@ -157,7 +157,7 @@ When an error occurs, the exception handles the error and send a response with a
 <pre><code class="lang-csharp">// Response an exception as JSON at error
 app.UseJsonExceptionHandler();
 </code></pre><h4 id="the-fallback">The Fallback</h4>
-<p>Uses the fallback to redirect everything without extension. When the application encountered something without an extension this will help to redirect to the index page or where ever you define to. It&#39;s like when a URL that is not handled it will automatically redirect to the fallback, the default is index.html.</p>
+<p>Uses the fallback to redirect everything without extension. When the application encountered something without an extension this will help to redirect to the index page or where ever you define too. It&#39;s like when a URL that is not handled it will automatically redirect to the fallback, the default is index.html.</p>
 <pre><code class="lang-csharp">// Redirect anything without extension to index.html
 app.UseFallback();
 </code></pre></article>
