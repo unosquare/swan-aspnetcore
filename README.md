@@ -18,7 +18,7 @@ PM> Install-Package Unosquare.Swan.AspNetCore
 
 ## Use Cases
 
-Here we can find very useful code to use in our project configuration. All of this you can use it in your Startup.cs file, see our [Sample Project](https://github.com/unosquare/swan-aspnetcore/tree/master/src/Unosquare.Swan.AspNetCore.Sample) for more reference.
+Here we can find a very useful code to use in our project configuration. All of this you can use it in your Startup.cs file, see our [Sample Project](https://github.com/unosquare/swan-aspnetcore/tree/master/src/Unosquare.Swan.AspNetCore.Sample) for more reference.
 
 ### Using Bearer Token Authentication
 
@@ -28,7 +28,7 @@ The extension method UseBearerTokenAuthentication is important because it gives 
 
 With this configuration, you just need to add the data annotation [Authorize] to your API to say that the user needs to be authorized to access that part of your project.
 
-This two are used together because you need to add the bearer token authentication to the services to use the bearer token authentication in your application. You just need to added in your `ConfigureServices` and your `Configure`.
+This two are used together because you need to add the bearer token authentication to the services to use the bearer token authentication in your application. You just need to add in your `ConfigureServices` and your `Configure`.
 
 ```csharp
 // This method gets called by the runtime. Use this method to add services to the container
@@ -64,7 +64,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
 
 ### Using EntityFrameworkLogger
 
-The EntityFrameworkLogger represents a Logger based on Entity Framework and adds a Logging subsystem. It will help you log to your Database everything necessary to know what’s going on in your application. This logger is used in the `Configure` method of your Startup.cs file.
+The EntityFrameworkLogger represents a Logger based on Entity Framework and adds a Logging subsystem. It will help you log into your Database everything necessary to know what’s going on in your application. This logger is used in the `Configure` method of your Startup.cs file.
 With this you just add your configuration section and then add in the entity framework, your database context and the models that you use for log entries into your database, then you just pass the application services.
 
 ```csharp
@@ -93,7 +93,7 @@ The BusinessDbContext run business rules when you save changes to the database. 
 
 ### AuditTrail
 
-[Audit Trails](https://github.com/unosquare/ef-enterpriseextensions) is a business rule to save the changes to any operation perform in a record. In other words, capture what change between any data saving. This operation is important in many system and you can accomplish with these extensions easily. The AuditTrailController can be attached to your BusinessDbContext and setup which Entities will be recorded in the three CRUD actions supported, create, update and delete.
+[Audit Trails](https://github.com/unosquare/ef-enterpriseextensions) is a business rule to save the changes to any operation performed in a record. In other words, capture what change between any data saving. This operation is important in many systems and you can accomplish with these extensions easily. The AuditTrailController can be attached to your BusinessDbContext and setup which Entities will be recorded in the three CRUD actions supported, create, update and delete.
 
 ```csharp
 public class SampleDbContext : BusinessDbContext
@@ -125,7 +125,7 @@ app.UseJsonExceptionHandler();
 
 #### The Fallback
 
-Uses the fallback to redirect everything without extension. When the application encountered something without an extension this will help to redirect to the index page or where ever you define to. It's like when a URL that is not handled it will automatically redirect to the fallback, the default is index.html.
+Uses the fallback to redirect everything without extension. When the application encountered something without an extension this will help to redirect to the index page or where ever you define too. It's like when a URL that is not handled it will automatically redirect to the fallback, the default is index.html.
 
 ```csharp
 // Redirect anything without extension to index.html
