@@ -98,6 +98,22 @@
         }
 
         /// <summary>
+        /// Adds the logging entity framework.
+        /// </summary>
+        /// <typeparam name="TDbContext">The type of the database context.</typeparam>
+        /// <typeparam name="TLog">The type of the log.</typeparam>
+        /// <param name="services">The services.</param>
+        /// <param name="filter">The filter.</param>
+        /// <returns>The services collection</returns>
+        public static IServiceCollection AddLoggingEntityFramework<TDbContext, TLog>(this IServiceCollection services,
+            Func<string, LogLevel, bool> filter = null)
+            where TDbContext : DbContext
+            where TLog : LogEntry, new()
+        {
+            return services.AddLogging(logging => logging.AddEntityFramework<TDbContext, TLog>(filter));
+        }
+
+        /// <summary>
         /// Uses the bearer token provider.
         /// </summary>
         /// <param name="app">The application.</param>

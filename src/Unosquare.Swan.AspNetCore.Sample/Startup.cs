@@ -39,6 +39,7 @@
         }
 
         public IConfiguration Configuration { get; }
+
         private TokenValidationParameters ValidationParameters { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container
@@ -47,7 +48,8 @@
             // Add framework services.
             services.AddDbContext<SampleDbContext>(options => options.UseSqlServer(Configuration["ConnectionString"]));
 
-            services.AddLogging(logging => logging.AddEntityFramework<SampleDbContext, Models.LogEntry>());
+            // Add Entity Framework Logging Provider
+            services.AddLoggingEntityFramework<SampleDbContext, Models.LogEntry>();
 
             // Extension method to add Bearer authentication
             services.AddBearerTokenAuthentication(ValidationParameters);

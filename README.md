@@ -22,11 +22,11 @@ Here we can find a very useful code to use in our project configuration. All of 
 
 ### Using Bearer Token Authentication
 
-The extension method AddBearerTokenAuthentication adds the services that are going to be used in your application. This method uses the Jwt schemes and adds a JwtBearer with the Token Validation Parameters that you configure. Jwt stands for [JSON Web Tokens](https://jwt.io/introduction/)
+The extension method `AddBearerTokenAuthentication` adds the services that are going to be used in your application. This method uses the Jwt schemes and adds a JwtBearer with the Token Validation Parameters that you configure. Jwt stands for [JSON Web Tokens](https://jwt.io/introduction/)
 
-The extension method UseBearerTokenAuthentication is important because it gives the application the requirements to use authentication and authorization with JWT.
+The extension method `UseBearerTokenAuthentication` is important because it gives the application the requirements to use authentication and authorization with JWT.
 
-With this configuration, you just need to add the data annotation [Authorize] to your API to say that the user needs to be authorized to access that part of your project.
+With this configuration, you just need to add the data annotation `[Authorize]` to your API to say that the user needs to be authorized to access that part of your project.
 
 This two are used together because you need to add the bearer token authentication to the services to use the bearer token authentication in your application. You just need to add in your `ConfigureServices` and your `Configure`.
 
@@ -64,16 +64,16 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
 
 ### Using EntityFrameworkLogger
 
-The EntityFrameworkLogger represents a Logger based on Entity Framework and adds a Logging subsystem. It will help you log into your Database everything necessary to know what’s going on in your application. This logger is used in the `Configure` method of your Startup.cs file.
+The `EntityFrameworkLogger` represents a Logger based on Entity Framework and adds a Logging subsystem. It will help you log into your Database everything necessary to know what’s going on in your application. This logger is used in the `ConfigureServices` method of your Startup.cs file.
 With this you just add your configuration section and then add in the entity framework, your database context and the models that you use for log entries into your database, then you just pass the application services.
 
 ```csharp
-public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+public void ConfigureServices(IServiceCollection services)
 {
-    // Log levels set in your configuration
-    loggerFactory.AddConsole(Configuration.GetSection("Logging"));
-    // Here we add the entity framework with the database and the model to utilize
-    loggerFactory.AddEntityFramework<SampleDbContext, Models.LogEntry>(app.ApplicationServices);
+	// Inject your DbContext first.
+
+    // Add Entity Framework Logging Provider
+	services.AddLoggingEntityFramework<SampleDbContext, Models.LogEntry>();
 }
 ```
 
