@@ -69,6 +69,16 @@
             return factory;
         }
 
+        public static ILoggingBuilder AddEntityFramework<TDbContext, TLog>(this ILoggingBuilder builder, IServiceProvider serviceProvider, Func<string, LogLevel, bool> filter = null)
+            where TDbContext : DbContext
+            where TLog : LogEntry, new()
+        {
+            if (builder == null)
+                throw new ArgumentNullException(nameof(builder));
+            builder.AddProvider(new EntityFrameworkLoggerProvider<TDbContext, TLog>(serviceProvider, filter));
+            return builder;
+        }
+
         /// <summary>
         /// Uses the bearer token provider.
         /// </summary>
