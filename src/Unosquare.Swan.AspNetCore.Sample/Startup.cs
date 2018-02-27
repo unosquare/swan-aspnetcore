@@ -44,12 +44,10 @@
         // This method gets called by the runtime. Use this method to add services to the container
         public void ConfigureServices(IServiceCollection services)
         {
-            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
             // Add framework services.
             services.AddDbContext<SampleDbContext>(options => options.UseSqlServer(Configuration["ConnectionString"]));
 
-            services.AddLogging(logging => logging.AddEntityFramework<SampleDbContext, Models.LogEntry>(services.BuildServiceProvider()));
+            services.AddLogging(logging => logging.AddEntityFramework<SampleDbContext, Models.LogEntry>());
 
             // Extension method to add Bearer authentication
             services.AddBearerTokenAuthentication(ValidationParameters);
@@ -65,9 +63,6 @@
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            //loggerFactory.AddConsole(Configuration.GetSection("Logging"));
-            //loggerFactory.AddEntityFramework<SampleDbContext, Models.LogEntry>(app.ApplicationServices);
-
             // Redirect anything without extension to index.html
             app.UseFallback();
             // Response an exception as JSON at error

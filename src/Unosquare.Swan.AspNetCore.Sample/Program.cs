@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Logging;
-using Unosquare.Swan.AspNetCore.Sample.Database;
 
 namespace Unosquare.Swan.AspNetCore.Sample
 {
