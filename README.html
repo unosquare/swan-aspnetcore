@@ -82,9 +82,9 @@
 </code></pre><h2 id="use-cases">Use Cases</h2>
 <p>Here we can find a very useful code to use in our project configuration. All of this you can use it in your Startup.cs file, see our <a href="https://github.com/unosquare/swan-aspnetcore/tree/master/src/Unosquare.Swan.AspNetCore.Sample">Sample Project</a> for more reference.</p>
 <h3 id="using-bearer-token-authentication">Using Bearer Token Authentication</h3>
-<p>The extension method AddBearerTokenAuthentication adds the services that are going to be used in your application. This method uses the Jwt schemes and adds a JwtBearer with the Token Validation Parameters that you configure. Jwt stands for <a href="https://jwt.io/introduction/">JSON Web Tokens</a></p>
-<p>The extension method UseBearerTokenAuthentication is important because it gives the application the requirements to use authentication and authorization with JWT.</p>
-<p>With this configuration, you just need to add the data annotation [Authorize] to your API to say that the user needs to be authorized to access that part of your project.</p>
+<p>The extension method <code>AddBearerTokenAuthentication</code> adds the services that are going to be used in your application. This method uses the Jwt schemes and adds a JwtBearer with the Token Validation Parameters that you configure. Jwt stands for <a href="https://jwt.io/introduction/">JSON Web Tokens</a></p>
+<p>The extension method <code>UseBearerTokenAuthentication</code> is important because it gives the application the requirements to use authentication and authorization with JWT.</p>
+<p>With this configuration, you just need to add the data annotation <code>[Authorize]</code> to your API to say that the user needs to be authorized to access that part of your project.</p>
 <p>This two are used together because you need to add the bearer token authentication to the services to use the bearer token authentication in your application. You just need to add in your <code>ConfigureServices</code> and your <code>Configure</code>.</p>
 <pre><code class="lang-csharp">// This method gets called by the runtime. Use this method to add services to the container
 public void ConfigureServices(IServiceCollection services)
@@ -116,14 +116,14 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
         });
 }
 </code></pre><h3 id="using-entityframeworklogger">Using EntityFrameworkLogger</h3>
-<p>The EntityFrameworkLogger represents a Logger based on Entity Framework and adds a Logging subsystem. It will help you log into your Database everything necessary to know what’s going on in your application. This logger is used in the <code>Configure</code> method of your Startup.cs file.
+<p>The <code>EntityFrameworkLogger</code> represents a Logger based on Entity Framework and adds a Logging subsystem. It will help you log into your Database everything necessary to know what’s going on in your application. This logger is used in the <code>ConfigureServices</code> method of your Startup.cs file.
 With this you just add your configuration section and then add in the entity framework, your database context and the models that you use for log entries into your database, then you just pass the application services.</p>
-<pre><code class="lang-csharp">public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+<pre><code class="lang-csharp">public void ConfigureServices(IServiceCollection services)
 {
-    // Log levels set in your configuration
-    loggerFactory.AddConsole(Configuration.GetSection(&quot;Logging&quot;));
-    // Here we add the entity framework with the database and the model to utilize
-    loggerFactory.AddEntityFramework&lt;SampleDbContext, Models.LogEntry&gt;(app.ApplicationServices);
+    // Inject your DbContext first.
+
+    // Add Entity Framework Logging Provider
+    services.AddLoggingEntityFramework&lt;SampleDbContext, Models.LogEntry&gt;();
 }
 </code></pre><h3 id="using-businessdbcontext">Using BusinessDbContext</h3>
 <p>The BusinessDbContext run business rules when you save changes to the database. It&#39;s helpful because if you want to modify an entity every time you save changes to the database, you can create a controller to do that. Your Db Context must inheritance from the BusinessDbContext in order to have this functionality and then you can add, remove and check for controllers using your context.</p>

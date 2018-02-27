@@ -875,6 +875,21 @@ references:
   fullName.vb: Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework(Of TDbContext, TLog)(ILoggingBuilder, System.Func(Of System.String, System.LogLevel, System.Boolean))
   nameWithType: Extensions.AddEntityFramework<TDbContext, TLog>(ILoggingBuilder, Func<String, LogLevel, Boolean>)
   nameWithType.vb: Extensions.AddEntityFramework(Of TDbContext, TLog)(ILoggingBuilder, Func(Of String, LogLevel, Boolean))
+- uid: Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework*
+  name: AddLoggingEntityFramework
+  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_AddLoggingEntityFramework_
+  commentId: Overload:Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework
+  fullName: Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework
+  nameWithType: Extensions.AddLoggingEntityFramework
+- uid: Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework``2(IServiceCollection,System.Func{System.String,System.LogLevel,System.Boolean})
+  name: AddLoggingEntityFramework<TDbContext, TLog>(IServiceCollection, Func<String, LogLevel, Boolean>)
+  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_AddLoggingEntityFramework__2_IServiceCollection_System_Func_System_String_System_LogLevel_System_Boolean__
+  commentId: M:Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework``2(IServiceCollection,System.Func{System.String,System.LogLevel,System.Boolean})
+  name.vb: AddLoggingEntityFramework(Of TDbContext, TLog)(IServiceCollection, Func(Of String, LogLevel, Boolean))
+  fullName: Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework<TDbContext, TLog>(IServiceCollection, System.Func<System.String, System.LogLevel, System.Boolean>)
+  fullName.vb: Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework(Of TDbContext, TLog)(IServiceCollection, System.Func(Of System.String, System.LogLevel, System.Boolean))
+  nameWithType: Extensions.AddLoggingEntityFramework<TDbContext, TLog>(IServiceCollection, Func<String, LogLevel, Boolean>)
+  nameWithType.vb: Extensions.AddLoggingEntityFramework(Of TDbContext, TLog)(IServiceCollection, Func(Of String, LogLevel, Boolean))
 - uid: Unosquare.Swan.AspNetCore.Extensions.JsonMimeType
   name: JsonMimeType
   href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_JsonMimeType

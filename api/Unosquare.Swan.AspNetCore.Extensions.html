@@ -383,6 +383,78 @@
   </table>
   
   
+  <a id="Unosquare_Swan_AspNetCore_Extensions_AddLoggingEntityFramework_" data-uid="Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework*"></a>
+  <h4 id="Unosquare_Swan_AspNetCore_Extensions_AddLoggingEntityFramework__2_IServiceCollection_System_Func_System_String_System_LogLevel_System_Boolean__" data-uid="Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework``2(IServiceCollection,System.Func{System.String,System.LogLevel,System.Boolean})">AddLoggingEntityFramework&lt;TDbContext, TLog&gt;(IServiceCollection, Func&lt;String, LogLevel, Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds the logging entity framework.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddLoggingEntityFramework&lt;TDbContext, TLog&gt;(this IServiceCollection services, Func&lt;string, LogLevel, bool&gt; filter = null)where TDbContext : DbContext where TLog : LogEntry, new ()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IServiceCollection</span></td>
+        <td><span class="parametername">services</span></td>
+        <td><p>The services.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.LogLevel</span>, <span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>The filter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IServiceCollection</span></td>
+        <td><p>The services collection</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TDbContext</span></td>
+        <td><p>The type of the database context.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TLog</span></td>
+        <td><p>The type of the log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Unosquare_Swan_AspNetCore_Extensions_UseAuditTrail_" data-uid="Unosquare.Swan.AspNetCore.Extensions.UseAuditTrail*"></a>
   <h4 id="Unosquare_Swan_AspNetCore_Extensions_UseAuditTrail__2_Unosquare_Swan_AspNetCore_IBusinessDbContext_System_String_" data-uid="Unosquare.Swan.AspNetCore.Extensions.UseAuditTrail``2(Unosquare.Swan.AspNetCore.IBusinessDbContext,System.String)">UseAuditTrail&lt;T, TEntity&gt;(IBusinessDbContext, String)</h4>
   <div class="markdown level1 summary"><p>Extension method to add AuditTrail to a DbContext</p>
