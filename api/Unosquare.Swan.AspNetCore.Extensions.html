@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Extensions
    | Unosquare SWAN ASPNetCore ">
-    <meta name="generator" content="docfx 2.31.0.0">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -208,7 +208,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ILoggerFactory AddEntityFramework&lt;TDbContext, TLog&gt;(this ILoggerFactory factory, IServiceProvider serviceProvider, Func&lt;string, LogLevel, bool&gt; filter = null)where TDbContext : DbContext where TLog : LogEntry, new ()</code></pre>
+    <pre><code class="lang-csharp hljs">public static ILoggerFactory AddEntityFramework&lt;TDbContext, TLog&gt;(this ILoggerFactory factory, IServiceProvider serviceProvider, Func&lt;string, LogLevel, bool&gt; filter = null)
+    where TDbContext : DbContext where TLog : LogEntry, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -302,7 +303,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ILoggingBuilder AddEntityFramework&lt;TDbContext, TLog&gt;(this ILoggingBuilder builder, Func&lt;string, LogLevel, bool&gt; filter = null)where TDbContext : DbContext where TLog : LogEntry, new ()</code></pre>
+    <pre><code class="lang-csharp hljs">public static ILoggingBuilder AddEntityFramework&lt;TDbContext, TLog&gt;(this ILoggingBuilder builder, Func&lt;string, LogLevel, bool&gt; filter = null)
+    where TDbContext : DbContext where TLog : LogEntry, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -390,7 +392,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection AddLoggingEntityFramework&lt;TDbContext, TLog&gt;(this IServiceCollection services, Func&lt;string, LogLevel, bool&gt; filter = null)where TDbContext : DbContext where TLog : LogEntry, new ()</code></pre>
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddLoggingEntityFramework&lt;TDbContext, TLog&gt;(this IServiceCollection services, Func&lt;string, LogLevel, bool&gt; filter = null)
+    where TDbContext : DbContext where TLog : LogEntry, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -462,7 +465,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IBusinessDbContext UseAuditTrail&lt;T, TEntity&gt;(this IBusinessDbContext context, string currentUserId)where T : DbContext</code></pre>
+    <pre><code class="lang-csharp hljs">public static IBusinessDbContext UseAuditTrail&lt;T, TEntity&gt;(this IBusinessDbContext context, string currentUserId)
+    where T : DbContext</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -534,7 +538,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseBearerTokenAuthentication(this IApplicationBuilder app, TokenValidationParameters validationParameter, Func&lt;string, string, string, string, Task&lt;ClaimsIdentity&gt;&gt; identityResolver, Func&lt;ClaimsIdentity, Dictionary&lt;string, object&gt;, Task&lt;Dictionary&lt;string, object&gt;&gt;&gt; bearerTokenResolver = null, TimeSpan expiration = default (TimeSpan), bool forceHttps = true)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseBearerTokenAuthentication(this IApplicationBuilder app, TokenValidationParameters validationParameter, Func&lt;string, string, string, string, Task&lt;ClaimsIdentity&gt;&gt; identityResolver, Func&lt;ClaimsIdentity, Dictionary&lt;string, object&gt;, Task&lt;Dictionary&lt;string, object&gt;&gt;&gt; bearerTokenResolver = null, TimeSpan expiration = default(TimeSpan), bool forceHttps = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -702,10 +706,11 @@
       </tr>
     </tbody>
   </table>
+
+<h3>Comments</h3>
 <div id="disqus_thread"></div>
 <script>
 
-<h3>Comments</h3>
 /**
 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/

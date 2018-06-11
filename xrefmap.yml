@@ -58,6 +58,7 @@ references:
   name: AuditTrailController
   href: api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html#Unosquare_Swan_AspNetCore_AuditTrailController_2__ctor_
   commentId: Overload:Unosquare.Swan.AspNetCore.AuditTrailController`2.#ctor
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.AuditTrailController<T, TEntity>.AuditTrailController
   fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of T, TEntity).AuditTrailController
   nameWithType: AuditTrailController<T, TEntity>.AuditTrailController
@@ -75,6 +76,7 @@ references:
   name: AddTypes
   href: api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html#Unosquare_Swan_AspNetCore_AuditTrailController_2_AddTypes_
   commentId: Overload:Unosquare.Swan.AspNetCore.AuditTrailController`2.AddTypes
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.AuditTrailController<T, TEntity>.AddTypes
   fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of T, TEntity).AddTypes
   nameWithType: AuditTrailController<T, TEntity>.AddTypes
@@ -91,6 +93,7 @@ references:
   name: OnDeleteCreated
   href: api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html#Unosquare_Swan_AspNetCore_AuditTrailController_2_OnDeleteCreated_
   commentId: Overload:Unosquare.Swan.AspNetCore.AuditTrailController`2.OnDeleteCreated
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.AuditTrailController<T, TEntity>.OnDeleteCreated
   fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of T, TEntity).OnDeleteCreated
   nameWithType: AuditTrailController<T, TEntity>.OnDeleteCreated
@@ -107,6 +110,7 @@ references:
   name: OnEntityCreated
   href: api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html#Unosquare_Swan_AspNetCore_AuditTrailController_2_OnEntityCreated_
   commentId: Overload:Unosquare.Swan.AspNetCore.AuditTrailController`2.OnEntityCreated
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.AuditTrailController<T, TEntity>.OnEntityCreated
   fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of T, TEntity).OnEntityCreated
   nameWithType: AuditTrailController<T, TEntity>.OnEntityCreated
@@ -123,6 +127,7 @@ references:
   name: OnEntityUpdated
   href: api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html#Unosquare_Swan_AspNetCore_AuditTrailController_2_OnEntityUpdated_
   commentId: Overload:Unosquare.Swan.AspNetCore.AuditTrailController`2.OnEntityUpdated
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.AuditTrailController<T, TEntity>.OnEntityUpdated
   fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of T, TEntity).OnEntityUpdated
   nameWithType: AuditTrailController<T, TEntity>.OnEntityUpdated
@@ -143,6 +148,7 @@ references:
   name: AuthenticateSchemeMiddleware
   href: api/Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.html#Unosquare_Swan_AspNetCore_AuthenticateSchemeMiddleware__ctor_
   commentId: Overload:Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.#ctor
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.AuthenticateSchemeMiddleware
   nameWithType: AuthenticateSchemeMiddleware.AuthenticateSchemeMiddleware
 - uid: Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.Invoke(HttpContext)
@@ -155,6 +161,7 @@ references:
   name: Invoke
   href: api/Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.html#Unosquare_Swan_AspNetCore_AuthenticateSchemeMiddleware_Invoke_
   commentId: Overload:Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.Invoke
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.Invoke
   nameWithType: AuthenticateSchemeMiddleware.Invoke
 - uid: Unosquare.Swan.AspNetCore.BasicRoleStore
@@ -173,6 +180,7 @@ references:
   name: BasicRoleStore
   href: api/Unosquare.Swan.AspNetCore.BasicRoleStore.html#Unosquare_Swan_AspNetCore_BasicRoleStore__ctor_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicRoleStore.#ctor
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicRoleStore.BasicRoleStore
   nameWithType: BasicRoleStore.BasicRoleStore
 - uid: Unosquare.Swan.AspNetCore.BasicRoleStore.CreateAsync(Unosquare.Swan.AspNetCore.Models.ApplicationRole,System.Threading.CancellationToken)
@@ -185,6 +193,7 @@ references:
   name: CreateAsync
   href: api/Unosquare.Swan.AspNetCore.BasicRoleStore.html#Unosquare_Swan_AspNetCore_BasicRoleStore_CreateAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicRoleStore.CreateAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicRoleStore.CreateAsync
   nameWithType: BasicRoleStore.CreateAsync
 - uid: Unosquare.Swan.AspNetCore.BasicRoleStore.DeleteAsync(Unosquare.Swan.AspNetCore.Models.ApplicationRole,System.Threading.CancellationToken)
@@ -197,6 +206,7 @@ references:
   name: DeleteAsync
   href: api/Unosquare.Swan.AspNetCore.BasicRoleStore.html#Unosquare_Swan_AspNetCore_BasicRoleStore_DeleteAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicRoleStore.DeleteAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicRoleStore.DeleteAsync
   nameWithType: BasicRoleStore.DeleteAsync
 - uid: Unosquare.Swan.AspNetCore.BasicRoleStore.Dispose
@@ -209,6 +219,7 @@ references:
   name: Dispose
   href: api/Unosquare.Swan.AspNetCore.BasicRoleStore.html#Unosquare_Swan_AspNetCore_BasicRoleStore_Dispose_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicRoleStore.Dispose
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicRoleStore.Dispose
   nameWithType: BasicRoleStore.Dispose
 - uid: Unosquare.Swan.AspNetCore.BasicRoleStore.FindByIdAsync(System.String,System.Threading.CancellationToken)
@@ -221,6 +232,7 @@ references:
   name: FindByIdAsync
   href: api/Unosquare.Swan.AspNetCore.BasicRoleStore.html#Unosquare_Swan_AspNetCore_BasicRoleStore_FindByIdAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicRoleStore.FindByIdAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicRoleStore.FindByIdAsync
   nameWithType: BasicRoleStore.FindByIdAsync
 - uid: Unosquare.Swan.AspNetCore.BasicRoleStore.FindByNameAsync(System.String,System.Threading.CancellationToken)
@@ -233,6 +245,7 @@ references:
   name: FindByNameAsync
   href: api/Unosquare.Swan.AspNetCore.BasicRoleStore.html#Unosquare_Swan_AspNetCore_BasicRoleStore_FindByNameAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicRoleStore.FindByNameAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicRoleStore.FindByNameAsync
   nameWithType: BasicRoleStore.FindByNameAsync
 - uid: Unosquare.Swan.AspNetCore.BasicRoleStore.GetNormalizedRoleNameAsync(Unosquare.Swan.AspNetCore.Models.ApplicationRole,System.Threading.CancellationToken)
@@ -245,6 +258,7 @@ references:
   name: GetNormalizedRoleNameAsync
   href: api/Unosquare.Swan.AspNetCore.BasicRoleStore.html#Unosquare_Swan_AspNetCore_BasicRoleStore_GetNormalizedRoleNameAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicRoleStore.GetNormalizedRoleNameAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicRoleStore.GetNormalizedRoleNameAsync
   nameWithType: BasicRoleStore.GetNormalizedRoleNameAsync
 - uid: Unosquare.Swan.AspNetCore.BasicRoleStore.GetRoleIdAsync(Unosquare.Swan.AspNetCore.Models.ApplicationRole,System.Threading.CancellationToken)
@@ -257,6 +271,7 @@ references:
   name: GetRoleIdAsync
   href: api/Unosquare.Swan.AspNetCore.BasicRoleStore.html#Unosquare_Swan_AspNetCore_BasicRoleStore_GetRoleIdAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicRoleStore.GetRoleIdAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicRoleStore.GetRoleIdAsync
   nameWithType: BasicRoleStore.GetRoleIdAsync
 - uid: Unosquare.Swan.AspNetCore.BasicRoleStore.GetRoleNameAsync(Unosquare.Swan.AspNetCore.Models.ApplicationRole,System.Threading.CancellationToken)
@@ -269,6 +284,7 @@ references:
   name: GetRoleNameAsync
   href: api/Unosquare.Swan.AspNetCore.BasicRoleStore.html#Unosquare_Swan_AspNetCore_BasicRoleStore_GetRoleNameAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicRoleStore.GetRoleNameAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicRoleStore.GetRoleNameAsync
   nameWithType: BasicRoleStore.GetRoleNameAsync
 - uid: Unosquare.Swan.AspNetCore.BasicRoleStore.SetNormalizedRoleNameAsync(Unosquare.Swan.AspNetCore.Models.ApplicationRole,System.String,System.Threading.CancellationToken)
@@ -281,6 +297,7 @@ references:
   name: SetNormalizedRoleNameAsync
   href: api/Unosquare.Swan.AspNetCore.BasicRoleStore.html#Unosquare_Swan_AspNetCore_BasicRoleStore_SetNormalizedRoleNameAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicRoleStore.SetNormalizedRoleNameAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicRoleStore.SetNormalizedRoleNameAsync
   nameWithType: BasicRoleStore.SetNormalizedRoleNameAsync
 - uid: Unosquare.Swan.AspNetCore.BasicRoleStore.SetRoleNameAsync(Unosquare.Swan.AspNetCore.Models.ApplicationRole,System.String,System.Threading.CancellationToken)
@@ -293,6 +310,7 @@ references:
   name: SetRoleNameAsync
   href: api/Unosquare.Swan.AspNetCore.BasicRoleStore.html#Unosquare_Swan_AspNetCore_BasicRoleStore_SetRoleNameAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicRoleStore.SetRoleNameAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicRoleStore.SetRoleNameAsync
   nameWithType: BasicRoleStore.SetRoleNameAsync
 - uid: Unosquare.Swan.AspNetCore.BasicRoleStore.UpdateAsync(Unosquare.Swan.AspNetCore.Models.ApplicationRole,System.Threading.CancellationToken)
@@ -305,6 +323,7 @@ references:
   name: UpdateAsync
   href: api/Unosquare.Swan.AspNetCore.BasicRoleStore.html#Unosquare_Swan_AspNetCore_BasicRoleStore_UpdateAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicRoleStore.UpdateAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicRoleStore.UpdateAsync
   nameWithType: BasicRoleStore.UpdateAsync
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore
@@ -323,6 +342,7 @@ references:
   name: BasicUserStore
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore__ctor_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.#ctor
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.BasicUserStore
   nameWithType: BasicUserStore.BasicUserStore
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.AddLoginAsync(Unosquare.Swan.AspNetCore.Models.ApplicationUser,UserLoginInfo,System.Threading.CancellationToken)
@@ -335,6 +355,7 @@ references:
   name: AddLoginAsync
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_AddLoginAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.AddLoginAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.AddLoginAsync
   nameWithType: BasicUserStore.AddLoginAsync
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.CreateAsync(Unosquare.Swan.AspNetCore.Models.ApplicationUser,System.Threading.CancellationToken)
@@ -347,6 +368,7 @@ references:
   name: CreateAsync
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_CreateAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.CreateAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.CreateAsync
   nameWithType: BasicUserStore.CreateAsync
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.DeleteAsync(Unosquare.Swan.AspNetCore.Models.ApplicationUser,System.Threading.CancellationToken)
@@ -359,6 +381,7 @@ references:
   name: DeleteAsync
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_DeleteAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.DeleteAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.DeleteAsync
   nameWithType: BasicUserStore.DeleteAsync
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.Dispose
@@ -371,6 +394,7 @@ references:
   name: Dispose
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_Dispose_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.Dispose
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.Dispose
   nameWithType: BasicUserStore.Dispose
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.FindByIdAsync(System.String,System.Threading.CancellationToken)
@@ -383,6 +407,7 @@ references:
   name: FindByIdAsync
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_FindByIdAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.FindByIdAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.FindByIdAsync
   nameWithType: BasicUserStore.FindByIdAsync
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.FindByLoginAsync(System.String,System.String,System.Threading.CancellationToken)
@@ -395,6 +420,7 @@ references:
   name: FindByLoginAsync
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_FindByLoginAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.FindByLoginAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.FindByLoginAsync
   nameWithType: BasicUserStore.FindByLoginAsync
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.FindByNameAsync(System.String,System.Threading.CancellationToken)
@@ -407,6 +433,7 @@ references:
   name: FindByNameAsync
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_FindByNameAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.FindByNameAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.FindByNameAsync
   nameWithType: BasicUserStore.FindByNameAsync
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.GetLoginsAsync(Unosquare.Swan.AspNetCore.Models.ApplicationUser,System.Threading.CancellationToken)
@@ -419,6 +446,7 @@ references:
   name: GetLoginsAsync
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_GetLoginsAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.GetLoginsAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.GetLoginsAsync
   nameWithType: BasicUserStore.GetLoginsAsync
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.GetNormalizedUserNameAsync(Unosquare.Swan.AspNetCore.Models.ApplicationUser,System.Threading.CancellationToken)
@@ -431,6 +459,7 @@ references:
   name: GetNormalizedUserNameAsync
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_GetNormalizedUserNameAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.GetNormalizedUserNameAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.GetNormalizedUserNameAsync
   nameWithType: BasicUserStore.GetNormalizedUserNameAsync
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.GetPasswordHashAsync(Unosquare.Swan.AspNetCore.Models.ApplicationUser,System.Threading.CancellationToken)
@@ -443,6 +472,7 @@ references:
   name: GetPasswordHashAsync
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_GetPasswordHashAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.GetPasswordHashAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.GetPasswordHashAsync
   nameWithType: BasicUserStore.GetPasswordHashAsync
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.GetPhoneNumberAsync(Unosquare.Swan.AspNetCore.Models.ApplicationUser,System.Threading.CancellationToken)
@@ -455,6 +485,7 @@ references:
   name: GetPhoneNumberAsync
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_GetPhoneNumberAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.GetPhoneNumberAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.GetPhoneNumberAsync
   nameWithType: BasicUserStore.GetPhoneNumberAsync
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.GetPhoneNumberConfirmedAsync(Unosquare.Swan.AspNetCore.Models.ApplicationUser,System.Threading.CancellationToken)
@@ -467,6 +498,7 @@ references:
   name: GetPhoneNumberConfirmedAsync
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_GetPhoneNumberConfirmedAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.GetPhoneNumberConfirmedAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.GetPhoneNumberConfirmedAsync
   nameWithType: BasicUserStore.GetPhoneNumberConfirmedAsync
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.GetTwoFactorEnabledAsync(Unosquare.Swan.AspNetCore.Models.ApplicationUser,System.Threading.CancellationToken)
@@ -479,6 +511,7 @@ references:
   name: GetTwoFactorEnabledAsync
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_GetTwoFactorEnabledAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.GetTwoFactorEnabledAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.GetTwoFactorEnabledAsync
   nameWithType: BasicUserStore.GetTwoFactorEnabledAsync
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.GetUserIdAsync(Unosquare.Swan.AspNetCore.Models.ApplicationUser,System.Threading.CancellationToken)
@@ -491,6 +524,7 @@ references:
   name: GetUserIdAsync
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_GetUserIdAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.GetUserIdAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.GetUserIdAsync
   nameWithType: BasicUserStore.GetUserIdAsync
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.GetUserNameAsync(Unosquare.Swan.AspNetCore.Models.ApplicationUser,System.Threading.CancellationToken)
@@ -503,6 +537,7 @@ references:
   name: GetUserNameAsync
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_GetUserNameAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.GetUserNameAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.GetUserNameAsync
   nameWithType: BasicUserStore.GetUserNameAsync
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.HasPasswordAsync(Unosquare.Swan.AspNetCore.Models.ApplicationUser,System.Threading.CancellationToken)
@@ -515,6 +550,7 @@ references:
   name: HasPasswordAsync
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_HasPasswordAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.HasPasswordAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.HasPasswordAsync
   nameWithType: BasicUserStore.HasPasswordAsync
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.RemoveLoginAsync(Unosquare.Swan.AspNetCore.Models.ApplicationUser,System.String,System.String,System.Threading.CancellationToken)
@@ -527,6 +563,7 @@ references:
   name: RemoveLoginAsync
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_RemoveLoginAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.RemoveLoginAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.RemoveLoginAsync
   nameWithType: BasicUserStore.RemoveLoginAsync
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.SetNormalizedUserNameAsync(Unosquare.Swan.AspNetCore.Models.ApplicationUser,System.String,System.Threading.CancellationToken)
@@ -539,6 +576,7 @@ references:
   name: SetNormalizedUserNameAsync
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_SetNormalizedUserNameAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.SetNormalizedUserNameAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.SetNormalizedUserNameAsync
   nameWithType: BasicUserStore.SetNormalizedUserNameAsync
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.SetPasswordHashAsync(Unosquare.Swan.AspNetCore.Models.ApplicationUser,System.String,System.Threading.CancellationToken)
@@ -551,6 +589,7 @@ references:
   name: SetPasswordHashAsync
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_SetPasswordHashAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.SetPasswordHashAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.SetPasswordHashAsync
   nameWithType: BasicUserStore.SetPasswordHashAsync
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.SetPhoneNumberAsync(Unosquare.Swan.AspNetCore.Models.ApplicationUser,System.String,System.Threading.CancellationToken)
@@ -563,6 +602,7 @@ references:
   name: SetPhoneNumberAsync
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_SetPhoneNumberAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.SetPhoneNumberAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.SetPhoneNumberAsync
   nameWithType: BasicUserStore.SetPhoneNumberAsync
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.SetPhoneNumberConfirmedAsync(Unosquare.Swan.AspNetCore.Models.ApplicationUser,System.Boolean,System.Threading.CancellationToken)
@@ -575,6 +615,7 @@ references:
   name: SetPhoneNumberConfirmedAsync
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_SetPhoneNumberConfirmedAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.SetPhoneNumberConfirmedAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.SetPhoneNumberConfirmedAsync
   nameWithType: BasicUserStore.SetPhoneNumberConfirmedAsync
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.SetTwoFactorEnabledAsync(Unosquare.Swan.AspNetCore.Models.ApplicationUser,System.Boolean,System.Threading.CancellationToken)
@@ -587,6 +628,7 @@ references:
   name: SetTwoFactorEnabledAsync
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_SetTwoFactorEnabledAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.SetTwoFactorEnabledAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.SetTwoFactorEnabledAsync
   nameWithType: BasicUserStore.SetTwoFactorEnabledAsync
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.SetUserNameAsync(Unosquare.Swan.AspNetCore.Models.ApplicationUser,System.String,System.Threading.CancellationToken)
@@ -599,6 +641,7 @@ references:
   name: SetUserNameAsync
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_SetUserNameAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.SetUserNameAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.SetUserNameAsync
   nameWithType: BasicUserStore.SetUserNameAsync
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.UpdateAsync(Unosquare.Swan.AspNetCore.Models.ApplicationUser,System.Threading.CancellationToken)
@@ -611,6 +654,7 @@ references:
   name: UpdateAsync
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_UpdateAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.UpdateAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore.UpdateAsync
   nameWithType: BasicUserStore.UpdateAsync
 - uid: Unosquare.Swan.AspNetCore.BusinessDbContext
@@ -629,6 +673,7 @@ references:
   name: BusinessDbContext
   href: api/Unosquare.Swan.AspNetCore.BusinessDbContext.html#Unosquare_Swan_AspNetCore_BusinessDbContext__ctor_
   commentId: Overload:Unosquare.Swan.AspNetCore.BusinessDbContext.#ctor
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BusinessDbContext.BusinessDbContext
   nameWithType: BusinessDbContext.BusinessDbContext
 - uid: Unosquare.Swan.AspNetCore.BusinessDbContext.AddController(Unosquare.Swan.AspNetCore.IBusinessRulesController)
@@ -641,6 +686,7 @@ references:
   name: AddController
   href: api/Unosquare.Swan.AspNetCore.BusinessDbContext.html#Unosquare_Swan_AspNetCore_BusinessDbContext_AddController_
   commentId: Overload:Unosquare.Swan.AspNetCore.BusinessDbContext.AddController
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BusinessDbContext.AddController
   nameWithType: BusinessDbContext.AddController
 - uid: Unosquare.Swan.AspNetCore.BusinessDbContext.ContainsController(Unosquare.Swan.AspNetCore.IBusinessRulesController)
@@ -653,6 +699,7 @@ references:
   name: ContainsController
   href: api/Unosquare.Swan.AspNetCore.BusinessDbContext.html#Unosquare_Swan_AspNetCore_BusinessDbContext_ContainsController_
   commentId: Overload:Unosquare.Swan.AspNetCore.BusinessDbContext.ContainsController
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BusinessDbContext.ContainsController
   nameWithType: BusinessDbContext.ContainsController
 - uid: Unosquare.Swan.AspNetCore.BusinessDbContext.RemoveController(Unosquare.Swan.AspNetCore.IBusinessRulesController)
@@ -665,6 +712,7 @@ references:
   name: RemoveController
   href: api/Unosquare.Swan.AspNetCore.BusinessDbContext.html#Unosquare_Swan_AspNetCore_BusinessDbContext_RemoveController_
   commentId: Overload:Unosquare.Swan.AspNetCore.BusinessDbContext.RemoveController
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BusinessDbContext.RemoveController
   nameWithType: BusinessDbContext.RemoveController
 - uid: Unosquare.Swan.AspNetCore.BusinessDbContext.RunBusinessRules
@@ -677,6 +725,7 @@ references:
   name: RunBusinessRules
   href: api/Unosquare.Swan.AspNetCore.BusinessDbContext.html#Unosquare_Swan_AspNetCore_BusinessDbContext_RunBusinessRules_
   commentId: Overload:Unosquare.Swan.AspNetCore.BusinessDbContext.RunBusinessRules
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BusinessDbContext.RunBusinessRules
   nameWithType: BusinessDbContext.RunBusinessRules
 - uid: Unosquare.Swan.AspNetCore.BusinessDbContext.SaveChanges
@@ -689,6 +738,7 @@ references:
   name: SaveChanges
   href: api/Unosquare.Swan.AspNetCore.BusinessDbContext.html#Unosquare_Swan_AspNetCore_BusinessDbContext_SaveChanges_
   commentId: Overload:Unosquare.Swan.AspNetCore.BusinessDbContext.SaveChanges
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BusinessDbContext.SaveChanges
   nameWithType: BusinessDbContext.SaveChanges
 - uid: Unosquare.Swan.AspNetCore.BusinessDbContext.SaveChangesAsync(System.Threading.CancellationToken)
@@ -701,6 +751,7 @@ references:
   name: SaveChangesAsync
   href: api/Unosquare.Swan.AspNetCore.BusinessDbContext.html#Unosquare_Swan_AspNetCore_BusinessDbContext_SaveChangesAsync_
   commentId: Overload:Unosquare.Swan.AspNetCore.BusinessDbContext.SaveChangesAsync
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BusinessDbContext.SaveChangesAsync
   nameWithType: BusinessDbContext.SaveChangesAsync
 - uid: Unosquare.Swan.AspNetCore.BusinessRuleAttribute
@@ -734,6 +785,7 @@ references:
   name: BusinessRuleAttribute
   href: api/Unosquare.Swan.AspNetCore.BusinessRuleAttribute.html#Unosquare_Swan_AspNetCore_BusinessRuleAttribute__ctor_
   commentId: Overload:Unosquare.Swan.AspNetCore.BusinessRuleAttribute.#ctor
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BusinessRuleAttribute.BusinessRuleAttribute
   nameWithType: BusinessRuleAttribute.BusinessRuleAttribute
 - uid: Unosquare.Swan.AspNetCore.BusinessRuleAttribute.Action
@@ -746,6 +798,7 @@ references:
   name: Action
   href: api/Unosquare.Swan.AspNetCore.BusinessRuleAttribute.html#Unosquare_Swan_AspNetCore_BusinessRuleAttribute_Action_
   commentId: Overload:Unosquare.Swan.AspNetCore.BusinessRuleAttribute.Action
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BusinessRuleAttribute.Action
   nameWithType: BusinessRuleAttribute.Action
 - uid: Unosquare.Swan.AspNetCore.BusinessRuleAttribute.EntityTypes
@@ -758,6 +811,7 @@ references:
   name: EntityTypes
   href: api/Unosquare.Swan.AspNetCore.BusinessRuleAttribute.html#Unosquare_Swan_AspNetCore_BusinessRuleAttribute_EntityTypes_
   commentId: Overload:Unosquare.Swan.AspNetCore.BusinessRuleAttribute.EntityTypes
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BusinessRuleAttribute.EntityTypes
   nameWithType: BusinessRuleAttribute.EntityTypes
 - uid: Unosquare.Swan.AspNetCore.BusinessRulesController`1
@@ -781,6 +835,7 @@ references:
   name: BusinessRulesController
   href: api/Unosquare.Swan.AspNetCore.BusinessRulesController-1.html#Unosquare_Swan_AspNetCore_BusinessRulesController_1__ctor_
   commentId: Overload:Unosquare.Swan.AspNetCore.BusinessRulesController`1.#ctor
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<T>.BusinessRulesController
   fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of T).BusinessRulesController
   nameWithType: BusinessRulesController<T>.BusinessRulesController
@@ -797,6 +852,7 @@ references:
   name: Context
   href: api/Unosquare.Swan.AspNetCore.BusinessRulesController-1.html#Unosquare_Swan_AspNetCore_BusinessRulesController_1_Context_
   commentId: Overload:Unosquare.Swan.AspNetCore.BusinessRulesController`1.Context
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<T>.Context
   fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of T).Context
   nameWithType: BusinessRulesController<T>.Context
@@ -813,6 +869,7 @@ references:
   name: GetEntityType
   href: api/Unosquare.Swan.AspNetCore.BusinessRulesController-1.html#Unosquare_Swan_AspNetCore_BusinessRulesController_1_GetEntityType_
   commentId: Overload:Unosquare.Swan.AspNetCore.BusinessRulesController`1.GetEntityType
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<T>.GetEntityType
   fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of T).GetEntityType
   nameWithType: BusinessRulesController<T>.GetEntityType
@@ -829,6 +886,7 @@ references:
   name: RunBusinessRules
   href: api/Unosquare.Swan.AspNetCore.BusinessRulesController-1.html#Unosquare_Swan_AspNetCore_BusinessRulesController_1_RunBusinessRules_
   commentId: Overload:Unosquare.Swan.AspNetCore.BusinessRulesController`1.RunBusinessRules
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<T>.RunBusinessRules
   fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of T).RunBusinessRules
   nameWithType: BusinessRulesController<T>.RunBusinessRules
@@ -849,12 +907,14 @@ references:
   name: AddBearerTokenAuthentication
   href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_AddBearerTokenAuthentication_
   commentId: Overload:Unosquare.Swan.AspNetCore.Extensions.AddBearerTokenAuthentication
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Extensions.AddBearerTokenAuthentication
   nameWithType: Extensions.AddBearerTokenAuthentication
 - uid: Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework*
   name: AddEntityFramework
   href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_AddEntityFramework_
   commentId: Overload:Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework
   nameWithType: Extensions.AddEntityFramework
 - uid: Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework``2(ILoggerFactory,System.IServiceProvider,System.Func{System.String,System.LogLevel,System.Boolean})
@@ -879,6 +939,7 @@ references:
   name: AddLoggingEntityFramework
   href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_AddLoggingEntityFramework_
   commentId: Overload:Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework
   nameWithType: Extensions.AddLoggingEntityFramework
 - uid: Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework``2(IServiceCollection,System.Func{System.String,System.LogLevel,System.Boolean})
@@ -900,6 +961,7 @@ references:
   name: UseAuditTrail
   href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_UseAuditTrail_
   commentId: Overload:Unosquare.Swan.AspNetCore.Extensions.UseAuditTrail
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Extensions.UseAuditTrail
   nameWithType: Extensions.UseAuditTrail
 - uid: Unosquare.Swan.AspNetCore.Extensions.UseAuditTrail``2(Unosquare.Swan.AspNetCore.IBusinessDbContext,System.String)
@@ -924,6 +986,7 @@ references:
   name: UseBearerTokenAuthentication
   href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_UseBearerTokenAuthentication_
   commentId: Overload:Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenAuthentication
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenAuthentication
   nameWithType: Extensions.UseBearerTokenAuthentication
 - uid: Unosquare.Swan.AspNetCore.Extensions.UseFallback(IApplicationBuilder,System.String,System.Func{PathString,System.Boolean})
@@ -939,6 +1002,7 @@ references:
   name: UseFallback
   href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_UseFallback_
   commentId: Overload:Unosquare.Swan.AspNetCore.Extensions.UseFallback
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Extensions.UseFallback
   nameWithType: Extensions.UseFallback
 - uid: Unosquare.Swan.AspNetCore.Extensions.UseJsonExceptionHandler(IApplicationBuilder)
@@ -951,6 +1015,7 @@ references:
   name: UseJsonExceptionHandler
   href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_UseJsonExceptionHandler_
   commentId: Overload:Unosquare.Swan.AspNetCore.Extensions.UseJsonExceptionHandler
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Extensions.UseJsonExceptionHandler
   nameWithType: Extensions.UseJsonExceptionHandler
 - uid: Unosquare.Swan.AspNetCore.IBusinessDbContext
@@ -969,6 +1034,7 @@ references:
   name: AddController
   href: api/Unosquare.Swan.AspNetCore.IBusinessDbContext.html#Unosquare_Swan_AspNetCore_IBusinessDbContext_AddController_
   commentId: Overload:Unosquare.Swan.AspNetCore.IBusinessDbContext.AddController
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.IBusinessDbContext.AddController
   nameWithType: IBusinessDbContext.AddController
 - uid: Unosquare.Swan.AspNetCore.IBusinessDbContext.ContainsController(Unosquare.Swan.AspNetCore.IBusinessRulesController)
@@ -981,6 +1047,7 @@ references:
   name: ContainsController
   href: api/Unosquare.Swan.AspNetCore.IBusinessDbContext.html#Unosquare_Swan_AspNetCore_IBusinessDbContext_ContainsController_
   commentId: Overload:Unosquare.Swan.AspNetCore.IBusinessDbContext.ContainsController
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.IBusinessDbContext.ContainsController
   nameWithType: IBusinessDbContext.ContainsController
 - uid: Unosquare.Swan.AspNetCore.IBusinessDbContext.RemoveController(Unosquare.Swan.AspNetCore.IBusinessRulesController)
@@ -993,6 +1060,7 @@ references:
   name: RemoveController
   href: api/Unosquare.Swan.AspNetCore.IBusinessDbContext.html#Unosquare_Swan_AspNetCore_IBusinessDbContext_RemoveController_
   commentId: Overload:Unosquare.Swan.AspNetCore.IBusinessDbContext.RemoveController
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.IBusinessDbContext.RemoveController
   nameWithType: IBusinessDbContext.RemoveController
 - uid: Unosquare.Swan.AspNetCore.IBusinessRulesController
@@ -1011,6 +1079,7 @@ references:
   name: RunBusinessRules
   href: api/Unosquare.Swan.AspNetCore.IBusinessRulesController.html#Unosquare_Swan_AspNetCore_IBusinessRulesController_RunBusinessRules_
   commentId: Overload:Unosquare.Swan.AspNetCore.IBusinessRulesController.RunBusinessRules
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.IBusinessRulesController.RunBusinessRules
   nameWithType: IBusinessRulesController.RunBusinessRules
 - uid: Unosquare.Swan.AspNetCore.Logger
@@ -1041,6 +1110,7 @@ references:
   name: EntityFrameworkLogger
   href: api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger-2.html#Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLogger_2__ctor_
   commentId: Overload:Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger`2.#ctor
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger<TDbContext, TLog>.EntityFrameworkLogger
   fullName.vb: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger(Of TDbContext, TLog).EntityFrameworkLogger
   nameWithType: EntityFrameworkLogger<TDbContext, TLog>.EntityFrameworkLogger
@@ -1049,6 +1119,7 @@ references:
   name: BeginScope
   href: api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger-2.html#Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLogger_2_BeginScope_
   commentId: Overload:Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger`2.BeginScope
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger<TDbContext, TLog>.BeginScope
   fullName.vb: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger(Of TDbContext, TLog).BeginScope
   nameWithType: EntityFrameworkLogger<TDbContext, TLog>.BeginScope
@@ -1074,6 +1145,7 @@ references:
   name: IsEnabled
   href: api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger-2.html#Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLogger_2_IsEnabled_
   commentId: Overload:Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger`2.IsEnabled
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger<TDbContext, TLog>.IsEnabled
   fullName.vb: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger(Of TDbContext, TLog).IsEnabled
   nameWithType: EntityFrameworkLogger<TDbContext, TLog>.IsEnabled
@@ -1082,6 +1154,7 @@ references:
   name: Log
   href: api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger-2.html#Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLogger_2_Log_
   commentId: Overload:Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger`2.Log
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger<TDbContext, TLog>.Log
   fullName.vb: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger(Of TDbContext, TLog).Log
   nameWithType: EntityFrameworkLogger<TDbContext, TLog>.Log
@@ -1111,6 +1184,7 @@ references:
   name: Filters
   href: api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerOptions.html#Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLoggerOptions_Filters_
   commentId: Overload:Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerOptions.Filters
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerOptions.Filters
   nameWithType: EntityFrameworkLoggerOptions.Filters
 - uid: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider`2
@@ -1135,6 +1209,7 @@ references:
   name: EntityFrameworkLoggerProvider
   href: api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider-2.html#Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLoggerProvider_2__ctor_
   commentId: Overload:Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider`2.#ctor
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider<TDbContext, TLog>.EntityFrameworkLoggerProvider
   fullName.vb: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider(Of TDbContext, TLog).EntityFrameworkLoggerProvider
   nameWithType: EntityFrameworkLoggerProvider<TDbContext, TLog>.EntityFrameworkLoggerProvider
@@ -1151,6 +1226,7 @@ references:
   name: CreateLogger
   href: api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider-2.html#Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLoggerProvider_2_CreateLogger_
   commentId: Overload:Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider`2.CreateLogger
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider<TDbContext, TLog>.CreateLogger
   fullName.vb: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider(Of TDbContext, TLog).CreateLogger
   nameWithType: EntityFrameworkLoggerProvider<TDbContext, TLog>.CreateLogger
@@ -1167,6 +1243,7 @@ references:
   name: Dispose
   href: api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider-2.html#Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLoggerProvider_2_Dispose_
   commentId: Overload:Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider`2.Dispose
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider<TDbContext, TLog>.Dispose
   fullName.vb: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider(Of TDbContext, TLog).Dispose
   nameWithType: EntityFrameworkLoggerProvider<TDbContext, TLog>.Dispose
@@ -1193,6 +1270,7 @@ references:
   name: RoleId
   href: api/Unosquare.Swan.AspNetCore.Models.ApplicationRole.html#Unosquare_Swan_AspNetCore_Models_ApplicationRole_RoleId_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.ApplicationRole.RoleId
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.ApplicationRole.RoleId
   nameWithType: ApplicationRole.RoleId
 - uid: Unosquare.Swan.AspNetCore.Models.ApplicationRole.RoleName
@@ -1205,6 +1283,7 @@ references:
   name: RoleName
   href: api/Unosquare.Swan.AspNetCore.Models.ApplicationRole.html#Unosquare_Swan_AspNetCore_Models_ApplicationRole_RoleName_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.ApplicationRole.RoleName
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.ApplicationRole.RoleName
   nameWithType: ApplicationRole.RoleName
 - uid: Unosquare.Swan.AspNetCore.Models.ApplicationUser
@@ -1223,6 +1302,7 @@ references:
   name: Email
   href: api/Unosquare.Swan.AspNetCore.Models.ApplicationUser.html#Unosquare_Swan_AspNetCore_Models_ApplicationUser_Email_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.ApplicationUser.Email
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.ApplicationUser.Email
   nameWithType: ApplicationUser.Email
 - uid: Unosquare.Swan.AspNetCore.Models.ApplicationUser.PasswordHash
@@ -1235,6 +1315,7 @@ references:
   name: PasswordHash
   href: api/Unosquare.Swan.AspNetCore.Models.ApplicationUser.html#Unosquare_Swan_AspNetCore_Models_ApplicationUser_PasswordHash_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.ApplicationUser.PasswordHash
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.ApplicationUser.PasswordHash
   nameWithType: ApplicationUser.PasswordHash
 - uid: Unosquare.Swan.AspNetCore.Models.ApplicationUser.PhoneNumber
@@ -1247,6 +1328,7 @@ references:
   name: PhoneNumber
   href: api/Unosquare.Swan.AspNetCore.Models.ApplicationUser.html#Unosquare_Swan_AspNetCore_Models_ApplicationUser_PhoneNumber_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.ApplicationUser.PhoneNumber
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.ApplicationUser.PhoneNumber
   nameWithType: ApplicationUser.PhoneNumber
 - uid: Unosquare.Swan.AspNetCore.Models.ApplicationUser.PhoneNumberConfirmed
@@ -1259,6 +1341,7 @@ references:
   name: PhoneNumberConfirmed
   href: api/Unosquare.Swan.AspNetCore.Models.ApplicationUser.html#Unosquare_Swan_AspNetCore_Models_ApplicationUser_PhoneNumberConfirmed_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.ApplicationUser.PhoneNumberConfirmed
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.ApplicationUser.PhoneNumberConfirmed
   nameWithType: ApplicationUser.PhoneNumberConfirmed
 - uid: Unosquare.Swan.AspNetCore.Models.ApplicationUser.TwoFactorEnabled
@@ -1271,6 +1354,7 @@ references:
   name: TwoFactorEnabled
   href: api/Unosquare.Swan.AspNetCore.Models.ApplicationUser.html#Unosquare_Swan_AspNetCore_Models_ApplicationUser_TwoFactorEnabled_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.ApplicationUser.TwoFactorEnabled
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.ApplicationUser.TwoFactorEnabled
   nameWithType: ApplicationUser.TwoFactorEnabled
 - uid: Unosquare.Swan.AspNetCore.Models.ApplicationUser.UserId
@@ -1283,6 +1367,7 @@ references:
   name: UserId
   href: api/Unosquare.Swan.AspNetCore.Models.ApplicationUser.html#Unosquare_Swan_AspNetCore_Models_ApplicationUser_UserId_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.ApplicationUser.UserId
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.ApplicationUser.UserId
   nameWithType: ApplicationUser.UserId
 - uid: Unosquare.Swan.AspNetCore.Models.ApplicationUser.UserName
@@ -1295,6 +1380,7 @@ references:
   name: UserName
   href: api/Unosquare.Swan.AspNetCore.Models.ApplicationUser.html#Unosquare_Swan_AspNetCore_Models_ApplicationUser_UserName_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.ApplicationUser.UserName
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.ApplicationUser.UserName
   nameWithType: ApplicationUser.UserName
 - uid: Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry
@@ -1313,6 +1399,7 @@ references:
   name: Action
   href: api/Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.html#Unosquare_Swan_AspNetCore_Models_IAuditTrailEntry_Action_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.Action
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.Action
   nameWithType: IAuditTrailEntry.Action
 - uid: Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.DateCreated
@@ -1325,6 +1412,7 @@ references:
   name: DateCreated
   href: api/Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.html#Unosquare_Swan_AspNetCore_Models_IAuditTrailEntry_DateCreated_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.DateCreated
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.DateCreated
   nameWithType: IAuditTrailEntry.DateCreated
 - uid: Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.JsonBody
@@ -1337,6 +1425,7 @@ references:
   name: JsonBody
   href: api/Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.html#Unosquare_Swan_AspNetCore_Models_IAuditTrailEntry_JsonBody_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.JsonBody
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.JsonBody
   nameWithType: IAuditTrailEntry.JsonBody
 - uid: Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.TableName
@@ -1349,6 +1438,7 @@ references:
   name: TableName
   href: api/Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.html#Unosquare_Swan_AspNetCore_Models_IAuditTrailEntry_TableName_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.TableName
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.TableName
   nameWithType: IAuditTrailEntry.TableName
 - uid: Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.UserId
@@ -1361,6 +1451,7 @@ references:
   name: UserId
   href: api/Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.html#Unosquare_Swan_AspNetCore_Models_IAuditTrailEntry_UserId_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.UserId
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.UserId
   nameWithType: IAuditTrailEntry.UserId
 - uid: Unosquare.Swan.AspNetCore.Models.LogEntry
@@ -1379,6 +1470,7 @@ references:
   name: Browser
   href: api/Unosquare.Swan.AspNetCore.Models.LogEntry.html#Unosquare_Swan_AspNetCore_Models_LogEntry_Browser_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.LogEntry.Browser
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.LogEntry.Browser
   nameWithType: LogEntry.Browser
 - uid: Unosquare.Swan.AspNetCore.Models.LogEntry.Date
@@ -1391,6 +1483,7 @@ references:
   name: Date
   href: api/Unosquare.Swan.AspNetCore.Models.LogEntry.html#Unosquare_Swan_AspNetCore_Models_LogEntry_Date_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.LogEntry.Date
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.LogEntry.Date
   nameWithType: LogEntry.Date
 - uid: Unosquare.Swan.AspNetCore.Models.LogEntry.Exception
@@ -1403,6 +1496,7 @@ references:
   name: Exception
   href: api/Unosquare.Swan.AspNetCore.Models.LogEntry.html#Unosquare_Swan_AspNetCore_Models_LogEntry_Exception_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.LogEntry.Exception
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.LogEntry.Exception
   nameWithType: LogEntry.Exception
 - uid: Unosquare.Swan.AspNetCore.Models.LogEntry.HostAddress
@@ -1415,6 +1509,7 @@ references:
   name: HostAddress
   href: api/Unosquare.Swan.AspNetCore.Models.LogEntry.html#Unosquare_Swan_AspNetCore_Models_LogEntry_HostAddress_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.LogEntry.HostAddress
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.LogEntry.HostAddress
   nameWithType: LogEntry.HostAddress
 - uid: Unosquare.Swan.AspNetCore.Models.LogEntry.Id
@@ -1427,6 +1522,7 @@ references:
   name: Id
   href: api/Unosquare.Swan.AspNetCore.Models.LogEntry.html#Unosquare_Swan_AspNetCore_Models_LogEntry_Id_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.LogEntry.Id
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.LogEntry.Id
   nameWithType: LogEntry.Id
 - uid: Unosquare.Swan.AspNetCore.Models.LogEntry.Level
@@ -1439,6 +1535,7 @@ references:
   name: Level
   href: api/Unosquare.Swan.AspNetCore.Models.LogEntry.html#Unosquare_Swan_AspNetCore_Models_LogEntry_Level_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.LogEntry.Level
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.LogEntry.Level
   nameWithType: LogEntry.Level
 - uid: Unosquare.Swan.AspNetCore.Models.LogEntry.Logger
@@ -1451,6 +1548,7 @@ references:
   name: Logger
   href: api/Unosquare.Swan.AspNetCore.Models.LogEntry.html#Unosquare_Swan_AspNetCore_Models_LogEntry_Logger_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.LogEntry.Logger
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.LogEntry.Logger
   nameWithType: LogEntry.Logger
 - uid: Unosquare.Swan.AspNetCore.Models.LogEntry.MaximumExceptionLength
@@ -1475,6 +1573,7 @@ references:
   name: Message
   href: api/Unosquare.Swan.AspNetCore.Models.LogEntry.html#Unosquare_Swan_AspNetCore_Models_LogEntry_Message_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.LogEntry.Message
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.LogEntry.Message
   nameWithType: LogEntry.Message
 - uid: Unosquare.Swan.AspNetCore.Models.LogEntry.Thread
@@ -1487,6 +1586,7 @@ references:
   name: Thread
   href: api/Unosquare.Swan.AspNetCore.Models.LogEntry.html#Unosquare_Swan_AspNetCore_Models_LogEntry_Thread_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.LogEntry.Thread
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.LogEntry.Thread
   nameWithType: LogEntry.Thread
 - uid: Unosquare.Swan.AspNetCore.Models.LogEntry.Url
@@ -1499,6 +1599,7 @@ references:
   name: Url
   href: api/Unosquare.Swan.AspNetCore.Models.LogEntry.html#Unosquare_Swan_AspNetCore_Models_LogEntry_Url_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.LogEntry.Url
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.LogEntry.Url
   nameWithType: LogEntry.Url
 - uid: Unosquare.Swan.AspNetCore.Models.LogEntry.Username
@@ -1511,6 +1612,7 @@ references:
   name: Username
   href: api/Unosquare.Swan.AspNetCore.Models.LogEntry.html#Unosquare_Swan_AspNetCore_Models_LogEntry_Username_
   commentId: Overload:Unosquare.Swan.AspNetCore.Models.LogEntry.Username
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Models.LogEntry.Username
   nameWithType: LogEntry.Username
 - uid: Unosquare.Swan.AspNetCore.TokenProviderMiddleware
@@ -1532,6 +1634,7 @@ references:
   name: TokenProviderMiddleware
   href: api/Unosquare.Swan.AspNetCore.TokenProviderMiddleware.html#Unosquare_Swan_AspNetCore_TokenProviderMiddleware__ctor_
   commentId: Overload:Unosquare.Swan.AspNetCore.TokenProviderMiddleware.#ctor
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.TokenProviderMiddleware.TokenProviderMiddleware
   nameWithType: TokenProviderMiddleware.TokenProviderMiddleware
 - uid: Unosquare.Swan.AspNetCore.TokenProviderMiddleware.Invoke(HttpContext)
@@ -1544,6 +1647,7 @@ references:
   name: Invoke
   href: api/Unosquare.Swan.AspNetCore.TokenProviderMiddleware.html#Unosquare_Swan_AspNetCore_TokenProviderMiddleware_Invoke_
   commentId: Overload:Unosquare.Swan.AspNetCore.TokenProviderMiddleware.Invoke
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.TokenProviderMiddleware.Invoke
   nameWithType: TokenProviderMiddleware.Invoke
 - uid: Unosquare.Swan.AspNetCore.TokenProviderOptions
@@ -1562,6 +1666,7 @@ references:
   name: Audience
   href: api/Unosquare.Swan.AspNetCore.TokenProviderOptions.html#Unosquare_Swan_AspNetCore_TokenProviderOptions_Audience_
   commentId: Overload:Unosquare.Swan.AspNetCore.TokenProviderOptions.Audience
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.TokenProviderOptions.Audience
   nameWithType: TokenProviderOptions.Audience
 - uid: Unosquare.Swan.AspNetCore.TokenProviderOptions.BearerTokenResolver
@@ -1574,6 +1679,7 @@ references:
   name: BearerTokenResolver
   href: api/Unosquare.Swan.AspNetCore.TokenProviderOptions.html#Unosquare_Swan_AspNetCore_TokenProviderOptions_BearerTokenResolver_
   commentId: Overload:Unosquare.Swan.AspNetCore.TokenProviderOptions.BearerTokenResolver
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.TokenProviderOptions.BearerTokenResolver
   nameWithType: TokenProviderOptions.BearerTokenResolver
 - uid: Unosquare.Swan.AspNetCore.TokenProviderOptions.ClaimResolver
@@ -1586,6 +1692,7 @@ references:
   name: ClaimResolver
   href: api/Unosquare.Swan.AspNetCore.TokenProviderOptions.html#Unosquare_Swan_AspNetCore_TokenProviderOptions_ClaimResolver_
   commentId: Overload:Unosquare.Swan.AspNetCore.TokenProviderOptions.ClaimResolver
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.TokenProviderOptions.ClaimResolver
   nameWithType: TokenProviderOptions.ClaimResolver
 - uid: Unosquare.Swan.AspNetCore.TokenProviderOptions.Expiration
@@ -1598,6 +1705,7 @@ references:
   name: Expiration
   href: api/Unosquare.Swan.AspNetCore.TokenProviderOptions.html#Unosquare_Swan_AspNetCore_TokenProviderOptions_Expiration_
   commentId: Overload:Unosquare.Swan.AspNetCore.TokenProviderOptions.Expiration
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.TokenProviderOptions.Expiration
   nameWithType: TokenProviderOptions.Expiration
 - uid: Unosquare.Swan.AspNetCore.TokenProviderOptions.ForceHttps
@@ -1610,6 +1718,7 @@ references:
   name: ForceHttps
   href: api/Unosquare.Swan.AspNetCore.TokenProviderOptions.html#Unosquare_Swan_AspNetCore_TokenProviderOptions_ForceHttps_
   commentId: Overload:Unosquare.Swan.AspNetCore.TokenProviderOptions.ForceHttps
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.TokenProviderOptions.ForceHttps
   nameWithType: TokenProviderOptions.ForceHttps
 - uid: Unosquare.Swan.AspNetCore.TokenProviderOptions.IdentityResolver
@@ -1622,6 +1731,7 @@ references:
   name: IdentityResolver
   href: api/Unosquare.Swan.AspNetCore.TokenProviderOptions.html#Unosquare_Swan_AspNetCore_TokenProviderOptions_IdentityResolver_
   commentId: Overload:Unosquare.Swan.AspNetCore.TokenProviderOptions.IdentityResolver
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.TokenProviderOptions.IdentityResolver
   nameWithType: TokenProviderOptions.IdentityResolver
 - uid: Unosquare.Swan.AspNetCore.TokenProviderOptions.Issuer
@@ -1634,6 +1744,7 @@ references:
   name: Issuer
   href: api/Unosquare.Swan.AspNetCore.TokenProviderOptions.html#Unosquare_Swan_AspNetCore_TokenProviderOptions_Issuer_
   commentId: Overload:Unosquare.Swan.AspNetCore.TokenProviderOptions.Issuer
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.TokenProviderOptions.Issuer
   nameWithType: TokenProviderOptions.Issuer
 - uid: Unosquare.Swan.AspNetCore.TokenProviderOptions.NonceGenerator
@@ -1646,6 +1757,7 @@ references:
   name: NonceGenerator
   href: api/Unosquare.Swan.AspNetCore.TokenProviderOptions.html#Unosquare_Swan_AspNetCore_TokenProviderOptions_NonceGenerator_
   commentId: Overload:Unosquare.Swan.AspNetCore.TokenProviderOptions.NonceGenerator
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.TokenProviderOptions.NonceGenerator
   nameWithType: TokenProviderOptions.NonceGenerator
 - uid: Unosquare.Swan.AspNetCore.TokenProviderOptions.Path
@@ -1658,6 +1770,7 @@ references:
   name: Path
   href: api/Unosquare.Swan.AspNetCore.TokenProviderOptions.html#Unosquare_Swan_AspNetCore_TokenProviderOptions_Path_
   commentId: Overload:Unosquare.Swan.AspNetCore.TokenProviderOptions.Path
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.TokenProviderOptions.Path
   nameWithType: TokenProviderOptions.Path
 - uid: Unosquare.Swan.AspNetCore.TokenProviderOptions.SigningCredentials
@@ -1670,5 +1783,6 @@ references:
   name: SigningCredentials
   href: api/Unosquare.Swan.AspNetCore.TokenProviderOptions.html#Unosquare_Swan_AspNetCore_TokenProviderOptions_SigningCredentials_
   commentId: Overload:Unosquare.Swan.AspNetCore.TokenProviderOptions.SigningCredentials
+  isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.TokenProviderOptions.SigningCredentials
   nameWithType: TokenProviderOptions.SigningCredentials
