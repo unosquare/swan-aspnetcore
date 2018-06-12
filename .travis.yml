@@ -8,4 +8,4 @@ sudo: false
 install:
   - dotnet restore
 script:
-  - dotnet test ./test/Unosquare.Swan.AspNetCore.Test/Unosquare.Swan.AspNetCore.Test.csproj -f netcoreapp2.0
+  - dotnet test ./test/Unosquare.Swan.AspNetCore.Test/Unosquare.Swan.AspNetCore.Test.csproj -f netcoreapp2.1
