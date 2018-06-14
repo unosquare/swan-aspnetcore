@@ -8,7 +8,7 @@
     <title> Swan ASP.NET Core 2: Stuff We All Need | Unosquare SWAN ASPNetCore </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content=" Swan ASP.NET Core 2: Stuff We All Need | Unosquare SWAN ASPNetCore ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.36.2.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -75,7 +75,7 @@
 <a href="https://coveralls.io/github/unosquare/swan-aspnetcore?branch=master"><img src="https://coveralls.io/repos/github/unosquare/swan-aspnetcore/badge.svg?branch=master" alt="Coverage Status"></a></p>
 <h1 id="img-srchttpsgithubcomunosquareswanrawmasterswan-logo-32pngimg-swan-aspnet-core-2-stuff-we-all-need"><img src="https://github.com/unosquare/swan/raw/master/swan-logo-32.png"> Swan ASP.NET Core 2: Stuff We All Need</h1>
 <p><em><span class="emoji" shortcode="star">⭐</span> Please star this project if you find it useful!</em></p>
-<p>A set of libraries to use with ASP.NET Core 2.0 applications. Also, includes a configure middleware and extension to setup your project. ASP.NET Core 2.0 came with a lot of changes, including authentication and authorization, here with Swan ASP.NET Core 2.0 is easy to configure and start working on your project.</p>
+<p>A set of libraries to use with ASP.NET Core 2.1 applications. Also, includes a configure middleware and extension to setup your project. ASP.NET Core 2.1 came with a lot of changes, including authentication and authorization, here with Swan ASP.NET Core 2.1 is easy to configure and start working on your project.</p>
 <h2 id="nuget-installation">NuGet Installation:</h2>
 <p><a href="https://badge.fury.io/nu/Unosquare.Swan.AspNetCore"><img src="https://badge.fury.io/nu/Unosquare.Swan.AspNetCore.svg" alt="NuGet version"></a></p>
 <pre><code>PM&gt; Install-Package Unosquare.Swan.AspNetCore
@@ -122,7 +122,7 @@ With this you just add your configuration section and then add in the entity fra
 {
     // Inject your DbContext first.
 
-    // Add Entity Framework Logging Provider
+        //  Add Entity Framework Logging Provider
     services.AddLoggingEntityFramework&lt;SampleDbContext, Models.LogEntry&gt;();
 }
 </code></pre><h3 id="using-businessdbcontext">Using BusinessDbContext</h3>
@@ -151,13 +151,13 @@ With this you just add your configuration section and then add in the entity fra
         public DbSet&lt;AuditTrailEntry&gt; AuditTrailEntries { get; set; }
     }
 </code></pre><h3 id="additional-extension-methods">Additional Extension Methods</h3>
+<p>Use the following extension methods to extend the ApplicationBuilder with helpful handlers.</p>
 <h4 id="the-jsonexceptionhandler">The JsonExceptionHandler</h4>
-<p>It&#39;s very useful to see exceptions in JSON format. You can use this extension to add a very good way to debug your application, you just need to add this to your application builder in the Configure method of your Startup.cs.
-When an error occurs, the exception handles the error and send a response with a 500-status code, or any other according to the exception type.</p>
+<p>Adding this extension is a very good way to debug your application. When an error occurs, the exception handles the error and send a 500 Internal Server Error HTTP Response with a JSON object containing useful information as stacktrace and inner exceptions.</p>
 <pre><code class="lang-csharp">// Response an exception as JSON at error
 app.UseJsonExceptionHandler();
 </code></pre><h4 id="the-fallback">The Fallback</h4>
-<p>Uses the fallback to redirect everything without extension. When the application encountered something without an extension this will help to redirect to the index page or where ever you define too. It&#39;s like when a URL that is not handled it will automatically redirect to the fallback, the default is index.html.</p>
+<p>Redirect any 404 request without extension to specific URL like your <code>index.html</code> page. This is helpful when you are using client-side routing (like Angular) and redirect any unknown URL to the javascript application.</p>
 <pre><code class="lang-csharp">// Redirect anything without extension to index.html
 app.UseFallback();
 </code></pre></article>
