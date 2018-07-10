@@ -81,7 +81,7 @@
         /// <returns>The application build with bearer token authentication</returns>
         public static IApplicationBuilder UseBearerTokenAuthentication(this IApplicationBuilder app,
             TokenValidationParameters validationParameter,
-            Func<string, string, string, string, Task<ClaimsIdentity>> identityResolver,
+            Func<IServiceProvider, string, string, string, string, Task<ClaimsIdentity>> identityResolver,
             Func<ClaimsIdentity, Dictionary<string, object>, Task<Dictionary<string, object>>> bearerTokenResolver = null,
             TimeSpan expiration = default(TimeSpan),
             bool forceHttps = true)

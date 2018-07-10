@@ -40,7 +40,7 @@
                     {
                         app.UseBearerTokenAuthentication(
                             _validationParameters,
-                            (username, password, grantType, clientId) =>
+                            (services, username, password, grantType, clientId) =>
                             {
                                 if (username != "Admin" || password != "Pass.word")
                                     return Task.FromResult<ClaimsIdentity>(null);

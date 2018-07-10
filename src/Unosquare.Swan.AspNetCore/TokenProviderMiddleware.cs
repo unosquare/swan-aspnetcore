@@ -19,22 +19,25 @@
         private readonly RequestDelegate _next;
         private readonly TokenProviderOptions _options;
         private readonly ILogger _logger;
+        private readonly IServiceProvider _services;
         private readonly Dictionary<Guid, JwtSecurityToken> _refreshTokens = new Dictionary<Guid, JwtSecurityToken>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TokenProviderMiddleware"/> class.
+        /// Initializes a new instance of the <see cref="TokenProviderMiddleware" /> class.
         /// </summary>
         /// <param name="next">The next.</param>
         /// <param name="options">The options.</param>
         /// <param name="loggerFactory">The logger factory.</param>
+        /// <param name="services">The services.</param>
         public TokenProviderMiddleware(
             RequestDelegate next,
             IOptions<TokenProviderOptions> options,
-            ILoggerFactory loggerFactory)
+            ILoggerFactory loggerFactory,
+            IServiceProvider services)
         {
             _next = next;
             _logger = loggerFactory.CreateLogger<TokenProviderMiddleware>();
-
+            _services = services;
             _options = options.Value;
             ThrowIfInvalidOptions(_options);
         }
@@ -132,10 +135,10 @@
                 throw new ArgumentNullException(nameof(TokenProviderOptions.BearerTokenResolver));
             }
         }
-        
+
         private static string SerializeError(string description, string error = "invalid_grant")
         {
-            return Json.Serialize(new 
+            return Json.Serialize(new
             {
                 error,
                 error_description = description
@@ -182,7 +185,7 @@
                 var password = context.Request.Form["password"];
                 var clientId = context.Request.Form["client_id"];
 
-                identity = await _options.IdentityResolver(username, password, grantType, clientId);
+                identity = await _options.IdentityResolver(_services, username, password, grantType, clientId);
 
                 if (identity == null)
                 {

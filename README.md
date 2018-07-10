@@ -44,7 +44,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
     // Use the bearer token provider and check Admin and Pass.word as valid credentials
     app.UseBearerTokenAuthentication(
         ValidationParameters,
-        (username, password, grantType, clientId) =>
+        (services, username, password, grantType, clientId) =>
         {
             if (username != "Admin" || password != "Pass.word")
                 return Task.FromResult<ClaimsIdentity>(null);

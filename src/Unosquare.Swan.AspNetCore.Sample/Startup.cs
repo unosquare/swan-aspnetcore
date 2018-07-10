@@ -80,9 +80,11 @@
             // Use the bearer token provider and check Admin and Pass.word as valid credentials
             app.UseBearerTokenAuthentication(
                 ValidationParameters,
-                (username, password, grantType, clientId) =>
+                (services, username, password, grantType, clientId) =>
                 {
-                    if (username != "Admin" || password != "Pass.word")
+                    var context = services.GetService<SampleDbContext>();
+
+                    if (context != null && username != "Admin" || password != "Pass.word")
                         return Task.FromResult<ClaimsIdentity>(null);
 
                     var claim = new ClaimsIdentity("Bearer");
@@ -94,7 +96,7 @@
                     // This action is optional
                     obj["test"] = "OK";
                     return Task.FromResult(obj);
-                });
+                }, forceHttps: false);
 
             app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseMvc();

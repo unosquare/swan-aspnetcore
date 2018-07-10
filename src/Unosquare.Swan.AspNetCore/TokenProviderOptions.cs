@@ -46,7 +46,7 @@
         /// <summary>
         /// Resolves a user identity given a username and password.
         /// </summary>
-        public Func<string, string, string, string, Task<ClaimsIdentity>> IdentityResolver { get; set; }
+        public Func<IServiceProvider, string, string, string, string, Task<ClaimsIdentity>> IdentityResolver { get; set; }
 
         /// <summary>
         /// Generates a random value (nonce) for each generated token.
