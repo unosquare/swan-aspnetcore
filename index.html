@@ -8,7 +8,7 @@
     <title> Swan ASP.NET Core 2: Stuff We All Need | Unosquare SWAN ASPNetCore </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content=" Swan ASP.NET Core 2: Stuff We All Need | Unosquare SWAN ASPNetCore ">
-    <meta name="generator" content="docfx 2.36.2.0">
+    <meta name="generator" content="docfx 2.37.0.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -99,7 +99,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
     // Use the bearer token provider and check Admin and Pass.word as valid credentials
     app.UseBearerTokenAuthentication(
         ValidationParameters,
-        (username, password, grantType, clientId) =&gt;
+        (services, username, password, grantType, clientId) =&gt;
         {
             if (username != &quot;Admin&quot; || password != &quot;Pass.word&quot;)
                 return Task.FromResult&lt;ClaimsIdentity&gt;(null);

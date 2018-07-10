@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TokenProviderMiddleware
    | Unosquare SWAN ASPNetCore ">
-    <meta name="generator" content="docfx 2.36.2.0">
+    <meta name="generator" content="docfx 2.37.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -124,13 +124,13 @@
   
   
   <a id="Unosquare_Swan_AspNetCore_TokenProviderMiddleware__ctor_" data-uid="Unosquare.Swan.AspNetCore.TokenProviderMiddleware.#ctor*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_TokenProviderMiddleware__ctor_RequestDelegate_IOptions_Unosquare_Swan_AspNetCore_TokenProviderOptions__ILoggerFactory_" data-uid="Unosquare.Swan.AspNetCore.TokenProviderMiddleware.#ctor(RequestDelegate,IOptions{Unosquare.Swan.AspNetCore.TokenProviderOptions},ILoggerFactory)">TokenProviderMiddleware(RequestDelegate, IOptions&lt;TokenProviderOptions&gt;, ILoggerFactory)</h4>
+  <h4 id="Unosquare_Swan_AspNetCore_TokenProviderMiddleware__ctor_RequestDelegate_IOptions_Unosquare_Swan_AspNetCore_TokenProviderOptions__ILoggerFactory_System_IServiceProvider_" data-uid="Unosquare.Swan.AspNetCore.TokenProviderMiddleware.#ctor(RequestDelegate,IOptions{Unosquare.Swan.AspNetCore.TokenProviderOptions},ILoggerFactory,System.IServiceProvider)">TokenProviderMiddleware(RequestDelegate, IOptions&lt;TokenProviderOptions&gt;, ILoggerFactory, IServiceProvider)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Unosquare.Swan.AspNetCore.TokenProviderMiddleware.html">TokenProviderMiddleware</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TokenProviderMiddleware(RequestDelegate next, IOptions&lt;TokenProviderOptions&gt; options, ILoggerFactory loggerFactory)</code></pre>
+    <pre><code class="lang-csharp hljs">public TokenProviderMiddleware(RequestDelegate next, IOptions&lt;TokenProviderOptions&gt; options, ILoggerFactory loggerFactory, IServiceProvider services)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -158,6 +158,12 @@
         <td><span class="xref">ILoggerFactory</span></td>
         <td><span class="parametername">loggerFactory</span></td>
         <td><p>The logger factory.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.IServiceProvider</span></td>
+        <td><span class="parametername">services</span></td>
+        <td><p>The services.</p>
 </td>
       </tr>
     </tbody>
@@ -210,10 +216,8 @@
     </tbody>
   </table>
 
-<h3>Comments</h3>
-<div id="disqus_thread"></div>
+<h3 id="disqus_thread">Comments</h3>
 <script>
-
 /**
 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
