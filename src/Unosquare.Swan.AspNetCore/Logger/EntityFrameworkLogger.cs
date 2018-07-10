@@ -13,6 +13,7 @@
 
     /// <summary>
     /// Represents a Logger using EntityFramework
+    /// 
     /// Based on https://github.com/staff0rd/entityframework-logging
     /// </summary>
     /// <typeparam name="TDbContext">The type of the database context.</typeparam>
@@ -62,39 +63,19 @@
                             // Ignored
                         }
                     }
+
                     await Task.Delay(50);
                 }
             });
         }
 
-        /// <summary>
-        /// Checks if the given <paramref name="logLevel" /> is enabled.
-        /// </summary>
-        /// <param name="logLevel">level to be checked.</param>
-        /// <returns>
-        ///   <c>true</c> if enabled.
-        /// </returns>
+        /// <inheritdoc />
         public bool IsEnabled(LogLevel logLevel) => _filter(_name, logLevel);
-
-        /// <summary>
-        /// Begins a logical operation scope.
-        /// </summary>
-        /// <typeparam name="TState">Entry state</typeparam>
-        /// <param name="state">The identifier for the scope.</param>
-        /// <returns>
-        /// An IDisposable that ends the logical operation scope on dispose.
-        /// </returns>
+        
+        /// <inheritdoc />
         public IDisposable BeginScope<TState>(TState state) => new NoopDisposable();
-
-        /// <summary>
-        /// Writes a log entry.
-        /// </summary>
-        /// <typeparam name="TState">Entry state</typeparam>
-        /// <param name="logLevel">Entry will be written on this level.</param>
-        /// <param name="eventId">Id of the event.</param>
-        /// <param name="state">The entry to be written. Can be also an object.</param>
-        /// <param name="exception">The exception related to this entry.</param>
-        /// <param name="formatter">Function to create a <c>string</c> message of the <paramref name="state" /> and <paramref name="exception" />.</param>
+        
+        /// <inheritdoc />
         public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
         {
             if (_name.StartsWith("Microsoft.EntityFrameworkCore") || IsEnabled(logLevel) == false) return;

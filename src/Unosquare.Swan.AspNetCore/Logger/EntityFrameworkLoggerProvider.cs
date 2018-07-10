@@ -29,18 +29,12 @@
             _filter = filter;
             _serviceProvider = serviceProvider;
         }
-
-        /// <summary>
-        /// Creates the logger.
-        /// </summary>
-        /// <param name="name">The name.</param>
-        /// <returns>Instance of EntityFrameworkLogger</returns>
+        
+        /// <inheritdoc />
         public ILogger CreateLogger(string name)
             => new EntityFrameworkLogger<TDbContext, TLog>(name, _filter, _serviceProvider);
 
-        /// <summary>
-        /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
-        /// </summary>
+        /// <inheritdoc />
         public void Dispose()
         {
         }

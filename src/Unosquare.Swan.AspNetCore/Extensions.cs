@@ -1,6 +1,7 @@
 ﻿namespace Unosquare.Swan.AspNetCore
 {
     using Microsoft.AspNetCore.Authentication.JwtBearer;
+    using Microsoft.Extensions.DependencyInjection.Extensions;
     using Formatters;
     using Logger;
     using Microsoft.AspNetCore.Builder;
@@ -64,9 +65,52 @@
         {
             if (factory == null)
                 throw new ArgumentNullException(nameof(factory));
+
             factory.AddProvider(new EntityFrameworkLoggerProvider<TDbContext, TLog>(serviceProvider, filter));
 
             return factory;
+        }
+
+        /// <summary>
+        /// Adds the entity framework.
+        /// </summary>
+        /// <typeparam name="TDbContext">The type of the database context.</typeparam>
+        /// <typeparam name="TLog">The type of the log.</typeparam>
+        /// <param name="builder">The builder.</param>
+        /// <param name="filter">The filter.</param>
+        /// <returns>
+        /// The logger builder
+        /// </returns>
+        /// <exception cref="ArgumentNullException">builder</exception>
+        public static ILoggingBuilder AddEntityFramework<TDbContext, TLog>(this ILoggingBuilder builder,
+            Func<string, LogLevel, bool> filter = null)
+            where TDbContext : DbContext
+            where TLog : LogEntry, new()
+        {
+            if (builder == null)
+                throw new ArgumentNullException(nameof(builder));
+
+            builder.Services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            builder.AddProvider(
+                new EntityFrameworkLoggerProvider<TDbContext, TLog>(builder.Services.BuildServiceProvider(), filter));
+
+            return builder;
+        }
+
+        /// <summary>
+        /// Adds the logging entity framework.
+        /// </summary>
+        /// <typeparam name="TDbContext">The type of the database context.</typeparam>
+        /// <typeparam name="TLog">The type of the log.</typeparam>
+        /// <param name="services">The services.</param>
+        /// <param name="filter">The filter.</param>
+        /// <returns>The services collection</returns>
+        public static IServiceCollection AddLoggingEntityFramework<TDbContext, TLog>(this IServiceCollection services,
+            Func<string, LogLevel, bool> filter = null)
+            where TDbContext : DbContext
+            where TLog : LogEntry, new()
+        {
+            return services.AddLogging(logging => logging.AddEntityFramework<TDbContext, TLog>(filter));
         }
 
         /// <summary>

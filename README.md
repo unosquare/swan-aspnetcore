@@ -5,7 +5,7 @@
 
 *:star: Please star this project if you find it useful!*
 
-A set of libraries to use with ASP.NET Core 2.0 applications. Also, includes a configure middleware and extension to setup your project. ASP.NET Core 2.0 came with a lot of changes, including authentication and authorization, here with Swan ASP.NET Core 2.0 is easy to configure and start working on your project.
+A set of libraries to use with ASP.NET Core 2.1 applications. Also, includes a configure middleware and extension to setup your project. ASP.NET Core 2.1 came with a lot of changes, including authentication and authorization, here with Swan ASP.NET Core 2.1 is easy to configure and start working on your project.
 
 NuGet Installation:
 -------------------
@@ -22,11 +22,11 @@ Here we can find a very useful code to use in our project configuration. All of 
 
 ### Using Bearer Token Authentication
 
-The extension method AddBearerTokenAuthentication adds the services that are going to be used in your application. This method uses the Jwt schemes and adds a JwtBearer with the Token Validation Parameters that you configure. Jwt stands for [JSON Web Tokens](https://jwt.io/introduction/)
+The extension method `AddBearerTokenAuthentication` adds the services that are going to be used in your application. This method uses the Jwt schemes and adds a JwtBearer with the Token Validation Parameters that you configure. Jwt stands for [JSON Web Tokens](https://jwt.io/introduction/)
 
-The extension method UseBearerTokenAuthentication is important because it gives the application the requirements to use authentication and authorization with JWT.
+The extension method `UseBearerTokenAuthentication` is important because it gives the application the requirements to use authentication and authorization with JWT.
 
-With this configuration, you just need to add the data annotation [Authorize] to your API to say that the user needs to be authorized to access that part of your project.
+With this configuration, you just need to add the data annotation `[Authorize]` to your API to say that the user needs to be authorized to access that part of your project.
 
 This two are used together because you need to add the bearer token authentication to the services to use the bearer token authentication in your application. You just need to add in your `ConfigureServices` and your `Configure`.
 
@@ -64,16 +64,16 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
 
 ### Using EntityFrameworkLogger
 
-The EntityFrameworkLogger represents a Logger based on Entity Framework and adds a Logging subsystem. It will help you log into your Database everything necessary to know what’s going on in your application. This logger is used in the `Configure` method of your Startup.cs file.
+The `EntityFrameworkLogger` represents a Logger based on Entity Framework and adds a Logging subsystem. It will help you log into your Database everything necessary to know what’s going on in your application. This logger is used in the `ConfigureServices` method of your Startup.cs file.
 With this you just add your configuration section and then add in the entity framework, your database context and the models that you use for log entries into your database, then you just pass the application services.
 
 ```csharp
-public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+public void ConfigureServices(IServiceCollection services)
 {
-    // Log levels set in your configuration
-    loggerFactory.AddConsole(Configuration.GetSection("Logging"));
-    // Here we add the entity framework with the database and the model to utilize
-    loggerFactory.AddEntityFramework<SampleDbContext, Models.LogEntry>(app.ApplicationServices);
+	// Inject your DbContext first.
+
+    	//  Add Entity Framework Logging Provider
+	services.AddLoggingEntityFramework<SampleDbContext, Models.LogEntry>();
 }
 ```
 
@@ -111,12 +111,14 @@ public class SampleDbContext : BusinessDbContext
         public DbSet<AuditTrailEntry> AuditTrailEntries { get; set; }
     }
 ```
+
 ### Additional Extension Methods
+
+Use the following extension methods to extend the ApplicationBuilder with helpful handlers.
 
 #### The JsonExceptionHandler
 
-It's very useful to see exceptions in JSON format. You can use this extension to add a very good way to debug your application, you just need to add this to your application builder in the Configure method of your Startup.cs.
-When an error occurs, the exception handles the error and send a response with a 500-status code, or any other according to the exception type.
+Adding this extension is a very good way to debug your application. When an error occurs, the exception handles the error and send a 500 Internal Server Error HTTP Response with a JSON object containing useful information as stacktrace and inner exceptions.
 
 ```csharp
 // Response an exception as JSON at error
@@ -125,7 +127,7 @@ app.UseJsonExceptionHandler();
 
 #### The Fallback
 
-Uses the fallback to redirect everything without extension. When the application encountered something without an extension this will help to redirect to the index page or where ever you define too. It's like when a URL that is not handled it will automatically redirect to the fallback, the default is index.html.
+Redirect any 404 request without extension to specific URL like your `index.html` page. This is helpful when you are using client-side routing (like Angular) and redirect any unknown URL to the javascript application.
 
 ```csharp
 // Redirect anything without extension to index.html
