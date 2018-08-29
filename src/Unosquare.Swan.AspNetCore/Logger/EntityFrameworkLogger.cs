@@ -66,6 +66,8 @@
 
                     await Task.Delay(50);
                 }
+
+                // ReSharper disable once FunctionNeverReturns
             });
         }
 
@@ -114,6 +116,7 @@
             {
                 log.Browser = httpContext.Request.Headers["User-Agent"];
                 log.Username = httpContext.User.Identity.Name;
+
                 try
                 {
                     log.HostAddress = httpContext.Connection.LocalIpAddress?.ToString();
@@ -132,10 +135,7 @@
         private static bool GetFilter(EntityFrameworkLoggerOptions options, string category, LogLevel level)
         {
             var filter = options.Filters?.Keys.FirstOrDefault(category.StartsWith);
-            if (filter != null)
-                return (int)options.Filters[filter] <= (int)level;
-
-            return true;
+            return filter == null || (int) options.Filters[filter] <= (int) level;
         }
 
         private Func<string, LogLevel, bool> GetFilter(IOptions<EntityFrameworkLoggerOptions> options)

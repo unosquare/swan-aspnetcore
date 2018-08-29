@@ -8,16 +8,15 @@
     using System.Threading.Tasks;
     using Mocks.StartupMocks;
 
-    class FallbackTest
+    public class FallbackTest
     {
-        private readonly TestServer _server;
         private readonly HttpClient _client;
 
         public FallbackTest()
         {
-            _server = new TestServer(new WebHostBuilder()
+            var server = new TestServer(new WebHostBuilder()
                 .UseStartup<StartupFallbackMock>());
-            _client = _server.CreateClient();
+            _client = server.CreateClient();
         }
 
         [Test]

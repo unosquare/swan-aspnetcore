@@ -1,17 +1,16 @@
 ﻿namespace Unosquare.Swan.AspNetCore.Test
 {
+    using Formatters;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.TestHost;
-    using Formatters;
     using NUnit.Framework;
     using System.Net;
     using System.Net.Http;
     using System.Threading.Tasks;
-    
+
     public class JsonExceptionHandlerTests
     {
-        private readonly TestServer _server;
         private readonly HttpClient _client;
 
         public class JsonError
@@ -21,14 +20,14 @@
 
         public JsonExceptionHandlerTests()
         {
-            _server = new TestServer(new WebHostBuilder()
+            var server = new TestServer(new WebHostBuilder()
                 .Configure(app =>
                 {
                     app.UseJsonExceptionHandler();
 
                     app.Run((context) => throw new System.Exception("Test Exception"));
                 }));
-            _client = _server.CreateClient();
+            _client = server.CreateClient();
         }
 
         [Test]

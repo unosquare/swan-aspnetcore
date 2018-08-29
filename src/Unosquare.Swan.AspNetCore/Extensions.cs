@@ -1,13 +1,14 @@
 ﻿namespace Unosquare.Swan.AspNetCore
 {
-    using Microsoft.AspNetCore.Authentication.JwtBearer;
-    using Microsoft.Extensions.DependencyInjection.Extensions;
     using Formatters;
     using Logger;
+    using Microsoft.AspNetCore.Authentication.JwtBearer;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Diagnostics;
     using Microsoft.AspNetCore.Http;
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.DependencyInjection.Extensions;
     using Microsoft.Extensions.Logging;
     using Microsoft.Extensions.Options;
     using Microsoft.IdentityModel.Tokens;
@@ -18,7 +19,6 @@
     using System.Net;
     using System.Security.Claims;
     using System.Threading.Tasks;
-    using Microsoft.Extensions.DependencyInjection;
 
     /// <summary>
     /// Extensions methods to implement SWAN providers
