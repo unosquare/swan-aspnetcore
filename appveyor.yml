@@ -23,16 +23,14 @@ before_build:
             git checkout $env:APPVEYOR_REPO_BRANCH -q
             cinst docfx -y
         }
-- appveyor-retry dotnet restore -v Minimal
+- dotnet restore -v Minimal
 - mkdir tools
-- nuget install OpenCover -Version 4.6.519 -OutputDirectory tools
 - nuget install coveralls.net -Version 0.7.0 -OutputDirectory tools
 build_script:
 - msbuild /p:Configuration=%CONFIGURATION%
 test_script:
-- dotnet test test/Unosquare.Swan.AspNetCore.Test/Unosquare.Swan.AspNetCore.Test.csproj -c %CONFIGURATION% -f netcoreapp2.1
-- tools\OpenCover.4.6.519\tools\OpenCover.Console.exe -target:"%ProgramFiles%\dotnet\dotnet.exe" -targetargs:"test test/Unosquare.Swan.AspNetCore.Test/Unosquare.Swan.AspNetCore.Test.csproj -c %CONFIGURATION% -f net461" -output:coverage.xml -filter:"+[Unosquare.Swan.AspNetCore*]* -[Unosquare.Swan.AspNetCore.Test*]*" -register:userdotnet
-- tools\coveralls.net.0.7.0\tools\csmacnz.Coveralls.exe --opencover -i coverage.xml --serviceName appveyor --jobId %APPVEYOR_BUILD_NUMBER%
+- dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:Exclude=[NUnit3.TestAdapter]* test/Unosquare.Swan.AspNetCore.Test/Unosquare.Swan.AspNetCore.Test.csproj -c %CONFIGURATION% -f netcoreapp2.1
+- tools\coveralls.net.0.7.0\tools\csmacnz.Coveralls.exe --opencover -i test\Unosquare.Swan.AspNetCore.Test\coverage.opencover.xml --serviceName appveyor --jobId %APPVEYOR_BUILD_NUMBER%
 after_build:
 - ps: |
         if(-Not $env:APPVEYOR_PULL_REQUEST_TITLE)
