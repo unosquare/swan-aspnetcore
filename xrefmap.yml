@@ -951,12 +951,53 @@ references:
   fullName.vb: Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework(Of TDbContext, TLog)(IServiceCollection, System.Func(Of System.String, System.LogLevel, System.Boolean))
   nameWithType: Extensions.AddLoggingEntityFramework<TDbContext, TLog>(IServiceCollection, Func<String, LogLevel, Boolean>)
   nameWithType.vb: Extensions.AddLoggingEntityFramework(Of TDbContext, TLog)(IServiceCollection, Func(Of String, LogLevel, Boolean))
+- uid: Unosquare.Swan.AspNetCore.Extensions.GetJsonAsync*
+  name: GetJsonAsync
+  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_GetJsonAsync_
+  commentId: Overload:Unosquare.Swan.AspNetCore.Extensions.GetJsonAsync
+  isSpec: "True"
+  fullName: Unosquare.Swan.AspNetCore.Extensions.GetJsonAsync
+  nameWithType: Extensions.GetJsonAsync
+- uid: Unosquare.Swan.AspNetCore.Extensions.GetJsonAsync``1(HttpClient,System.String)
+  name: GetJsonAsync<T>(HttpClient, String)
+  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_GetJsonAsync__1_HttpClient_System_String_
+  commentId: M:Unosquare.Swan.AspNetCore.Extensions.GetJsonAsync``1(HttpClient,System.String)
+  name.vb: GetJsonAsync(Of T)(HttpClient, String)
+  fullName: Unosquare.Swan.AspNetCore.Extensions.GetJsonAsync<T>(HttpClient, System.String)
+  fullName.vb: Unosquare.Swan.AspNetCore.Extensions.GetJsonAsync(Of T)(HttpClient, System.String)
+  nameWithType: Extensions.GetJsonAsync<T>(HttpClient, String)
+  nameWithType.vb: Extensions.GetJsonAsync(Of T)(HttpClient, String)
+- uid: Unosquare.Swan.AspNetCore.Extensions.GetJsonAsync``1(HttpClient,Uri)
+  name: GetJsonAsync<T>(HttpClient, Uri)
+  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_GetJsonAsync__1_HttpClient_Uri_
+  commentId: M:Unosquare.Swan.AspNetCore.Extensions.GetJsonAsync``1(HttpClient,Uri)
+  name.vb: GetJsonAsync(Of T)(HttpClient, Uri)
+  fullName: Unosquare.Swan.AspNetCore.Extensions.GetJsonAsync<T>(HttpClient, Uri)
+  fullName.vb: Unosquare.Swan.AspNetCore.Extensions.GetJsonAsync(Of T)(HttpClient, Uri)
+  nameWithType: Extensions.GetJsonAsync<T>(HttpClient, Uri)
+  nameWithType.vb: Extensions.GetJsonAsync(Of T)(HttpClient, Uri)
 - uid: Unosquare.Swan.AspNetCore.Extensions.JsonMimeType
   name: JsonMimeType
   href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_JsonMimeType
   commentId: F:Unosquare.Swan.AspNetCore.Extensions.JsonMimeType
   fullName: Unosquare.Swan.AspNetCore.Extensions.JsonMimeType
   nameWithType: Extensions.JsonMimeType
+- uid: Unosquare.Swan.AspNetCore.Extensions.ReadAsJsonAsync*
+  name: ReadAsJsonAsync
+  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_ReadAsJsonAsync_
+  commentId: Overload:Unosquare.Swan.AspNetCore.Extensions.ReadAsJsonAsync
+  isSpec: "True"
+  fullName: Unosquare.Swan.AspNetCore.Extensions.ReadAsJsonAsync
+  nameWithType: Extensions.ReadAsJsonAsync
+- uid: Unosquare.Swan.AspNetCore.Extensions.ReadAsJsonAsync``1(HttpContent)
+  name: ReadAsJsonAsync<T>(HttpContent)
+  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_ReadAsJsonAsync__1_HttpContent_
+  commentId: M:Unosquare.Swan.AspNetCore.Extensions.ReadAsJsonAsync``1(HttpContent)
+  name.vb: ReadAsJsonAsync(Of T)(HttpContent)
+  fullName: Unosquare.Swan.AspNetCore.Extensions.ReadAsJsonAsync<T>(HttpContent)
+  fullName.vb: Unosquare.Swan.AspNetCore.Extensions.ReadAsJsonAsync(Of T)(HttpContent)
+  nameWithType: Extensions.ReadAsJsonAsync<T>(HttpContent)
+  nameWithType.vb: Extensions.ReadAsJsonAsync(Of T)(HttpContent)
 - uid: Unosquare.Swan.AspNetCore.Extensions.UseAuditTrail*
   name: UseAuditTrail
   href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_UseAuditTrail_

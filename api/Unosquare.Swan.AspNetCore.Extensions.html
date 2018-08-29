@@ -458,6 +458,201 @@
   </table>
   
   
+  <a id="Unosquare_Swan_AspNetCore_Extensions_GetJsonAsync_" data-uid="Unosquare.Swan.AspNetCore.Extensions.GetJsonAsync*"></a>
+  <h4 id="Unosquare_Swan_AspNetCore_Extensions_GetJsonAsync__1_HttpClient_System_String_" data-uid="Unosquare.Swan.AspNetCore.Extensions.GetJsonAsync``1(HttpClient,System.String)">GetJsonAsync&lt;T&gt;(HttpClient, String)</h4>
+  <div class="markdown level1 summary"><p>Send a GET request to the specified Uri and return the response body as a JSON in an asynchronous operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; GetJsonAsync&lt;T&gt;(this HttpClient client, string requestUri)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HttpClient</span></td>
+        <td><span class="parametername">client</span></td>
+        <td><p>The client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">requestUri</span></td>
+        <td><p>The request URI.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;</td>
+        <td><p>The object from the JSON.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of object to return.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_Swan_AspNetCore_Extensions_GetJsonAsync_" data-uid="Unosquare.Swan.AspNetCore.Extensions.GetJsonAsync*"></a>
+  <h4 id="Unosquare_Swan_AspNetCore_Extensions_GetJsonAsync__1_HttpClient_Uri_" data-uid="Unosquare.Swan.AspNetCore.Extensions.GetJsonAsync``1(HttpClient,Uri)">GetJsonAsync&lt;T&gt;(HttpClient, Uri)</h4>
+  <div class="markdown level1 summary"><p>Send a GET request to the specified Uri and return the response body as a JSON in an asynchronous operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; GetJsonAsync&lt;T&gt;(this HttpClient client, Uri requestUri)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HttpClient</span></td>
+        <td><span class="parametername">client</span></td>
+        <td><p>The client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Uri</span></td>
+        <td><span class="parametername">requestUri</span></td>
+        <td><p>The request URI.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;</td>
+        <td><p>The object from the JSON.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of object to return.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_Swan_AspNetCore_Extensions_ReadAsJsonAsync_" data-uid="Unosquare.Swan.AspNetCore.Extensions.ReadAsJsonAsync*"></a>
+  <h4 id="Unosquare_Swan_AspNetCore_Extensions_ReadAsJsonAsync__1_HttpContent_" data-uid="Unosquare.Swan.AspNetCore.Extensions.ReadAsJsonAsync``1(HttpContent)">ReadAsJsonAsync&lt;T&gt;(HttpContent)</h4>
+  <div class="markdown level1 summary"><p>Serialize the HTTP content to a JSON as an asynchronous operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; ReadAsJsonAsync&lt;T&gt;(this HttpContent httpContent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HttpContent</span></td>
+        <td><span class="parametername">httpContent</span></td>
+        <td><p>Content of the HTTP.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;</td>
+        <td><p>The object from the JSON.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of object to return.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Unosquare_Swan_AspNetCore_Extensions_UseAuditTrail_" data-uid="Unosquare.Swan.AspNetCore.Extensions.UseAuditTrail*"></a>
   <h4 id="Unosquare_Swan_AspNetCore_Extensions_UseAuditTrail__2_Unosquare_Swan_AspNetCore_IBusinessDbContext_System_String_" data-uid="Unosquare.Swan.AspNetCore.Extensions.UseAuditTrail``2(Unosquare.Swan.AspNetCore.IBusinessDbContext,System.String)">UseAuditTrail&lt;T, TEntity&gt;(IBusinessDbContext, String)</h4>
   <div class="markdown level1 summary"><p>Extension method to add AuditTrail to a DbContext</p>
