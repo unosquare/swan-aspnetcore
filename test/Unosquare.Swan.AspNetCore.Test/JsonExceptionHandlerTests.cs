@@ -1,6 +1,5 @@
 ﻿namespace Unosquare.Swan.AspNetCore.Test
 {
-    using Formatters;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.TestHost;
@@ -35,8 +34,7 @@
         {
             var response = await _client.GetAsync("/");
 
-            var responseString = await response.Content.ReadAsStringAsync();
-            var jsonError = Json.Deserialize<JsonError>(responseString);
+            var jsonError = await response.Content.ReadAsJsonAsync<JsonError>();
             
             Assert.AreEqual(HttpStatusCode.InternalServerError, response.StatusCode);
             Assert.AreEqual("Test Exception", jsonError.Message);

@@ -1,6 +1,7 @@
 ﻿namespace Unosquare.Swan.AspNetCore
 {
     using Formatters;
+    using System.Net.Http;
     using Logger;
     using Microsoft.AspNetCore.Authentication.JwtBearer;
     using Microsoft.AspNetCore.Builder;
@@ -222,6 +223,44 @@
             });
 
             return services;
+        }
+
+        /// <summary>
+        /// Serialize the HTTP content to a JSON as an asynchronous operation.
+        /// </summary>
+        /// <typeparam name="T">The type of object to return.</typeparam>
+        /// <param name="httpContent">Content of the HTTP.</param>
+        /// <returns>The object from the JSON.</returns>
+        public static async Task<T> ReadAsJsonAsync<T>(this HttpContent httpContent)
+        {
+            var responseString = await httpContent.ReadAsStringAsync();
+            return Json.Deserialize<T>(responseString);
+        }
+
+        /// <summary>
+        /// Send a GET request to the specified Uri and return the response body as a JSON in an asynchronous operation.
+        /// </summary>
+        /// <typeparam name="T">The type of object to return.</typeparam>
+        /// <param name="client">The client.</param>
+        /// <param name="requestUri">The request URI.</param>
+        /// <returns>The object from the JSON.</returns>
+        public static async Task<T> GetJsonAsync<T>(this HttpClient client, string requestUri)
+        {
+            var responseString = await client.GetStringAsync(requestUri);
+            return Json.Deserialize<T>(responseString);
+        }
+
+        /// <summary>
+        /// Send a GET request to the specified Uri and return the response body as a JSON in an asynchronous operation.
+        /// </summary>
+        /// <typeparam name="T">The type of object to return.</typeparam>
+        /// <param name="client">The client.</param>
+        /// <param name="requestUri">The request URI.</param>
+        /// <returns>The object from the JSON.</returns>
+        public static async Task<T> GetJsonAsync<T>(this HttpClient client, Uri requestUri)
+        {
+            var responseString = await client.GetStringAsync(requestUri);
+            return Json.Deserialize<T>(responseString);
         }
     }
 }

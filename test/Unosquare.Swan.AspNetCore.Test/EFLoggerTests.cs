@@ -49,7 +49,7 @@
         }
 
         [Test]
-        public async Task EFLoggerDbTest()
+        public async Task EfLoggerDbTest()
         {
             var data = await _client.GetStringAsync("/");
             Assert.Greater(int.Parse(data), 0);
