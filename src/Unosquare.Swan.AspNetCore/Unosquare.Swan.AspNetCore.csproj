@@ -4,7 +4,7 @@
     <Description>Bearer Token and logging to fast start any ASP.NET Core project</Description>
     <Copyright>Copyright (c) 2016-2018 - Unosquare</Copyright>
     <AssemblyTitle>Unosquare SWAN AspNet Core</AssemblyTitle>
-    <VersionPrefix>0.14.1</VersionPrefix>
+    <VersionPrefix>0.15.0</VersionPrefix>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <DebugType>Full</DebugType>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
