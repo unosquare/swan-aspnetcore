@@ -1,13 +1,15 @@
 ﻿namespace Unosquare.Swan.AspNetCore
 {
-    using Microsoft.AspNetCore.Authentication.JwtBearer;
-    using Microsoft.Extensions.DependencyInjection.Extensions;
     using Formatters;
+    using System.Net.Http;
     using Logger;
+    using Microsoft.AspNetCore.Authentication.JwtBearer;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Diagnostics;
     using Microsoft.AspNetCore.Http;
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.DependencyInjection.Extensions;
     using Microsoft.Extensions.Logging;
     using Microsoft.Extensions.Options;
     using Microsoft.IdentityModel.Tokens;
@@ -18,7 +20,6 @@
     using System.Net;
     using System.Security.Claims;
     using System.Threading.Tasks;
-    using Microsoft.Extensions.DependencyInjection;
 
     /// <summary>
     /// Extensions methods to implement SWAN providers
@@ -222,6 +223,44 @@
             });
 
             return services;
+        }
+
+        /// <summary>
+        /// Serialize the HTTP content to a JSON as an asynchronous operation.
+        /// </summary>
+        /// <typeparam name="T">The type of object to return.</typeparam>
+        /// <param name="httpContent">Content of the HTTP.</param>
+        /// <returns>The object from the JSON.</returns>
+        public static async Task<T> ReadAsJsonAsync<T>(this HttpContent httpContent)
+        {
+            var responseString = await httpContent.ReadAsStringAsync();
+            return Json.Deserialize<T>(responseString);
+        }
+
+        /// <summary>
+        /// Send a GET request to the specified Uri and return the response body as a JSON in an asynchronous operation.
+        /// </summary>
+        /// <typeparam name="T">The type of object to return.</typeparam>
+        /// <param name="client">The client.</param>
+        /// <param name="requestUri">The request URI.</param>
+        /// <returns>The object from the JSON.</returns>
+        public static async Task<T> GetJsonAsync<T>(this HttpClient client, string requestUri)
+        {
+            var responseString = await client.GetStringAsync(requestUri);
+            return Json.Deserialize<T>(responseString);
+        }
+
+        /// <summary>
+        /// Send a GET request to the specified Uri and return the response body as a JSON in an asynchronous operation.
+        /// </summary>
+        /// <typeparam name="T">The type of object to return.</typeparam>
+        /// <param name="client">The client.</param>
+        /// <param name="requestUri">The request URI.</param>
+        /// <returns>The object from the JSON.</returns>
+        public static async Task<T> GetJsonAsync<T>(this HttpClient client, Uri requestUri)
+        {
+            var responseString = await client.GetStringAsync(requestUri);
+            return Json.Deserialize<T>(responseString);
         }
     }
 }

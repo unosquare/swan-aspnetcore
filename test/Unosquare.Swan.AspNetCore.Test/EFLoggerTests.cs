@@ -15,41 +15,41 @@
     using Microsoft.AspNetCore.Builder;
 
     [TestFixture]
-    public class EFLoggerTests
+    public class EfLoggerTests
     {
-        private readonly TestServer _server;
         private readonly HttpClient _client;
         
-        public EFLoggerTests()
+        public EfLoggerTests()
         {
-            _server = new TestServer(new WebHostBuilder()
+            var server = new TestServer(new WebHostBuilder()
                 .Configure(app =>
-               {
-                   app.ApplicationServices.GetService<ILoggerFactory>()
-                       .AddEntityFramework<BusinessDbContextMock, Models.LogEntry>(app.ApplicationServices);
+                {
+                    app.ApplicationServices.GetService<ILoggerFactory>()
+                        .AddEntityFramework<BusinessDbContextMock, Models.LogEntry>(app.ApplicationServices);
 
-                   app.Run(async (context) =>
-                   {
-                       await Task.Delay(150);
-                       await context.Response.WriteAsync(
-                           app.ApplicationServices.GetService<BusinessDbContextMock>().Set< Models.LogEntry>().Count().ToString());
-                   });
-               })
+                    app.Run(async (context) =>
+                    {
+                        await Task.Delay(150);
+                        await context.Response.WriteAsync(
+                            app.ApplicationServices.GetService<BusinessDbContextMock>().Set< Models.LogEntry>().Count().ToString());
+                    });
+                })
                 .ConfigureServices(services =>
-               {
-                   services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-                   services
-                       .AddEntityFrameworkInMemoryDatabase()
-                       .AddDbContext<BusinessDbContextMock>(options =>
-                       {
-                           options.UseInMemoryDatabase(nameof(EFLoggerTests));
-                       });
-               }));
-            _client = _server.CreateClient();
+                {
+                    services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+                    services
+                        .AddEntityFrameworkInMemoryDatabase()
+                        .AddDbContext<BusinessDbContextMock>(options =>
+                        {
+                            options.UseInMemoryDatabase(nameof(EfLoggerTests));
+                        });
+                }));
+
+            _client = server.CreateClient();
         }
 
         [Test]
-        public async Task EFLoggerDbTest()
+        public async Task EfLoggerDbTest()
         {
             var data = await _client.GetStringAsync("/");
             Assert.Greater(int.Parse(data), 0);

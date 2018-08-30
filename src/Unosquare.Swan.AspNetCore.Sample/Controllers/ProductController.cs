@@ -44,6 +44,9 @@ namespace Unosquare.Swan.AspNetCore.Sample.Controllers
         public IActionResult Edit(int id)
         {
             var product = _context.Products.FirstOrDefault(p => p.ProductID == id);
+            
+            if (product == null)
+                return NotFound();
 
             product.Name = "Coca";
 
@@ -55,6 +58,10 @@ namespace Unosquare.Swan.AspNetCore.Sample.Controllers
         public IActionResult Delete(int id)
         {
             var product = _context.Products.FirstOrDefault(p => p.ProductID == id);
+
+            if (product == null)
+                return NotFound();
+
             _context.Products.Remove(product);
             _context.SaveChanges();
             return Ok(product);

@@ -12,9 +12,8 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    class BearerTokenAuthTest
+    public class BearerTokenAuthTest
     {
-        private readonly TestServer _server;
         private readonly HttpClient _client;
         private readonly TokenValidationParameters _validationParameters = new TokenValidationParameters
         {
@@ -34,7 +33,7 @@
 
         public BearerTokenAuthTest()
         {
-            _server = new TestServer(
+            var server = new TestServer(
                 new WebHostBuilder()
                     .Configure(app =>
                     {
@@ -64,7 +63,7 @@
                 BaseAddress = new Uri("https://localhost/")
             };
 
-            _client = _server.CreateClient();
+            _client = server.CreateClient();
         }
 
         [Test]

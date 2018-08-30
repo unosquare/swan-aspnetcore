@@ -77,6 +77,7 @@
         {
             var user = Mock.GetUser();
             await _userStore.CreateAsync(user, _ct);
+
             foreach (var u in _users)
                 await _userStore.CreateAsync(u, _ct);
 
