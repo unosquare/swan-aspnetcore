@@ -6,7 +6,7 @@
     using Mocks;
 
     [TestFixture]
-    class BusinessDbTest
+    public class BusinessDbTest
     {
         private BusinessDbContextMock SetupDatabase(string name)
         {
