@@ -6,7 +6,7 @@
     using Microsoft.EntityFrameworkCore;
 
     /// <summary>
-    /// Represents a abstract class to create DbContext using Business Rules
+    /// Represents a abstract class to create DbContext using Business Rules.
     /// </summary>
     /// <seealso cref="Microsoft.EntityFrameworkCore.DbContext" />
     /// <seealso cref="Unosquare.Swan.AspNetCore.IBusinessDbContext" />

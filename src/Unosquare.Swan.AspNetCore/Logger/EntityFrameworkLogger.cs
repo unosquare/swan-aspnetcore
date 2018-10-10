@@ -14,7 +14,7 @@
     /// <summary>
     /// Represents a Logger using EntityFramework
     /// 
-    /// Based on https://github.com/staff0rd/entityframework-logging
+    /// Based on https://github.com/staff0rd/entityframework-logging.
     /// </summary>
     /// <typeparam name="TDbContext">The type of the database context.</typeparam>
     /// <typeparam name="TLog">The type of the log.</typeparam>
@@ -40,7 +40,7 @@
             _filter = filter ?? GetFilter(serviceProvider.GetService<IOptions<EntityFrameworkLoggerOptions>>());
             _services = serviceProvider;
 
-            Task.Factory.StartNew(async () =>
+            Task.Run(async () =>
             {
                 while (true)
                 {
@@ -104,7 +104,7 @@
                 Date = DateTime.UtcNow,
                 Level = logLevel.ToString(),
                 Logger = _name,
-                Thread = eventId.ToString()
+                Thread = eventId.ToString(),
             };
 
             if (exception != null)

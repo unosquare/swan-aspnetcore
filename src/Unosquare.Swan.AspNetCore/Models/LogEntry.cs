@@ -4,17 +4,17 @@
     using System.ComponentModel.DataAnnotations;
 
     /// <summary>
-    /// Represents a common Log Entry to use with the EF Logger
+    /// Represents a common Log Entry to use with the EF Logger.
     /// </summary>
     public class LogEntry
     {
         /// <summary>
-        /// The maximum exception length
+        /// The maximum exception length.
         /// </summary>
         public const int MaximumExceptionLength = 2000;
 
         /// <summary>
-        /// The maximum message length
+        /// The maximum message length.
         /// </summary>
         public const int MaximumMessageLength = 4000;
 

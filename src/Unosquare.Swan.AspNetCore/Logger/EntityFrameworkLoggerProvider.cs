@@ -7,7 +7,7 @@
     using Models;
 
     /// <summary>
-    /// Represents a EF logger provider
+    /// Represents a EF logger provider.
     /// </summary>
     /// <typeparam name="TDbContext">The type of the database context.</typeparam>
     /// <typeparam name="TLog">The type of the log.</typeparam>
@@ -41,7 +41,7 @@
     }
 
     /// <summary>
-    /// Represents the EF Logger options
+    /// Represents the EF Logger options.
     /// </summary>
     public class EntityFrameworkLoggerOptions
     {

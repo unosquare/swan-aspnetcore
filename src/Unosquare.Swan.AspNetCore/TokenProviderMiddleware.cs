@@ -46,7 +46,7 @@
         /// Invokes the specified context.
         /// </summary>
         /// <param name="context">The context.</param>
-        /// <returns>The token to the specific context</returns>
+        /// <returns>The token to the specific context.</returns>
         public Task Invoke(HttpContext context)
         {
             // Check if we are getting a new token
@@ -141,7 +141,7 @@
             return Json.Serialize(new
             {
                 error,
-                error_description = description
+                error_description = description,
             });
         }
 
@@ -206,7 +206,7 @@
                 {
                     new Claim(JwtRegisteredClaimNames.Sub, username),
                     new Claim(JwtRegisteredClaimNames.Jti, await _options.NonceGenerator()),
-                    new Claim(JwtRegisteredClaimNames.Iat, now.ToUnixEpochDate().ToString(), ClaimValueTypes.Integer64)
+                    new Claim(JwtRegisteredClaimNames.Iat, now.ToUnixEpochDate().ToString(), ClaimValueTypes.Integer64),
                 });
 
                 // Add claim role
@@ -231,7 +231,7 @@
             {
                 { "access_token", encodedJwt },
                 { "expires_in", (int)_options.Expiration.TotalSeconds },
-                { "refresh_token", refreshTokenGuid }
+                { "refresh_token", refreshTokenGuid },
             };
 
             _refreshTokens.Add(refreshTokenGuid, jwt);

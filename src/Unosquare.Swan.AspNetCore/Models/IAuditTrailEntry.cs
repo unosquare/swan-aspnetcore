@@ -3,7 +3,7 @@
     using System;
 
     /// <summary>
-    /// Represents an AuditTrail Entry
+    /// Represents an AuditTrail Entry.
     /// </summary>
     public interface IAuditTrailEntry
     {

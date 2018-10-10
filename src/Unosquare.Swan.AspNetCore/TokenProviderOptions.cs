@@ -60,7 +60,7 @@
         public Func<ClaimsIdentity, Task<Claim[]>> ClaimResolver { get; set; } = (identity) => Task.FromResult<Claim[]>(null);
 
         /// <summary>
-        /// Resolves a bearer token response
+        /// Resolves a bearer token response.
         /// </summary>
         public Func<ClaimsIdentity, Dictionary<string, object>, Task<Dictionary<string, object>>> BearerTokenResolver { get; set; } = (identity, input) => Task.FromResult(input);
     }

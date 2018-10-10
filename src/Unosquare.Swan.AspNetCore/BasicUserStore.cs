@@ -9,7 +9,7 @@
     using Models;
 
     /// <summary>
-    /// Represents a basic UserStore for AspNetCore Identity
+    /// Represents a basic UserStore for AspNetCore Identity.
     /// </summary>
     /// <seealso cref="Microsoft.AspNetCore.Identity.IUserStore{ApplicationUser}" />
     /// <seealso cref="Microsoft.AspNetCore.Identity.IUserPasswordStore{ApplicationUser}" />
@@ -351,7 +351,7 @@
         /// <returns>
         /// The <see cref="T:System.Threading.Tasks.Task" /> for the asynchronous operation, containing the user, if any which matched the specified login provider and key.
         /// </returns>
-        /// <exception cref="System.NotImplementedException">Throws NotImplementedException</exception>
+        /// <exception cref="System.NotImplementedException">Throws NotImplementedException.</exception>
         public Task<ApplicationUser> FindByLoginAsync(string loginProvider, string providerKey, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
@@ -366,7 +366,7 @@
         /// <returns>
         /// The <see cref="T:System.Threading.Tasks.Task" /> that represents the asynchronous operation.
         /// </returns>
-        /// <exception cref="System.NotImplementedException">Throws NotImplementedException</exception>
+        /// <exception cref="System.NotImplementedException">Throws NotImplementedException.</exception>
         public Task AddLoginAsync(ApplicationUser user, UserLoginInfo login, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
@@ -383,7 +383,7 @@
         /// <returns>
         /// The <see cref="T:System.Threading.Tasks.Task" /> that represents the asynchronous operation.
         /// </returns>
-        /// <exception cref="System.NotImplementedException">Throws NotImplementedException</exception>
+        /// <exception cref="System.NotImplementedException">Throws NotImplementedException.</exception>
         public Task RemoveLoginAsync(ApplicationUser user, string loginProvider, string providerKey, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
