@@ -1272,23 +1272,25 @@ references:
   fullName.vb: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider(Of TDbContext, TLog).CreateLogger
   nameWithType: EntityFrameworkLoggerProvider<TDbContext, TLog>.CreateLogger
   nameWithType.vb: EntityFrameworkLoggerProvider(Of TDbContext, TLog).CreateLogger
-- uid: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider`2.Dispose
-  name: Dispose()
-  href: api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider-2.html#Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLoggerProvider_2_Dispose
-  commentId: M:Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider`2.Dispose
-  fullName: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider<TDbContext, TLog>.Dispose()
-  fullName.vb: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider(Of TDbContext, TLog).Dispose()
-  nameWithType: EntityFrameworkLoggerProvider<TDbContext, TLog>.Dispose()
-  nameWithType.vb: EntityFrameworkLoggerProvider(Of TDbContext, TLog).Dispose()
-- uid: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider`2.Dispose*
-  name: Dispose
-  href: api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider-2.html#Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLoggerProvider_2_Dispose_
-  commentId: Overload:Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider`2.Dispose
+- uid: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider`2.System#IDisposable#Dispose
+  name: IDisposable.Dispose()
+  href: api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider-2.html#Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLoggerProvider_2_System_IDisposable_Dispose
+  commentId: M:Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider`2.System#IDisposable#Dispose
+  name.vb: System.IDisposable.Dispose()
+  fullName: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider<TDbContext, TLog>.System.IDisposable.Dispose()
+  fullName.vb: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider(Of TDbContext, TLog).System.IDisposable.Dispose()
+  nameWithType: EntityFrameworkLoggerProvider<TDbContext, TLog>.IDisposable.Dispose()
+  nameWithType.vb: EntityFrameworkLoggerProvider(Of TDbContext, TLog).System.IDisposable.Dispose()
+- uid: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider`2.System#IDisposable#Dispose*
+  name: IDisposable.Dispose
+  href: api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider-2.html#Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLoggerProvider_2_System_IDisposable_Dispose_
+  commentId: Overload:Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider`2.System#IDisposable#Dispose
   isSpec: "True"
-  fullName: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider<TDbContext, TLog>.Dispose
-  fullName.vb: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider(Of TDbContext, TLog).Dispose
-  nameWithType: EntityFrameworkLoggerProvider<TDbContext, TLog>.Dispose
-  nameWithType.vb: EntityFrameworkLoggerProvider(Of TDbContext, TLog).Dispose
+  name.vb: System.IDisposable.Dispose
+  fullName: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider<TDbContext, TLog>.System.IDisposable.Dispose
+  fullName.vb: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider(Of TDbContext, TLog).System.IDisposable.Dispose
+  nameWithType: EntityFrameworkLoggerProvider<TDbContext, TLog>.IDisposable.Dispose
+  nameWithType.vb: EntityFrameworkLoggerProvider(Of TDbContext, TLog).System.IDisposable.Dispose
 - uid: Unosquare.Swan.AspNetCore.Models
   name: Unosquare.Swan.AspNetCore.Models
   href: api/Unosquare.Swan.AspNetCore.Models.html
