@@ -35,7 +35,7 @@
             => new EntityFrameworkLogger<TDbContext, TLog>(name, _filter, _serviceProvider);
 
         /// <inheritdoc />
-        public void Dispose()
+        void IDisposable.Dispose()
         {
         }
     }
