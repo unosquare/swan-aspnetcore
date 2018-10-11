@@ -8,7 +8,7 @@
     using System.Threading.Tasks;
 
     /// <summary>
-    /// Represents a basic RoleStore for AspNetCore Identity
+    /// Represents a basic RoleStore for AspNetCore Identity.
     /// </summary>
     /// <seealso cref="Microsoft.AspNetCore.Identity.IRoleStore{ApplicationRole}" />
     public class BasicRoleStore : IRoleStore<ApplicationRole>
@@ -173,7 +173,7 @@
         /// Set a role's normalized name as an asynchronous operation.
         /// </summary>
         /// <param name="role">The role whose normalized name should be set.</param>
-        /// <param name="normalizedName">The normalized name to set</param>
+        /// <param name="normalizedName">The normalized name to set.</param>
         /// <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> used to propagate notifications that the operation should be canceled.</param>
         /// <returns>
         /// The <see cref="T:System.Threading.Tasks.Task" /> that represents the asynchronous operation.

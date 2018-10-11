@@ -3,7 +3,7 @@
     using System;
 
     /// <summary>
-    /// defines a combination of actions in a CRUD pattern
+    /// defines a combination of actions in a CRUD pattern.
     /// </summary>
     [Flags]
     public enum ActionFlags
@@ -26,12 +26,12 @@
         /// <summary>
         /// Delete Action
         /// </summary>
-        Delete = 0x3
+        Delete = 0x3,
     }
 
     /// <summary>
     /// Decorate methods with this attribute to execute business rules that match the following signature:
-    /// public void MethodName(T entity)
+    /// public void MethodName(T entity).
     /// </summary>
     /// <seealso cref="System.Attribute" />
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]

@@ -22,12 +22,12 @@
     using System.Threading.Tasks;
 
     /// <summary>
-    /// Extensions methods to implement SWAN providers
+    /// Extensions methods to implement SWAN providers.
     /// </summary>
     public static class Extensions
     {
         /// <summary>
-        /// The JSON MIME type
+        /// The JSON MIME type.
         /// </summary>
         public const string JsonMimeType = "application/json";
 
@@ -35,7 +35,7 @@
         /// Uses the json exception handler.
         /// </summary>
         /// <param name="app">The application.</param>
-        /// <returns>The exception handler</returns>
+        /// <returns>The exception handler.</returns>
         public static IApplicationBuilder UseJsonExceptionHandler(this IApplicationBuilder app)
         {
             return app.UseExceptionHandler(errorApp =>
@@ -58,9 +58,12 @@
         /// <param name="factory">The factory.</param>
         /// <param name="serviceProvider">The service provider.</param>
         /// <param name="filter">The filter.</param>
-        /// <returns>The logger factory</returns>
-        /// <exception cref="ArgumentNullException">factory</exception>
-        public static ILoggerFactory AddEntityFramework<TDbContext, TLog>(this ILoggerFactory factory, IServiceProvider serviceProvider, Func<string, LogLevel, bool> filter = null)
+        /// <returns>The logger factory.</returns>
+        /// <exception cref="ArgumentNullException">factory.</exception>
+        public static ILoggerFactory AddEntityFramework<TDbContext, TLog>(
+            this ILoggerFactory factory, 
+            IServiceProvider serviceProvider, 
+            Func<string, LogLevel, bool> filter = null)
             where TDbContext : DbContext
             where TLog : LogEntry, new()
         {
@@ -80,10 +83,11 @@
         /// <param name="builder">The builder.</param>
         /// <param name="filter">The filter.</param>
         /// <returns>
-        /// The logger builder
+        /// The logger builder.
         /// </returns>
-        /// <exception cref="ArgumentNullException">builder</exception>
-        public static ILoggingBuilder AddEntityFramework<TDbContext, TLog>(this ILoggingBuilder builder,
+        /// <exception cref="ArgumentNullException">builder.</exception>
+        public static ILoggingBuilder AddEntityFramework<TDbContext, TLog>(
+            this ILoggingBuilder builder,
             Func<string, LogLevel, bool> filter = null)
             where TDbContext : DbContext
             where TLog : LogEntry, new()
@@ -105,7 +109,7 @@
         /// <typeparam name="TLog">The type of the log.</typeparam>
         /// <param name="services">The services.</param>
         /// <param name="filter">The filter.</param>
-        /// <returns>The services collection</returns>
+        /// <returns>The services collection.</returns>
         public static IServiceCollection AddLoggingEntityFramework<TDbContext, TLog>(this IServiceCollection services,
             Func<string, LogLevel, bool> filter = null)
             where TDbContext : DbContext
@@ -123,7 +127,7 @@
         /// <param name="bearerTokenResolver">The bearer token resolver.</param>
         /// <param name="expiration">The expiration.</param>
         /// <param name="forceHttps">if set to <c>true</c> [force HTTPS].</param>
-        /// <returns>The application build with bearer token authentication</returns>
+        /// <returns>The application build with bearer token authentication.</returns>
         public static IApplicationBuilder UseBearerTokenAuthentication(this IApplicationBuilder app,
             TokenValidationParameters validationParameter,
             Func<IServiceProvider, string, string, string, string, Task<ClaimsIdentity>> identityResolver,
@@ -137,7 +141,7 @@
             // Use Authentication capabilities
             app.UseAuthentication();
 
-            // Middlewere for aunthenticate bearer token
+            // Middleware for authenticate bearer token
             app.UseMiddleware<TokenProviderMiddleware>(Options.Create(new TokenProviderOptions
             {
                 Audience = validationParameter.ValidAudience,
@@ -147,10 +151,10 @@
                 IdentityResolver = identityResolver,
                 BearerTokenResolver = bearerTokenResolver,
                 Expiration = expiration == default(TimeSpan) ? TimeSpan.FromMinutes(20) : expiration,
-                ForceHttps = forceHttps
+                ForceHttps = forceHttps,
             }));
 
-            // Middlewere to use authorization
+            // Middleware to use authorization
             app.UseMiddleware<AuthenticateSchemeMiddleware>(JwtBearerDefaults.AuthenticationScheme);
 
             return app;
@@ -162,7 +166,7 @@
         /// <param name="app">The application.</param>
         /// <param name="fallbackPath">The fallback path.</param>
         /// <param name="ignoreCheck">The ignore check.</param>
-        /// <returns>The application builder with the fallback</returns>
+        /// <returns>The application builder with the fallback.</returns>
         public static IApplicationBuilder UseFallback(this IApplicationBuilder app, string fallbackPath = "/index.html", Func<PathString, bool> ignoreCheck = null)
         {
             if (ignoreCheck == null)
@@ -185,13 +189,13 @@
         }
 
         /// <summary>
-        /// Extension method to add AuditTrail to a DbContext
+        /// Extension method to add AuditTrail to a DbContext.
         /// </summary>
-        /// <typeparam name="T">The context</typeparam>
+        /// <typeparam name="T">The context.</typeparam>
         /// <typeparam name="TEntity">The type of the entity.</typeparam>
-        /// <param name="context">The Db context</param>
-        /// <param name="currentUserId">The Id of the principal claim</param>
-        /// <returns>The Db context with the audit controller</returns>
+        /// <param name="context">The Db context.</param>
+        /// <param name="currentUserId">The Id of the principal claim.</param>
+        /// <returns>The Db context with the audit controller.</returns>
         public static IBusinessDbContext UseAuditTrail<T, TEntity>(this IBusinessDbContext context, string currentUserId)
             where T : DbContext
         {
@@ -205,7 +209,7 @@
         /// </summary>
         /// <param name="services">The services.</param>
         /// <param name="validationParameters">The validation parameters.</param>
-        /// <returns>The service with bearer token authentication</returns>
+        /// <returns>The service with bearer token authentication.</returns>
         public static IServiceCollection AddBearerTokenAuthentication(this IServiceCollection services, TokenValidationParameters validationParameters)
         {
             // Add Authentication services

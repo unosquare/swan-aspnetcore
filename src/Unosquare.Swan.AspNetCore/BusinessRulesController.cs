@@ -6,47 +6,9 @@
     using System.Reflection;
 
     /// <summary>
-    /// Represents a Business Rules Controller
+    /// Represent the controller of the business rules.
     /// </summary>
-    public interface IBusinessRulesController
-    {
-        /// <summary>
-        /// Runs the business rules.
-        /// </summary>
-        void RunBusinessRules();
-    }
-
-    /// <summary>
-    /// Creates a new DbContext with support to run BusinessControllers
-    /// </summary>
-    public interface IBusinessDbContext
-    {
-        /// <summary>
-        /// Adds the controller.
-        /// </summary>
-        /// <param name="controller">The controller.</param>
-        void AddController(IBusinessRulesController controller);
-
-        /// <summary>
-        /// Removes the controller.
-        /// </summary>
-        /// <param name="controller">The controller.</param>
-        void RemoveController(IBusinessRulesController controller);
-
-        /// <summary>
-        /// Determines whether the specified controller contains controller.
-        /// </summary>
-        /// <param name="controller">The controller.</param>
-        /// <returns>
-        ///   <c>true</c> if the specified controller contains controller; otherwise, <c>false</c>.
-        /// </returns>
-        bool ContainsController(IBusinessRulesController controller);
-    }
-
-    /// <summary>
-    /// Represent the controller of the business rules
-    /// </summary>
-    /// <typeparam name="T">The Db context</typeparam>
+    /// <typeparam name="T">The Db context.</typeparam>
     /// <seealso cref="Unosquare.Swan.AspNetCore.IBusinessRulesController" />
     public abstract class BusinessRulesController<T> : IBusinessRulesController
         where T : DbContext
@@ -87,7 +49,7 @@
         /// Gets the type of the entity.
         /// </summary>
         /// <param name="entity">The entity.</param>
-        /// <returns>The type of the current instance</returns>
+        /// <returns>The type of the current instance.</returns>
         public Type GetEntityType(object entity) => entity.GetType();
 
         private void ExecuteBusinessRulesMethods(EntityState state, ActionFlags action, MethodInfo[] methodInfoSet)

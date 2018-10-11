@@ -8,9 +8,9 @@
     using Formatters;
 
     /// <summary>
-    /// Represents an AuditTrail controller to use with BusinessDbContext
+    /// Represents an AuditTrail controller to use with BusinessDbContext.
     /// </summary>
-    /// <typeparam name="T">The Db context</typeparam>
+    /// <typeparam name="T">The Db context.</typeparam>
     /// <typeparam name="TEntity">The type of the entity.</typeparam>
     public class AuditTrailController<T, TEntity> : BusinessRulesController<T> 
         where T : DbContext

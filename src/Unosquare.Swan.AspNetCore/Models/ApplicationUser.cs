@@ -3,7 +3,7 @@
     using System.Security.Claims;
 
     /// <summary>
-    /// Represents an User
+    /// Represents an User.
     /// </summary>
     /// <seealso cref="System.Security.Claims.ClaimsIdentity" />
     public class ApplicationUser : ClaimsIdentity

@@ -1,7 +1,7 @@
 ﻿namespace Unosquare.Swan.AspNetCore.Models
 {
     /// <summary>
-    /// Represents a Role
+    /// Represents a Role.
     /// </summary>
     public class ApplicationRole
     {
