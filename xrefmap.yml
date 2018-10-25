@@ -80,119 +80,119 @@ references:
   fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).DbContext
   nameWithType: ApiControllerBase<TDbContext>.DbContext
   nameWithType.vb: ApiControllerBase(Of TDbContext).DbContext
-- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.OkFirstOrNotFound*
-  name: OkFirstOrNotFound
-  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_OkFirstOrNotFound_
-  commentId: Overload:Unosquare.Swan.AspNetCore.ApiControllerBase`1.OkFirstOrNotFound
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.FirstOrNotFound*
+  name: FirstOrNotFound
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_FirstOrNotFound_
+  commentId: Overload:Unosquare.Swan.AspNetCore.ApiControllerBase`1.FirstOrNotFound
   isSpec: "True"
-  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.OkFirstOrNotFound
-  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).OkFirstOrNotFound
-  nameWithType: ApiControllerBase<TDbContext>.OkFirstOrNotFound
-  nameWithType.vb: ApiControllerBase(Of TDbContext).OkFirstOrNotFound
-- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.OkFirstOrNotFound``1(Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)
-  name: OkFirstOrNotFound<TEntity>(Expression<Func<TEntity, Boolean>>, CancellationToken)
-  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_OkFirstOrNotFound__1_Expression_System_Func___0_System_Boolean___System_Threading_CancellationToken_
-  commentId: M:Unosquare.Swan.AspNetCore.ApiControllerBase`1.OkFirstOrNotFound``1(Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)
-  name.vb: OkFirstOrNotFound(Of TEntity)(Expression(Of Func(Of TEntity, Boolean)), CancellationToken)
-  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.OkFirstOrNotFound<TEntity>(Expression<System.Func<TEntity, System.Boolean>>, System.Threading.CancellationToken)
-  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).OkFirstOrNotFound(Of TEntity)(Expression(Of System.Func(Of TEntity, System.Boolean)), System.Threading.CancellationToken)
-  nameWithType: ApiControllerBase<TDbContext>.OkFirstOrNotFound<TEntity>(Expression<Func<TEntity, Boolean>>, CancellationToken)
-  nameWithType.vb: ApiControllerBase(Of TDbContext).OkFirstOrNotFound(Of TEntity)(Expression(Of Func(Of TEntity, Boolean)), CancellationToken)
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.FirstOrNotFound
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).FirstOrNotFound
+  nameWithType: ApiControllerBase<TDbContext>.FirstOrNotFound
+  nameWithType.vb: ApiControllerBase(Of TDbContext).FirstOrNotFound
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.FirstOrNotFound``1(Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)
+  name: FirstOrNotFound<TEntity>(Expression<Func<TEntity, Boolean>>, CancellationToken)
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_FirstOrNotFound__1_Expression_System_Func___0_System_Boolean___System_Threading_CancellationToken_
+  commentId: M:Unosquare.Swan.AspNetCore.ApiControllerBase`1.FirstOrNotFound``1(Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)
+  name.vb: FirstOrNotFound(Of TEntity)(Expression(Of Func(Of TEntity, Boolean)), CancellationToken)
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.FirstOrNotFound<TEntity>(Expression<System.Func<TEntity, System.Boolean>>, System.Threading.CancellationToken)
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).FirstOrNotFound(Of TEntity)(Expression(Of System.Func(Of TEntity, System.Boolean)), System.Threading.CancellationToken)
+  nameWithType: ApiControllerBase<TDbContext>.FirstOrNotFound<TEntity>(Expression<Func<TEntity, Boolean>>, CancellationToken)
+  nameWithType.vb: ApiControllerBase(Of TDbContext).FirstOrNotFound(Of TEntity)(Expression(Of Func(Of TEntity, Boolean)), CancellationToken)
 - uid: Unosquare.Swan.AspNetCore.AuditTrailController`2
-  name: AuditTrailController<T, TEntity>
+  name: AuditTrailController<TDbContext, TEntity>
   href: api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html
   commentId: T:Unosquare.Swan.AspNetCore.AuditTrailController`2
-  name.vb: AuditTrailController(Of T, TEntity)
-  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<T, TEntity>
-  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of T, TEntity)
-  nameWithType: AuditTrailController<T, TEntity>
-  nameWithType.vb: AuditTrailController(Of T, TEntity)
+  name.vb: AuditTrailController(Of TDbContext, TEntity)
+  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<TDbContext, TEntity>
+  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of TDbContext, TEntity)
+  nameWithType: AuditTrailController<TDbContext, TEntity>
+  nameWithType.vb: AuditTrailController(Of TDbContext, TEntity)
 - uid: Unosquare.Swan.AspNetCore.AuditTrailController`2.#ctor(`0,System.String)
-  name: AuditTrailController(T, String)
+  name: AuditTrailController(TDbContext, String)
   href: api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html#Unosquare_Swan_AspNetCore_AuditTrailController_2__ctor__0_System_String_
   commentId: M:Unosquare.Swan.AspNetCore.AuditTrailController`2.#ctor(`0,System.String)
-  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<T, TEntity>.AuditTrailController(T, System.String)
-  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of T, TEntity).AuditTrailController(T, System.String)
-  nameWithType: AuditTrailController<T, TEntity>.AuditTrailController(T, String)
-  nameWithType.vb: AuditTrailController(Of T, TEntity).AuditTrailController(T, String)
+  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<TDbContext, TEntity>.AuditTrailController(TDbContext, System.String)
+  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of TDbContext, TEntity).AuditTrailController(TDbContext, System.String)
+  nameWithType: AuditTrailController<TDbContext, TEntity>.AuditTrailController(TDbContext, String)
+  nameWithType.vb: AuditTrailController(Of TDbContext, TEntity).AuditTrailController(TDbContext, String)
 - uid: Unosquare.Swan.AspNetCore.AuditTrailController`2.#ctor*
   name: AuditTrailController
   href: api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html#Unosquare_Swan_AspNetCore_AuditTrailController_2__ctor_
   commentId: Overload:Unosquare.Swan.AspNetCore.AuditTrailController`2.#ctor
   isSpec: "True"
-  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<T, TEntity>.AuditTrailController
-  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of T, TEntity).AuditTrailController
-  nameWithType: AuditTrailController<T, TEntity>.AuditTrailController
-  nameWithType.vb: AuditTrailController(Of T, TEntity).AuditTrailController
+  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<TDbContext, TEntity>.AuditTrailController
+  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of TDbContext, TEntity).AuditTrailController
+  nameWithType: AuditTrailController<TDbContext, TEntity>.AuditTrailController
+  nameWithType.vb: AuditTrailController(Of TDbContext, TEntity).AuditTrailController
 - uid: Unosquare.Swan.AspNetCore.AuditTrailController`2.AddTypes(Unosquare.Swan.AspNetCore.ActionFlags,System.Type[])
   name: AddTypes(ActionFlags, Type[])
   href: api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html#Unosquare_Swan_AspNetCore_AuditTrailController_2_AddTypes_Unosquare_Swan_AspNetCore_ActionFlags_System_Type___
   commentId: M:Unosquare.Swan.AspNetCore.AuditTrailController`2.AddTypes(Unosquare.Swan.AspNetCore.ActionFlags,System.Type[])
   name.vb: AddTypes(ActionFlags, Type())
-  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<T, TEntity>.AddTypes(Unosquare.Swan.AspNetCore.ActionFlags, System.Type[])
-  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of T, TEntity).AddTypes(Unosquare.Swan.AspNetCore.ActionFlags, System.Type())
-  nameWithType: AuditTrailController<T, TEntity>.AddTypes(ActionFlags, Type[])
-  nameWithType.vb: AuditTrailController(Of T, TEntity).AddTypes(ActionFlags, Type())
+  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<TDbContext, TEntity>.AddTypes(Unosquare.Swan.AspNetCore.ActionFlags, System.Type[])
+  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of TDbContext, TEntity).AddTypes(Unosquare.Swan.AspNetCore.ActionFlags, System.Type())
+  nameWithType: AuditTrailController<TDbContext, TEntity>.AddTypes(ActionFlags, Type[])
+  nameWithType.vb: AuditTrailController(Of TDbContext, TEntity).AddTypes(ActionFlags, Type())
 - uid: Unosquare.Swan.AspNetCore.AuditTrailController`2.AddTypes*
   name: AddTypes
   href: api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html#Unosquare_Swan_AspNetCore_AuditTrailController_2_AddTypes_
   commentId: Overload:Unosquare.Swan.AspNetCore.AuditTrailController`2.AddTypes
   isSpec: "True"
-  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<T, TEntity>.AddTypes
-  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of T, TEntity).AddTypes
-  nameWithType: AuditTrailController<T, TEntity>.AddTypes
-  nameWithType.vb: AuditTrailController(Of T, TEntity).AddTypes
+  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<TDbContext, TEntity>.AddTypes
+  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of TDbContext, TEntity).AddTypes
+  nameWithType: AuditTrailController<TDbContext, TEntity>.AddTypes
+  nameWithType.vb: AuditTrailController(Of TDbContext, TEntity).AddTypes
 - uid: Unosquare.Swan.AspNetCore.AuditTrailController`2.OnDeleteCreated(System.Object)
   name: OnDeleteCreated(Object)
   href: api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html#Unosquare_Swan_AspNetCore_AuditTrailController_2_OnDeleteCreated_System_Object_
   commentId: M:Unosquare.Swan.AspNetCore.AuditTrailController`2.OnDeleteCreated(System.Object)
-  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<T, TEntity>.OnDeleteCreated(System.Object)
-  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of T, TEntity).OnDeleteCreated(System.Object)
-  nameWithType: AuditTrailController<T, TEntity>.OnDeleteCreated(Object)
-  nameWithType.vb: AuditTrailController(Of T, TEntity).OnDeleteCreated(Object)
+  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<TDbContext, TEntity>.OnDeleteCreated(System.Object)
+  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of TDbContext, TEntity).OnDeleteCreated(System.Object)
+  nameWithType: AuditTrailController<TDbContext, TEntity>.OnDeleteCreated(Object)
+  nameWithType.vb: AuditTrailController(Of TDbContext, TEntity).OnDeleteCreated(Object)
 - uid: Unosquare.Swan.AspNetCore.AuditTrailController`2.OnDeleteCreated*
   name: OnDeleteCreated
   href: api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html#Unosquare_Swan_AspNetCore_AuditTrailController_2_OnDeleteCreated_
   commentId: Overload:Unosquare.Swan.AspNetCore.AuditTrailController`2.OnDeleteCreated
   isSpec: "True"
-  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<T, TEntity>.OnDeleteCreated
-  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of T, TEntity).OnDeleteCreated
-  nameWithType: AuditTrailController<T, TEntity>.OnDeleteCreated
-  nameWithType.vb: AuditTrailController(Of T, TEntity).OnDeleteCreated
+  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<TDbContext, TEntity>.OnDeleteCreated
+  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of TDbContext, TEntity).OnDeleteCreated
+  nameWithType: AuditTrailController<TDbContext, TEntity>.OnDeleteCreated
+  nameWithType.vb: AuditTrailController(Of TDbContext, TEntity).OnDeleteCreated
 - uid: Unosquare.Swan.AspNetCore.AuditTrailController`2.OnEntityCreated(System.Object)
   name: OnEntityCreated(Object)
   href: api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html#Unosquare_Swan_AspNetCore_AuditTrailController_2_OnEntityCreated_System_Object_
   commentId: M:Unosquare.Swan.AspNetCore.AuditTrailController`2.OnEntityCreated(System.Object)
-  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<T, TEntity>.OnEntityCreated(System.Object)
-  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of T, TEntity).OnEntityCreated(System.Object)
-  nameWithType: AuditTrailController<T, TEntity>.OnEntityCreated(Object)
-  nameWithType.vb: AuditTrailController(Of T, TEntity).OnEntityCreated(Object)
+  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<TDbContext, TEntity>.OnEntityCreated(System.Object)
+  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of TDbContext, TEntity).OnEntityCreated(System.Object)
+  nameWithType: AuditTrailController<TDbContext, TEntity>.OnEntityCreated(Object)
+  nameWithType.vb: AuditTrailController(Of TDbContext, TEntity).OnEntityCreated(Object)
 - uid: Unosquare.Swan.AspNetCore.AuditTrailController`2.OnEntityCreated*
   name: OnEntityCreated
   href: api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html#Unosquare_Swan_AspNetCore_AuditTrailController_2_OnEntityCreated_
   commentId: Overload:Unosquare.Swan.AspNetCore.AuditTrailController`2.OnEntityCreated
   isSpec: "True"
-  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<T, TEntity>.OnEntityCreated
-  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of T, TEntity).OnEntityCreated
-  nameWithType: AuditTrailController<T, TEntity>.OnEntityCreated
-  nameWithType.vb: AuditTrailController(Of T, TEntity).OnEntityCreated
+  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<TDbContext, TEntity>.OnEntityCreated
+  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of TDbContext, TEntity).OnEntityCreated
+  nameWithType: AuditTrailController<TDbContext, TEntity>.OnEntityCreated
+  nameWithType.vb: AuditTrailController(Of TDbContext, TEntity).OnEntityCreated
 - uid: Unosquare.Swan.AspNetCore.AuditTrailController`2.OnEntityUpdated(System.Object)
   name: OnEntityUpdated(Object)
   href: api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html#Unosquare_Swan_AspNetCore_AuditTrailController_2_OnEntityUpdated_System_Object_
   commentId: M:Unosquare.Swan.AspNetCore.AuditTrailController`2.OnEntityUpdated(System.Object)
-  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<T, TEntity>.OnEntityUpdated(System.Object)
-  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of T, TEntity).OnEntityUpdated(System.Object)
-  nameWithType: AuditTrailController<T, TEntity>.OnEntityUpdated(Object)
-  nameWithType.vb: AuditTrailController(Of T, TEntity).OnEntityUpdated(Object)
+  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<TDbContext, TEntity>.OnEntityUpdated(System.Object)
+  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of TDbContext, TEntity).OnEntityUpdated(System.Object)
+  nameWithType: AuditTrailController<TDbContext, TEntity>.OnEntityUpdated(Object)
+  nameWithType.vb: AuditTrailController(Of TDbContext, TEntity).OnEntityUpdated(Object)
 - uid: Unosquare.Swan.AspNetCore.AuditTrailController`2.OnEntityUpdated*
   name: OnEntityUpdated
   href: api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html#Unosquare_Swan_AspNetCore_AuditTrailController_2_OnEntityUpdated_
   commentId: Overload:Unosquare.Swan.AspNetCore.AuditTrailController`2.OnEntityUpdated
   isSpec: "True"
-  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<T, TEntity>.OnEntityUpdated
-  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of T, TEntity).OnEntityUpdated
-  nameWithType: AuditTrailController<T, TEntity>.OnEntityUpdated
-  nameWithType.vb: AuditTrailController(Of T, TEntity).OnEntityUpdated
+  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<TDbContext, TEntity>.OnEntityUpdated
+  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of TDbContext, TEntity).OnEntityUpdated
+  nameWithType: AuditTrailController<TDbContext, TEntity>.OnEntityUpdated
+  nameWithType.vb: AuditTrailController(Of TDbContext, TEntity).OnEntityUpdated
 - uid: Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware
   name: AuthenticateSchemeMiddleware
   href: api/Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.html
@@ -876,82 +876,82 @@ references:
   fullName: Unosquare.Swan.AspNetCore.BusinessRuleAttribute.EntityTypes
   nameWithType: BusinessRuleAttribute.EntityTypes
 - uid: Unosquare.Swan.AspNetCore.BusinessRulesController`1
-  name: BusinessRulesController<T>
+  name: BusinessRulesController<TDbContext>
   href: api/Unosquare.Swan.AspNetCore.BusinessRulesController-1.html
   commentId: T:Unosquare.Swan.AspNetCore.BusinessRulesController`1
-  name.vb: BusinessRulesController(Of T)
-  fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<T>
-  fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of T)
-  nameWithType: BusinessRulesController<T>
-  nameWithType.vb: BusinessRulesController(Of T)
+  name.vb: BusinessRulesController(Of TDbContext)
+  fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<TDbContext>
+  fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of TDbContext)
+  nameWithType: BusinessRulesController<TDbContext>
+  nameWithType.vb: BusinessRulesController(Of TDbContext)
 - uid: Unosquare.Swan.AspNetCore.BusinessRulesController`1.#ctor(`0)
-  name: BusinessRulesController(T)
+  name: BusinessRulesController(TDbContext)
   href: api/Unosquare.Swan.AspNetCore.BusinessRulesController-1.html#Unosquare_Swan_AspNetCore_BusinessRulesController_1__ctor__0_
   commentId: M:Unosquare.Swan.AspNetCore.BusinessRulesController`1.#ctor(`0)
-  fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<T>.BusinessRulesController(T)
-  fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of T).BusinessRulesController(T)
-  nameWithType: BusinessRulesController<T>.BusinessRulesController(T)
-  nameWithType.vb: BusinessRulesController(Of T).BusinessRulesController(T)
+  fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<TDbContext>.BusinessRulesController(TDbContext)
+  fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of TDbContext).BusinessRulesController(TDbContext)
+  nameWithType: BusinessRulesController<TDbContext>.BusinessRulesController(TDbContext)
+  nameWithType.vb: BusinessRulesController(Of TDbContext).BusinessRulesController(TDbContext)
 - uid: Unosquare.Swan.AspNetCore.BusinessRulesController`1.#ctor*
   name: BusinessRulesController
   href: api/Unosquare.Swan.AspNetCore.BusinessRulesController-1.html#Unosquare_Swan_AspNetCore_BusinessRulesController_1__ctor_
   commentId: Overload:Unosquare.Swan.AspNetCore.BusinessRulesController`1.#ctor
   isSpec: "True"
-  fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<T>.BusinessRulesController
-  fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of T).BusinessRulesController
-  nameWithType: BusinessRulesController<T>.BusinessRulesController
-  nameWithType.vb: BusinessRulesController(Of T).BusinessRulesController
+  fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<TDbContext>.BusinessRulesController
+  fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of TDbContext).BusinessRulesController
+  nameWithType: BusinessRulesController<TDbContext>.BusinessRulesController
+  nameWithType.vb: BusinessRulesController(Of TDbContext).BusinessRulesController
 - uid: Unosquare.Swan.AspNetCore.BusinessRulesController`1.Context
   name: Context
   href: api/Unosquare.Swan.AspNetCore.BusinessRulesController-1.html#Unosquare_Swan_AspNetCore_BusinessRulesController_1_Context
   commentId: P:Unosquare.Swan.AspNetCore.BusinessRulesController`1.Context
-  fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<T>.Context
-  fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of T).Context
-  nameWithType: BusinessRulesController<T>.Context
-  nameWithType.vb: BusinessRulesController(Of T).Context
+  fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<TDbContext>.Context
+  fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of TDbContext).Context
+  nameWithType: BusinessRulesController<TDbContext>.Context
+  nameWithType.vb: BusinessRulesController(Of TDbContext).Context
 - uid: Unosquare.Swan.AspNetCore.BusinessRulesController`1.Context*
   name: Context
   href: api/Unosquare.Swan.AspNetCore.BusinessRulesController-1.html#Unosquare_Swan_AspNetCore_BusinessRulesController_1_Context_
   commentId: Overload:Unosquare.Swan.AspNetCore.BusinessRulesController`1.Context
   isSpec: "True"
-  fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<T>.Context
-  fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of T).Context
-  nameWithType: BusinessRulesController<T>.Context
-  nameWithType.vb: BusinessRulesController(Of T).Context
+  fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<TDbContext>.Context
+  fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of TDbContext).Context
+  nameWithType: BusinessRulesController<TDbContext>.Context
+  nameWithType.vb: BusinessRulesController(Of TDbContext).Context
 - uid: Unosquare.Swan.AspNetCore.BusinessRulesController`1.GetEntityType(System.Object)
   name: GetEntityType(Object)
   href: api/Unosquare.Swan.AspNetCore.BusinessRulesController-1.html#Unosquare_Swan_AspNetCore_BusinessRulesController_1_GetEntityType_System_Object_
   commentId: M:Unosquare.Swan.AspNetCore.BusinessRulesController`1.GetEntityType(System.Object)
-  fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<T>.GetEntityType(System.Object)
-  fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of T).GetEntityType(System.Object)
-  nameWithType: BusinessRulesController<T>.GetEntityType(Object)
-  nameWithType.vb: BusinessRulesController(Of T).GetEntityType(Object)
+  fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<TDbContext>.GetEntityType(System.Object)
+  fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of TDbContext).GetEntityType(System.Object)
+  nameWithType: BusinessRulesController<TDbContext>.GetEntityType(Object)
+  nameWithType.vb: BusinessRulesController(Of TDbContext).GetEntityType(Object)
 - uid: Unosquare.Swan.AspNetCore.BusinessRulesController`1.GetEntityType*
   name: GetEntityType
   href: api/Unosquare.Swan.AspNetCore.BusinessRulesController-1.html#Unosquare_Swan_AspNetCore_BusinessRulesController_1_GetEntityType_
   commentId: Overload:Unosquare.Swan.AspNetCore.BusinessRulesController`1.GetEntityType
   isSpec: "True"
-  fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<T>.GetEntityType
-  fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of T).GetEntityType
-  nameWithType: BusinessRulesController<T>.GetEntityType
-  nameWithType.vb: BusinessRulesController(Of T).GetEntityType
+  fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<TDbContext>.GetEntityType
+  fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of TDbContext).GetEntityType
+  nameWithType: BusinessRulesController<TDbContext>.GetEntityType
+  nameWithType.vb: BusinessRulesController(Of TDbContext).GetEntityType
 - uid: Unosquare.Swan.AspNetCore.BusinessRulesController`1.RunBusinessRules
   name: RunBusinessRules()
   href: api/Unosquare.Swan.AspNetCore.BusinessRulesController-1.html#Unosquare_Swan_AspNetCore_BusinessRulesController_1_RunBusinessRules
   commentId: M:Unosquare.Swan.AspNetCore.BusinessRulesController`1.RunBusinessRules
-  fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<T>.RunBusinessRules()
-  fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of T).RunBusinessRules()
-  nameWithType: BusinessRulesController<T>.RunBusinessRules()
-  nameWithType.vb: BusinessRulesController(Of T).RunBusinessRules()
+  fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<TDbContext>.RunBusinessRules()
+  fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of TDbContext).RunBusinessRules()
+  nameWithType: BusinessRulesController<TDbContext>.RunBusinessRules()
+  nameWithType.vb: BusinessRulesController(Of TDbContext).RunBusinessRules()
 - uid: Unosquare.Swan.AspNetCore.BusinessRulesController`1.RunBusinessRules*
   name: RunBusinessRules
   href: api/Unosquare.Swan.AspNetCore.BusinessRulesController-1.html#Unosquare_Swan_AspNetCore_BusinessRulesController_1_RunBusinessRules_
   commentId: Overload:Unosquare.Swan.AspNetCore.BusinessRulesController`1.RunBusinessRules
   isSpec: "True"
-  fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<T>.RunBusinessRules
-  fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of T).RunBusinessRules
-  nameWithType: BusinessRulesController<T>.RunBusinessRules
-  nameWithType.vb: BusinessRulesController(Of T).RunBusinessRules
+  fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<TDbContext>.RunBusinessRules
+  fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of TDbContext).RunBusinessRules
+  nameWithType: BusinessRulesController<TDbContext>.RunBusinessRules
+  nameWithType.vb: BusinessRulesController(Of TDbContext).RunBusinessRules
 - uid: Unosquare.Swan.AspNetCore.Extensions
   name: Extensions
   href: api/Unosquare.Swan.AspNetCore.Extensions.html

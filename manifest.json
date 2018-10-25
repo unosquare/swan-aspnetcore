@@ -75,7 +75,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html",
-          "hash": "u+XUZJ4+X1YGCUh3gRapKg=="
+          "hash": "qrCuX3KEhklVYoZcq7W6cg=="
         }
       },
       "is_incremental": false,
@@ -87,7 +87,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html",
-          "hash": "oWzm1mABs1VRHSozd/8ikA=="
+          "hash": "S0mwxQHvFEC8zpXcU44VKw=="
         }
       },
       "is_incremental": false,
@@ -159,7 +159,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.BusinessRulesController-1.html",
-          "hash": "fEyiKVACjq5uX73YBGbwbA=="
+          "hash": "YjPpEiiNLpTS3KzaSsoWBg=="
         }
       },
       "is_incremental": false,
@@ -339,7 +339,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.html",
-          "hash": "IY/+vqkYUnhFJ8UgeEO6QQ=="
+          "hash": "zhm4lWC+3PAAGX7bvJmsfA=="
         }
       },
       "is_incremental": false,
@@ -351,7 +351,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "bJVgnskyHbA0gKOL60pSYw=="
+          "hash": "9MpKKigmAPk7h9W19RajKQ=="
         }
       },
       "is_incremental": false,
@@ -388,11 +388,11 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ManagedReferenceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },

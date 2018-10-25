@@ -176,14 +176,15 @@ the database provide in <code>T</code>.</p>
   </h3>
   
   
-  <a id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_OkFirstOrNotFound_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.OkFirstOrNotFound*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_OkFirstOrNotFound__1_Expression_System_Func___0_System_Boolean___System_Threading_CancellationToken_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.OkFirstOrNotFound``1(Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)">OkFirstOrNotFound&lt;TEntity&gt;(Expression&lt;Func&lt;TEntity, Boolean&gt;&gt;, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Oks the first or not found.</p>
+  <a id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_FirstOrNotFound_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.FirstOrNotFound*"></a>
+  <h4 id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_FirstOrNotFound__1_Expression_System_Func___0_System_Boolean___System_Threading_CancellationToken_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.FirstOrNotFound``1(Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)">FirstOrNotFound&lt;TEntity&gt;(Expression&lt;Func&lt;TEntity, Boolean&gt;&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Retrieve the first element matching the where expression
+or not found response code (404).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;IActionResult&gt; OkFirstOrNotFound&lt;TEntity&gt;(Expression&lt;Func&lt;TEntity, bool&gt;&gt; whereExpression, CancellationToken cancellationToken)
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IActionResult&gt; FirstOrNotFound&lt;TEntity&gt;(Expression&lt;Func&lt;TEntity, bool&gt;&gt; whereExpression, CancellationToken cancellationToken)
     where TEntity : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
