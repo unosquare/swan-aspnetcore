@@ -1,8 +1,3 @@
-﻿
-// This file is used by Code Analysis to maintain SuppressMessage 
-// attributes that are applied to this project.
-// Project-level suppressions either have no target or are given 
-// a specific target and scoped to a namespace, type, member, etc.
-
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "SA1305:Field names should not use Hungarian notation", Justification = "<Pending>", Scope = "member", Target = "~M:Unosquare.Swan.AspNetCore.ApiControllerBase`1.#ctor(`0)")]
-
+﻿#pragma warning disable SA1652 // Enable XML documentation output
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "SA1305:Field names should not use Hungarian notation", Justification = "Annoying Db naming", Scope = "namespace", Target = "~N:Unosquare.Swan.AspNetCore")]
+#pragma warning restore SA1652 // Enable XML documentation output

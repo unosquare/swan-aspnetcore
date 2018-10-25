@@ -8,8 +8,8 @@
     /// <summary>
     /// Represents a abstract class to create DbContext using Business Rules.
     /// </summary>
-    /// <seealso cref="Microsoft.EntityFrameworkCore.DbContext" />
-    /// <seealso cref="Unosquare.Swan.AspNetCore.IBusinessDbContext" />
+    /// <seealso cref="DbContext" />
+    /// <seealso cref="IBusinessDbContext" />
     public abstract class BusinessDbContext : DbContext, IBusinessDbContext
     {
         private readonly List<IBusinessRulesController> _businessControllers = new List<IBusinessRulesController>();
@@ -23,35 +23,14 @@
         {
         }
 
-        /// <summary>
-        /// Adds the controller.
-        /// </summary>
-        /// <param name="controller">The controller.</param>
-        public void AddController(IBusinessRulesController controller)
-        {
-            _businessControllers.Add(controller);
-        }
+        /// <inheritdoc />
+        public void AddController(IBusinessRulesController controller) => _businessControllers.Add(controller);
 
-        /// <summary>
-        /// Removes the controller.
-        /// </summary>
-        /// <param name="controller">The controller.</param>
-        public void RemoveController(IBusinessRulesController controller)
-        {
-            _businessControllers.Remove(controller);
-        }
+        /// <inheritdoc />
+        public void RemoveController(IBusinessRulesController controller) => _businessControllers.Remove(controller);
 
-        /// <summary>
-        /// Determines whether the specified controller contains controller.
-        /// </summary>
-        /// <param name="controller">The controller.</param>
-        /// <returns>
-        ///   <c>true</c> if the specified controller contains controller; otherwise, <c>false</c>.
-        /// </returns>
-        public bool ContainsController(IBusinessRulesController controller)
-        {
-            return _businessControllers.Contains(controller);
-        }
+        /// <inheritdoc />
+        public bool ContainsController(IBusinessRulesController controller) => _businessControllers.Contains(controller);
 
         /// <summary>
         /// Runs the business rules.

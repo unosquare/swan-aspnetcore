@@ -8,16 +8,16 @@
     /// <summary>
     /// Represent the controller of the business rules.
     /// </summary>
-    /// <typeparam name="T">The Db context.</typeparam>
+    /// <typeparam name="TDbContext">The type of database.</typeparam>
     /// <seealso cref="Unosquare.Swan.AspNetCore.IBusinessRulesController" />
-    public abstract class BusinessRulesController<T> : IBusinessRulesController
-        where T : DbContext
+    public abstract class BusinessRulesController<TDbContext> : IBusinessRulesController
+        where TDbContext : DbContext
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BusinessRulesController{T}"/> class.
         /// </summary>
         /// <param name="context">The context.</param>
-        protected BusinessRulesController(T context)
+        protected BusinessRulesController(TDbContext context)
         {
             Context = context;
         }
@@ -28,7 +28,7 @@
         /// <value>
         /// The context.
         /// </value>
-        public T Context { get; protected set; }
+        public TDbContext Context { get; protected set; }
 
         /// <summary>
         /// Runs the business rules.
