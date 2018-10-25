@@ -176,9 +176,208 @@ the database provide in <code>T</code>.</p>
   </h3>
   
   
+  <a id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Create_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Create*"></a>
+  <h4 id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Create__1___0_System_Threading_CancellationToken_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Create``1(``0,System.Threading.CancellationToken)">Create&lt;TEntity&gt;(TEntity, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Creates the specified model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; Create&lt;TEntity&gt;(TEntity model, CancellationToken cancellationToken = default(CancellationToken))
+    where TEntity : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TEntity</span></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The model.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td><p>A task representing the database operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TEntity</span></td>
+        <td><p>The type of the entity.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Delete_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Delete*"></a>
+  <h4 id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Delete__1_System_Object___" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Delete``1(System.Object[])">Delete&lt;TEntity&gt;(Object[])</h4>
+  <div class="markdown level1 summary"><p>Deletes the specified model by the provided keys.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; Delete&lt;TEntity&gt;(params object[] keys)
+    where TEntity : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The keys.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td><p>A task representing the database operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TEntity</span></td>
+        <td><p>The type of the entity.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Delete_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Delete*"></a>
+  <h4 id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Delete__1_System_Object___System_Threading_CancellationToken_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Delete``1(System.Object[],System.Threading.CancellationToken)">Delete&lt;TEntity&gt;(Object[], CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Deletes the specified model by the provided keys.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; Delete&lt;TEntity&gt;(object[] keys, CancellationToken cancellationToken)
+    where TEntity : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The keys.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td><p>A task representing the database operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TEntity</span></td>
+        <td><p>The type of the entity.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_FirstOrNotFound_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.FirstOrNotFound*"></a>
   <h4 id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_FirstOrNotFound__1_Expression_System_Func___0_System_Boolean___Expression_System_Func___0_System_Object___System_Threading_CancellationToken_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.FirstOrNotFound``1(Expression{System.Func{``0,System.Boolean}},Expression{System.Func{``0,System.Object}},System.Threading.CancellationToken)">FirstOrNotFound&lt;TEntity&gt;(Expression&lt;Func&lt;TEntity, Boolean&gt;&gt;, Expression&lt;Func&lt;TEntity, Object&gt;&gt;, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Firsts the or not found.</p>
+  <div class="markdown level1 summary"><p>Retrieve the first element with the selection expression and
+matching the where expression or not found response code (404).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -297,6 +496,652 @@ or not found response code (404).</p>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
         <td><p>A task representing the query database operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TEntity</span></td>
+        <td><p>The type of the entity.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Query_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Query*"></a>
+  <h4 id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Query__1_System_Func_IQueryable___0__IQueryable__" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Query``1(System.Func{IQueryable{``0},IQueryable})">Query&lt;TEntity&gt;(Func&lt;IQueryable&lt;TEntity&gt;, IQueryable&gt;)</h4>
+  <div class="markdown level1 summary"><p>Queries the specified query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; Query&lt;TEntity&gt;(Func&lt;IQueryable&lt;TEntity&gt;, IQueryable&gt; query)
+    where TEntity : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">IQueryable</span>&lt;TEntity&gt;, <span class="xref">IQueryable</span>&gt;</td>
+        <td><span class="parametername">query</span></td>
+        <td><p>The query.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td><p>A task representing the query to the database.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TEntity</span></td>
+        <td><p>The type of the entity.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Single_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Single*"></a>
+  <h4 id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Single__1_System_Object___" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Single``1(System.Object[])">Single&lt;TEntity&gt;(Object[])</h4>
+  <div class="markdown level1 summary"><p>Finds the matching element using the provided keys
+or not found response code (404).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IActionResult&gt; Single&lt;TEntity&gt;(params object[] keys)
+    where TEntity : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The keys.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td><p>A task representing the query database operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TEntity</span></td>
+        <td><p>The type of the entity.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Single_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Single*"></a>
+  <h4 id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Single__1_System_Object___System_Threading_CancellationToken_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Single``1(System.Object[],System.Threading.CancellationToken)">Single&lt;TEntity&gt;(Object[], CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Finds the matching element using the provided keys
+or not found response code (404).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IActionResult&gt; Single&lt;TEntity&gt;(object[] keys, CancellationToken cancellationToken)
+    where TEntity : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The keys.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td><p>A task representing the query database operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TEntity</span></td>
+        <td><p>The type of the entity.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Update_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Update*"></a>
+  <h4 id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Update__1___0_System_Object___" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Update``1(``0,System.Object[])">Update&lt;TEntity&gt;(TEntity, Object[])</h4>
+  <div class="markdown level1 summary"><p>Updates the specified model. If the entity class contains
+the <code>Copyable</code> attribute will copy only the tagged properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; Update&lt;TEntity&gt;(TEntity model, params object[] keys)
+    where TEntity : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TEntity</span></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The model.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The keys.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td><p>A task representing the write operation to the database.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TEntity</span></td>
+        <td><p>The type of the entity.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Update_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Update*"></a>
+  <h4 id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Update__1___0_System_Object___System_Threading_CancellationToken_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Update``1(``0,System.Object[],System.Threading.CancellationToken)">Update&lt;TEntity&gt;(TEntity, Object[], CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Updates the specified model. If the entity class contains
+the <code>Copyable</code> attribute will copy only the tagged properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; Update&lt;TEntity&gt;(TEntity model, object[] keys, CancellationToken cancellationToken)
+    where TEntity : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TEntity</span></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The model.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The keys.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td><p>A task representing the write operation to the database.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TEntity</span></td>
+        <td><p>The type of the entity.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Update_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Update*"></a>
+  <h4 id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Update__1___0_System_String___System_Object___" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Update``1(``0,System.String[],System.Object[])">Update&lt;TEntity&gt;(TEntity, String[], Object[])</h4>
+  <div class="markdown level1 summary"><p>Updates the specified model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; Update&lt;TEntity&gt;(TEntity model, string[] ignoredProperties, params object[] keys)
+    where TEntity : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TEntity</span></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The model.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">ignoredProperties</span></td>
+        <td><p>The ignored properties.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The keys.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td><p>A task representing the write operation to the database.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TEntity</span></td>
+        <td><p>The type of the entity.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Update_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Update*"></a>
+  <h4 id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Update__1___0_System_String___System_Object___System_Threading_CancellationToken_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Update``1(``0,System.String[],System.Object[],System.Threading.CancellationToken)">Update&lt;TEntity&gt;(TEntity, String[], Object[], CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Updates the specified model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; Update&lt;TEntity&gt;(TEntity model, string[] ignoredProperties, object[] keys, CancellationToken cancellationToken)
+    where TEntity : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TEntity</span></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The model.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">ignoredProperties</span></td>
+        <td><p>The ignored properties.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The keys.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td><p>A task representing the write operation to the database.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TEntity</span></td>
+        <td><p>The type of the entity.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_UpdateOnly_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.UpdateOnly*"></a>
+  <h4 id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_UpdateOnly__1___0_System_String___System_Object___" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.UpdateOnly``1(``0,System.String[],System.Object[])">UpdateOnly&lt;TEntity&gt;(TEntity, String[], Object[])</h4>
+  <div class="markdown level1 summary"><p>Updates the specified model only with the provide list of properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; UpdateOnly&lt;TEntity&gt;(TEntity model, string[] includedProperties, params object[] keys)
+    where TEntity : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TEntity</span></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The model.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">includedProperties</span></td>
+        <td><p>The included properties.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The keys.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td><p>A task representing the write operation to the database.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TEntity</span></td>
+        <td><p>The type of the entity.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_UpdateOnly_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.UpdateOnly*"></a>
+  <h4 id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_UpdateOnly__1___0_System_String___System_Object___System_Threading_CancellationToken_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.UpdateOnly``1(``0,System.String[],System.Object[],System.Threading.CancellationToken)">UpdateOnly&lt;TEntity&gt;(TEntity, String[], Object[], CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Updates the specified model only with the provide list of properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; UpdateOnly&lt;TEntity&gt;(TEntity model, string[] includedProperties, object[] keys, CancellationToken cancellationToken)
+    where TEntity : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TEntity</span></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The model.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">includedProperties</span></td>
+        <td><p>The included properties.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The keys.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td><p>A task representing the write operation to the database.</p>
 </td>
       </tr>
     </tbody>

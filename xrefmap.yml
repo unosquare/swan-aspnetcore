@@ -63,6 +63,24 @@ references:
   fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).ApiControllerBase
   nameWithType: ApiControllerBase<TDbContext>.ApiControllerBase
   nameWithType.vb: ApiControllerBase(Of TDbContext).ApiControllerBase
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.Create*
+  name: Create
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_Create_
+  commentId: Overload:Unosquare.Swan.AspNetCore.ApiControllerBase`1.Create
+  isSpec: "True"
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.Create
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).Create
+  nameWithType: ApiControllerBase<TDbContext>.Create
+  nameWithType.vb: ApiControllerBase(Of TDbContext).Create
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.Create``1(``0,System.Threading.CancellationToken)
+  name: Create<TEntity>(TEntity, CancellationToken)
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_Create__1___0_System_Threading_CancellationToken_
+  commentId: M:Unosquare.Swan.AspNetCore.ApiControllerBase`1.Create``1(``0,System.Threading.CancellationToken)
+  name.vb: Create(Of TEntity)(TEntity, CancellationToken)
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.Create<TEntity>(TEntity, System.Threading.CancellationToken)
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).Create(Of TEntity)(TEntity, System.Threading.CancellationToken)
+  nameWithType: ApiControllerBase<TDbContext>.Create<TEntity>(TEntity, CancellationToken)
+  nameWithType.vb: ApiControllerBase(Of TDbContext).Create(Of TEntity)(TEntity, CancellationToken)
 - uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.DbContext
   name: DbContext
   href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_DbContext
@@ -80,6 +98,33 @@ references:
   fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).DbContext
   nameWithType: ApiControllerBase<TDbContext>.DbContext
   nameWithType.vb: ApiControllerBase(Of TDbContext).DbContext
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.Delete*
+  name: Delete
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_Delete_
+  commentId: Overload:Unosquare.Swan.AspNetCore.ApiControllerBase`1.Delete
+  isSpec: "True"
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.Delete
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).Delete
+  nameWithType: ApiControllerBase<TDbContext>.Delete
+  nameWithType.vb: ApiControllerBase(Of TDbContext).Delete
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.Delete``1(System.Object[])
+  name: Delete<TEntity>(Object[])
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_Delete__1_System_Object___
+  commentId: M:Unosquare.Swan.AspNetCore.ApiControllerBase`1.Delete``1(System.Object[])
+  name.vb: Delete(Of TEntity)(Object())
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.Delete<TEntity>(System.Object[])
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).Delete(Of TEntity)(System.Object())
+  nameWithType: ApiControllerBase<TDbContext>.Delete<TEntity>(Object[])
+  nameWithType.vb: ApiControllerBase(Of TDbContext).Delete(Of TEntity)(Object())
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.Delete``1(System.Object[],System.Threading.CancellationToken)
+  name: Delete<TEntity>(Object[], CancellationToken)
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_Delete__1_System_Object___System_Threading_CancellationToken_
+  commentId: M:Unosquare.Swan.AspNetCore.ApiControllerBase`1.Delete``1(System.Object[],System.Threading.CancellationToken)
+  name.vb: Delete(Of TEntity)(Object(), CancellationToken)
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.Delete<TEntity>(System.Object[], System.Threading.CancellationToken)
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).Delete(Of TEntity)(System.Object(), System.Threading.CancellationToken)
+  nameWithType: ApiControllerBase<TDbContext>.Delete<TEntity>(Object[], CancellationToken)
+  nameWithType.vb: ApiControllerBase(Of TDbContext).Delete(Of TEntity)(Object(), CancellationToken)
 - uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.FirstOrNotFound*
   name: FirstOrNotFound
   href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_FirstOrNotFound_
@@ -107,6 +152,123 @@ references:
   fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).FirstOrNotFound(Of TEntity)(Expression(Of System.Func(Of TEntity, System.Boolean)), System.Threading.CancellationToken)
   nameWithType: ApiControllerBase<TDbContext>.FirstOrNotFound<TEntity>(Expression<Func<TEntity, Boolean>>, CancellationToken)
   nameWithType.vb: ApiControllerBase(Of TDbContext).FirstOrNotFound(Of TEntity)(Expression(Of Func(Of TEntity, Boolean)), CancellationToken)
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.Query*
+  name: Query
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_Query_
+  commentId: Overload:Unosquare.Swan.AspNetCore.ApiControllerBase`1.Query
+  isSpec: "True"
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.Query
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).Query
+  nameWithType: ApiControllerBase<TDbContext>.Query
+  nameWithType.vb: ApiControllerBase(Of TDbContext).Query
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.Query``1(System.Func{IQueryable{``0},IQueryable})
+  name: Query<TEntity>(Func<IQueryable<TEntity>, IQueryable>)
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_Query__1_System_Func_IQueryable___0__IQueryable__
+  commentId: M:Unosquare.Swan.AspNetCore.ApiControllerBase`1.Query``1(System.Func{IQueryable{``0},IQueryable})
+  name.vb: Query(Of TEntity)(Func(Of IQueryable(Of TEntity), IQueryable))
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.Query<TEntity>(System.Func<IQueryable<TEntity>, IQueryable>)
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).Query(Of TEntity)(System.Func(Of IQueryable(Of TEntity), IQueryable))
+  nameWithType: ApiControllerBase<TDbContext>.Query<TEntity>(Func<IQueryable<TEntity>, IQueryable>)
+  nameWithType.vb: ApiControllerBase(Of TDbContext).Query(Of TEntity)(Func(Of IQueryable(Of TEntity), IQueryable))
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.Single*
+  name: Single
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_Single_
+  commentId: Overload:Unosquare.Swan.AspNetCore.ApiControllerBase`1.Single
+  isSpec: "True"
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.Single
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).Single
+  nameWithType: ApiControllerBase<TDbContext>.Single
+  nameWithType.vb: ApiControllerBase(Of TDbContext).Single
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.Single``1(System.Object[])
+  name: Single<TEntity>(Object[])
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_Single__1_System_Object___
+  commentId: M:Unosquare.Swan.AspNetCore.ApiControllerBase`1.Single``1(System.Object[])
+  name.vb: Single(Of TEntity)(Object())
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.Single<TEntity>(System.Object[])
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).Single(Of TEntity)(System.Object())
+  nameWithType: ApiControllerBase<TDbContext>.Single<TEntity>(Object[])
+  nameWithType.vb: ApiControllerBase(Of TDbContext).Single(Of TEntity)(Object())
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.Single``1(System.Object[],System.Threading.CancellationToken)
+  name: Single<TEntity>(Object[], CancellationToken)
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_Single__1_System_Object___System_Threading_CancellationToken_
+  commentId: M:Unosquare.Swan.AspNetCore.ApiControllerBase`1.Single``1(System.Object[],System.Threading.CancellationToken)
+  name.vb: Single(Of TEntity)(Object(), CancellationToken)
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.Single<TEntity>(System.Object[], System.Threading.CancellationToken)
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).Single(Of TEntity)(System.Object(), System.Threading.CancellationToken)
+  nameWithType: ApiControllerBase<TDbContext>.Single<TEntity>(Object[], CancellationToken)
+  nameWithType.vb: ApiControllerBase(Of TDbContext).Single(Of TEntity)(Object(), CancellationToken)
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.Update*
+  name: Update
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_Update_
+  commentId: Overload:Unosquare.Swan.AspNetCore.ApiControllerBase`1.Update
+  isSpec: "True"
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.Update
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).Update
+  nameWithType: ApiControllerBase<TDbContext>.Update
+  nameWithType.vb: ApiControllerBase(Of TDbContext).Update
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.Update``1(``0,System.Object[])
+  name: Update<TEntity>(TEntity, Object[])
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_Update__1___0_System_Object___
+  commentId: M:Unosquare.Swan.AspNetCore.ApiControllerBase`1.Update``1(``0,System.Object[])
+  name.vb: Update(Of TEntity)(TEntity, Object())
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.Update<TEntity>(TEntity, System.Object[])
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).Update(Of TEntity)(TEntity, System.Object())
+  nameWithType: ApiControllerBase<TDbContext>.Update<TEntity>(TEntity, Object[])
+  nameWithType.vb: ApiControllerBase(Of TDbContext).Update(Of TEntity)(TEntity, Object())
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.Update``1(``0,System.Object[],System.Threading.CancellationToken)
+  name: Update<TEntity>(TEntity, Object[], CancellationToken)
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_Update__1___0_System_Object___System_Threading_CancellationToken_
+  commentId: M:Unosquare.Swan.AspNetCore.ApiControllerBase`1.Update``1(``0,System.Object[],System.Threading.CancellationToken)
+  name.vb: Update(Of TEntity)(TEntity, Object(), CancellationToken)
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.Update<TEntity>(TEntity, System.Object[], System.Threading.CancellationToken)
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).Update(Of TEntity)(TEntity, System.Object(), System.Threading.CancellationToken)
+  nameWithType: ApiControllerBase<TDbContext>.Update<TEntity>(TEntity, Object[], CancellationToken)
+  nameWithType.vb: ApiControllerBase(Of TDbContext).Update(Of TEntity)(TEntity, Object(), CancellationToken)
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.Update``1(``0,System.String[],System.Object[])
+  name: Update<TEntity>(TEntity, String[], Object[])
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_Update__1___0_System_String___System_Object___
+  commentId: M:Unosquare.Swan.AspNetCore.ApiControllerBase`1.Update``1(``0,System.String[],System.Object[])
+  name.vb: Update(Of TEntity)(TEntity, String(), Object())
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.Update<TEntity>(TEntity, System.String[], System.Object[])
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).Update(Of TEntity)(TEntity, System.String(), System.Object())
+  nameWithType: ApiControllerBase<TDbContext>.Update<TEntity>(TEntity, String[], Object[])
+  nameWithType.vb: ApiControllerBase(Of TDbContext).Update(Of TEntity)(TEntity, String(), Object())
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.Update``1(``0,System.String[],System.Object[],System.Threading.CancellationToken)
+  name: Update<TEntity>(TEntity, String[], Object[], CancellationToken)
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_Update__1___0_System_String___System_Object___System_Threading_CancellationToken_
+  commentId: M:Unosquare.Swan.AspNetCore.ApiControllerBase`1.Update``1(``0,System.String[],System.Object[],System.Threading.CancellationToken)
+  name.vb: Update(Of TEntity)(TEntity, String(), Object(), CancellationToken)
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.Update<TEntity>(TEntity, System.String[], System.Object[], System.Threading.CancellationToken)
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).Update(Of TEntity)(TEntity, System.String(), System.Object(), System.Threading.CancellationToken)
+  nameWithType: ApiControllerBase<TDbContext>.Update<TEntity>(TEntity, String[], Object[], CancellationToken)
+  nameWithType.vb: ApiControllerBase(Of TDbContext).Update(Of TEntity)(TEntity, String(), Object(), CancellationToken)
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.UpdateOnly*
+  name: UpdateOnly
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_UpdateOnly_
+  commentId: Overload:Unosquare.Swan.AspNetCore.ApiControllerBase`1.UpdateOnly
+  isSpec: "True"
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.UpdateOnly
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).UpdateOnly
+  nameWithType: ApiControllerBase<TDbContext>.UpdateOnly
+  nameWithType.vb: ApiControllerBase(Of TDbContext).UpdateOnly
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.UpdateOnly``1(``0,System.String[],System.Object[])
+  name: UpdateOnly<TEntity>(TEntity, String[], Object[])
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_UpdateOnly__1___0_System_String___System_Object___
+  commentId: M:Unosquare.Swan.AspNetCore.ApiControllerBase`1.UpdateOnly``1(``0,System.String[],System.Object[])
+  name.vb: UpdateOnly(Of TEntity)(TEntity, String(), Object())
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.UpdateOnly<TEntity>(TEntity, System.String[], System.Object[])
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).UpdateOnly(Of TEntity)(TEntity, System.String(), System.Object())
+  nameWithType: ApiControllerBase<TDbContext>.UpdateOnly<TEntity>(TEntity, String[], Object[])
+  nameWithType.vb: ApiControllerBase(Of TDbContext).UpdateOnly(Of TEntity)(TEntity, String(), Object())
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.UpdateOnly``1(``0,System.String[],System.Object[],System.Threading.CancellationToken)
+  name: UpdateOnly<TEntity>(TEntity, String[], Object[], CancellationToken)
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_UpdateOnly__1___0_System_String___System_Object___System_Threading_CancellationToken_
+  commentId: M:Unosquare.Swan.AspNetCore.ApiControllerBase`1.UpdateOnly``1(``0,System.String[],System.Object[],System.Threading.CancellationToken)
+  name.vb: UpdateOnly(Of TEntity)(TEntity, String(), Object(), CancellationToken)
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.UpdateOnly<TEntity>(TEntity, System.String[], System.Object[], System.Threading.CancellationToken)
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).UpdateOnly(Of TEntity)(TEntity, System.String(), System.Object(), System.Threading.CancellationToken)
+  nameWithType: ApiControllerBase<TDbContext>.UpdateOnly<TEntity>(TEntity, String[], Object[], CancellationToken)
+  nameWithType.vb: ApiControllerBase(Of TDbContext).UpdateOnly(Of TEntity)(TEntity, String(), Object(), CancellationToken)
 - uid: Unosquare.Swan.AspNetCore.AuditTrailController`2
   name: AuditTrailController<TDbContext, TEntity>
   href: api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html
