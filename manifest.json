@@ -71,6 +71,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html",
+          "hash": "u+XUZJ4+X1YGCUh3gRapKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Unosquare.Swan.AspNetCore.AuditTrailController-2.yml",
       "output": {
         ".html": {
@@ -327,7 +339,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.html",
-          "hash": "vRxYNY1DtNlQqzGkScuC1g=="
+          "hash": "IY/+vqkYUnhFJ8UgeEO6QQ=="
         }
       },
       "is_incremental": false,
@@ -339,7 +351,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "Q0Sg+or7vDuHnWza3Hlc8Q=="
+          "hash": "bJVgnskyHbA0gKOL60pSYw=="
         }
       },
       "is_incremental": false,
@@ -376,11 +388,11 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ConceptualDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },

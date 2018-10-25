@@ -37,6 +37,67 @@ references:
   commentId: F:Unosquare.Swan.AspNetCore.ActionFlags.Update
   fullName: Unosquare.Swan.AspNetCore.ActionFlags.Update
   nameWithType: ActionFlags.Update
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1
+  name: ApiControllerBase<TDbContext>
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html
+  commentId: T:Unosquare.Swan.AspNetCore.ApiControllerBase`1
+  name.vb: ApiControllerBase(Of TDbContext)
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext)
+  nameWithType: ApiControllerBase<TDbContext>
+  nameWithType.vb: ApiControllerBase(Of TDbContext)
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.#ctor(`0)
+  name: ApiControllerBase(TDbContext)
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1__ctor__0_
+  commentId: M:Unosquare.Swan.AspNetCore.ApiControllerBase`1.#ctor(`0)
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.ApiControllerBase(TDbContext)
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).ApiControllerBase(TDbContext)
+  nameWithType: ApiControllerBase<TDbContext>.ApiControllerBase(TDbContext)
+  nameWithType.vb: ApiControllerBase(Of TDbContext).ApiControllerBase(TDbContext)
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.#ctor*
+  name: ApiControllerBase
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1__ctor_
+  commentId: Overload:Unosquare.Swan.AspNetCore.ApiControllerBase`1.#ctor
+  isSpec: "True"
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.ApiControllerBase
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).ApiControllerBase
+  nameWithType: ApiControllerBase<TDbContext>.ApiControllerBase
+  nameWithType.vb: ApiControllerBase(Of TDbContext).ApiControllerBase
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.DbContext
+  name: DbContext
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_DbContext
+  commentId: P:Unosquare.Swan.AspNetCore.ApiControllerBase`1.DbContext
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.DbContext
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).DbContext
+  nameWithType: ApiControllerBase<TDbContext>.DbContext
+  nameWithType.vb: ApiControllerBase(Of TDbContext).DbContext
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.DbContext*
+  name: DbContext
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_DbContext_
+  commentId: Overload:Unosquare.Swan.AspNetCore.ApiControllerBase`1.DbContext
+  isSpec: "True"
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.DbContext
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).DbContext
+  nameWithType: ApiControllerBase<TDbContext>.DbContext
+  nameWithType.vb: ApiControllerBase(Of TDbContext).DbContext
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.OkFirstOrNotFound*
+  name: OkFirstOrNotFound
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_OkFirstOrNotFound_
+  commentId: Overload:Unosquare.Swan.AspNetCore.ApiControllerBase`1.OkFirstOrNotFound
+  isSpec: "True"
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.OkFirstOrNotFound
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).OkFirstOrNotFound
+  nameWithType: ApiControllerBase<TDbContext>.OkFirstOrNotFound
+  nameWithType.vb: ApiControllerBase(Of TDbContext).OkFirstOrNotFound
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.OkFirstOrNotFound``1(Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)
+  name: OkFirstOrNotFound<TEntity>(Expression<Func<TEntity, Boolean>>, CancellationToken)
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_OkFirstOrNotFound__1_Expression_System_Func___0_System_Boolean___System_Threading_CancellationToken_
+  commentId: M:Unosquare.Swan.AspNetCore.ApiControllerBase`1.OkFirstOrNotFound``1(Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)
+  name.vb: OkFirstOrNotFound(Of TEntity)(Expression(Of Func(Of TEntity, Boolean)), CancellationToken)
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.OkFirstOrNotFound<TEntity>(Expression<System.Func<TEntity, System.Boolean>>, System.Threading.CancellationToken)
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).OkFirstOrNotFound(Of TEntity)(Expression(Of System.Func(Of TEntity, System.Boolean)), System.Threading.CancellationToken)
+  nameWithType: ApiControllerBase<TDbContext>.OkFirstOrNotFound<TEntity>(Expression<Func<TEntity, Boolean>>, CancellationToken)
+  nameWithType.vb: ApiControllerBase(Of TDbContext).OkFirstOrNotFound(Of TEntity)(Expression(Of Func(Of TEntity, Boolean)), CancellationToken)
 - uid: Unosquare.Swan.AspNetCore.AuditTrailController`2
   name: AuditTrailController<T, TEntity>
   href: api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html
