@@ -177,6 +177,80 @@ the database provide in <code>T</code>.</p>
   
   
   <a id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_FirstOrNotFound_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.FirstOrNotFound*"></a>
+  <h4 id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_FirstOrNotFound__1_Expression_System_Func___0_System_Boolean___Expression_System_Func___0_System_Object___System_Threading_CancellationToken_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.FirstOrNotFound``1(Expression{System.Func{``0,System.Boolean}},Expression{System.Func{``0,System.Object}},System.Threading.CancellationToken)">FirstOrNotFound&lt;TEntity&gt;(Expression&lt;Func&lt;TEntity, Boolean&gt;&gt;, Expression&lt;Func&lt;TEntity, Object&gt;&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Firsts the or not found.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IActionResult&gt; FirstOrNotFound&lt;TEntity&gt;(Expression&lt;Func&lt;TEntity, bool&gt;&gt; whereExpression, Expression&lt;Func&lt;TEntity, object&gt;&gt; selectExpression, CancellationToken cancellationToken = default(CancellationToken))
+    where TEntity : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Expression</span>&lt;<span class="xref">System.Func</span>&lt;TEntity, <span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="parametername">whereExpression</span></td>
+        <td><p>The where expression.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Expression</span>&lt;<span class="xref">System.Func</span>&lt;TEntity, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td><span class="parametername">selectExpression</span></td>
+        <td><p>The select expression.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td><p>A task representing the query database operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TEntity</span></td>
+        <td><p>The type of the entity.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_FirstOrNotFound_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.FirstOrNotFound*"></a>
   <h4 id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_FirstOrNotFound__1_Expression_System_Func___0_System_Boolean___System_Threading_CancellationToken_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.FirstOrNotFound``1(Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)">FirstOrNotFound&lt;TEntity&gt;(Expression&lt;Func&lt;TEntity, Boolean&gt;&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Retrieve the first element matching the where expression
 or not found response code (404).</p>
@@ -184,7 +258,7 @@ or not found response code (404).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;IActionResult&gt; FirstOrNotFound&lt;TEntity&gt;(Expression&lt;Func&lt;TEntity, bool&gt;&gt; whereExpression, CancellationToken cancellationToken)
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IActionResult&gt; FirstOrNotFound&lt;TEntity&gt;(Expression&lt;Func&lt;TEntity, bool&gt;&gt; whereExpression, CancellationToken cancellationToken = default(CancellationToken))
     where TEntity : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

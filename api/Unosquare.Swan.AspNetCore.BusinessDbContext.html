@@ -250,8 +250,7 @@
   
   <a id="Unosquare_Swan_AspNetCore_BusinessDbContext_SaveChanges_" data-uid="Unosquare.Swan.AspNetCore.BusinessDbContext.SaveChanges*"></a>
   <h4 id="Unosquare_Swan_AspNetCore_BusinessDbContext_SaveChanges" data-uid="Unosquare.Swan.AspNetCore.BusinessDbContext.SaveChanges">SaveChanges()</h4>
-  <div class="markdown level1 summary"><p>Saves all changes made in this context to the database.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -268,22 +267,15 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>The number of state entries written to the database.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="Unosquare_Swan_AspNetCore_BusinessDbContext_SaveChanges_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>This method will automatically call <span class="xref">Microsoft.EntityFrameworkCore.ChangeTracking.ChangeTracker.DetectChanges</span> to discover any
-changes to entity instances before saving to the underlying database. This can be disabled via
-<span class="xref">Microsoft.EntityFrameworkCore.ChangeTracking.ChangeTracker.AutoDetectChangesEnabled</span>.</p>
-</div>
   
   
   <a id="Unosquare_Swan_AspNetCore_BusinessDbContext_SaveChangesAsync_" data-uid="Unosquare.Swan.AspNetCore.BusinessDbContext.SaveChangesAsync*"></a>
   <h4 id="Unosquare_Swan_AspNetCore_BusinessDbContext_SaveChangesAsync_System_Threading_CancellationToken_" data-uid="Unosquare.Swan.AspNetCore.BusinessDbContext.SaveChangesAsync(System.Threading.CancellationToken)">SaveChangesAsync(CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Asynchronously saves all changes made in this context to the database.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -302,8 +294,7 @@ changes to entity instances before saving to the underlying database. This can b
       <tr>
         <td><span class="xref">System.Threading.CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td><p>A <span class="xref">System.Threading.CancellationToken</span> to observe while waiting for the task to complete.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -318,23 +309,10 @@ changes to entity instances before saving to the underlying database. This can b
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td><p>A task that represents the asynchronous save operation. The task result contains the
-number of state entries written to the database.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="Unosquare_Swan_AspNetCore_BusinessDbContext_SaveChangesAsync_System_Threading_CancellationToken__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>
-This method will automatically call <span class="xref">Microsoft.EntityFrameworkCore.ChangeTracking.ChangeTracker.DetectChanges</span> to discover any
-changes to entity instances before saving to the underlying database. This can be disabled via
-<span class="xref">Microsoft.EntityFrameworkCore.ChangeTracking.ChangeTracker.AutoDetectChangesEnabled</span>.
-</p>
-<p>
-Multiple active operations on the same context instance are not supported.  Use &apos;await&apos; to ensure
-that any asynchronous operations have completed before calling another method on this context.
-</p>
-</div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Unosquare.Swan.AspNetCore.IBusinessDbContext.html">IBusinessDbContext</a>

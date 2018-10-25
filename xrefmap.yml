@@ -89,6 +89,15 @@ references:
   fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).FirstOrNotFound
   nameWithType: ApiControllerBase<TDbContext>.FirstOrNotFound
   nameWithType.vb: ApiControllerBase(Of TDbContext).FirstOrNotFound
+- uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.FirstOrNotFound``1(Expression{System.Func{``0,System.Boolean}},Expression{System.Func{``0,System.Object}},System.Threading.CancellationToken)
+  name: FirstOrNotFound<TEntity>(Expression<Func<TEntity, Boolean>>, Expression<Func<TEntity, Object>>, CancellationToken)
+  href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_FirstOrNotFound__1_Expression_System_Func___0_System_Boolean___Expression_System_Func___0_System_Object___System_Threading_CancellationToken_
+  commentId: M:Unosquare.Swan.AspNetCore.ApiControllerBase`1.FirstOrNotFound``1(Expression{System.Func{``0,System.Boolean}},Expression{System.Func{``0,System.Object}},System.Threading.CancellationToken)
+  name.vb: FirstOrNotFound(Of TEntity)(Expression(Of Func(Of TEntity, Boolean)), Expression(Of Func(Of TEntity, Object)), CancellationToken)
+  fullName: Unosquare.Swan.AspNetCore.ApiControllerBase<TDbContext>.FirstOrNotFound<TEntity>(Expression<System.Func<TEntity, System.Boolean>>, Expression<System.Func<TEntity, System.Object>>, System.Threading.CancellationToken)
+  fullName.vb: Unosquare.Swan.AspNetCore.ApiControllerBase(Of TDbContext).FirstOrNotFound(Of TEntity)(Expression(Of System.Func(Of TEntity, System.Boolean)), Expression(Of System.Func(Of TEntity, System.Object)), System.Threading.CancellationToken)
+  nameWithType: ApiControllerBase<TDbContext>.FirstOrNotFound<TEntity>(Expression<Func<TEntity, Boolean>>, Expression<Func<TEntity, Object>>, CancellationToken)
+  nameWithType.vb: ApiControllerBase(Of TDbContext).FirstOrNotFound(Of TEntity)(Expression(Of Func(Of TEntity, Boolean)), Expression(Of Func(Of TEntity, Object)), CancellationToken)
 - uid: Unosquare.Swan.AspNetCore.ApiControllerBase`1.FirstOrNotFound``1(Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)
   name: FirstOrNotFound<TEntity>(Expression<Func<TEntity, Boolean>>, CancellationToken)
   href: api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html#Unosquare_Swan_AspNetCore_ApiControllerBase_1_FirstOrNotFound__1_Expression_System_Func___0_System_Boolean___System_Threading_CancellationToken_
