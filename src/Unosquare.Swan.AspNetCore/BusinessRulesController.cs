@@ -26,7 +26,7 @@
 
             _methodInfoSet = GetType()
                 .GetMethods()
-                .Where(m => (m.ReturnType == typeof(void) && m.ReturnType == typeof(Task))
+                .Where(m => (m.ReturnType == typeof(void) || m.ReturnType == typeof(Task))
                             && m.IsPublic
                             && !m.IsConstructor &&
                             m.GetCustomAttributes(typeof(BusinessRuleAttribute),
