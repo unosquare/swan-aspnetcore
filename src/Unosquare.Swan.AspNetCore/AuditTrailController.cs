@@ -7,13 +7,14 @@
     using Models;
     using Formatters;
 
+    /// <inheritdoc />
     /// <summary>
     /// Represents an AuditTrail controller to use with BusinessDbContext.
     /// </summary>
-    /// <typeparam name="T">The Db context.</typeparam>
+    /// <typeparam name="TDbContext">The type of database.</typeparam>
     /// <typeparam name="TEntity">The type of the entity.</typeparam>
-    public class AuditTrailController<T, TEntity> : BusinessRulesController<T> 
-        where T : DbContext
+    public class AuditTrailController<TDbContext, TEntity> : BusinessRulesController<TDbContext> 
+        where TDbContext : DbContext
     {
         private readonly List<Type> _validCreateTypes = new List<Type>();
         private readonly List<Type> _validUpdateTypes = new List<Type>();
@@ -25,7 +26,7 @@
         /// </summary>
         /// <param name="context">The context.</param>
         /// <param name="currentUserId">The current user identifier.</param>
-        public AuditTrailController(T context, string currentUserId) 
+        public AuditTrailController(TDbContext context, string currentUserId) 
             : base(context)
         {
             _currentUserId = currentUserId;
@@ -51,6 +52,8 @@
                 case ActionFlags.Delete:
                     _validDeleteTypes.AddRange(types);
                     break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(action), action, null);
             }
         }
 

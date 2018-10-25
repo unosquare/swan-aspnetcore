@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <Copyright>Unosquare</Copyright>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <AssemblyName>Unosquare.Swan.AspNetCore.Sample</AssemblyName>
     <OutputType>Exe</OutputType>
     <PackageId>Unosquare.Swan.AspNetCore.Sample</PackageId>
-    <RuntimeIdentifiers>win7-x64</RuntimeIdentifiers>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
