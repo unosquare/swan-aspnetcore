@@ -36,19 +36,16 @@
         /// </summary>
         /// <param name="app">The application.</param>
         /// <returns>The exception handler.</returns>
-        public static IApplicationBuilder UseJsonExceptionHandler(this IApplicationBuilder app)
+        public static IApplicationBuilder UseJsonExceptionHandler(this IApplicationBuilder app) => app.UseExceptionHandler(errorApp =>
         {
-            return app.UseExceptionHandler(errorApp =>
+            errorApp.Run(async context =>
             {
-                errorApp.Run(async context =>
-                {
-                    context.Response.StatusCode = 500; // or another Status accordingly to Exception Type
-                    context.Response.ContentType = JsonMimeType;
-                    var error = context.Features.Get<IExceptionHandlerFeature>();
-                    await context.Response.WriteAsync(Json.Serialize(error?.Error ?? new Exception("Unhandled Exception")));
-                });
+                context.Response.StatusCode = 500; // or another Status accordingly to Exception Type
+                context.Response.ContentType = JsonMimeType;
+                var error = context.Features.Get<IExceptionHandlerFeature>();
+                await context.Response.WriteAsync(Json.Serialize(error?.Error ?? new Exception("Unhandled Exception")));
             });
-        }
+        });
 
         /// <summary>
         /// Adds the entity framework logger.
@@ -61,8 +58,8 @@
         /// <returns>The logger factory.</returns>
         /// <exception cref="ArgumentNullException">factory.</exception>
         public static ILoggerFactory AddEntityFramework<TDbContext, TLog>(
-            this ILoggerFactory factory, 
-            IServiceProvider serviceProvider, 
+            this ILoggerFactory factory,
+            IServiceProvider serviceProvider,
             Func<string, LogLevel, bool> filter = null)
             where TDbContext : DbContext
             where TLog : LogEntry, new()
@@ -210,21 +207,22 @@
         /// <param name="services">The services.</param>
         /// <param name="validationParameters">The validation parameters.</param>
         /// <returns>The service with bearer token authentication.</returns>
-        public static IServiceCollection AddBearerTokenAuthentication(this IServiceCollection services, TokenValidationParameters validationParameters)
+        public static IServiceCollection AddBearerTokenAuthentication(this IServiceCollection services,
+            TokenValidationParameters validationParameters)
         {
-            // Add Authentication services
-            services.AddAuthentication(options => 
-            {
-                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-
-            // Configure the app to use Jwt Bearer Authentication
-            .AddJwtBearer(options => 
-            {
-                options.TokenValidationParameters = validationParameters;
-            });
+            services
+                .AddAuthentication(options =>
+                {
+                    // Add Authentication services
+                    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+                    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                })
+                .AddJwtBearer(options =>
+                {
+                    // Configure the app to use Jwt Bearer Authentication
+                    options.TokenValidationParameters = validationParameters;
+                });
 
             return services;
         }
@@ -238,6 +236,7 @@
         public static async Task<T> ReadAsJsonAsync<T>(this HttpContent httpContent)
         {
             var responseString = await httpContent.ReadAsStringAsync();
+
             return Json.Deserialize<T>(responseString);
         }
 
@@ -264,6 +263,7 @@
         public static async Task<T> GetJsonAsync<T>(this HttpClient client, Uri requestUri)
         {
             var responseString = await client.GetStringAsync(requestUri);
+
             return Json.Deserialize<T>(responseString);
         }
     }
