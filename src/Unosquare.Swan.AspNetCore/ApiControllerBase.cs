@@ -1,6 +1,7 @@
 ﻿namespace Unosquare.Swan.AspNetCore
 {
     using System;
+    using System.Linq;
     using System.Linq.Expressions;
     using System.Threading;
     using System.Threading.Tasks;
@@ -45,12 +46,38 @@
         /// <returns>A task representing the query database operation.</returns>
         public virtual async Task<IActionResult> FirstOrNotFound<TEntity>(
             Expression<Func<TEntity, bool>> whereExpression,
-            CancellationToken cancellationToken)
+            CancellationToken cancellationToken = default)
             where TEntity : class
         {
             var current = await DbContext
                 .Set<TEntity>()
                 .FirstOrDefaultAsync(whereExpression, cancellationToken);
+
+            if (current == null)
+                return NotFound();
+
+            return Ok(current);
+        }
+
+        /// <summary>
+        /// Firsts the or not found.
+        /// </summary>
+        /// <typeparam name="TEntity">The type of the entity.</typeparam>
+        /// <param name="whereExpression">The where expression.</param>
+        /// <param name="selectExpression">The select expression.</param>
+        /// <param name="cancellationToken">The cancellation token.</param>
+        /// <returns>A task representing the query database operation.</returns>
+        public virtual async Task<IActionResult> FirstOrNotFound<TEntity>(
+                    Expression<Func<TEntity, bool>> whereExpression,
+                    Expression<Func<TEntity, object>> selectExpression,
+                    CancellationToken cancellationToken = default)
+                    where TEntity : class
+        {
+            var current = await DbContext
+                .Set<TEntity>()
+                .Where(whereExpression)
+                .Select(selectExpression)
+                .FirstOrDefaultAsync(cancellationToken: cancellationToken);
 
             if (current == null)
                 return NotFound();

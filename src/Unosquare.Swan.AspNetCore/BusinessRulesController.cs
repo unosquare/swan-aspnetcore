@@ -1,6 +1,7 @@
 ﻿namespace Unosquare.Swan.AspNetCore
 {
     using Microsoft.EntityFrameworkCore;
+    using System.Threading.Tasks;
     using System;
     using System.Linq;
     using System.Reflection;
@@ -13,6 +14,8 @@
     public abstract class BusinessRulesController<TDbContext> : IBusinessRulesController
         where TDbContext : DbContext
     {
+        private readonly MethodInfo[] _methodInfoSet;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BusinessRulesController{T}"/> class.
         /// </summary>
@@ -20,6 +23,16 @@
         protected BusinessRulesController(TDbContext context)
         {
             Context = context;
+
+            _methodInfoSet = GetType()
+                .GetMethods()
+                .Where(m => (m.ReturnType == typeof(void) && m.ReturnType == typeof(Task))
+                            && m.IsPublic
+                            && !m.IsConstructor &&
+                            m.GetCustomAttributes(typeof(BusinessRuleAttribute),
+                                    true)
+                                .Any())
+                .ToArray();
         }
 
         /// <summary>
@@ -35,14 +48,9 @@
         /// </summary>
         public void RunBusinessRules()
         {
-            var methodInfoSet = GetType().GetMethods().Where(m => m.ReturnType == typeof(void) && m.IsPublic
-                                                                  && !m.IsConstructor &&
-                                                                  m.GetCustomAttributes(typeof(BusinessRuleAttribute),
-                                                                      true).Any()).ToArray();
-
-            ExecuteBusinessRulesMethods(EntityState.Added, ActionFlags.Create, methodInfoSet);
-            ExecuteBusinessRulesMethods(EntityState.Modified, ActionFlags.Update, methodInfoSet);
-            ExecuteBusinessRulesMethods(EntityState.Deleted, ActionFlags.Delete, methodInfoSet);
+            ExecuteBusinessRulesMethods(EntityState.Added, ActionFlags.Create);
+            ExecuteBusinessRulesMethods(EntityState.Modified, ActionFlags.Update);
+            ExecuteBusinessRulesMethods(EntityState.Deleted, ActionFlags.Delete);
         }
 
         /// <summary>
@@ -52,19 +60,19 @@
         /// <returns>The type of the current instance.</returns>
         public Type GetEntityType(object entity) => entity.GetType();
 
-        private void ExecuteBusinessRulesMethods(EntityState state, ActionFlags action, MethodInfo[] methodInfoSet)
+        private void ExecuteBusinessRulesMethods(EntityState state, ActionFlags action)
         {
             var selfTrackingEntries = Context.ChangeTracker.Entries()
                 .Where(x => x.State == state)
+                .Select(x => x.Entity)
                 .ToList();
 
-            foreach (var entry in selfTrackingEntries)
+            foreach (var entity in selfTrackingEntries)
             {
-                var entity = entry.Entity;
-
                 var entityType = entity.GetType();
 
-                var methods = methodInfoSet.Where(m => m.GetCustomAttributes(typeof(BusinessRuleAttribute), true)
+                var methods = _methodInfoSet
+                    .Where(m => m.GetCustomAttributes(typeof(BusinessRuleAttribute), true)
                     .Select(a => a as BusinessRuleAttribute)
                     .Any(b => b != null && (b.EntityTypes == null ||
                                             b.EntityTypes.Any(t => t == entityType)) &&
@@ -72,7 +80,7 @@
 
                 foreach (var methodInfo in methods)
                 {
-                    methodInfo.Invoke(this, new[] {entity});
+                    methodInfo.Invoke(this, new[] { entity });
                 }
             }
         }
