@@ -71,12 +71,14 @@
 
             if (!context.Request.Headers.ContainsKey("Authorization")) return _next(context);
 
-            var bearerToken = context.Request.Headers["Authorization"].FirstOrDefault(x => x.StartsWith("Bearer"));
+            var bearerToken = context.Request.Headers["Authorization"]
+                .FirstOrDefault(x => x.StartsWith("Bearer"))?
+                .Split(' ');
 
-            if (bearerToken == null) return _next(context);
-            bearerToken = bearerToken.Split(' ')[1];
+            if (bearerToken == null || bearerToken.Length != 2) return _next(context);
+
             var handler = new JwtSecurityTokenHandler();
-            var token = handler.ReadToken(bearerToken) as JwtSecurityToken;
+            var token = handler.ReadToken(bearerToken[1]) as JwtSecurityToken;
 
             if (DateTime.UtcNow > token?.ValidTo)
             {
@@ -136,14 +138,11 @@
             }
         }
 
-        private static string SerializeError(string description, string error = "invalid_grant")
+        private static string SerializeError(string description, string error = "invalid_grant") => Json.Serialize(new
         {
-            return Json.Serialize(new
-            {
-                error,
-                error_description = description,
-            });
-        }
+            error,
+            error_description = description,
+        });
 
         private async Task GenerateToken(HttpContext context)
         {

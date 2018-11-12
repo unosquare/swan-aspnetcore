@@ -4,9 +4,8 @@
     <Description>Bearer Token and logging to fast start any ASP.NET Core project</Description>
     <Copyright>Copyright (c) 2016-2018 - Unosquare</Copyright>
     <AssemblyTitle>Unosquare SWAN AspNet Core</AssemblyTitle>
-    <VersionPrefix>0.16.0</VersionPrefix>
+    <VersionPrefix>0.16.1</VersionPrefix>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
-    <DebugType>Full</DebugType>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>Unosquare.Swan.AspNetCore</AssemblyName>
     <PackageId>Unosquare.Swan.AspNetCore</PackageId>
@@ -28,7 +27,7 @@
     <PackageReference Include="Microsoft.Extensions.Options" Version="2.1.1" />
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.3.0" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.3.0" />
-    <PackageReference Include="Unosquare.Swan.Lite" Version="0.34.3" />
+    <PackageReference Include="Unosquare.Swan.Lite" Version="0.35.0" />
   </ItemGroup>
 
 </Project>
