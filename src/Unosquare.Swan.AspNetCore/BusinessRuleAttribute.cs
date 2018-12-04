@@ -26,7 +26,7 @@
         /// <summary>
         /// Delete Action
         /// </summary>
-        Delete = 0x3,
+        Delete = 0x4,
     }
 
     /// <summary>

@@ -12,7 +12,7 @@
     /// <inheritdoc />
     /// <summary>
     /// Represents a API Controller with extended methods related to
-    /// the database provide in <c>T</c>.
+    /// the database provide in <c>TDbContext</c>.
     /// </summary>
     /// <typeparam name="TDbContext">The database type.</typeparam>
     /// <seealso cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
@@ -76,7 +76,7 @@
                 .Set<TEntity>()
                 .Where(whereExpression)
                 .Select(selectExpression)
-                .FirstOrDefaultAsync(cancellationToken: cancellationToken);
+                .FirstOrDefaultAsync(cancellationToken);
 
             return EntityOrNull(current);
         }

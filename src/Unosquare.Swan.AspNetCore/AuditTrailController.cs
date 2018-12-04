@@ -64,7 +64,7 @@
         [BusinessRule(ActionFlags.Create)]
         public virtual void OnEntityCreated(object entity)
         {
-            var entityType = GetEntityType(entity);
+            var entityType = entity.GetType();
             if (_validCreateTypes.Contains(entityType) == false && _validCreateTypes.Any()) return;
 
             AuditEntry(ActionFlags.Create, entity, entityType.Name);
@@ -77,7 +77,7 @@
         [BusinessRule(ActionFlags.Update)]
         public virtual void OnEntityUpdated(object entity)
         {
-            var entityType = GetEntityType(entity);
+            var entityType = entity.GetType();
             if (_validUpdateTypes.Contains(entityType) == false && _validUpdateTypes.Any()) return;
 
             AuditEntry(ActionFlags.Update, entity, entityType.Name);
@@ -90,7 +90,7 @@
         [BusinessRule(ActionFlags.Delete)]
         public virtual void OnDeleteCreated(object entity)
         {
-            var entityType = GetEntityType(entity);
+            var entityType = entity.GetType();
             if (_validDeleteTypes.Contains(entityType) == false && _validDeleteTypes.Any()) return;
 
             AuditEntry(ActionFlags.Delete, entity, entityType.Name);

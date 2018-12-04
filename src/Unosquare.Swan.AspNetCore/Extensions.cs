@@ -129,7 +129,7 @@
             TokenValidationParameters validationParameter,
             Func<IServiceProvider, string, string, string, string, Task<ClaimsIdentity>> identityResolver,
             Func<ClaimsIdentity, Dictionary<string, object>, Task<Dictionary<string, object>>> bearerTokenResolver = null,
-            TimeSpan expiration = default(TimeSpan),
+            TimeSpan expiration = default,
             bool forceHttps = true)
         {
             if (bearerTokenResolver == null)
@@ -147,7 +147,7 @@
                     new SigningCredentials(validationParameter.IssuerSigningKey, SecurityAlgorithms.HmacSha256),
                 IdentityResolver = identityResolver,
                 BearerTokenResolver = bearerTokenResolver,
-                Expiration = expiration == default(TimeSpan) ? TimeSpan.FromMinutes(20) : expiration,
+                Expiration = expiration == default ? TimeSpan.FromMinutes(20) : expiration,
                 ForceHttps = forceHttps,
             }));
 
@@ -250,6 +250,7 @@
         public static async Task<T> GetJsonAsync<T>(this HttpClient client, string requestUri)
         {
             var responseString = await client.GetStringAsync(requestUri);
+
             return Json.Deserialize<T>(responseString);
         }
 

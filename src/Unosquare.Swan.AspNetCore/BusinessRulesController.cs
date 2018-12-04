@@ -1,16 +1,15 @@
 ﻿namespace Unosquare.Swan.AspNetCore
 {
     using Microsoft.EntityFrameworkCore;
-    using System.Threading.Tasks;
-    using System;
     using System.Linq;
     using System.Reflection;
+    using System.Threading.Tasks;
 
     /// <summary>
     /// Represent the controller of the business rules.
     /// </summary>
     /// <typeparam name="TDbContext">The type of database.</typeparam>
-    /// <seealso cref="Unosquare.Swan.AspNetCore.IBusinessRulesController" />
+    /// <seealso cref="IBusinessRulesController" />
     public abstract class BusinessRulesController<TDbContext> : IBusinessRulesController
         where TDbContext : DbContext
     {
@@ -43,22 +42,13 @@
         /// </value>
         public TDbContext Context { get; protected set; }
 
-        /// <summary>
-        /// Runs the business rules.
-        /// </summary>
+        /// <inheritdoc />
         public void RunBusinessRules()
         {
             ExecuteBusinessRulesMethods(EntityState.Added, ActionFlags.Create);
             ExecuteBusinessRulesMethods(EntityState.Modified, ActionFlags.Update);
             ExecuteBusinessRulesMethods(EntityState.Deleted, ActionFlags.Delete);
         }
-
-        /// <summary>
-        /// Gets the type of the entity.
-        /// </summary>
-        /// <param name="entity">The entity.</param>
-        /// <returns>The type of the current instance.</returns>
-        public Type GetEntityType(object entity) => entity.GetType();
 
         private void ExecuteBusinessRulesMethods(EntityState state, ActionFlags action)
         {
@@ -76,7 +66,7 @@
                     .Select(a => a as BusinessRuleAttribute)
                     .Any(b => b != null && (b.EntityTypes == null ||
                                             b.EntityTypes.Any(t => t == entityType)) &&
-                              b.Action == action));
+                              (b.Action & action) == action));
 
                 foreach (var methodInfo in methods)
                 {

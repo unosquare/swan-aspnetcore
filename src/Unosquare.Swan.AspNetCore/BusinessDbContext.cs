@@ -17,9 +17,9 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="BusinessDbContext"/> class.
         /// </summary>
-        /// <param name="dbConnection">The database connection.</param>
-        protected BusinessDbContext(DbContextOptions dbConnection)
-            : base(dbConnection)
+        /// <param name="options">The database connection.</param>
+        protected BusinessDbContext(DbContextOptions options)
+            : base(options)
         {
         }
 
@@ -51,7 +51,7 @@
         }
 
         /// <inheritdoc />
-        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             RunBusinessRules();
             return base.SaveChangesAsync(cancellationToken);
