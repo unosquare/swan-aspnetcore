@@ -88,7 +88,7 @@
                 var audit = context.AuditTrailEntries.Last();
 
                 Assert.IsTrue(context.AuditTrailEntries.Any());
-                Assert.AreEqual(3, audit.Action, "Where 3 means Delete");
+                Assert.AreEqual(4, audit.Action, "Where 4 means Delete");
             }
         }
     }
