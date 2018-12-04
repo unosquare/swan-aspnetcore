@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AuditTrailController&lt;TDbContext, TEntity&gt;
    | Unosquare SWAN ASPNetCore ">
-    <meta name="generator" content="docfx 2.40.1.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -102,9 +102,6 @@
     </div>
     <div>
       <a class="xref" href="Unosquare.Swan.AspNetCore.BusinessRulesController-1.html#Unosquare_Swan_AspNetCore_BusinessRulesController_1_RunBusinessRules">BusinessRulesController&lt;TDbContext&gt;.RunBusinessRules()</a>
-    </div>
-    <div>
-      <a class="xref" href="Unosquare.Swan.AspNetCore.BusinessRulesController-1.html#Unosquare_Swan_AspNetCore_BusinessRulesController_1_GetEntityType_System_Object_">BusinessRulesController&lt;TDbContext&gt;.GetEntityType(Object)</a>
     </div>
     <div>
       <span class="xref">System.Object.ToString()</span>
@@ -237,7 +234,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[BusinessRule(ActionFlags.Create | ActionFlags.Update | ActionFlags.Delete)]
+    <pre><code class="lang-csharp hljs">[BusinessRule(ActionFlags.Delete)]
 public virtual void OnDeleteCreated(object entity)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

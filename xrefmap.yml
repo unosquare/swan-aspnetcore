@@ -564,19 +564,6 @@ references:
   commentId: T:Unosquare.Swan.AspNetCore.BasicUserStore
   fullName: Unosquare.Swan.AspNetCore.BasicUserStore
   nameWithType: BasicUserStore
-- uid: Unosquare.Swan.AspNetCore.BasicUserStore.#ctor
-  name: BasicUserStore()
-  href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore__ctor
-  commentId: M:Unosquare.Swan.AspNetCore.BasicUserStore.#ctor
-  fullName: Unosquare.Swan.AspNetCore.BasicUserStore.BasicUserStore()
-  nameWithType: BasicUserStore.BasicUserStore()
-- uid: Unosquare.Swan.AspNetCore.BasicUserStore.#ctor*
-  name: BasicUserStore
-  href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore__ctor_
-  commentId: Overload:Unosquare.Swan.AspNetCore.BasicUserStore.#ctor
-  isSpec: "True"
-  fullName: Unosquare.Swan.AspNetCore.BasicUserStore.BasicUserStore
-  nameWithType: BasicUserStore.BasicUserStore
 - uid: Unosquare.Swan.AspNetCore.BasicUserStore.AddLoginAsync(Unosquare.Swan.AspNetCore.Models.ApplicationUser,UserLoginInfo,System.Threading.CancellationToken)
   name: AddLoginAsync(ApplicationUser, UserLoginInfo, CancellationToken)
   href: api/Unosquare.Swan.AspNetCore.BasicUserStore.html#Unosquare_Swan_AspNetCore_BasicUserStore_AddLoginAsync_Unosquare_Swan_AspNetCore_Models_ApplicationUser_UserLoginInfo_System_Threading_CancellationToken_
@@ -1089,23 +1076,6 @@ references:
   fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of TDbContext).Context
   nameWithType: BusinessRulesController<TDbContext>.Context
   nameWithType.vb: BusinessRulesController(Of TDbContext).Context
-- uid: Unosquare.Swan.AspNetCore.BusinessRulesController`1.GetEntityType(System.Object)
-  name: GetEntityType(Object)
-  href: api/Unosquare.Swan.AspNetCore.BusinessRulesController-1.html#Unosquare_Swan_AspNetCore_BusinessRulesController_1_GetEntityType_System_Object_
-  commentId: M:Unosquare.Swan.AspNetCore.BusinessRulesController`1.GetEntityType(System.Object)
-  fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<TDbContext>.GetEntityType(System.Object)
-  fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of TDbContext).GetEntityType(System.Object)
-  nameWithType: BusinessRulesController<TDbContext>.GetEntityType(Object)
-  nameWithType.vb: BusinessRulesController(Of TDbContext).GetEntityType(Object)
-- uid: Unosquare.Swan.AspNetCore.BusinessRulesController`1.GetEntityType*
-  name: GetEntityType
-  href: api/Unosquare.Swan.AspNetCore.BusinessRulesController-1.html#Unosquare_Swan_AspNetCore_BusinessRulesController_1_GetEntityType_
-  commentId: Overload:Unosquare.Swan.AspNetCore.BusinessRulesController`1.GetEntityType
-  isSpec: "True"
-  fullName: Unosquare.Swan.AspNetCore.BusinessRulesController<TDbContext>.GetEntityType
-  fullName.vb: Unosquare.Swan.AspNetCore.BusinessRulesController(Of TDbContext).GetEntityType
-  nameWithType: BusinessRulesController<TDbContext>.GetEntityType
-  nameWithType.vb: BusinessRulesController(Of TDbContext).GetEntityType
 - uid: Unosquare.Swan.AspNetCore.BusinessRulesController`1.RunBusinessRules
   name: RunBusinessRules()
   href: api/Unosquare.Swan.AspNetCore.BusinessRulesController-1.html#Unosquare_Swan_AspNetCore_BusinessRulesController_1_RunBusinessRules
