@@ -52,7 +52,8 @@
         {
             var current = await DbContext
                 .Set<TEntity>()
-                .FirstOrDefaultAsync(whereExpression, cancellationToken);
+                .FirstOrDefaultAsync(whereExpression, cancellationToken)
+                .ConfigureAwait(false);
 
             return EntityOrNull(current);
         }
@@ -76,7 +77,8 @@
                 .Set<TEntity>()
                 .Where(whereExpression)
                 .Select(selectExpression)
-                .FirstOrDefaultAsync(cancellationToken);
+                .FirstOrDefaultAsync(cancellationToken)
+                .ConfigureAwait(false);
 
             return EntityOrNull(current);
         }
@@ -94,7 +96,8 @@
         {
             var current = await DbContext
                 .Set<TEntity>()
-                .FindAsync(keys);
+                .FindAsync(keys)
+                .ConfigureAwait(false);
 
             return EntityOrNull(current);
         }
@@ -116,7 +119,8 @@
         {
             var current = await DbContext
                 .Set<TEntity>()
-                .FindAsync(keys, cancellationToken);
+                .FindAsync(keys, cancellationToken)
+                .ConfigureAwait(false);
 
             return EntityOrNull(current);
         }
@@ -155,13 +159,13 @@
             try
             {
                 var set = DbContext.Set<TEntity>();
-                var entity = await set.FindAsync(keys);
+                var entity = await set.FindAsync(keys).ConfigureAwait(false);
 
                 if (entity == null)
                     return NotFound();
 
                 set.Remove(entity);
-                await DbContext.SaveChangesAsync();
+                await DbContext.SaveChangesAsync().ConfigureAwait(false);
 
                 return Ok();
             }
@@ -188,13 +192,13 @@
             try
             {
                 var set = DbContext.Set<TEntity>();
-                var entity = await set.FindAsync(keys, cancellationToken);
+                var entity = await set.FindAsync(keys, cancellationToken).ConfigureAwait(false);
 
                 if (entity == null)
                     return NotFound();
 
                 set.Remove(entity);
-                await DbContext.SaveChangesAsync(cancellationToken);
+                await DbContext.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
 
                 return Ok();
             }
@@ -221,7 +225,7 @@
             try
             {
                 DbContext.Set<TEntity>().Add(model);
-                await DbContext.SaveChangesAsync(cancellationToken);
+                await DbContext.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
 
                 return Ok();
             }
@@ -355,7 +359,7 @@
                 return BadRequest();
 
             var set = DbContext.Set<TEntity>();
-            var entity = await set.FindAsync(keys);
+            var entity = await set.FindAsync(keys).ConfigureAwait(false);
 
             if (entity == null)
                 return NotFound();
@@ -365,7 +369,7 @@
             else
                 model.CopyPropertiesTo(entity, properties);
 
-            await DbContext.SaveChangesAsync(cancellationToken);
+            await DbContext.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
 
             return Ok();
         }
