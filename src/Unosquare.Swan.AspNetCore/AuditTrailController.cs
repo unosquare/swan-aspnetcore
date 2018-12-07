@@ -105,8 +105,6 @@
             instance.DateCreated = DateTime.UtcNow;
             instance.Action = (int) flag;
             instance.UserId = _currentUserId;
-
-            // TODO: Why the legacy doesn't save the body at delete method
             instance.JsonBody = Json.Serialize(entity);
 
             Context.Entry(instance).State = EntityState.Added;

@@ -38,32 +38,26 @@
         {
             var match = _users.FirstOrDefault(u => u.UserId == user.UserId);
 
-            if (match != null)
-            {
-                match.UserName = user.UserName;
-                match.Email = user.Email;
-                match.PhoneNumber = user.PhoneNumber;
-                match.TwoFactorEnabled = user.TwoFactorEnabled;
-                match.PasswordHash = user.PasswordHash;
+            if (match == null) return Task.FromResult(IdentityResult.Failed());
 
-                return Task.FromResult(IdentityResult.Success);
-            }
+            match.UserName = user.UserName;
+            match.Email = user.Email;
+            match.PhoneNumber = user.PhoneNumber;
+            match.TwoFactorEnabled = user.TwoFactorEnabled;
+            match.PasswordHash = user.PasswordHash;
 
-            return Task.FromResult(IdentityResult.Failed());
+            return Task.FromResult(IdentityResult.Success);
         }
 
         /// <inheritdoc />
         public Task<IdentityResult> DeleteAsync(ApplicationUser user, CancellationToken cancellationToken)
         {
             var match = _users.FirstOrDefault(u => u.UserId == user.UserId);
-            if (match != null)
-            {
-                _users.Remove(match);
+            if (match == null) return Task.FromResult(IdentityResult.Failed());
 
-                return Task.FromResult(IdentityResult.Success);
-            }
+            _users.Remove(match);
 
-            return Task.FromResult(IdentityResult.Failed());
+            return Task.FromResult(IdentityResult.Success);
         }
 
         /// <inheritdoc />
