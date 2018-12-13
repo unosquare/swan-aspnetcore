@@ -45,7 +45,7 @@
         /// <param name="whereExpression">The where expression.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>A task representing the query database operation.</returns>
-        public virtual async Task<IActionResult> FirstOrNotFound<TEntity>(
+        public async Task<IActionResult> FirstOrNotFound<TEntity>(
             Expression<Func<TEntity, bool>> whereExpression,
             CancellationToken cancellationToken = default)
             where TEntity : class
@@ -67,7 +67,7 @@
         /// <param name="selectExpression">The select expression.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>A task representing the query database operation.</returns>
-        public virtual async Task<IActionResult> FirstOrNotFound<TEntity>(
+        public async Task<IActionResult> FirstOrNotFound<TEntity>(
             Expression<Func<TEntity, bool>> whereExpression,
             Expression<Func<TEntity, object>> selectExpression,
             CancellationToken cancellationToken = default)
@@ -90,7 +90,7 @@
         /// <typeparam name="TEntity">The type of the entity.</typeparam>
         /// <param name="keys">The keys.</param>
         /// <returns>A task representing the query database operation.</returns>
-        public virtual async Task<IActionResult> Single<TEntity>(
+        public async Task<IActionResult> Single<TEntity>(
             params object[] keys)
             where TEntity : class
         {
@@ -112,7 +112,7 @@
         /// <returns>
         /// A task representing the query database operation.
         /// </returns>
-        public virtual async Task<IActionResult> Single<TEntity>(
+        public async Task<IActionResult> Single<TEntity>(
             object[] keys,
             CancellationToken cancellationToken)
             where TEntity : class
@@ -258,7 +258,7 @@
         /// <param name="ignoredProperties">The ignored properties.</param>
         /// <param name="keys">The keys.</param>
         /// <returns>A task representing the write operation to the database.</returns>
-        public Task<IActionResult> Update<TEntity>(
+        public Task<IActionResult> UpdateWithIgnoredProperties<TEntity>(
             TEntity model,
             string[] ignoredProperties,
             params object[] keys)
@@ -315,7 +315,7 @@
         /// <returns>
         /// A task representing the write operation to the database.
         /// </returns>
-        public Task<IActionResult> Update<TEntity>(
+        public Task<IActionResult> UpdateWithIgnoredProperties<TEntity>(
             TEntity model,
             string[] ignoredProperties,
             object[] keys,
