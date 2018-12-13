@@ -9,7 +9,7 @@
     /// <summary>
     /// Provides options for <see cref="TokenProviderMiddleware"/>.
     /// </summary>
-    public class TokenProviderOptions
+    public sealed class TokenProviderOptions
     {
         /// <summary>
         /// The relative request path to listen on.

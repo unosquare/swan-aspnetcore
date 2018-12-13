@@ -1,8 +1,9 @@
 version: '0.15.{build}'
-image: Visual Studio 2017
+image: 
+- Visual Studio 2017
+- Ubuntu
 configuration:
 - Release
-platform: Any CPU
 notifications:
 - provider: Slack
   auth_token:
@@ -18,7 +19,7 @@ environment:
        secure: HzWdswNyfQbQ0vLk9IQyO+Ei9mxoPYp9rvv6HPhtC9J/Fm7EHRzyV953pbPRXI9I
 before_build:
 - ps: |
-        if(-Not $env:APPVEYOR_PULL_REQUEST_TITLE)
+        if(-Not $env:APPVEYOR_PULL_REQUEST_TITLE -And $isWindows)
         {
             git checkout $env:APPVEYOR_REPO_BRANCH -q
             cinst docfx -y
@@ -26,14 +27,12 @@ before_build:
 - dotnet restore -v Minimal
 - mkdir tools
 - nuget install coveralls.net -Version 0.7.0 -OutputDirectory tools
-build_script:
-- msbuild /p:Configuration=%CONFIGURATION%
 test_script:
-- dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:Exclude=[NUnit3.TestAdapter]* test/Unosquare.Swan.AspNetCore.Test/Unosquare.Swan.AspNetCore.Test.csproj -c %CONFIGURATION% -f netcoreapp2.1
+- dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:Exclude=[NUnit3.TestAdapter]* test/Unosquare.Swan.AspNetCore.Test/Unosquare.Swan.AspNetCore.Test.csproj -c %CONFIGURATION%
 - tools\coveralls.net.0.7.0\tools\csmacnz.Coveralls.exe --opencover -i test\Unosquare.Swan.AspNetCore.Test\coverage.opencover.xml --serviceName appveyor --jobId %APPVEYOR_BUILD_NUMBER%
 after_build:
 - ps: |
-        if(-Not $env:APPVEYOR_PULL_REQUEST_TITLE)
+        if(-Not $env:APPVEYOR_PULL_REQUEST_TITLE -And $isWindows)
         {
             docfx docfx.json --logLevel Error
             git config --global credential.helper store
