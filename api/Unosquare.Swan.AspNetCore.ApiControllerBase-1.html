@@ -36,9 +36,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
               <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="logo" src="../best-practices/resources/images/logo.png" alt="">
+                <img id="logo" class="logo" src="../best-practices/resources/images/unosquare_logo.svg" alt="Unosquare">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -382,7 +381,7 @@ matching the where expression or not found response code (404).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;IActionResult&gt; FirstOrNotFound&lt;TEntity&gt;(Expression&lt;Func&lt;TEntity, bool&gt;&gt; whereExpression, Expression&lt;Func&lt;TEntity, object&gt;&gt; selectExpression, CancellationToken cancellationToken = default(CancellationToken))
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; FirstOrNotFound&lt;TEntity&gt;(Expression&lt;Func&lt;TEntity, bool&gt;&gt; whereExpression, Expression&lt;Func&lt;TEntity, object&gt;&gt; selectExpression, CancellationToken cancellationToken = default(CancellationToken))
     where TEntity : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -457,7 +456,7 @@ or not found response code (404).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;IActionResult&gt; FirstOrNotFound&lt;TEntity&gt;(Expression&lt;Func&lt;TEntity, bool&gt;&gt; whereExpression, CancellationToken cancellationToken = default(CancellationToken))
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; FirstOrNotFound&lt;TEntity&gt;(Expression&lt;Func&lt;TEntity, bool&gt;&gt; whereExpression, CancellationToken cancellationToken = default(CancellationToken))
     where TEntity : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -588,7 +587,7 @@ or not found response code (404).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;IActionResult&gt; Single&lt;TEntity&gt;(params object[] keys)
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; Single&lt;TEntity&gt;(params object[] keys)
     where TEntity : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -651,7 +650,7 @@ or not found response code (404).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;IActionResult&gt; Single&lt;TEntity&gt;(object[] keys, CancellationToken cancellationToken)
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; Single&lt;TEntity&gt;(object[] keys, CancellationToken cancellationToken)
     where TEntity : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -856,160 +855,6 @@ the <code>Copyable</code> attribute will copy only the tagged properties.</p>
   </table>
   
   
-  <a id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Update_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Update*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Update__1___0_System_String___System_Object___" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Update``1(``0,System.String[],System.Object[])">Update&lt;TEntity&gt;(TEntity, String[], Object[])</h4>
-  <div class="markdown level1 summary"><p>Updates the specified model.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; Update&lt;TEntity&gt;(TEntity model, string[] ignoredProperties, params object[] keys)
-    where TEntity : class</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TEntity</span></td>
-        <td><span class="parametername">model</span></td>
-        <td><p>The model.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span>[]</td>
-        <td><span class="parametername">ignoredProperties</span></td>
-        <td><p>The ignored properties.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Object</span>[]</td>
-        <td><span class="parametername">keys</span></td>
-        <td><p>The keys.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
-        <td><p>A task representing the write operation to the database.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TEntity</span></td>
-        <td><p>The type of the entity.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Update_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Update*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_Update__1___0_System_String___System_Object___System_Threading_CancellationToken_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.Update``1(``0,System.String[],System.Object[],System.Threading.CancellationToken)">Update&lt;TEntity&gt;(TEntity, String[], Object[], CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Updates the specified model.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; Update&lt;TEntity&gt;(TEntity model, string[] ignoredProperties, object[] keys, CancellationToken cancellationToken)
-    where TEntity : class</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TEntity</span></td>
-        <td><span class="parametername">model</span></td>
-        <td><p>The model.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span>[]</td>
-        <td><span class="parametername">ignoredProperties</span></td>
-        <td><p>The ignored properties.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Object</span>[]</td>
-        <td><span class="parametername">keys</span></td>
-        <td><p>The keys.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>The cancellation token.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
-        <td><p>A task representing the write operation to the database.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TEntity</span></td>
-        <td><p>The type of the entity.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_UpdateOnly_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.UpdateOnly*"></a>
   <h4 id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_UpdateOnly__1___0_System_String___System_Object___" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.UpdateOnly``1(``0,System.String[],System.Object[])">UpdateOnly&lt;TEntity&gt;(TEntity, String[], Object[])</h4>
   <div class="markdown level1 summary"><p>Updates the specified model only with the provide list of properties.</p>
@@ -1114,6 +959,160 @@ the <code>Copyable</code> attribute will copy only the tagged properties.</p>
         <td><span class="xref">System.String</span>[]</td>
         <td><span class="parametername">includedProperties</span></td>
         <td><p>The included properties.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The keys.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td><p>A task representing the write operation to the database.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TEntity</span></td>
+        <td><p>The type of the entity.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_UpdateWithIgnoredProperties_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.UpdateWithIgnoredProperties*"></a>
+  <h4 id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_UpdateWithIgnoredProperties__1___0_System_String___System_Object___" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.UpdateWithIgnoredProperties``1(``0,System.String[],System.Object[])">UpdateWithIgnoredProperties&lt;TEntity&gt;(TEntity, String[], Object[])</h4>
+  <div class="markdown level1 summary"><p>Updates the specified model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; UpdateWithIgnoredProperties&lt;TEntity&gt;(TEntity model, string[] ignoredProperties, params object[] keys)
+    where TEntity : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TEntity</span></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The model.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">ignoredProperties</span></td>
+        <td><p>The ignored properties.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The keys.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td><p>A task representing the write operation to the database.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TEntity</span></td>
+        <td><p>The type of the entity.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_UpdateWithIgnoredProperties_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.UpdateWithIgnoredProperties*"></a>
+  <h4 id="Unosquare_Swan_AspNetCore_ApiControllerBase_1_UpdateWithIgnoredProperties__1___0_System_String___System_Object___System_Threading_CancellationToken_" data-uid="Unosquare.Swan.AspNetCore.ApiControllerBase`1.UpdateWithIgnoredProperties``1(``0,System.String[],System.Object[],System.Threading.CancellationToken)">UpdateWithIgnoredProperties&lt;TEntity&gt;(TEntity, String[], Object[], CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Updates the specified model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; UpdateWithIgnoredProperties&lt;TEntity&gt;(TEntity model, string[] ignoredProperties, object[] keys, CancellationToken cancellationToken)
+    where TEntity : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TEntity</span></td>
+        <td><span class="parametername">model</span></td>
+        <td><p>The model.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">ignoredProperties</span></td>
+        <td><p>The ignored properties.</p>
 </td>
       </tr>
       <tr>
