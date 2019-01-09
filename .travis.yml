@@ -3,7 +3,7 @@ notifications:
   slack: unolabs:cbusXPH6pBwZ35rVDzi4k4ve
 dotnet: 2.2.101
 mono: latest
-dist: trusty
+dist: xenial
 sudo: false
 install:
   - dotnet restore
