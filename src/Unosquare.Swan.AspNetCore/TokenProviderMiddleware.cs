@@ -127,11 +127,6 @@
                 throw new ArgumentNullException(nameof(TokenProviderOptions.NonceGenerator));
             }
 
-            if (options.IdentityResolver == null)
-            {
-                throw new ArgumentNullException(nameof(TokenProviderOptions.IdentityResolver));
-            }
-
             if (options.BearerTokenResolver == null)
             {
                 throw new ArgumentNullException(nameof(TokenProviderOptions.BearerTokenResolver));
