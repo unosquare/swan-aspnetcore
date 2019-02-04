@@ -6,7 +6,7 @@
 
 *:star: Please star this project if you find it useful!*
 
-A set of libraries to use with ASP.NET Core 2.1 applications. Also, includes a configure middleware and extension to setup your project. ASP.NET Core 2.1 came with a lot of changes, including authentication and authorization, here with Swan ASP.NET Core 2.1 is easy to configure and start working on your project.
+A set of libraries to use with ASP.NET Core 2.2 applications. Also, includes a configure middleware and extension to setup your project. ASP.NET Core 2.2 came with a lot of changes, including authentication and authorization, here with Swan ASP.NET Core 2.2 is easy to configure and start working on your project.
 
 NuGet Installation:
 -------------------
