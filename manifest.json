@@ -86,7 +86,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html",
-          "hash": "amzfr9kDRZ3lRXAAGcCC8g=="
+          "hash": "wlVgdE2GG8NTFbJJSUxC1A=="
         }
       },
       "is_incremental": false,
@@ -377,6 +377,13 @@
         "skipped_file_count": 0
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
@@ -388,13 +395,6 @@
           "incrementalPhase": "build",
           "total_file_count": 1,
           "skipped_file_count": 1
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
