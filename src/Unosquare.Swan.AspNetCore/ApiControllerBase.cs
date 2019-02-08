@@ -23,10 +23,10 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiControllerBase{T}"/> class.
         /// </summary>
-        /// <param name="dbContext">The database context.</param>
-        protected ApiControllerBase(TDbContext dbContext)
+        /// <param name="context">The database context.</param>
+        protected ApiControllerBase(TDbContext context)
         {
-            DbContext = dbContext;
+            DbContext = context;
         }
 
         /// <summary>

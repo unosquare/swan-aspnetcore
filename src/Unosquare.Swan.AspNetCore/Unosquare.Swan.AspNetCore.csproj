@@ -21,10 +21,10 @@
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="2.2.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.0" />
-    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.3.0" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.3.0" />
-    <PackageReference Include="Unosquare.Swan.Lite" Version="0.37.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.1" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.4.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.4.0" />
+    <PackageReference Include="Unosquare.Swan.Lite" Version="0.39.0" />
   </ItemGroup>
 
 </Project>
