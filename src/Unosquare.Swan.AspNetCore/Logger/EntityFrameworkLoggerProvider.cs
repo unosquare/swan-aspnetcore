@@ -11,8 +11,8 @@
     /// </summary>
     /// <typeparam name="TDbContext">The type of the database context.</typeparam>
     /// <typeparam name="TLog">The type of the log.</typeparam>
-    /// <seealso cref="Microsoft.Extensions.Logging.ILoggerProvider" />
-    public class EntityFrameworkLoggerProvider<TDbContext, TLog> : ILoggerProvider
+    /// <seealso cref="ILoggerProvider" />
+    public sealed class EntityFrameworkLoggerProvider<TDbContext, TLog> : ILoggerProvider
         where TLog : LogEntry, new()
         where TDbContext : DbContext
     {

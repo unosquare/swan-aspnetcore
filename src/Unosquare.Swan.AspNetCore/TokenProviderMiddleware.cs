@@ -150,12 +150,13 @@
             {
                 var refreshToken = context.Request.Form["refresh_token"];
 
-                if (Guid.TryParse(refreshToken, out var guidToken) == false || _refreshTokens.ContainsKey(guidToken) == false)
+                if (!Guid.TryParse(refreshToken, out var guidToken) || !_refreshTokens.ContainsKey(guidToken))
                 {
-                    context.Response.StatusCode = 401;
-                    await context.Response.WriteAsync(SerializeError("Invalid refresh token."));
-
                     _logger.LogDebug($"Invalid refresh token ({refreshToken})");
+
+                    context.Response.StatusCode = 401;
+                    await context.Response.WriteAsync(SerializeError("Invalid refresh token.")).ConfigureAwait(false);
+
                     return;
                 }
 
@@ -179,14 +180,14 @@
                 var password = context.Request.Form["password"];
                 var clientId = context.Request.Form["client_id"];
 
-                identity = await _options.IdentityResolver(_services, username, password, grantType, clientId);
+                identity = await _options.IdentityResolver(_services, username, password, grantType, clientId).ConfigureAwait(false);
 
                 if (identity == null)
                 {
-                    context.Response.StatusCode = 401;
-                    await context.Response.WriteAsync(SerializeError("Invalid username or password."));
-
                     _logger.LogDebug($"Invalid username ({username}) or password");
+
+                    context.Response.StatusCode = 401;
+                    await context.Response.WriteAsync(SerializeError("Invalid username or password.")).ConfigureAwait(false);
                     return;
                 }
 
@@ -199,12 +200,12 @@
                 claims.AddRange(new[]
                 {
                     new Claim(JwtRegisteredClaimNames.Sub, username),
-                    new Claim(JwtRegisteredClaimNames.Jti, await _options.NonceGenerator()),
+                    new Claim(JwtRegisteredClaimNames.Jti, await _options.NonceGenerator().ConfigureAwait(false)),
                     new Claim(JwtRegisteredClaimNames.Iat, now.ToUnixEpochDate().ToString(), ClaimValueTypes.Integer64),
                 });
 
                 // Add claim role
-                var additionalClaims = await _options.ClaimResolver(identity);
+                var additionalClaims = await _options.ClaimResolver(identity).ConfigureAwait(false);
 
                 if (additionalClaims != null) claims.AddRange(additionalClaims);
 
@@ -230,7 +231,10 @@
 
             _refreshTokens.Add(refreshTokenGuid, jwt);
 
-            await context.Response.WriteAsync(Json.Serialize(await _options.BearerTokenResolver(identity, responseInfo)));
+            var dataResponse =
+                Json.Serialize(await _options.BearerTokenResolver(identity, responseInfo).ConfigureAwait(false));
+
+            await context.Response.WriteAsync(dataResponse).ConfigureAwait(false);
         }
     }
 }

@@ -32,14 +32,14 @@
         /// <returns>The HTTP Context with the authenticate scheme.</returns>
         public async Task Invoke(HttpContext httpContext)
         {
-            var result = await httpContext.AuthenticateAsync(_scheme);
+            var result = await httpContext.AuthenticateAsync(_scheme).ConfigureAwait(false);
 
             if (result.Succeeded)
             {
                 httpContext.User = result.Principal;
             }
 
-            await _next(httpContext);
+            await _next(httpContext).ConfigureAwait(false);
         }
     }
 }

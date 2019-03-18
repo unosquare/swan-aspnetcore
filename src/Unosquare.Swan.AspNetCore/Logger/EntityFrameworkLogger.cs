@@ -80,7 +80,7 @@
         /// <inheritdoc />
         public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
         {
-            if (_name.StartsWith("Microsoft.EntityFrameworkCore") || IsEnabled(logLevel) == false) return;
+            if (_name.StartsWith("Microsoft.EntityFrameworkCore") || !IsEnabled(logLevel)) return;
 
             string message;
 

@@ -15,7 +15,7 @@
     /// the database provide in <c>TDbContext</c>.
     /// </summary>
     /// <typeparam name="TDbContext">The database type.</typeparam>
-    /// <seealso cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
+    /// <seealso cref="ControllerBase" />
     [ApiController]
     public abstract class ApiControllerBase<TDbContext> : ControllerBase
         where TDbContext : DbContext

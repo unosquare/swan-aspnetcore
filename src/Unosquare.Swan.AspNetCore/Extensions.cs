@@ -235,7 +235,7 @@
         /// <returns>The object from the JSON.</returns>
         public static async Task<T> ReadAsJsonAsync<T>(this HttpContent httpContent)
         {
-            var responseString = await httpContent.ReadAsStringAsync();
+            var responseString = await httpContent.ReadAsStringAsync().ConfigureAwait(false);
 
             return Json.Deserialize<T>(responseString);
         }
@@ -249,7 +249,7 @@
         /// <returns>The object from the JSON.</returns>
         public static async Task<T> GetJsonAsync<T>(this HttpClient client, string requestUri)
         {
-            var responseString = await client.GetStringAsync(requestUri);
+            var responseString = await client.GetStringAsync(requestUri).ConfigureAwait(false);
 
             return Json.Deserialize<T>(responseString);
         }
@@ -263,7 +263,7 @@
         /// <returns>The object from the JSON.</returns>
         public static async Task<T> GetJsonAsync<T>(this HttpClient client, Uri requestUri)
         {
-            var responseString = await client.GetStringAsync(requestUri);
+            var responseString = await client.GetStringAsync(requestUri).ConfigureAwait(false);
 
             return Json.Deserialize<T>(responseString);
         }
