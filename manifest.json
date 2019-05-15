@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "SOi4wCEetwZ7lmwjDIEuIA=="
+          "hash": "KZ/URSLCzByeID+18eUf7w=="
         }
       },
       "is_incremental": false,
@@ -74,7 +74,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.ActionFlags.html",
-          "hash": "QUjHaeZ3jSvZSyXCuSOGXA=="
+          "hash": "/CLDMqa/hZ2uFLij57OSvQ=="
         }
       },
       "is_incremental": false,
@@ -86,7 +86,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html",
-          "hash": "HD1hCpIepTr46mIxpI7XUg=="
+          "hash": "hh6qPeVES+G7IHmffI+Wvg=="
         }
       },
       "is_incremental": false,
@@ -98,7 +98,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html",
-          "hash": "zpYuLRGW83mYlBsRkHvVZg=="
+          "hash": "0epQmGz9RqQ7/nX/uEqJCg=="
         }
       },
       "is_incremental": false,
@@ -110,7 +110,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.AuthenticateSchemeMiddleware.html",
-          "hash": "DJ0mPIYadLIBVydBLgG+vA=="
+          "hash": "UVam67aQO1jXtclKBWyEew=="
         }
       },
       "is_incremental": false,
@@ -122,7 +122,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.BusinessDbContext.html",
-          "hash": "jLup1FFtRkebkRjHaj+2cg=="
+          "hash": "DgF+rmhhJncjl78/C4IL+w=="
         }
       },
       "is_incremental": false,
@@ -134,7 +134,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.BusinessRuleAttribute.html",
-          "hash": "my9p90E2wGWkKk0IJkQw4A=="
+          "hash": "qs3QHd0eAN3sfZAH7585DQ=="
         }
       },
       "is_incremental": false,
@@ -146,7 +146,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.BusinessRulesController-1.html",
-          "hash": "VQUN9BDFawH7rds6hRuIUw=="
+          "hash": "eS81YAhMW2takqS9K6EuDQ=="
         }
       },
       "is_incremental": false,
@@ -158,7 +158,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.Extensions.html",
-          "hash": "J0cbnsbvxzXgoVdaSJiVHQ=="
+          "hash": "NKZHctLMafEDnZqeibygvw=="
         }
       },
       "is_incremental": false,
@@ -170,7 +170,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.IBusinessDbContext.html",
-          "hash": "gCUV6qeu1Ch8BdgXojLA/A=="
+          "hash": "p3ui3ajYGaHgzbeR6SQwSA=="
         }
       },
       "is_incremental": false,
@@ -182,7 +182,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.IBusinessRulesController.html",
-          "hash": "ymKU3KYghYmzPWkYodtEOA=="
+          "hash": "vnd0SOJ9Yp6jQc3AvqNCrw=="
         }
       },
       "is_incremental": false,
@@ -194,7 +194,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger-2.html",
-          "hash": "fSlf9tiQlMLgEZ5LUDobmQ=="
+          "hash": "UmKomRm3wOb2qu+yqJpNsg=="
         }
       },
       "is_incremental": false,
@@ -206,7 +206,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerOptions.html",
-          "hash": "TPu7mgucvzWCBk4huf7hgA=="
+          "hash": "QQxD/Le5YYa5BommdsNciw=="
         }
       },
       "is_incremental": false,
@@ -218,7 +218,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider-2.html",
-          "hash": "50I1ax+JpNc1XPoNenBiaQ=="
+          "hash": "lQtceQSickIBGZdIBqKDfA=="
         }
       },
       "is_incremental": false,
@@ -230,7 +230,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.Logger.html",
-          "hash": "JMhLNP1yae0LaCD4gHptdg=="
+          "hash": "5Ai6FK448RbDvfPXjSk1oQ=="
         }
       },
       "is_incremental": false,
@@ -242,7 +242,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.Models.ApplicationRole.html",
-          "hash": "rinRQoQJlsLCZyRw9He7CQ=="
+          "hash": "br6JLU4YbQflytjzsfLmsQ=="
         }
       },
       "is_incremental": false,
@@ -254,7 +254,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.Models.ApplicationUser.html",
-          "hash": "qRrP4OfaLgFa+axPQAD7vA=="
+          "hash": "ehcBM2Qk3ZkSi8qbKNUHYg=="
         }
       },
       "is_incremental": false,
@@ -266,7 +266,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.html",
-          "hash": "HoMYn8ZRUvdUw1EUHpCf0A=="
+          "hash": "XHNrgKzj5w4a1tP7FPTV0A=="
         }
       },
       "is_incremental": false,
@@ -278,7 +278,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.Models.LogEntry.html",
-          "hash": "LWvRDU/WYbH9vdcp1JngKw=="
+          "hash": "ojiJ+PdWueYaYjjAxXmxbA=="
         }
       },
       "is_incremental": false,
@@ -290,7 +290,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.Models.html",
-          "hash": "2eSFGIG04LnA15GnWfFMDQ=="
+          "hash": "gsGgoYQHueDs6p9x2NJYfg=="
         }
       },
       "is_incremental": false,
@@ -302,7 +302,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.TokenProviderMiddleware.html",
-          "hash": "7a57VAsRBgPWW5XwZixQ8Q=="
+          "hash": "rD2QBHN23MOLG3qoQXMmJw=="
         }
       },
       "is_incremental": false,
@@ -314,7 +314,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.TokenProviderOptions.html",
-          "hash": "yCPmBaxu6CQDOc5q35islQ=="
+          "hash": "LqPl/XsYCZDdjF7L5WZM5A=="
         }
       },
       "is_incremental": false,
@@ -326,7 +326,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.html",
-          "hash": "BTZVGmrD66VbIDMSY0A5hA=="
+          "hash": "bYFw9cm2OUOAHSzb5iIBGQ=="
         }
       },
       "is_incremental": false,
@@ -377,13 +377,6 @@
         "skipped_file_count": 0
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
@@ -399,6 +392,13 @@
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
