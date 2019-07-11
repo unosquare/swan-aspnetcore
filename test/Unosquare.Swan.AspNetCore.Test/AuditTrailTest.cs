@@ -7,7 +7,7 @@
     using System.Threading.Tasks;
 
     [TestFixture]
-    class AuditTrailTest
+    public class AuditTrailTest
     {
         private ProductMock _product;
 
@@ -75,15 +75,15 @@
         }
 
         [Test]
-        public void DeleteChangesEntityTest()
+        public async  Task DeleteChangesEntityTest()
         {
             using (var context = SetupDatabase(nameof(DeleteChangesEntityTest)))
             {
                 context.Add(_product);
-                context.SaveChanges();
+                await context.SaveChangesAsync();
 
                 context.Remove(_product);
-                context.SaveChanges();
+                await context.SaveChangesAsync();
 
                 var audit = context.AuditTrailEntries.Last();
 

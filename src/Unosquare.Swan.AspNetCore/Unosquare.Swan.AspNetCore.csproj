@@ -4,7 +4,7 @@
     <Description>Bearer Token and logging to fast start any ASP.NET Core project</Description>
     <Copyright>Copyright (c) 2016-2019 - Unosquare</Copyright>
     <AssemblyTitle>Unosquare SWAN AspNet Core</AssemblyTitle>
-    <VersionPrefix>0.16.5</VersionPrefix>
+    <VersionPrefix>0.16.6</VersionPrefix>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>Unosquare.Swan.AspNetCore</AssemblyName>
@@ -15,7 +15,7 @@
   
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.2">
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.3">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
@@ -25,10 +25,10 @@
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="2.2.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.4" />
-    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.4.0" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.4.0" />
-    <PackageReference Include="Unosquare.Swan.Lite" Version="1.2.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.5.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.5.0" />
+    <PackageReference Include="Unosquare.Swan.Lite" Version="1.3.1" />
   </ItemGroup>
 
 </Project>
