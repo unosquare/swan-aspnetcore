@@ -13,6 +13,7 @@
     public abstract class BusinessDbContext : DbContext, IBusinessDbContext
     {
         private readonly List<IBusinessRulesController> _businessControllers = new List<IBusinessRulesController>();
+        private readonly AutoResetEvent resetEvent = new AutoResetEvent(true);
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BusinessDbContext"/> class.
@@ -37,9 +38,18 @@
         /// </summary>
         public void RunBusinessRules()
         {
-            foreach (var controller in _businessControllers)
+            resetEvent.WaitOne();
+
+            try
             {
-                controller.RunBusinessRules();
+                foreach (var controller in _businessControllers)
+                {
+                    controller.RunBusinessRules();
+                }
+            }
+            finally
+            {
+                resetEvent.Set();
             }
         }
 

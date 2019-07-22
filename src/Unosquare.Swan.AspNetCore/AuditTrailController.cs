@@ -19,7 +19,6 @@
         private readonly List<Type> _validCreateTypes = new List<Type>();
         private readonly List<Type> _validUpdateTypes = new List<Type>();
         private readonly List<Type> _validDeleteTypes = new List<Type>();
-        private readonly string _currentUserId;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditTrailController{T, TEntity}"/> class.
@@ -29,8 +28,16 @@
         public AuditTrailController(TDbContext context, string currentUserId) 
             : base(context)
         {
-            _currentUserId = currentUserId;
+            CurrentUserId = currentUserId;
         }
+
+        /// <summary>
+        /// Gets the current user identifier.
+        /// </summary>
+        /// <value>
+        /// The current user identifier.
+        /// </value>
+        public string CurrentUserId { get; }
 
         /// <summary>
         /// Adds the types.
@@ -96,15 +103,21 @@
             AuditEntry(ActionFlags.Delete, entity, entityType.Name);
         }
 
-        private void AuditEntry(ActionFlags flag, object entity, string name)
+        /// <summary>
+        /// Audits the entry.
+        /// </summary>
+        /// <param name="flag">The flag.</param>
+        /// <param name="entity">The entity.</param>
+        /// <param name="name">The name.</param>
+        protected virtual void AuditEntry(ActionFlags flag, object entity, string name)
         {
-            if (string.IsNullOrWhiteSpace(_currentUserId)) return;
+            if (string.IsNullOrWhiteSpace(CurrentUserId)) return;
 
             var instance = (IAuditTrailEntry) Activator.CreateInstance<TEntity>();
             instance.TableName = name;
             instance.DateCreated = DateTime.UtcNow;
             instance.Action = (int) flag;
-            instance.UserId = _currentUserId;
+            instance.UserId = CurrentUserId;
             instance.JsonBody = Json.Serialize(entity);
 
             Context.Entry(instance).State = EntityState.Added;

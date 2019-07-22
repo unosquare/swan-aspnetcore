@@ -3,13 +3,12 @@
     using Microsoft.EntityFrameworkCore;
     using Models;
 
-    class BusinessDbContextMock : BusinessDbContext
+    internal class BusinessDbContextMock : BusinessDbContext
     {
         public BusinessDbContextMock(DbContextOptions<BusinessDbContextMock> options)
             : base(options)
         {
-            var auditController = new AuditTrailController<BusinessDbContextMock, AuditTrailMock>(this,
-                "Admin");
+            var auditController = new CustomAuditTrailController(this, "Admin");
             auditController.AddTypes(ActionFlags.Create, new[] { typeof(ProductMock) });
 
             AddController(auditController);

@@ -11,7 +11,7 @@
     {
         private ProductMock _product;
 
-        private BusinessDbContextMock SetupDatabase(string name)
+        private static BusinessDbContextMock SetupDatabase(string name)
         {
             var builder = new DbContextOptionsBuilder<BusinessDbContextMock>()
                .UseInMemoryDatabase(name);

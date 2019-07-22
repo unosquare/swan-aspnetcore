@@ -3,8 +3,8 @@
   <PropertyGroup>
     <Description>Bearer Token and logging to fast start any ASP.NET Core project</Description>
     <Copyright>Copyright (c) 2016-2019 - Unosquare</Copyright>
-    <AssemblyTitle>Unosquare SWAN AspNet Core</AssemblyTitle>
-    <VersionPrefix>0.16.6</VersionPrefix>
+    <AssemblyTitle>Unosquare SWAN ASP.Net Core</AssemblyTitle>
+    <VersionPrefix>0.17.0</VersionPrefix>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>Unosquare.Swan.AspNetCore</AssemblyName>
