@@ -322,6 +322,40 @@ references:
   fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of TDbContext, TEntity).AddTypes
   nameWithType: AuditTrailController<TDbContext, TEntity>.AddTypes
   nameWithType.vb: AuditTrailController(Of TDbContext, TEntity).AddTypes
+- uid: Unosquare.Swan.AspNetCore.AuditTrailController`2.AuditEntry(Unosquare.Swan.AspNetCore.ActionFlags,System.Object,System.String)
+  name: AuditEntry(ActionFlags, Object, String)
+  href: api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html#Unosquare_Swan_AspNetCore_AuditTrailController_2_AuditEntry_Unosquare_Swan_AspNetCore_ActionFlags_System_Object_System_String_
+  commentId: M:Unosquare.Swan.AspNetCore.AuditTrailController`2.AuditEntry(Unosquare.Swan.AspNetCore.ActionFlags,System.Object,System.String)
+  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<TDbContext, TEntity>.AuditEntry(Unosquare.Swan.AspNetCore.ActionFlags, System.Object, System.String)
+  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of TDbContext, TEntity).AuditEntry(Unosquare.Swan.AspNetCore.ActionFlags, System.Object, System.String)
+  nameWithType: AuditTrailController<TDbContext, TEntity>.AuditEntry(ActionFlags, Object, String)
+  nameWithType.vb: AuditTrailController(Of TDbContext, TEntity).AuditEntry(ActionFlags, Object, String)
+- uid: Unosquare.Swan.AspNetCore.AuditTrailController`2.AuditEntry*
+  name: AuditEntry
+  href: api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html#Unosquare_Swan_AspNetCore_AuditTrailController_2_AuditEntry_
+  commentId: Overload:Unosquare.Swan.AspNetCore.AuditTrailController`2.AuditEntry
+  isSpec: "True"
+  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<TDbContext, TEntity>.AuditEntry
+  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of TDbContext, TEntity).AuditEntry
+  nameWithType: AuditTrailController<TDbContext, TEntity>.AuditEntry
+  nameWithType.vb: AuditTrailController(Of TDbContext, TEntity).AuditEntry
+- uid: Unosquare.Swan.AspNetCore.AuditTrailController`2.CurrentUserId
+  name: CurrentUserId
+  href: api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html#Unosquare_Swan_AspNetCore_AuditTrailController_2_CurrentUserId
+  commentId: P:Unosquare.Swan.AspNetCore.AuditTrailController`2.CurrentUserId
+  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<TDbContext, TEntity>.CurrentUserId
+  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of TDbContext, TEntity).CurrentUserId
+  nameWithType: AuditTrailController<TDbContext, TEntity>.CurrentUserId
+  nameWithType.vb: AuditTrailController(Of TDbContext, TEntity).CurrentUserId
+- uid: Unosquare.Swan.AspNetCore.AuditTrailController`2.CurrentUserId*
+  name: CurrentUserId
+  href: api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html#Unosquare_Swan_AspNetCore_AuditTrailController_2_CurrentUserId_
+  commentId: Overload:Unosquare.Swan.AspNetCore.AuditTrailController`2.CurrentUserId
+  isSpec: "True"
+  fullName: Unosquare.Swan.AspNetCore.AuditTrailController<TDbContext, TEntity>.CurrentUserId
+  fullName.vb: Unosquare.Swan.AspNetCore.AuditTrailController(Of TDbContext, TEntity).CurrentUserId
+  nameWithType: AuditTrailController<TDbContext, TEntity>.CurrentUserId
+  nameWithType.vb: AuditTrailController(Of TDbContext, TEntity).CurrentUserId
 - uid: Unosquare.Swan.AspNetCore.AuditTrailController`2.OnDeleteCreated(System.Object)
   name: OnDeleteCreated(Object)
   href: api/Unosquare.Swan.AspNetCore.AuditTrailController-2.html#Unosquare_Swan_AspNetCore_AuditTrailController_2_OnDeleteCreated_System_Object_
