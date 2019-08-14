@@ -1,26 +1,26 @@
-﻿namespace Unosquare.Swan.AspNetCore
-{
-    using Formatters;
-    using System.Net.Http;
-    using Logger;
-    using Microsoft.AspNetCore.Authentication.JwtBearer;
-    using Microsoft.AspNetCore.Builder;
-    using Microsoft.AspNetCore.Diagnostics;
-    using Microsoft.AspNetCore.Http;
-    using Microsoft.EntityFrameworkCore;
-    using Microsoft.Extensions.DependencyInjection;
-    using Microsoft.Extensions.DependencyInjection.Extensions;
-    using Microsoft.Extensions.Logging;
-    using Microsoft.Extensions.Options;
-    using Microsoft.IdentityModel.Tokens;
-    using Models;
-    using System;
-    using System.Collections.Generic;
-    using System.IO;
-    using System.Net;
-    using System.Security.Claims;
-    using System.Threading.Tasks;
+﻿using Swan.Formatters;
+using System.Net.Http;
+using Unosquare.Swan.AspNetCore.Logger;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using Unosquare.Swan.AspNetCore.Models;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Net;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
+namespace Unosquare.Swan.AspNetCore
+{
     /// <summary>
     /// Extensions methods to implement SWAN providers.
     /// </summary>

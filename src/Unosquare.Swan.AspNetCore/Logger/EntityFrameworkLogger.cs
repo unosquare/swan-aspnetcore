@@ -1,16 +1,18 @@
-﻿namespace Unosquare.Swan.AspNetCore.Logger
-{
-    using Microsoft.AspNetCore.Http;
-    using Microsoft.EntityFrameworkCore;
-    using Microsoft.Extensions.DependencyInjection;
-    using Microsoft.Extensions.Logging;
-    using Microsoft.Extensions.Options;
-    using Models;
-    using System;
-    using System.Collections.Concurrent;
-    using System.Linq;
-    using System.Threading.Tasks;
+﻿using Swan;
+using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using Unosquare.Swan.AspNetCore.Models;
+using System;
+using System.Collections.Concurrent;
+using System.Linq;
+using System.Threading.Tasks;
+using LogLevel = Microsoft.Extensions.Logging.LogLevel;
 
+namespace Unosquare.Swan.AspNetCore.Logger
+{
     /// <summary>
     /// Represents a Logger using EntityFramework
     /// 

@@ -1,16 +1,17 @@
-﻿namespace Unosquare.Swan.AspNetCore
-{
-    using Formatters;
-    using Microsoft.AspNetCore.Http;
-    using Microsoft.Extensions.Logging;
-    using Microsoft.Extensions.Options;
-    using System;
-    using System.Collections.Generic;
-    using System.IdentityModel.Tokens.Jwt;
-    using System.Linq;
-    using System.Security.Claims;
-    using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using Swan;
+using Swan.Formatters;
+using System;
+using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
+namespace Unosquare.Swan.AspNetCore
+{
     /// <summary>
     /// Token generator middleware component which is added to an HTTP pipeline.
     /// </summary>

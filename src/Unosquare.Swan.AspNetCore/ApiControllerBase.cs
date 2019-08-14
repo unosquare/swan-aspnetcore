@@ -1,14 +1,15 @@
-﻿namespace Unosquare.Swan.AspNetCore
-{
-    using System;
-    using System.Linq;
-    using System.Linq.Expressions;
-    using System.Reflection;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.EntityFrameworkCore;
+﻿using Swan;
+using System;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Reflection;
+using System.Threading;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
+namespace Unosquare.Swan.AspNetCore
+{
     /// <inheritdoc />
     /// <summary>
     /// Represents a API Controller with extended methods related to

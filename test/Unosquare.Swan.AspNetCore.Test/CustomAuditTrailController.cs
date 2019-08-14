@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Unosquare.Swan.AspNetCore.Models;
 using Unosquare.Swan.AspNetCore.Test.Mocks;
-using Unosquare.Swan.Formatters;
+using Swan.Formatters;
 
 namespace Unosquare.Swan.AspNetCore.Test
 {

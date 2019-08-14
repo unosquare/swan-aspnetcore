@@ -1,12 +1,12 @@
-﻿namespace Unosquare.Swan.AspNetCore
-{
-    using Microsoft.EntityFrameworkCore;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using Models;
-    using Formatters;
+﻿using Swan.Formatters;
+using Microsoft.EntityFrameworkCore;
+using Unosquare.Swan.AspNetCore.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
+namespace Unosquare.Swan.AspNetCore
+{
     /// <inheritdoc />
     /// <summary>
     /// Represents an AuditTrail controller to use with BusinessDbContext.
