@@ -58,7 +58,7 @@ namespace Unosquare.Swan.AspNetCore.Logger
                                     db.Set<TLog>().Add(entry);
                             }
 
-                            await db.SaveChangesAsync();
+                            await db.SaveChangesAsync().ConfigureAwait(false);
                         }
                         catch
                         {
@@ -66,7 +66,7 @@ namespace Unosquare.Swan.AspNetCore.Logger
                         }
                     }
 
-                    await Task.Delay(50);
+                    await Task.Delay(50).ConfigureAwait(false);
                 }
 
                 // ReSharper disable once FunctionNeverReturns
