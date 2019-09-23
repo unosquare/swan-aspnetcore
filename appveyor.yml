@@ -28,7 +28,11 @@ before_build:
 - cmd: dotnet tool install -g coveralls.net
 test_script:
 - dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:Exclude=[NUnit3.TestAdapter]* test/Unosquare.Swan.AspNetCore.Test/Unosquare.Swan.AspNetCore.Test.csproj -c %CONFIGURATION%
-- cmd: csmacnz.coveralls --opencover -i test/Unosquare.Swan.AspNetCore.Test/coverage.opencover.xml --serviceName appveyor --jobId %APPVEYOR_BUILD_NUMBER%
+- ps: |
+        if(-Not $env:APPVEYOR_PULL_REQUEST_TITLE -And $isWindows)
+        {
+            csmacnz.coveralls --opencover -i test/Unosquare.Swan.AspNetCore.Test/coverage.opencover.xml --serviceName appveyor --jobId %APPVEYOR_BUILD_NUMBER%
+        }
 after_build:
 - ps: |
         if(-Not $env:APPVEYOR_PULL_REQUEST_TITLE -And $isWindows)
