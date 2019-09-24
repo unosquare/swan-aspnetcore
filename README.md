@@ -1,5 +1,6 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/bcd1c58d7efe48818559805230db19c8)](https://app.codacy.com/app/UnosquareLabs/swan-aspnetcore?utm_source=github.com&utm_medium=referral&utm_content=unosquare/swan-aspnetcore&utm_campaign=Badge_Grade_Settings)
 [![Build status](https://ci.appveyor.com/api/projects/status/q408tg5jd9bm0jak/branch/master?svg=true)](https://ci.appveyor.com/project/geoperez/swan-aspnetcore/branch/master)
+![Buils status](https://github.com/unosquare/swan-aspnetcore/workflows/.NET%20Core%20CI/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/unosquare/swan-aspnetcore/badge.svg?branch=master)](https://coveralls.io/github/unosquare/swan-aspnetcore?branch=master)
 
 # <img src="https://github.com/unosquare/swan/raw/master/swan-logo-32.png"></img> Swan ASP.NET Core 2: Stuff We All Need
@@ -66,6 +67,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
 ### Using EntityFrameworkLogger
 
 The `EntityFrameworkLogger` represents a Logger based on Entity Framework and adds a Logging subsystem. It will help you log into your Database everything necessary to know what’s going on in your application. This logger is used in the `ConfigureServices` method of your Startup.cs file.
+
 With this you just add your configuration section and then add in the entity framework, your database context and the models that you use for log entries into your database, then you just pass the application services.
 
 ```csharp
@@ -94,7 +96,7 @@ The BusinessDbContext run business rules when you save changes to the database. 
 
 ### AuditTrail
 
-[Audit Trails](https://github.com/unosquare/ef-enterpriseextensions) is a business rule to save the changes to any operation performed in a record. In other words, capture what change between any data saving. This operation is important in many systems and you can accomplish with these extensions easily. The AuditTrailController can be attached to your BusinessDbContext and setup which Entities will be recorded in the three CRUD actions supported, create, update and delete.
+[Audit Trails](https://github.com/unosquare/ef-enterpriseextensions) is a business rule to save the changes to any operation performed in a record. In other words, capture what change between any data saving. This operation is important in many systems and you can accomplish with these extensions easily. The `AuditTrailController` can be attached to your `BusinessDbContext` and setup which Entities will be recorded in the three CRUD actions supported, create, update and delete.
 
 ```csharp
 public class SampleDbContext : BusinessDbContext
@@ -115,7 +117,7 @@ public class SampleDbContext : BusinessDbContext
 
 ### Additional Extension Methods
 
-Use the following extension methods to extend the ApplicationBuilder with helpful handlers.
+Use the following extension methods to extend the `ApplicationBuilder` with helpful handlers.
 
 #### The JsonExceptionHandler
 
