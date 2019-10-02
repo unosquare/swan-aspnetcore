@@ -86,7 +86,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.ApiControllerBase-1.html",
-          "hash": "MW6jX6W0+6mmlrApnvRTTg=="
+          "hash": "qmOkoOmdERRmnb5106eH0g=="
         }
       },
       "is_incremental": false,
@@ -158,7 +158,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.Extensions.html",
-          "hash": "Kk1MwY38UAdersN0wD0BBQ=="
+          "hash": "xn8d8zAskT5afLDnwy07jQ=="
         }
       },
       "is_incremental": false,
@@ -194,7 +194,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger-2.html",
-          "hash": "JiixAG1MCXdcTcLM+hWoog=="
+          "hash": "r/ab6soy4Pjm5hknXlN5og=="
         }
       },
       "is_incremental": false,
@@ -218,7 +218,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider-2.html",
-          "hash": "EcibbqhtDVCHTQyFhDV6+A=="
+          "hash": "ukJa/yOqzZ1yCZuHT+OFPA=="
         }
       },
       "is_incremental": false,
@@ -377,6 +377,13 @@
         "skipped_file_count": 0
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
@@ -388,13 +395,6 @@
           "incrementalPhase": "build",
           "total_file_count": 22,
           "skipped_file_count": 22
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

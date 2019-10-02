@@ -201,13 +201,13 @@
   
   
   <a id="Unosquare_Swan_AspNetCore_Extensions_AddEntityFramework_" data-uid="Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_Extensions_AddEntityFramework__2_ILoggerFactory_System_IServiceProvider_System_Func_System_String_System_LogLevel_System_Boolean__" data-uid="Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework``2(ILoggerFactory,System.IServiceProvider,System.Func{System.String,System.LogLevel,System.Boolean})">AddEntityFramework&lt;TDbContext, TLog&gt;(ILoggerFactory, IServiceProvider, Func&lt;String, LogLevel, Boolean&gt;)</h4>
+  <h4 id="Unosquare_Swan_AspNetCore_Extensions_AddEntityFramework__2_ILoggerFactory_System_IServiceProvider_System_Nullable_System_Func_System_String_System_LogLevel_System_Boolean___" data-uid="Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework``2(ILoggerFactory,System.IServiceProvider,System.Nullable{System.Func{System.String,System.LogLevel,System.Boolean}})">AddEntityFramework&lt;TDbContext, TLog&gt;(ILoggerFactory, IServiceProvider, Nullable&lt;Func&lt;String, LogLevel, Boolean&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Adds the entity framework logger.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ILoggerFactory AddEntityFramework&lt;TDbContext, TLog&gt;(this ILoggerFactory factory, IServiceProvider serviceProvider, Func&lt;string, LogLevel, bool&gt; filter = null)
+    <pre><code class="lang-csharp hljs">public static ILoggerFactory AddEntityFramework&lt;TDbContext, TLog&gt;(this ILoggerFactory factory, IServiceProvider serviceProvider, Func&lt;string, LogLevel, bool&gt;? filter = default(Func&lt;string, LogLevel, bool&gt;? ))
     where TDbContext : DbContext where TLog : LogEntry, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -233,7 +233,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.LogLevel</span>, <span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.LogLevel</span>, <span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td><span class="parametername">filter</span></td>
         <td><p>The filter.</p>
 </td>
@@ -296,13 +296,13 @@
   
   
   <a id="Unosquare_Swan_AspNetCore_Extensions_AddEntityFramework_" data-uid="Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_Extensions_AddEntityFramework__2_ILoggingBuilder_System_Func_System_String_System_LogLevel_System_Boolean__" data-uid="Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework``2(ILoggingBuilder,System.Func{System.String,System.LogLevel,System.Boolean})">AddEntityFramework&lt;TDbContext, TLog&gt;(ILoggingBuilder, Func&lt;String, LogLevel, Boolean&gt;)</h4>
+  <h4 id="Unosquare_Swan_AspNetCore_Extensions_AddEntityFramework__2_ILoggingBuilder_System_Nullable_System_Func_System_String_System_LogLevel_System_Boolean___" data-uid="Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework``2(ILoggingBuilder,System.Nullable{System.Func{System.String,System.LogLevel,System.Boolean}})">AddEntityFramework&lt;TDbContext, TLog&gt;(ILoggingBuilder, Nullable&lt;Func&lt;String, LogLevel, Boolean&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Adds the entity framework.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ILoggingBuilder AddEntityFramework&lt;TDbContext, TLog&gt;(this ILoggingBuilder builder, Func&lt;string, LogLevel, bool&gt; filter = null)
+    <pre><code class="lang-csharp hljs">public static ILoggingBuilder AddEntityFramework&lt;TDbContext, TLog&gt;(this ILoggingBuilder builder, Func&lt;string, LogLevel, bool&gt;? filter = default(Func&lt;string, LogLevel, bool&gt;? ))
     where TDbContext : DbContext where TLog : LogEntry, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -322,7 +322,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.LogLevel</span>, <span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.LogLevel</span>, <span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td><span class="parametername">filter</span></td>
         <td><p>The filter.</p>
 </td>
@@ -385,13 +385,13 @@
   
   
   <a id="Unosquare_Swan_AspNetCore_Extensions_AddLoggingEntityFramework_" data-uid="Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_Extensions_AddLoggingEntityFramework__2_IServiceCollection_System_Func_System_String_System_LogLevel_System_Boolean__" data-uid="Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework``2(IServiceCollection,System.Func{System.String,System.LogLevel,System.Boolean})">AddLoggingEntityFramework&lt;TDbContext, TLog&gt;(IServiceCollection, Func&lt;String, LogLevel, Boolean&gt;)</h4>
+  <h4 id="Unosquare_Swan_AspNetCore_Extensions_AddLoggingEntityFramework__2_IServiceCollection_System_Nullable_System_Func_System_String_System_LogLevel_System_Boolean___" data-uid="Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework``2(IServiceCollection,System.Nullable{System.Func{System.String,System.LogLevel,System.Boolean}})">AddLoggingEntityFramework&lt;TDbContext, TLog&gt;(IServiceCollection, Nullable&lt;Func&lt;String, LogLevel, Boolean&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Adds the logging entity framework.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection AddLoggingEntityFramework&lt;TDbContext, TLog&gt;(this IServiceCollection services, Func&lt;string, LogLevel, bool&gt; filter = null)
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddLoggingEntityFramework&lt;TDbContext, TLog&gt;(this IServiceCollection services, Func&lt;string, LogLevel, bool&gt;? filter = default(Func&lt;string, LogLevel, bool&gt;? ))
     where TDbContext : DbContext where TLog : LogEntry, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -411,7 +411,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.LogLevel</span>, <span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.LogLevel</span>, <span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td><span class="parametername">filter</span></td>
         <td><p>The filter.</p>
 </td>
@@ -726,13 +726,13 @@
   
   
   <a id="Unosquare_Swan_AspNetCore_Extensions_UseBearerTokenAuthentication_" data-uid="Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenAuthentication*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_Extensions_UseBearerTokenAuthentication_IApplicationBuilder_TokenValidationParameters_System_Func_System_IServiceProvider_System_String_System_String_System_String_System_String_System_Threading_Tasks_Task_ClaimsIdentity___System_Func_ClaimsIdentity_Dictionary_System_String_System_Object__System_Threading_Tasks_Task_Dictionary_System_String_System_Object____System_TimeSpan_System_Boolean_" data-uid="Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenAuthentication(IApplicationBuilder,TokenValidationParameters,System.Func{System.IServiceProvider,System.String,System.String,System.String,System.String,System.Threading.Tasks.Task{ClaimsIdentity}},System.Func{ClaimsIdentity,Dictionary{System.String,System.Object},System.Threading.Tasks.Task{Dictionary{System.String,System.Object}}},System.TimeSpan,System.Boolean)">UseBearerTokenAuthentication(IApplicationBuilder, TokenValidationParameters, Func&lt;IServiceProvider, String, String, String, String, Task&lt;ClaimsIdentity&gt;&gt;, Func&lt;ClaimsIdentity, Dictionary&lt;String, Object&gt;, Task&lt;Dictionary&lt;String, Object&gt;&gt;&gt;, TimeSpan, Boolean)</h4>
+  <h4 id="Unosquare_Swan_AspNetCore_Extensions_UseBearerTokenAuthentication_IApplicationBuilder_TokenValidationParameters_System_Func_System_IServiceProvider_System_String_System_String_System_String_System_String_System_Threading_Tasks_Task_ClaimsIdentity___System_Nullable_System_Func_ClaimsIdentity_Dictionary_System_String_System_Object__System_Threading_Tasks_Task_Dictionary_System_String_System_Object_____System_TimeSpan_System_Boolean_" data-uid="Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenAuthentication(IApplicationBuilder,TokenValidationParameters,System.Func{System.IServiceProvider,System.String,System.String,System.String,System.String,System.Threading.Tasks.Task{ClaimsIdentity}},System.Nullable{System.Func{ClaimsIdentity,Dictionary{System.String,System.Object},System.Threading.Tasks.Task{Dictionary{System.String,System.Object}}}},System.TimeSpan,System.Boolean)">UseBearerTokenAuthentication(IApplicationBuilder, TokenValidationParameters, Func&lt;IServiceProvider, String, String, String, String, Task&lt;ClaimsIdentity&gt;&gt;, Nullable&lt;Func&lt;ClaimsIdentity, Dictionary&lt;String, Object&gt;, Task&lt;Dictionary&lt;String, Object&gt;&gt;&gt;&gt;, TimeSpan, Boolean)</h4>
   <div class="markdown level1 summary"><p>Uses the bearer token provider.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseBearerTokenAuthentication(this IApplicationBuilder app, TokenValidationParameters validationParameter, Func&lt;IServiceProvider, string, string, string, string, Task&lt;ClaimsIdentity&gt;&gt; identityResolver, Func&lt;ClaimsIdentity, Dictionary&lt;string, object&gt;, Task&lt;Dictionary&lt;string, object&gt;&gt;&gt; bearerTokenResolver = null, TimeSpan expiration = default(TimeSpan), bool forceHttps = true)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseBearerTokenAuthentication(this IApplicationBuilder app, TokenValidationParameters validationParameter, Func&lt;IServiceProvider, string, string, string, string, Task&lt;ClaimsIdentity&gt;&gt; identityResolver, Func&lt;ClaimsIdentity, Dictionary&lt;string, object&gt;, Task&lt;Dictionary&lt;string, object&gt;&gt;&gt;? bearerTokenResolver = default(Func&lt;ClaimsIdentity, Dictionary&lt;string, object&gt;, Task&lt;Dictionary&lt;string, object&gt;&gt;&gt;? ), TimeSpan expiration = default(TimeSpan), bool forceHttps = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -763,7 +763,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">ClaimsIdentity</span>, <span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;, <span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Func</span>&lt;<span class="xref">ClaimsIdentity</span>, <span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;, <span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;&gt;</td>
         <td><span class="parametername">bearerTokenResolver</span></td>
         <td><p>The bearer token resolver.</p>
 </td>
@@ -801,13 +801,13 @@
   
   
   <a id="Unosquare_Swan_AspNetCore_Extensions_UseFallback_" data-uid="Unosquare.Swan.AspNetCore.Extensions.UseFallback*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_Extensions_UseFallback_IApplicationBuilder_System_String_System_Func_PathString_System_Boolean__" data-uid="Unosquare.Swan.AspNetCore.Extensions.UseFallback(IApplicationBuilder,System.String,System.Func{PathString,System.Boolean})">UseFallback(IApplicationBuilder, String, Func&lt;PathString, Boolean&gt;)</h4>
+  <h4 id="Unosquare_Swan_AspNetCore_Extensions_UseFallback_IApplicationBuilder_System_String_System_Nullable_System_Func_PathString_System_Boolean___" data-uid="Unosquare.Swan.AspNetCore.Extensions.UseFallback(IApplicationBuilder,System.String,System.Nullable{System.Func{PathString,System.Boolean}})">UseFallback(IApplicationBuilder, String, Nullable&lt;Func&lt;PathString, Boolean&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Uses the fallback to redirect everything without extension.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseFallback(this IApplicationBuilder app, string fallbackPath = &quot;/index.html&quot;, Func&lt;PathString, bool&gt; ignoreCheck = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseFallback(this IApplicationBuilder app, string fallbackPath = &quot;/index.html&quot;, Func&lt;PathString, bool&gt;? ignoreCheck = default(Func&lt;PathString, bool&gt;? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -832,7 +832,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">PathString</span>, <span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Func</span>&lt;<span class="xref">PathString</span>, <span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td><span class="parametername">ignoreCheck</span></td>
         <td><p>The ignore check.</p>
 </td>
