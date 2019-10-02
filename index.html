@@ -70,8 +70,8 @@
             <article class="content wrap" id="_content" data-uid="">
 
 <p><a href="https://app.codacy.com/app/UnosquareLabs/swan-aspnetcore?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=unosquare/swan-aspnetcore&amp;utm_campaign=Badge_Grade_Settings"><img src="https://api.codacy.com/project/badge/Grade/bcd1c58d7efe48818559805230db19c8" alt="Codacy Badge"></a>
-<a href="https://travis-ci.org/unosquare/swan-aspnetcore"><img src="https://travis-ci.org/unosquare/swan-aspnetcore.svg?branch=master" alt="Build Status"></a>
 <a href="https://ci.appveyor.com/project/geoperez/swan-aspnetcore/branch/master"><img src="https://ci.appveyor.com/api/projects/status/q408tg5jd9bm0jak/branch/master?svg=true" alt="Build status"></a>
+<img src="https://github.com/unosquare/swan-aspnetcore/workflows/.NET%20Core%20CI/badge.svg" alt="Buils status">
 <a href="https://coveralls.io/github/unosquare/swan-aspnetcore?branch=master"><img src="https://coveralls.io/repos/github/unosquare/swan-aspnetcore/badge.svg?branch=master" alt="Coverage Status"></a></p>
 <h1 id="img-srchttpsgithubcomunosquareswanrawmasterswan-logo-32pngimg-swan-aspnet-core-2-stuff-we-all-need"><img src="https://github.com/unosquare/swan/raw/master/swan-logo-32.png"> Swan ASP.NET Core 2: Stuff We All Need</h1>
 <p><em><span class="emoji" shortcode="star">⭐</span> Please star this project if you find it useful!</em></p>
@@ -116,8 +116,8 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
         });
 }
 </code></pre><h3 id="using-entityframeworklogger">Using EntityFrameworkLogger</h3>
-<p>The <code>EntityFrameworkLogger</code> represents a Logger based on Entity Framework and adds a Logging subsystem. It will help you log into your Database everything necessary to know what’s going on in your application. This logger is used in the <code>ConfigureServices</code> method of your Startup.cs file.
-With this you just add your configuration section and then add in the entity framework, your database context and the models that you use for log entries into your database, then you just pass the application services.</p>
+<p>The <code>EntityFrameworkLogger</code> represents a Logger based on Entity Framework and adds a Logging subsystem. It will help you log into your Database everything necessary to know what’s going on in your application. This logger is used in the <code>ConfigureServices</code> method of your Startup.cs file.</p>
+<p>With this you just add your configuration section and then add in the entity framework, your database context and the models that you use for log entries into your database, then you just pass the application services.</p>
 <pre><code class="lang-csharp">public void ConfigureServices(IServiceCollection services)
 {
     // Inject your DbContext first.
@@ -135,7 +135,7 @@ With this you just add your configuration section and then add in the entity fra
         }
     }
 </code></pre><h3 id="audittrail">AuditTrail</h3>
-<p><a href="https://github.com/unosquare/ef-enterpriseextensions">Audit Trails</a> is a business rule to save the changes to any operation performed in a record. In other words, capture what change between any data saving. This operation is important in many systems and you can accomplish with these extensions easily. The AuditTrailController can be attached to your BusinessDbContext and setup which Entities will be recorded in the three CRUD actions supported, create, update and delete.</p>
+<p><a href="https://github.com/unosquare/ef-enterpriseextensions">Audit Trails</a> is a business rule to save the changes to any operation performed in a record. In other words, capture what change between any data saving. This operation is important in many systems and you can accomplish with these extensions easily. The <code>AuditTrailController</code> can be attached to your <code>BusinessDbContext</code> and setup which Entities will be recorded in the three CRUD actions supported, create, update and delete.</p>
 <pre><code class="lang-csharp">public class SampleDbContext : BusinessDbContext
     {
          public SampleDbContext(DbContextOptions&lt;SampleDbContext&gt; options, IHttpContextAccessor httpContextAccessor)
@@ -151,7 +151,7 @@ With this you just add your configuration section and then add in the entity fra
         public DbSet&lt;AuditTrailEntry&gt; AuditTrailEntries { get; set; }
     }
 </code></pre><h3 id="additional-extension-methods">Additional Extension Methods</h3>
-<p>Use the following extension methods to extend the ApplicationBuilder with helpful handlers.</p>
+<p>Use the following extension methods to extend the <code>ApplicationBuilder</code> with helpful handlers.</p>
 <h4 id="the-jsonexceptionhandler">The JsonExceptionHandler</h4>
 <p>Adding this extension is a very good way to debug your application. When an error occurs, the exception handles the error and send a 500 Internal Server Error HTTP Response with a JSON object containing useful information as stacktrace and inner exceptions.</p>
 <pre><code class="lang-csharp">// Response an exception as JSON at error
@@ -173,7 +173,7 @@ app.UseFallback();
               <div class="contribution">
                 <ul class="nav">
                   <li class="top-sep">
-                    <a href="https://github.com/unosquare/swan-aspnetcore/blob/master/README.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/unosquare/swan-aspnetcore/blob/NetCore3/README.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
