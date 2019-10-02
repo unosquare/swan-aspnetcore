@@ -4,6 +4,7 @@
     <Copyright>Unosquare</Copyright>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <AssemblyName>Unosquare.Swan.AspNetCore.Sample</AssemblyName>
     <OutputType>Exe</OutputType>
