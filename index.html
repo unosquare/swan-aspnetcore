@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> Swan ASP.NET Core 3: Stuff We All Need | Unosquare SWAN ASPNetCore </title>
+    <title> Swan ASP.NET Core 2: Stuff We All Need | Unosquare SWAN ASPNetCore </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" Swan ASP.NET Core 3: Stuff We All Need | Unosquare SWAN ASPNetCore ">
+    <meta name="title" content=" Swan ASP.NET Core 2: Stuff We All Need | Unosquare SWAN ASPNetCore ">
     <meta name="generator" content="docfx 2.45.1.0">
     
     <link rel="shortcut icon" href="favicon.ico">
@@ -69,17 +69,18 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
 
-<p><a href="https://ci.appveyor.com/project/geoperez/swan-aspnetcore/branch/master"><img src="https://ci.appveyor.com/api/projects/status/q408tg5jd9bm0jak/branch/master?svg=true" alt="Build status"></a>
-<img src="https://github.com/unosquare/swan-aspnetcore/workflows/.NET%20Core%20CI/badge.svg" alt="Buils status">
+<p><a href="https://app.codacy.com/app/UnosquareLabs/swan-aspnetcore?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=unosquare/swan-aspnetcore&amp;utm_campaign=Badge_Grade_Settings"><img src="https://api.codacy.com/project/badge/Grade/bcd1c58d7efe48818559805230db19c8" alt="Codacy Badge"></a>
+<a href="https://travis-ci.org/unosquare/swan-aspnetcore"><img src="https://travis-ci.org/unosquare/swan-aspnetcore.svg?branch=master" alt="Build Status"></a>
+<a href="https://ci.appveyor.com/project/geoperez/swan-aspnetcore/branch/master"><img src="https://ci.appveyor.com/api/projects/status/q408tg5jd9bm0jak/branch/master?svg=true" alt="Build status"></a>
 <a href="https://coveralls.io/github/unosquare/swan-aspnetcore?branch=master"><img src="https://coveralls.io/repos/github/unosquare/swan-aspnetcore/badge.svg?branch=master" alt="Coverage Status"></a></p>
-<h1 id="img-srchttpsgithubcomunosquareswanrawmasterswan-logo-32pngimg-swan-aspnet-core-3-stuff-we-all-need"><img src="https://github.com/unosquare/swan/raw/master/swan-logo-32.png"> Swan ASP.NET Core 3: Stuff We All Need</h1>
+<h1 id="img-srchttpsgithubcomunosquareswanrawmasterswan-logo-32pngimg-swan-aspnet-core-2-stuff-we-all-need"><img src="https://github.com/unosquare/swan/raw/master/swan-logo-32.png"> Swan ASP.NET Core 2: Stuff We All Need</h1>
 <p><em><span class="emoji" shortcode="star">⭐</span> Please star this project if you find it useful!</em></p>
-<p>A set of libraries to use with ASP.NET Core 3.0 applications. Also, includes a configure middleware and extension to setup your project. ASP.NET Core 3.0 came with a lot of changes, including authentication and authorization, here with Swan ASP.NET Core 3.0 is easy to configure and start working on your project.</p>
+<p>A set of libraries to use with ASP.NET Core 2.2 applications. Also, includes a configure middleware and extension to setup your project. ASP.NET Core 2.2 came with a lot of changes, including authentication and authorization, here with Swan ASP.NET Core 2.2 is easy to configure and start working on your project.</p>
 <h2 id="nuget-installation">NuGet Installation:</h2>
 <p><a href="https://badge.fury.io/nu/Unosquare.Swan.AspNetCore"><img src="https://badge.fury.io/nu/Unosquare.Swan.AspNetCore.svg" alt="NuGet version"></a></p>
 <pre><code>PM&gt; Install-Package Unosquare.Swan.AspNetCore
 </code></pre><h2 id="use-cases">Use Cases</h2>
-<p>Here we can find a very useful code to use in our project configuration. All of this you can use it in your <code>Startup.cs</code> file, see our <a href="https://github.com/unosquare/swan-aspnetcore/tree/master/src/Unosquare.Swan.AspNetCore.Sample">Sample Project</a> for more reference.</p>
+<p>Here we can find a very useful code to use in our project configuration. All of this you can use it in your Startup.cs file, see our <a href="https://github.com/unosquare/swan-aspnetcore/tree/master/src/Unosquare.Swan.AspNetCore.Sample">Sample Project</a> for more reference.</p>
 <h3 id="using-bearer-token-authentication">Using Bearer Token Authentication</h3>
 <p>The extension method <code>AddBearerTokenAuthentication</code> adds the services that are going to be used in your application. This method uses the Jwt schemes and adds a JwtBearer with the Token Validation Parameters that you configure. Jwt stands for <a href="https://jwt.io/introduction/">JSON Web Tokens</a></p>
 <p>The extension method <code>UseBearerTokenAuthentication</code> is important because it gives the application the requirements to use authentication and authorization with JWT.</p>
@@ -115,8 +116,8 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
         });
 }
 </code></pre><h3 id="using-entityframeworklogger">Using EntityFrameworkLogger</h3>
-<p>The <code>EntityFrameworkLogger</code> represents a Logger based on Entity Framework and adds a Logging subsystem. It will help you log into your Database everything necessary to know what’s going on in your application. This logger is used in the <code>ConfigureServices</code> method of your Startup.cs file.</p>
-<p>With this you just add your configuration section and then add in the entity framework, your database context and the models that you use for log entries into your database, then you just pass the application services.</p>
+<p>The <code>EntityFrameworkLogger</code> represents a Logger based on Entity Framework and adds a Logging subsystem. It will help you log into your Database everything necessary to know what’s going on in your application. This logger is used in the <code>ConfigureServices</code> method of your Startup.cs file.
+With this you just add your configuration section and then add in the entity framework, your database context and the models that you use for log entries into your database, then you just pass the application services.</p>
 <pre><code class="lang-csharp">public void ConfigureServices(IServiceCollection services)
 {
     // Inject your DbContext first.
@@ -125,7 +126,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
     services.AddLoggingEntityFramework&lt;SampleDbContext, Models.LogEntry&gt;();
 }
 </code></pre><h3 id="using-businessdbcontext">Using BusinessDbContext</h3>
-<p>The <code>BusinessDbContext</code> run business rules when you save changes to the database. It&#39;s helpful because if you want to modify an entity every time you save changes to the database, you can create a controller to do that. Your Db Context must inheritance from the BusinessDbContext in order to have this functionality and then you can add, remove and check for controllers using your context.</p>
+<p>The BusinessDbContext run business rules when you save changes to the database. It&#39;s helpful because if you want to modify an entity every time you save changes to the database, you can create a controller to do that. Your Db Context must inheritance from the BusinessDbContext in order to have this functionality and then you can add, remove and check for controllers using your context.</p>
 <pre><code class="lang-csharp"> public class SampleDbContext : BusinessDbContext
     {
         public SampleDbContext(DbContextOptions&lt;SampleDbContext&gt; options)
@@ -134,7 +135,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
         }
     }
 </code></pre><h3 id="audittrail">AuditTrail</h3>
-<p>Audit Trails is a business rule to save the changes to any operation performed in a record. In other words, capture what change between any data saving. This operation is important in many systems and you can accomplish with these extensions easily. The <code>AuditTrailController</code> can be attached to your <code>BusinessDbContext</code> and setup which Entities will be recorded in the three CRUD actions supported, create, update and delete.</p>
+<p><a href="https://github.com/unosquare/ef-enterpriseextensions">Audit Trails</a> is a business rule to save the changes to any operation performed in a record. In other words, capture what change between any data saving. This operation is important in many systems and you can accomplish with these extensions easily. The AuditTrailController can be attached to your BusinessDbContext and setup which Entities will be recorded in the three CRUD actions supported, create, update and delete.</p>
 <pre><code class="lang-csharp">public class SampleDbContext : BusinessDbContext
     {
          public SampleDbContext(DbContextOptions&lt;SampleDbContext&gt; options, IHttpContextAccessor httpContextAccessor)
@@ -150,7 +151,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
         public DbSet&lt;AuditTrailEntry&gt; AuditTrailEntries { get; set; }
     }
 </code></pre><h3 id="additional-extension-methods">Additional Extension Methods</h3>
-<p>Use the following extension methods to extend the <code>ApplicationBuilder</code> with helpful handlers.</p>
+<p>Use the following extension methods to extend the ApplicationBuilder with helpful handlers.</p>
 <h4 id="the-jsonexceptionhandler">The JsonExceptionHandler</h4>
 <p>Adding this extension is a very good way to debug your application. When an error occurs, the exception handles the error and send a 500 Internal Server Error HTTP Response with a JSON object containing useful information as stacktrace and inner exceptions.</p>
 <pre><code class="lang-csharp">// Response an exception as JSON at error
@@ -172,7 +173,7 @@ app.UseFallback();
               <div class="contribution">
                 <ul class="nav">
                   <li class="top-sep">
-                    <a href="https://github.com/unosquare/swan-aspnetcore/blob/NetCore3/README.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/unosquare/swan-aspnetcore/blob/dependabot/nuget/Microsoft.CodeAnalysis.FxCopAnalyzers-2.9.5/README.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

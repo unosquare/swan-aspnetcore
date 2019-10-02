@@ -682,24 +682,24 @@ references:
   isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework
   nameWithType: Extensions.AddEntityFramework
-- uid: Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework``2(ILoggerFactory,System.IServiceProvider,System.Nullable{System.Func{System.String,System.LogLevel,System.Boolean}})
-  name: AddEntityFramework<TDbContext, TLog>(ILoggerFactory, IServiceProvider, Nullable<Func<String, LogLevel, Boolean>>)
-  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_AddEntityFramework__2_ILoggerFactory_System_IServiceProvider_System_Nullable_System_Func_System_String_System_LogLevel_System_Boolean___
-  commentId: M:Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework``2(ILoggerFactory,System.IServiceProvider,System.Nullable{System.Func{System.String,System.LogLevel,System.Boolean}})
-  name.vb: AddEntityFramework(Of TDbContext, TLog)(ILoggerFactory, IServiceProvider, Nullable(Of Func(Of String, LogLevel, Boolean)))
-  fullName: Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework<TDbContext, TLog>(ILoggerFactory, System.IServiceProvider, System.Nullable<System.Func<System.String, System.LogLevel, System.Boolean>>)
-  fullName.vb: Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework(Of TDbContext, TLog)(ILoggerFactory, System.IServiceProvider, System.Nullable(Of System.Func(Of System.String, System.LogLevel, System.Boolean)))
-  nameWithType: Extensions.AddEntityFramework<TDbContext, TLog>(ILoggerFactory, IServiceProvider, Nullable<Func<String, LogLevel, Boolean>>)
-  nameWithType.vb: Extensions.AddEntityFramework(Of TDbContext, TLog)(ILoggerFactory, IServiceProvider, Nullable(Of Func(Of String, LogLevel, Boolean)))
-- uid: Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework``2(ILoggingBuilder,System.Nullable{System.Func{System.String,System.LogLevel,System.Boolean}})
-  name: AddEntityFramework<TDbContext, TLog>(ILoggingBuilder, Nullable<Func<String, LogLevel, Boolean>>)
-  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_AddEntityFramework__2_ILoggingBuilder_System_Nullable_System_Func_System_String_System_LogLevel_System_Boolean___
-  commentId: M:Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework``2(ILoggingBuilder,System.Nullable{System.Func{System.String,System.LogLevel,System.Boolean}})
-  name.vb: AddEntityFramework(Of TDbContext, TLog)(ILoggingBuilder, Nullable(Of Func(Of String, LogLevel, Boolean)))
-  fullName: Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework<TDbContext, TLog>(ILoggingBuilder, System.Nullable<System.Func<System.String, System.LogLevel, System.Boolean>>)
-  fullName.vb: Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework(Of TDbContext, TLog)(ILoggingBuilder, System.Nullable(Of System.Func(Of System.String, System.LogLevel, System.Boolean)))
-  nameWithType: Extensions.AddEntityFramework<TDbContext, TLog>(ILoggingBuilder, Nullable<Func<String, LogLevel, Boolean>>)
-  nameWithType.vb: Extensions.AddEntityFramework(Of TDbContext, TLog)(ILoggingBuilder, Nullable(Of Func(Of String, LogLevel, Boolean)))
+- uid: Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework``2(ILoggerFactory,System.IServiceProvider,System.Func{System.String,System.LogLevel,System.Boolean})
+  name: AddEntityFramework<TDbContext, TLog>(ILoggerFactory, IServiceProvider, Func<String, LogLevel, Boolean>)
+  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_AddEntityFramework__2_ILoggerFactory_System_IServiceProvider_System_Func_System_String_System_LogLevel_System_Boolean__
+  commentId: M:Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework``2(ILoggerFactory,System.IServiceProvider,System.Func{System.String,System.LogLevel,System.Boolean})
+  name.vb: AddEntityFramework(Of TDbContext, TLog)(ILoggerFactory, IServiceProvider, Func(Of String, LogLevel, Boolean))
+  fullName: Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework<TDbContext, TLog>(ILoggerFactory, System.IServiceProvider, System.Func<System.String, System.LogLevel, System.Boolean>)
+  fullName.vb: Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework(Of TDbContext, TLog)(ILoggerFactory, System.IServiceProvider, System.Func(Of System.String, System.LogLevel, System.Boolean))
+  nameWithType: Extensions.AddEntityFramework<TDbContext, TLog>(ILoggerFactory, IServiceProvider, Func<String, LogLevel, Boolean>)
+  nameWithType.vb: Extensions.AddEntityFramework(Of TDbContext, TLog)(ILoggerFactory, IServiceProvider, Func(Of String, LogLevel, Boolean))
+- uid: Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework``2(ILoggingBuilder,System.Func{System.String,System.LogLevel,System.Boolean})
+  name: AddEntityFramework<TDbContext, TLog>(ILoggingBuilder, Func<String, LogLevel, Boolean>)
+  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_AddEntityFramework__2_ILoggingBuilder_System_Func_System_String_System_LogLevel_System_Boolean__
+  commentId: M:Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework``2(ILoggingBuilder,System.Func{System.String,System.LogLevel,System.Boolean})
+  name.vb: AddEntityFramework(Of TDbContext, TLog)(ILoggingBuilder, Func(Of String, LogLevel, Boolean))
+  fullName: Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework<TDbContext, TLog>(ILoggingBuilder, System.Func<System.String, System.LogLevel, System.Boolean>)
+  fullName.vb: Unosquare.Swan.AspNetCore.Extensions.AddEntityFramework(Of TDbContext, TLog)(ILoggingBuilder, System.Func(Of System.String, System.LogLevel, System.Boolean))
+  nameWithType: Extensions.AddEntityFramework<TDbContext, TLog>(ILoggingBuilder, Func<String, LogLevel, Boolean>)
+  nameWithType.vb: Extensions.AddEntityFramework(Of TDbContext, TLog)(ILoggingBuilder, Func(Of String, LogLevel, Boolean))
 - uid: Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework*
   name: AddLoggingEntityFramework
   href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_AddLoggingEntityFramework_
@@ -707,15 +707,15 @@ references:
   isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework
   nameWithType: Extensions.AddLoggingEntityFramework
-- uid: Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework``2(IServiceCollection,System.Nullable{System.Func{System.String,System.LogLevel,System.Boolean}})
-  name: AddLoggingEntityFramework<TDbContext, TLog>(IServiceCollection, Nullable<Func<String, LogLevel, Boolean>>)
-  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_AddLoggingEntityFramework__2_IServiceCollection_System_Nullable_System_Func_System_String_System_LogLevel_System_Boolean___
-  commentId: M:Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework``2(IServiceCollection,System.Nullable{System.Func{System.String,System.LogLevel,System.Boolean}})
-  name.vb: AddLoggingEntityFramework(Of TDbContext, TLog)(IServiceCollection, Nullable(Of Func(Of String, LogLevel, Boolean)))
-  fullName: Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework<TDbContext, TLog>(IServiceCollection, System.Nullable<System.Func<System.String, System.LogLevel, System.Boolean>>)
-  fullName.vb: Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework(Of TDbContext, TLog)(IServiceCollection, System.Nullable(Of System.Func(Of System.String, System.LogLevel, System.Boolean)))
-  nameWithType: Extensions.AddLoggingEntityFramework<TDbContext, TLog>(IServiceCollection, Nullable<Func<String, LogLevel, Boolean>>)
-  nameWithType.vb: Extensions.AddLoggingEntityFramework(Of TDbContext, TLog)(IServiceCollection, Nullable(Of Func(Of String, LogLevel, Boolean)))
+- uid: Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework``2(IServiceCollection,System.Func{System.String,System.LogLevel,System.Boolean})
+  name: AddLoggingEntityFramework<TDbContext, TLog>(IServiceCollection, Func<String, LogLevel, Boolean>)
+  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_AddLoggingEntityFramework__2_IServiceCollection_System_Func_System_String_System_LogLevel_System_Boolean__
+  commentId: M:Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework``2(IServiceCollection,System.Func{System.String,System.LogLevel,System.Boolean})
+  name.vb: AddLoggingEntityFramework(Of TDbContext, TLog)(IServiceCollection, Func(Of String, LogLevel, Boolean))
+  fullName: Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework<TDbContext, TLog>(IServiceCollection, System.Func<System.String, System.LogLevel, System.Boolean>)
+  fullName.vb: Unosquare.Swan.AspNetCore.Extensions.AddLoggingEntityFramework(Of TDbContext, TLog)(IServiceCollection, System.Func(Of System.String, System.LogLevel, System.Boolean))
+  nameWithType: Extensions.AddLoggingEntityFramework<TDbContext, TLog>(IServiceCollection, Func<String, LogLevel, Boolean>)
+  nameWithType.vb: Extensions.AddLoggingEntityFramework(Of TDbContext, TLog)(IServiceCollection, Func(Of String, LogLevel, Boolean))
 - uid: Unosquare.Swan.AspNetCore.Extensions.GetJsonAsync*
   name: GetJsonAsync
   href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_GetJsonAsync_
@@ -779,15 +779,15 @@ references:
   fullName.vb: Unosquare.Swan.AspNetCore.Extensions.UseAuditTrail(Of T, TEntity)(Unosquare.Swan.AspNetCore.IBusinessDbContext, System.String)
   nameWithType: Extensions.UseAuditTrail<T, TEntity>(IBusinessDbContext, String)
   nameWithType.vb: Extensions.UseAuditTrail(Of T, TEntity)(IBusinessDbContext, String)
-- uid: Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenAuthentication(IApplicationBuilder,TokenValidationParameters,System.Func{System.IServiceProvider,System.String,System.String,System.String,System.String,System.Threading.Tasks.Task{ClaimsIdentity}},System.Nullable{System.Func{ClaimsIdentity,Dictionary{System.String,System.Object},System.Threading.Tasks.Task{Dictionary{System.String,System.Object}}}},System.TimeSpan,System.Boolean)
-  name: UseBearerTokenAuthentication(IApplicationBuilder, TokenValidationParameters, Func<IServiceProvider, String, String, String, String, Task<ClaimsIdentity>>, Nullable<Func<ClaimsIdentity, Dictionary<String, Object>, Task<Dictionary<String, Object>>>>, TimeSpan, Boolean)
-  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_UseBearerTokenAuthentication_IApplicationBuilder_TokenValidationParameters_System_Func_System_IServiceProvider_System_String_System_String_System_String_System_String_System_Threading_Tasks_Task_ClaimsIdentity___System_Nullable_System_Func_ClaimsIdentity_Dictionary_System_String_System_Object__System_Threading_Tasks_Task_Dictionary_System_String_System_Object_____System_TimeSpan_System_Boolean_
-  commentId: M:Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenAuthentication(IApplicationBuilder,TokenValidationParameters,System.Func{System.IServiceProvider,System.String,System.String,System.String,System.String,System.Threading.Tasks.Task{ClaimsIdentity}},System.Nullable{System.Func{ClaimsIdentity,Dictionary{System.String,System.Object},System.Threading.Tasks.Task{Dictionary{System.String,System.Object}}}},System.TimeSpan,System.Boolean)
-  name.vb: UseBearerTokenAuthentication(IApplicationBuilder, TokenValidationParameters, Func(Of IServiceProvider, String, String, String, String, Task(Of ClaimsIdentity)), Nullable(Of Func(Of ClaimsIdentity, Dictionary(Of String, Object), Task(Of Dictionary(Of String, Object)))), TimeSpan, Boolean)
-  fullName: Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenAuthentication(IApplicationBuilder, TokenValidationParameters, System.Func<System.IServiceProvider, System.String, System.String, System.String, System.String, System.Threading.Tasks.Task<ClaimsIdentity>>, System.Nullable<System.Func<ClaimsIdentity, Dictionary<System.String, System.Object>, System.Threading.Tasks.Task<Dictionary<System.String, System.Object>>>>, System.TimeSpan, System.Boolean)
-  fullName.vb: Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenAuthentication(IApplicationBuilder, TokenValidationParameters, System.Func(Of System.IServiceProvider, System.String, System.String, System.String, System.String, System.Threading.Tasks.Task(Of ClaimsIdentity)), System.Nullable(Of System.Func(Of ClaimsIdentity, Dictionary(Of System.String, System.Object), System.Threading.Tasks.Task(Of Dictionary(Of System.String, System.Object)))), System.TimeSpan, System.Boolean)
-  nameWithType: Extensions.UseBearerTokenAuthentication(IApplicationBuilder, TokenValidationParameters, Func<IServiceProvider, String, String, String, String, Task<ClaimsIdentity>>, Nullable<Func<ClaimsIdentity, Dictionary<String, Object>, Task<Dictionary<String, Object>>>>, TimeSpan, Boolean)
-  nameWithType.vb: Extensions.UseBearerTokenAuthentication(IApplicationBuilder, TokenValidationParameters, Func(Of IServiceProvider, String, String, String, String, Task(Of ClaimsIdentity)), Nullable(Of Func(Of ClaimsIdentity, Dictionary(Of String, Object), Task(Of Dictionary(Of String, Object)))), TimeSpan, Boolean)
+- uid: Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenAuthentication(IApplicationBuilder,TokenValidationParameters,System.Func{System.IServiceProvider,System.String,System.String,System.String,System.String,System.Threading.Tasks.Task{ClaimsIdentity}},System.Func{ClaimsIdentity,Dictionary{System.String,System.Object},System.Threading.Tasks.Task{Dictionary{System.String,System.Object}}},System.TimeSpan,System.Boolean)
+  name: UseBearerTokenAuthentication(IApplicationBuilder, TokenValidationParameters, Func<IServiceProvider, String, String, String, String, Task<ClaimsIdentity>>, Func<ClaimsIdentity, Dictionary<String, Object>, Task<Dictionary<String, Object>>>, TimeSpan, Boolean)
+  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_UseBearerTokenAuthentication_IApplicationBuilder_TokenValidationParameters_System_Func_System_IServiceProvider_System_String_System_String_System_String_System_String_System_Threading_Tasks_Task_ClaimsIdentity___System_Func_ClaimsIdentity_Dictionary_System_String_System_Object__System_Threading_Tasks_Task_Dictionary_System_String_System_Object____System_TimeSpan_System_Boolean_
+  commentId: M:Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenAuthentication(IApplicationBuilder,TokenValidationParameters,System.Func{System.IServiceProvider,System.String,System.String,System.String,System.String,System.Threading.Tasks.Task{ClaimsIdentity}},System.Func{ClaimsIdentity,Dictionary{System.String,System.Object},System.Threading.Tasks.Task{Dictionary{System.String,System.Object}}},System.TimeSpan,System.Boolean)
+  name.vb: UseBearerTokenAuthentication(IApplicationBuilder, TokenValidationParameters, Func(Of IServiceProvider, String, String, String, String, Task(Of ClaimsIdentity)), Func(Of ClaimsIdentity, Dictionary(Of String, Object), Task(Of Dictionary(Of String, Object))), TimeSpan, Boolean)
+  fullName: Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenAuthentication(IApplicationBuilder, TokenValidationParameters, System.Func<System.IServiceProvider, System.String, System.String, System.String, System.String, System.Threading.Tasks.Task<ClaimsIdentity>>, System.Func<ClaimsIdentity, Dictionary<System.String, System.Object>, System.Threading.Tasks.Task<Dictionary<System.String, System.Object>>>, System.TimeSpan, System.Boolean)
+  fullName.vb: Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenAuthentication(IApplicationBuilder, TokenValidationParameters, System.Func(Of System.IServiceProvider, System.String, System.String, System.String, System.String, System.Threading.Tasks.Task(Of ClaimsIdentity)), System.Func(Of ClaimsIdentity, Dictionary(Of System.String, System.Object), System.Threading.Tasks.Task(Of Dictionary(Of System.String, System.Object))), System.TimeSpan, System.Boolean)
+  nameWithType: Extensions.UseBearerTokenAuthentication(IApplicationBuilder, TokenValidationParameters, Func<IServiceProvider, String, String, String, String, Task<ClaimsIdentity>>, Func<ClaimsIdentity, Dictionary<String, Object>, Task<Dictionary<String, Object>>>, TimeSpan, Boolean)
+  nameWithType.vb: Extensions.UseBearerTokenAuthentication(IApplicationBuilder, TokenValidationParameters, Func(Of IServiceProvider, String, String, String, String, Task(Of ClaimsIdentity)), Func(Of ClaimsIdentity, Dictionary(Of String, Object), Task(Of Dictionary(Of String, Object))), TimeSpan, Boolean)
 - uid: Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenAuthentication*
   name: UseBearerTokenAuthentication
   href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_UseBearerTokenAuthentication_
@@ -795,15 +795,15 @@ references:
   isSpec: "True"
   fullName: Unosquare.Swan.AspNetCore.Extensions.UseBearerTokenAuthentication
   nameWithType: Extensions.UseBearerTokenAuthentication
-- uid: Unosquare.Swan.AspNetCore.Extensions.UseFallback(IApplicationBuilder,System.String,System.Nullable{System.Func{PathString,System.Boolean}})
-  name: UseFallback(IApplicationBuilder, String, Nullable<Func<PathString, Boolean>>)
-  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_UseFallback_IApplicationBuilder_System_String_System_Nullable_System_Func_PathString_System_Boolean___
-  commentId: M:Unosquare.Swan.AspNetCore.Extensions.UseFallback(IApplicationBuilder,System.String,System.Nullable{System.Func{PathString,System.Boolean}})
-  name.vb: UseFallback(IApplicationBuilder, String, Nullable(Of Func(Of PathString, Boolean)))
-  fullName: Unosquare.Swan.AspNetCore.Extensions.UseFallback(IApplicationBuilder, System.String, System.Nullable<System.Func<PathString, System.Boolean>>)
-  fullName.vb: Unosquare.Swan.AspNetCore.Extensions.UseFallback(IApplicationBuilder, System.String, System.Nullable(Of System.Func(Of PathString, System.Boolean)))
-  nameWithType: Extensions.UseFallback(IApplicationBuilder, String, Nullable<Func<PathString, Boolean>>)
-  nameWithType.vb: Extensions.UseFallback(IApplicationBuilder, String, Nullable(Of Func(Of PathString, Boolean)))
+- uid: Unosquare.Swan.AspNetCore.Extensions.UseFallback(IApplicationBuilder,System.String,System.Func{PathString,System.Boolean})
+  name: UseFallback(IApplicationBuilder, String, Func<PathString, Boolean>)
+  href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_UseFallback_IApplicationBuilder_System_String_System_Func_PathString_System_Boolean__
+  commentId: M:Unosquare.Swan.AspNetCore.Extensions.UseFallback(IApplicationBuilder,System.String,System.Func{PathString,System.Boolean})
+  name.vb: UseFallback(IApplicationBuilder, String, Func(Of PathString, Boolean))
+  fullName: Unosquare.Swan.AspNetCore.Extensions.UseFallback(IApplicationBuilder, System.String, System.Func<PathString, System.Boolean>)
+  fullName.vb: Unosquare.Swan.AspNetCore.Extensions.UseFallback(IApplicationBuilder, System.String, System.Func(Of PathString, System.Boolean))
+  nameWithType: Extensions.UseFallback(IApplicationBuilder, String, Func<PathString, Boolean>)
+  nameWithType.vb: Extensions.UseFallback(IApplicationBuilder, String, Func(Of PathString, Boolean))
 - uid: Unosquare.Swan.AspNetCore.Extensions.UseFallback*
   name: UseFallback
   href: api/Unosquare.Swan.AspNetCore.Extensions.html#Unosquare_Swan_AspNetCore_Extensions_UseFallback_
@@ -903,15 +903,15 @@ references:
   fullName.vb: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger(Of TDbContext, TLog)
   nameWithType: EntityFrameworkLogger<TDbContext, TLog>
   nameWithType.vb: EntityFrameworkLogger(Of TDbContext, TLog)
-- uid: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger`2.#ctor(System.String,System.Nullable{System.Func{System.String,System.LogLevel,System.Boolean}},System.IServiceProvider)
-  name: EntityFrameworkLogger(String, Nullable<Func<String, LogLevel, Boolean>>, IServiceProvider)
-  href: api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger-2.html#Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLogger_2__ctor_System_String_System_Nullable_System_Func_System_String_System_LogLevel_System_Boolean___System_IServiceProvider_
-  commentId: M:Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger`2.#ctor(System.String,System.Nullable{System.Func{System.String,System.LogLevel,System.Boolean}},System.IServiceProvider)
-  name.vb: EntityFrameworkLogger(String, Nullable(Of Func(Of String, LogLevel, Boolean)), IServiceProvider)
-  fullName: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger<TDbContext, TLog>.EntityFrameworkLogger(System.String, System.Nullable<System.Func<System.String, System.LogLevel, System.Boolean>>, System.IServiceProvider)
-  fullName.vb: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger(Of TDbContext, TLog).EntityFrameworkLogger(System.String, System.Nullable(Of System.Func(Of System.String, System.LogLevel, System.Boolean)), System.IServiceProvider)
-  nameWithType: EntityFrameworkLogger<TDbContext, TLog>.EntityFrameworkLogger(String, Nullable<Func<String, LogLevel, Boolean>>, IServiceProvider)
-  nameWithType.vb: EntityFrameworkLogger(Of TDbContext, TLog).EntityFrameworkLogger(String, Nullable(Of Func(Of String, LogLevel, Boolean)), IServiceProvider)
+- uid: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger`2.#ctor(System.String,System.Func{System.String,System.LogLevel,System.Boolean},System.IServiceProvider)
+  name: EntityFrameworkLogger(String, Func<String, LogLevel, Boolean>, IServiceProvider)
+  href: api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger-2.html#Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLogger_2__ctor_System_String_System_Func_System_String_System_LogLevel_System_Boolean__System_IServiceProvider_
+  commentId: M:Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger`2.#ctor(System.String,System.Func{System.String,System.LogLevel,System.Boolean},System.IServiceProvider)
+  name.vb: EntityFrameworkLogger(String, Func(Of String, LogLevel, Boolean), IServiceProvider)
+  fullName: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger<TDbContext, TLog>.EntityFrameworkLogger(System.String, System.Func<System.String, System.LogLevel, System.Boolean>, System.IServiceProvider)
+  fullName.vb: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger(Of TDbContext, TLog).EntityFrameworkLogger(System.String, System.Func(Of System.String, System.LogLevel, System.Boolean), System.IServiceProvider)
+  nameWithType: EntityFrameworkLogger<TDbContext, TLog>.EntityFrameworkLogger(String, Func<String, LogLevel, Boolean>, IServiceProvider)
+  nameWithType.vb: EntityFrameworkLogger(Of TDbContext, TLog).EntityFrameworkLogger(String, Func(Of String, LogLevel, Boolean), IServiceProvider)
 - uid: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger`2.#ctor*
   name: EntityFrameworkLogger
   href: api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger-2.html#Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLogger_2__ctor_
@@ -1002,15 +1002,15 @@ references:
   fullName.vb: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider(Of TDbContext, TLog)
   nameWithType: EntityFrameworkLoggerProvider<TDbContext, TLog>
   nameWithType.vb: EntityFrameworkLoggerProvider(Of TDbContext, TLog)
-- uid: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider`2.#ctor(System.IServiceProvider,System.Nullable{System.Func{System.String,System.LogLevel,System.Boolean}})
-  name: EntityFrameworkLoggerProvider(IServiceProvider, Nullable<Func<String, LogLevel, Boolean>>)
-  href: api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider-2.html#Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLoggerProvider_2__ctor_System_IServiceProvider_System_Nullable_System_Func_System_String_System_LogLevel_System_Boolean___
-  commentId: M:Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider`2.#ctor(System.IServiceProvider,System.Nullable{System.Func{System.String,System.LogLevel,System.Boolean}})
-  name.vb: EntityFrameworkLoggerProvider(IServiceProvider, Nullable(Of Func(Of String, LogLevel, Boolean)))
-  fullName: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider<TDbContext, TLog>.EntityFrameworkLoggerProvider(System.IServiceProvider, System.Nullable<System.Func<System.String, System.LogLevel, System.Boolean>>)
-  fullName.vb: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider(Of TDbContext, TLog).EntityFrameworkLoggerProvider(System.IServiceProvider, System.Nullable(Of System.Func(Of System.String, System.LogLevel, System.Boolean)))
-  nameWithType: EntityFrameworkLoggerProvider<TDbContext, TLog>.EntityFrameworkLoggerProvider(IServiceProvider, Nullable<Func<String, LogLevel, Boolean>>)
-  nameWithType.vb: EntityFrameworkLoggerProvider(Of TDbContext, TLog).EntityFrameworkLoggerProvider(IServiceProvider, Nullable(Of Func(Of String, LogLevel, Boolean)))
+- uid: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider`2.#ctor(System.IServiceProvider,System.Func{System.String,System.LogLevel,System.Boolean})
+  name: EntityFrameworkLoggerProvider(IServiceProvider, Func<String, LogLevel, Boolean>)
+  href: api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider-2.html#Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLoggerProvider_2__ctor_System_IServiceProvider_System_Func_System_String_System_LogLevel_System_Boolean__
+  commentId: M:Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider`2.#ctor(System.IServiceProvider,System.Func{System.String,System.LogLevel,System.Boolean})
+  name.vb: EntityFrameworkLoggerProvider(IServiceProvider, Func(Of String, LogLevel, Boolean))
+  fullName: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider<TDbContext, TLog>.EntityFrameworkLoggerProvider(System.IServiceProvider, System.Func<System.String, System.LogLevel, System.Boolean>)
+  fullName.vb: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider(Of TDbContext, TLog).EntityFrameworkLoggerProvider(System.IServiceProvider, System.Func(Of System.String, System.LogLevel, System.Boolean))
+  nameWithType: EntityFrameworkLoggerProvider<TDbContext, TLog>.EntityFrameworkLoggerProvider(IServiceProvider, Func<String, LogLevel, Boolean>)
+  nameWithType.vb: EntityFrameworkLoggerProvider(Of TDbContext, TLog).EntityFrameworkLoggerProvider(IServiceProvider, Func(Of String, LogLevel, Boolean))
 - uid: Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider`2.#ctor*
   name: EntityFrameworkLoggerProvider
   href: api/Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLoggerProvider-2.html#Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLoggerProvider_2__ctor_
