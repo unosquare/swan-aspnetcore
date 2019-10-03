@@ -36,7 +36,7 @@ namespace Unosquare.Swan.AspNetCore.Logger
         /// <param name="name">The name.</param>
         /// <param name="filter">The filter.</param>
         /// <param name="serviceProvider">The service provider.</param>
-        public EntityFrameworkLogger(string name, Func<string, LogLevel, bool> filter, IServiceProvider serviceProvider)
+        public EntityFrameworkLogger(string name, Func<string, LogLevel, bool>? filter, IServiceProvider serviceProvider)
         {
             _name = name;
             _filter = filter ?? GetFilter(serviceProvider.GetService<IOptions<EntityFrameworkLoggerOptions>>());
@@ -58,7 +58,7 @@ namespace Unosquare.Swan.AspNetCore.Logger
                                     db.Set<TLog>().Add(entry);
                             }
 
-                            await db.SaveChangesAsync();
+                            await db.SaveChangesAsync().ConfigureAwait(false);
                         }
                         catch
                         {
@@ -66,7 +66,7 @@ namespace Unosquare.Swan.AspNetCore.Logger
                         }
                     }
 
-                    await Task.Delay(50);
+                    await Task.Delay(50).ConfigureAwait(false);
                 }
 
                 // ReSharper disable once FunctionNeverReturns
@@ -137,7 +137,7 @@ namespace Unosquare.Swan.AspNetCore.Logger
         private static bool GetFilter(EntityFrameworkLoggerOptions options, string category, LogLevel level)
         {
             var filter = options.Filters?.Keys.FirstOrDefault(category.StartsWith);
-            return filter == null || (int) options.Filters[filter] <= (int) level;
+            return filter == null || (int) options.Filters![filter] <= (int) level;
         }
 
         private Func<string, LogLevel, bool> GetFilter(IOptions<EntityFrameworkLoggerOptions> options)

@@ -16,7 +16,7 @@
         where TLog : LogEntry, new()
         where TDbContext : DbContext
     {
-        private readonly Func<string, LogLevel, bool> _filter;
+        private readonly Func<string, LogLevel, bool>? _filter;
         private readonly IServiceProvider _serviceProvider;
 
         /// <summary>
@@ -24,7 +24,7 @@
         /// </summary>
         /// <param name="serviceProvider">The service provider.</param>
         /// <param name="filter">The filter.</param>
-        public EntityFrameworkLoggerProvider(IServiceProvider serviceProvider, Func<string, LogLevel, bool> filter)
+        public EntityFrameworkLoggerProvider(IServiceProvider serviceProvider, Func<string, LogLevel, bool>? filter)
         {
             _filter = filter;
             _serviceProvider = serviceProvider;

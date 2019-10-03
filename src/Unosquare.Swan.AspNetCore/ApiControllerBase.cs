@@ -132,17 +132,11 @@ namespace Unosquare.Swan.AspNetCore
         /// <typeparam name="TEntity">The type of the entity.</typeparam>
         /// <param name="query">The query.</param>
         /// <returns>A task representing the query to the database.</returns>
-        public async Task<IActionResult> Query<TEntity>(
+        public IActionResult Query<TEntity>(
                     Func<IQueryable<TEntity>, IQueryable> query)
                     where TEntity : class
         {
             var set = DbContext.Set<TEntity>();
-
-            // TODO: Pending
-            //if (query is IAsyncEnumerableAccessor<TEntity> queryAsync)
-            //{
-            //    return Ok(queryAsync.(set).ToListAsync());
-            //}
 
             return Ok(query(set));
         }
@@ -283,7 +277,7 @@ namespace Unosquare.Swan.AspNetCore
 
             return propertiesToCopy.Any()
                 ? UpdateOnly(model, propertiesToCopy, keys)
-                : Update(model, null, keys);
+                : Update(model, keys, default);
         }
 
         /// <summary>
@@ -345,7 +339,7 @@ namespace Unosquare.Swan.AspNetCore
 
             return propertiesToCopy.Any()
                 ? UpdateOnly(model, propertiesToCopy, keys, cancellationToken)
-                : Update(model, null, keys, cancellationToken);
+                : UpdateEntity(model, false, propertiesToCopy, keys, cancellationToken);
         }
 
         private async Task<IActionResult> UpdateEntity<TEntity>(

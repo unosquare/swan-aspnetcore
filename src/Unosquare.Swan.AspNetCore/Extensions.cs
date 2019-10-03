@@ -60,7 +60,7 @@ namespace Unosquare.Swan.AspNetCore
         public static ILoggerFactory AddEntityFramework<TDbContext, TLog>(
             this ILoggerFactory factory,
             IServiceProvider serviceProvider,
-            Func<string, LogLevel, bool> filter = null)
+            Func<string, LogLevel, bool>? filter = null)
             where TDbContext : DbContext
             where TLog : LogEntry, new()
         {
@@ -85,7 +85,7 @@ namespace Unosquare.Swan.AspNetCore
         /// <exception cref="ArgumentNullException">builder.</exception>
         public static ILoggingBuilder AddEntityFramework<TDbContext, TLog>(
             this ILoggingBuilder builder,
-            Func<string, LogLevel, bool> filter = null)
+            Func<string, LogLevel, bool>? filter = null)
             where TDbContext : DbContext
             where TLog : LogEntry, new()
         {
@@ -108,7 +108,7 @@ namespace Unosquare.Swan.AspNetCore
         /// <param name="filter">The filter.</param>
         /// <returns>The services collection.</returns>
         public static IServiceCollection AddLoggingEntityFramework<TDbContext, TLog>(this IServiceCollection services,
-            Func<string, LogLevel, bool> filter = null)
+            Func<string, LogLevel, bool>? filter = null)
             where TDbContext : DbContext
             where TLog : LogEntry, new()
         {
@@ -128,7 +128,7 @@ namespace Unosquare.Swan.AspNetCore
         public static IApplicationBuilder UseBearerTokenAuthentication(this IApplicationBuilder app,
             TokenValidationParameters validationParameter,
             Func<IServiceProvider, string, string, string, string, Task<ClaimsIdentity>> identityResolver,
-            Func<ClaimsIdentity, Dictionary<string, object>, Task<Dictionary<string, object>>> bearerTokenResolver = null,
+            Func<ClaimsIdentity, Dictionary<string, object>, Task<Dictionary<string, object>>>? bearerTokenResolver = null,
             TimeSpan expiration = default,
             bool forceHttps = true)
         {
@@ -164,7 +164,7 @@ namespace Unosquare.Swan.AspNetCore
         /// <param name="fallbackPath">The fallback path.</param>
         /// <param name="ignoreCheck">The ignore check.</param>
         /// <returns>The application builder with the fallback.</returns>
-        public static IApplicationBuilder UseFallback(this IApplicationBuilder app, string fallbackPath = "/index.html", Func<PathString, bool> ignoreCheck = null)
+        public static IApplicationBuilder UseFallback(this IApplicationBuilder app, string fallbackPath = "/index.html", Func<PathString, bool>? ignoreCheck = null)
         {
             if (ignoreCheck == null)
                 ignoreCheck = (path) => path.StartsWithSegments("/api") == false;

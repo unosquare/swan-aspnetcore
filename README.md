@@ -1,12 +1,12 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/bcd1c58d7efe48818559805230db19c8)](https://app.codacy.com/app/UnosquareLabs/swan-aspnetcore?utm_source=github.com&utm_medium=referral&utm_content=unosquare/swan-aspnetcore&utm_campaign=Badge_Grade_Settings)
-[![Build Status](https://travis-ci.org/unosquare/swan-aspnetcore.svg?branch=master)](https://travis-ci.org/unosquare/swan-aspnetcore)
 [![Build status](https://ci.appveyor.com/api/projects/status/q408tg5jd9bm0jak/branch/master?svg=true)](https://ci.appveyor.com/project/geoperez/swan-aspnetcore/branch/master)
+![Buils status](https://github.com/unosquare/swan-aspnetcore/workflows/.NET%20Core%20CI/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/unosquare/swan-aspnetcore/badge.svg?branch=master)](https://coveralls.io/github/unosquare/swan-aspnetcore?branch=master)
-# <img src="https://github.com/unosquare/swan/raw/master/swan-logo-32.png"></img> Swan ASP.NET Core 2: Stuff We All Need
+
+# <img src="https://github.com/unosquare/swan/raw/master/swan-logo-32.png"></img> Swan ASP.NET Core 3: Stuff We All Need
 
 *:star: Please star this project if you find it useful!*
 
-A set of libraries to use with ASP.NET Core 2.2 applications. Also, includes a configure middleware and extension to setup your project. ASP.NET Core 2.2 came with a lot of changes, including authentication and authorization, here with Swan ASP.NET Core 2.2 is easy to configure and start working on your project.
+A set of libraries to use with ASP.NET Core 3.0 applications. Also, includes a configure middleware and extension to setup your project. ASP.NET Core 3.0 came with a lot of changes, including authentication and authorization, here with Swan ASP.NET Core 3.0 is easy to configure and start working on your project.
 
 NuGet Installation:
 -------------------
@@ -19,7 +19,7 @@ PM> Install-Package Unosquare.Swan.AspNetCore
 
 ## Use Cases
 
-Here we can find a very useful code to use in our project configuration. All of this you can use it in your Startup.cs file, see our [Sample Project](https://github.com/unosquare/swan-aspnetcore/tree/master/src/Unosquare.Swan.AspNetCore.Sample) for more reference.
+Here we can find a very useful code to use in our project configuration. All of this you can use it in your `Startup.cs` file, see our [Sample Project](https://github.com/unosquare/swan-aspnetcore/tree/master/src/Unosquare.Swan.AspNetCore.Sample) for more reference.
 
 ### Using Bearer Token Authentication
 
@@ -66,6 +66,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
 ### Using EntityFrameworkLogger
 
 The `EntityFrameworkLogger` represents a Logger based on Entity Framework and adds a Logging subsystem. It will help you log into your Database everything necessary to know what’s going on in your application. This logger is used in the `ConfigureServices` method of your Startup.cs file.
+
 With this you just add your configuration section and then add in the entity framework, your database context and the models that you use for log entries into your database, then you just pass the application services.
 
 ```csharp
@@ -80,7 +81,7 @@ public void ConfigureServices(IServiceCollection services)
 
 ### Using BusinessDbContext
 
-The BusinessDbContext run business rules when you save changes to the database. It's helpful because if you want to modify an entity every time you save changes to the database, you can create a controller to do that. Your Db Context must inheritance from the BusinessDbContext in order to have this functionality and then you can add, remove and check for controllers using your context.
+The `BusinessDbContext` run business rules when you save changes to the database. It's helpful because if you want to modify an entity every time you save changes to the database, you can create a controller to do that. Your Db Context must inheritance from the BusinessDbContext in order to have this functionality and then you can add, remove and check for controllers using your context.
 
 ```csharp
  public class SampleDbContext : BusinessDbContext
@@ -94,7 +95,7 @@ The BusinessDbContext run business rules when you save changes to the database. 
 
 ### AuditTrail
 
-[Audit Trails](https://github.com/unosquare/ef-enterpriseextensions) is a business rule to save the changes to any operation performed in a record. In other words, capture what change between any data saving. This operation is important in many systems and you can accomplish with these extensions easily. The AuditTrailController can be attached to your BusinessDbContext and setup which Entities will be recorded in the three CRUD actions supported, create, update and delete.
+Audit Trails is a business rule to save the changes to any operation performed in a record. In other words, capture what change between any data saving. This operation is important in many systems and you can accomplish with these extensions easily. The `AuditTrailController` can be attached to your `BusinessDbContext` and setup which Entities will be recorded in the three CRUD actions supported, create, update and delete.
 
 ```csharp
 public class SampleDbContext : BusinessDbContext
@@ -115,7 +116,7 @@ public class SampleDbContext : BusinessDbContext
 
 ### Additional Extension Methods
 
-Use the following extension methods to extend the ApplicationBuilder with helpful handlers.
+Use the following extension methods to extend the `ApplicationBuilder` with helpful handlers.
 
 #### The JsonExceptionHandler
 
