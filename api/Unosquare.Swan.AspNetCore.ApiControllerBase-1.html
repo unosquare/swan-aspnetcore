@@ -524,7 +524,7 @@ or not found response code (404).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; Query&lt;TEntity&gt;(Func&lt;IQueryable&lt;TEntity&gt;, IQueryable&gt; query)
+    <pre><code class="lang-csharp hljs">public IActionResult Query&lt;TEntity&gt;(Func&lt;IQueryable&lt;TEntity&gt;, IQueryable&gt; query)
     where TEntity : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -555,7 +555,7 @@ or not found response code (404).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td><span class="xref">IActionResult</span></td>
         <td><p>A task representing the query to the database.</p>
 </td>
       </tr>
