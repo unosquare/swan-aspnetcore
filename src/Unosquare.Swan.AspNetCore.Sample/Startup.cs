@@ -2,11 +2,9 @@
 {
     using Database;
     using Microsoft.AspNetCore.Builder;
-    using Microsoft.AspNetCore.Hosting;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
-    using Microsoft.Extensions.Logging;
     using Microsoft.IdentityModel.Tokens;
     using System;
     using System.Security.Claims;
@@ -51,22 +49,21 @@
 
             // Extension method to add Bearer authentication
             services.AddBearerTokenAuthentication(ValidationParameters);
-
-            // Add Authorization services
-            // Only for custome rules
-            // services.AddAuthorization();
-
-            services.AddOptions();
-            services.AddMvc();
+            
+            // Add framework services.
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app)
         {
             // Redirect anything without extension to index.html
             app.UseFallback();
             // Response an exception as JSON at error
             app.UseJsonExceptionHandler();
+
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
 
             // Use the bearer token provider and check Admin and Pass.word as valid credentials
             app.UseBearerTokenAuthentication(
@@ -76,7 +73,7 @@
                     var context = services.GetService<SampleDbContext>();
 
                     if (context != null && username != "Admin" || password != "Pass.word")
-                        return Task.FromResult<ClaimsIdentity>(null);
+                        return Task.FromResult<ClaimsIdentity?>(null);
 
                     var claim = new ClaimsIdentity("Bearer");
                     claim.AddClaim(new Claim(ClaimTypes.Name, username));
@@ -88,10 +85,15 @@
                     obj["test"] = "OK";
                     return Task.FromResult(obj);
                 }, forceHttps: false);
-
+            
+            app.UseRouting();
             app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-            app.UseMvc();
-            app.UseStaticFiles();
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });          
         }
     }   
 }
