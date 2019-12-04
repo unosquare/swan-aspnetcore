@@ -1,6 +1,6 @@
 ﻿namespace Swan.AspNetCore.Test.Mocks
 {
-    class BusinessRulesControllerTest : BusinessRulesController<BusinessDbContextMock>
+    internal class BusinessRulesControllerTest : BusinessRulesController<BusinessDbContextMock>
     {
         public BusinessRulesControllerTest(BusinessDbContextMock instance)
             : base(instance)
