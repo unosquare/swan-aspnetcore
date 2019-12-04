@@ -1,11 +1,11 @@
 ﻿using Swan.Formatters;
 using Microsoft.EntityFrameworkCore;
-using Unosquare.Swan.AspNetCore.Models;
+using Swan.AspNetCore.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Unosquare.Swan.AspNetCore
+namespace Swan.AspNetCore
 {
     /// <inheritdoc />
     /// <summary>

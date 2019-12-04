@@ -1,4 +1,4 @@
-﻿namespace Unosquare.Swan.AspNetCore.Test
+﻿namespace Swan.AspNetCore.Test
 {
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;

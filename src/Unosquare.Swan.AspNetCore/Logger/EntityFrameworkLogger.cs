@@ -1,17 +1,14 @@
-﻿using Swan;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Unosquare.Swan.AspNetCore.Models;
+using Swan.AspNetCore.Models;
 using System;
 using System.Collections.Concurrent;
 using System.Linq;
 using System.Threading.Tasks;
-using LogLevel = Microsoft.Extensions.Logging.LogLevel;
 
-namespace Unosquare.Swan.AspNetCore.Logger
+namespace Swan.AspNetCore.Logger
 {
     /// <summary>
     /// Represents a Logger using EntityFramework
@@ -20,13 +17,13 @@ namespace Unosquare.Swan.AspNetCore.Logger
     /// </summary>
     /// <typeparam name="TDbContext">The type of the database context.</typeparam>
     /// <typeparam name="TLog">The type of the log.</typeparam>
-    /// <seealso cref="ILogger" />
-    public class EntityFrameworkLogger<TDbContext, TLog> : ILogger
+    /// <seealso cref="Microsoft.Extensions.Logging.ILogger" />
+    public class EntityFrameworkLogger<TDbContext, TLog> : Microsoft.Extensions.Logging.ILogger
         where TLog : LogEntry, new()
         where TDbContext : DbContext
     {
         private readonly string _name;
-        private readonly Func<string, LogLevel, bool> _filter;
+        private readonly Func<string, Microsoft.Extensions.Logging.LogLevel, bool> _filter;
         private readonly IServiceProvider _services;
         private readonly ConcurrentQueue<TLog> _entryQueue = new ConcurrentQueue<TLog>();
 
@@ -36,7 +33,7 @@ namespace Unosquare.Swan.AspNetCore.Logger
         /// <param name="name">The name.</param>
         /// <param name="filter">The filter.</param>
         /// <param name="serviceProvider">The service provider.</param>
-        public EntityFrameworkLogger(string name, Func<string, LogLevel, bool>? filter, IServiceProvider serviceProvider)
+        public EntityFrameworkLogger(string name, Func<string, Microsoft.Extensions.Logging.LogLevel, bool>? filter, IServiceProvider serviceProvider)
         {
             _name = name;
             _filter = filter ?? GetFilter(serviceProvider.GetService<IOptions<EntityFrameworkLoggerOptions>>());
@@ -74,13 +71,13 @@ namespace Unosquare.Swan.AspNetCore.Logger
         }
 
         /// <inheritdoc />
-        public bool IsEnabled(LogLevel logLevel) => _filter(_name, logLevel);
-        
+        public bool IsEnabled(Microsoft.Extensions.Logging.LogLevel logLevel) => _filter(_name, logLevel);
+
         /// <inheritdoc />
         public IDisposable BeginScope<TState>(TState state) => new NoopDisposable();
-        
+
         /// <inheritdoc />
-        public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
+        public void Log<TState>(Microsoft.Extensions.Logging.LogLevel logLevel, Microsoft.Extensions.Logging.EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
         {
             if (_name.StartsWith("Microsoft.EntityFrameworkCore") || !IsEnabled(logLevel)) return;
 
@@ -134,13 +131,13 @@ namespace Unosquare.Swan.AspNetCore.Logger
             _entryQueue.Enqueue(log);
         }
 
-        private static bool GetFilter(EntityFrameworkLoggerOptions options, string category, LogLevel level)
+        private static bool GetFilter(EntityFrameworkLoggerOptions options, string category, Microsoft.Extensions.Logging.LogLevel level)
         {
             var filter = options.Filters?.Keys.FirstOrDefault(category.StartsWith);
-            return filter == null || (int) options.Filters![filter] <= (int) level;
+            return filter == null || (int)options.Filters![filter] <= (int)level;
         }
 
-        private Func<string, LogLevel, bool> GetFilter(IOptions<EntityFrameworkLoggerOptions> options)
+        private Func<string, Microsoft.Extensions.Logging.LogLevel, bool> GetFilter(IOptions<EntityFrameworkLoggerOptions> options)
         {
             if (options != null)
                 return (category, level) => GetFilter(options.Value, category, level);

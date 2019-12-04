@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <Copyright>Unosquare</Copyright>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -14,11 +14,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Unosquare.Swan.AspNetCore\Unosquare.Swan.AspNetCore.csproj" />
+    <ProjectReference Include="..\Unosquare.Swan.AspNetCore\Swan.AspNetCore.csproj" />
   </ItemGroup>
 
 </Project>

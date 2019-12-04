@@ -2,9 +2,9 @@
 using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Unosquare.Swan.AspNetCore.Sample.Database;
+using Swan.AspNetCore.Sample.Database;
 
-namespace Unosquare.Swan.AspNetCore.Sample.Controllers
+namespace Swan.AspNetCore.Sample.Controllers
 {
     [Authorize]
     [Route("api/[controller]")]

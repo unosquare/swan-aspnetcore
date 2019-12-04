@@ -1,4 +1,4 @@
-﻿namespace Unosquare.Swan.AspNetCore.Sample.Database
+﻿namespace Swan.AspNetCore.Sample.Database
 {
     using Microsoft.AspNetCore.Http;
     using Microsoft.EntityFrameworkCore;

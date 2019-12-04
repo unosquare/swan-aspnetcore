@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace Unosquare.Swan.AspNetCore.Sample.Migrations
+namespace Swan.AspNetCore.Sample.Migrations
 {
     public partial class Create_Tables : Migration
     {

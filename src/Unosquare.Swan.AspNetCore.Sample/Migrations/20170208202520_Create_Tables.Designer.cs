@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Unosquare.Swan.AspNetCore.Sample.Database;
+using Swan.AspNetCore.Sample.Database;
 
-namespace Unosquare.Swan.AspNetCore.Sample.Migrations
+namespace Swan.AspNetCore.Sample.Migrations
 {
     [DbContext(typeof(SampleDbContext))]
     [Migration("20170208202520_Create_Tables")]

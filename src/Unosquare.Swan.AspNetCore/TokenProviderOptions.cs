@@ -1,4 +1,4 @@
-﻿namespace Unosquare.Swan.AspNetCore
+﻿namespace Swan.AspNetCore
 {
     using Microsoft.IdentityModel.Tokens;
     using System;
@@ -20,12 +20,12 @@
         /// <summary>
         ///  The Issuer (iss) claim for generated tokens.
         /// </summary>
-        public string Issuer { get; set; }
+        public string? Issuer { get; set; }
 
         /// <summary>
         /// The Audience (aud) claim for the generated tokens.
         /// </summary>
-        public string Audience { get; set; }
+        public string? Audience { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether [force HTTPS].
@@ -57,7 +57,7 @@
         /// <summary>
         /// Resolves the claims from a user.
         /// </summary>
-        public Func<ClaimsIdentity, Task<Claim[]>> ClaimResolver { get; set; } = (identity) => Task.FromResult<Claim[]>(null);
+        public Func<ClaimsIdentity, Task<Claim[]?>> ClaimResolver { get; set; } = (identity) => Task.FromResult<Claim[]?>(null);
 
         /// <summary>
         /// Resolves a bearer token response.

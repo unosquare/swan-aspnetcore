@@ -1,4 +1,4 @@
-﻿namespace Unosquare.Swan.AspNetCore.Models
+﻿namespace Swan.AspNetCore.Models
 {
     using System;
     using System.ComponentModel.DataAnnotations;

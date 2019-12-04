@@ -1,9 +1,8 @@
-﻿namespace Unosquare.Swan.AspNetCore.Logger
+﻿namespace Swan.AspNetCore.Logger
 {
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Logging;
     using System;
-    using System.Collections.Generic;
     using Models;
 
     /// <summary>
@@ -38,16 +37,5 @@
         void IDisposable.Dispose()
         {
         }
-    }
-
-    /// <summary>
-    /// Represents the EF Logger options.
-    /// </summary>
-    public class EntityFrameworkLoggerOptions
-    {
-        /// <summary>
-        /// Gets or sets the filters.
-        /// </summary>
-        public IDictionary<string, LogLevel> Filters { get; set; }
     }
 }

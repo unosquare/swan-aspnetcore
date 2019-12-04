@@ -13,13 +13,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8F5E916E-BF63-4CD7-A5B1-B3BE03D6A1B2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unosquare.Swan.AspNetCore", "src\Unosquare.Swan.AspNetCore\Unosquare.Swan.AspNetCore.csproj", "{7F333A1D-E00C-4E41-83F9-63A75F9B835C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swan.AspNetCore", "src\Unosquare.Swan.AspNetCore\Swan.AspNetCore.csproj", "{7F333A1D-E00C-4E41-83F9-63A75F9B835C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unosquare.Swan.AspNetCore.Sample", "src\Unosquare.Swan.AspNetCore.Sample\Unosquare.Swan.AspNetCore.Sample.csproj", "{4A0B4934-91F7-4E85-9BF4-00F787BF6776}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swan.AspNetCore.Sample", "src\Unosquare.Swan.AspNetCore.Sample\Swan.AspNetCore.Sample.csproj", "{4A0B4934-91F7-4E85-9BF4-00F787BF6776}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{8380C700-8E9C-4E50-B8B4-8CB24A975562}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unosquare.Swan.AspNetCore.Test", "test\Unosquare.Swan.AspNetCore.Test\Unosquare.Swan.AspNetCore.Test.csproj", "{63D865CE-559F-464C-9D2B-7C9A261D41FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swan.AspNetCore.Test", "test\Unosquare.Swan.AspNetCore.Test\Swan.AspNetCore.Test.csproj", "{63D865CE-559F-464C-9D2B-7C9A261D41FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,4 +1,4 @@
-﻿namespace Unosquare.Swan.AspNetCore
+﻿namespace Swan.AspNetCore
 {
     using System;
 
@@ -73,7 +73,7 @@
         /// <value>
         /// The entity types.
         /// </value>
-        public Type[] EntityTypes { get; protected set; }
+        public Type[]? EntityTypes { get; protected set; }
 
         /// <summary>
         /// Gets or sets the action.

@@ -1,4 +1,4 @@
-﻿namespace Unosquare.Swan.AspNetCore
+﻿namespace Swan.AspNetCore
 {
     using System.Collections.Generic;
     using System.Threading;

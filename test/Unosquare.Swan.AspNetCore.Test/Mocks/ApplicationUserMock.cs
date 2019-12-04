@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Unosquare.Swan.AspNetCore.Models;
+using Swan.AspNetCore.Models;
 
-namespace Unosquare.Swan.AspNetCore.Test.Mocks
+namespace Swan.AspNetCore.Test.Mocks
 {
     internal class ApplicationUserMock
     {

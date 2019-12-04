@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Swan;
 using Swan.Formatters;
 using System;
 using System.Collections.Generic;
@@ -10,7 +9,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace Unosquare.Swan.AspNetCore
+namespace Swan.AspNetCore
 {
     /// <summary>
     /// Token generator middleware component which is added to an HTTP pipeline.
@@ -143,7 +142,7 @@ namespace Unosquare.Swan.AspNetCore
         private async Task GenerateToken(HttpContext context)
         {
             JwtSecurityToken jwt;
-            ClaimsIdentity identity = null;
+            ClaimsIdentity? identity = null;
             var now = DateTime.UtcNow;
             var grantType = context.Request.Form["grant_type"];
 

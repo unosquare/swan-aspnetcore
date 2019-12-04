@@ -1,4 +1,4 @@
-﻿namespace Unosquare.Swan.AspNetCore
+﻿namespace Swan.AspNetCore
 {
     using Microsoft.AspNetCore.Authentication;
     using Microsoft.AspNetCore.Http;

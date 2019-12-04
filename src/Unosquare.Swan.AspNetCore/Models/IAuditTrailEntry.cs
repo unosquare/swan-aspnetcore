@@ -1,4 +1,4 @@
-﻿namespace Unosquare.Swan.AspNetCore.Models
+﻿namespace Swan.AspNetCore.Models
 {
     using System;
 
@@ -37,7 +37,7 @@
         /// <value>
         /// The json body.
         /// </value>
-        string JsonBody { get; set; }
+        string? JsonBody { get; set; }
 
         /// <summary>
         /// Gets or sets the date created.

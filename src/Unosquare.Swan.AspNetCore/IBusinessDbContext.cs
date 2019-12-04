@@ -1,4 +1,4 @@
-﻿namespace Unosquare.Swan.AspNetCore
+﻿namespace Swan.AspNetCore
 {
     /// <summary>
     /// Creates a new DbContext with support to run BusinessControllers.

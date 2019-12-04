@@ -1,4 +1,4 @@
-﻿namespace Unosquare.Swan.AspNetCore.Sample.Database
+﻿namespace Swan.AspNetCore.Sample.Database
 {
     using System.ComponentModel.DataAnnotations;
 
@@ -7,6 +7,6 @@
         [Key]
         public int ProductID { get; set; }
 
-        public string Name { get; set; }
+        public string? Name { get; set; }
     }
 }
