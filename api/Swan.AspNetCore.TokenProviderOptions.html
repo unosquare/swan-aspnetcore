@@ -76,12 +76,12 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Unosquare.Swan.AspNetCore.TokenProviderOptions">
+            <article class="content wrap" id="_content" data-uid="Swan.AspNetCore.TokenProviderOptions">
   
   
-  <h1 id="Unosquare_Swan_AspNetCore_TokenProviderOptions" data-uid="Unosquare.Swan.AspNetCore.TokenProviderOptions" class="text-break">Class TokenProviderOptions
+  <h1 id="Swan_AspNetCore_TokenProviderOptions" data-uid="Swan.AspNetCore.TokenProviderOptions" class="text-break">Class TokenProviderOptions
   </h1>
-  <div class="markdown level0 summary"><p>Provides options for <a class="xref" href="Unosquare.Swan.AspNetCore.TokenProviderMiddleware.html">TokenProviderMiddleware</a>.</p>
+  <div class="markdown level0 summary"><p>Provides options for <a class="xref" href="Swan.AspNetCore.TokenProviderMiddleware.html">TokenProviderMiddleware</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -113,8 +113,8 @@
       <span class="xref">System.Object.MemberwiseClone()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Unosquare.Swan.AspNetCore.html">Unosquare.Swan.AspNetCore</a></h6>
-  <h5 id="Unosquare_Swan_AspNetCore_TokenProviderOptions_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Swan.AspNetCore.html">Swan.AspNetCore</a></h6>
+  <h5 id="Swan_AspNetCore_TokenProviderOptions_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public sealed class TokenProviderOptions</code></pre>
   </div>
@@ -122,8 +122,8 @@
   </h3>
   
   
-  <a id="Unosquare_Swan_AspNetCore_TokenProviderOptions_Audience_" data-uid="Unosquare.Swan.AspNetCore.TokenProviderOptions.Audience*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_TokenProviderOptions_Audience" data-uid="Unosquare.Swan.AspNetCore.TokenProviderOptions.Audience">Audience</h4>
+  <a id="Swan_AspNetCore_TokenProviderOptions_Audience_" data-uid="Swan.AspNetCore.TokenProviderOptions.Audience*"></a>
+  <h4 id="Swan_AspNetCore_TokenProviderOptions_Audience" data-uid="Swan.AspNetCore.TokenProviderOptions.Audience">Audience</h4>
   <div class="markdown level1 summary"><p>The Audience (aud) claim for the generated tokens.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -148,8 +148,8 @@
   </table>
   
   
-  <a id="Unosquare_Swan_AspNetCore_TokenProviderOptions_BearerTokenResolver_" data-uid="Unosquare.Swan.AspNetCore.TokenProviderOptions.BearerTokenResolver*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_TokenProviderOptions_BearerTokenResolver" data-uid="Unosquare.Swan.AspNetCore.TokenProviderOptions.BearerTokenResolver">BearerTokenResolver</h4>
+  <a id="Swan_AspNetCore_TokenProviderOptions_BearerTokenResolver_" data-uid="Swan.AspNetCore.TokenProviderOptions.BearerTokenResolver*"></a>
+  <h4 id="Swan_AspNetCore_TokenProviderOptions_BearerTokenResolver" data-uid="Swan.AspNetCore.TokenProviderOptions.BearerTokenResolver">BearerTokenResolver</h4>
   <div class="markdown level1 summary"><p>Resolves a bearer token response.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -167,15 +167,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Security.Claims.ClaimsIdentity</span>, <span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;, <span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">ClaimsIdentity</span>, <span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;, <span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Unosquare_Swan_AspNetCore_TokenProviderOptions_ClaimResolver_" data-uid="Unosquare.Swan.AspNetCore.TokenProviderOptions.ClaimResolver*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_TokenProviderOptions_ClaimResolver" data-uid="Unosquare.Swan.AspNetCore.TokenProviderOptions.ClaimResolver">ClaimResolver</h4>
+  <a id="Swan_AspNetCore_TokenProviderOptions_ClaimResolver_" data-uid="Swan.AspNetCore.TokenProviderOptions.ClaimResolver*"></a>
+  <h4 id="Swan_AspNetCore_TokenProviderOptions_ClaimResolver" data-uid="Swan.AspNetCore.TokenProviderOptions.ClaimResolver">ClaimResolver</h4>
   <div class="markdown level1 summary"><p>Resolves the claims from a user.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -193,15 +193,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Security.Claims.ClaimsIdentity</span>, <span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Security.Claims.Claim</span>[]&gt;&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">ClaimsIdentity</span>, <span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Claim</span>[]&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Unosquare_Swan_AspNetCore_TokenProviderOptions_Expiration_" data-uid="Unosquare.Swan.AspNetCore.TokenProviderOptions.Expiration*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_TokenProviderOptions_Expiration" data-uid="Unosquare.Swan.AspNetCore.TokenProviderOptions.Expiration">Expiration</h4>
+  <a id="Swan_AspNetCore_TokenProviderOptions_Expiration_" data-uid="Swan.AspNetCore.TokenProviderOptions.Expiration*"></a>
+  <h4 id="Swan_AspNetCore_TokenProviderOptions_Expiration" data-uid="Swan.AspNetCore.TokenProviderOptions.Expiration">Expiration</h4>
   <div class="markdown level1 summary"><p>The expiration time for the generated tokens.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -224,13 +224,13 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="Unosquare_Swan_AspNetCore_TokenProviderOptions_Expiration_remarks">Remarks</h5>
+  <h5 id="Swan_AspNetCore_TokenProviderOptions_Expiration_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>The default is five minutes (300 seconds).</p>
 </div>
   
   
-  <a id="Unosquare_Swan_AspNetCore_TokenProviderOptions_ForceHttps_" data-uid="Unosquare.Swan.AspNetCore.TokenProviderOptions.ForceHttps*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_TokenProviderOptions_ForceHttps" data-uid="Unosquare.Swan.AspNetCore.TokenProviderOptions.ForceHttps">ForceHttps</h4>
+  <a id="Swan_AspNetCore_TokenProviderOptions_ForceHttps_" data-uid="Swan.AspNetCore.TokenProviderOptions.ForceHttps*"></a>
+  <h4 id="Swan_AspNetCore_TokenProviderOptions_ForceHttps" data-uid="Swan.AspNetCore.TokenProviderOptions.ForceHttps">ForceHttps</h4>
   <div class="markdown level1 summary"><p>Gets or sets a value indicating whether [force HTTPS].</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -255,8 +255,8 @@
   </table>
   
   
-  <a id="Unosquare_Swan_AspNetCore_TokenProviderOptions_IdentityResolver_" data-uid="Unosquare.Swan.AspNetCore.TokenProviderOptions.IdentityResolver*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_TokenProviderOptions_IdentityResolver" data-uid="Unosquare.Swan.AspNetCore.TokenProviderOptions.IdentityResolver">IdentityResolver</h4>
+  <a id="Swan_AspNetCore_TokenProviderOptions_IdentityResolver_" data-uid="Swan.AspNetCore.TokenProviderOptions.IdentityResolver*"></a>
+  <h4 id="Swan_AspNetCore_TokenProviderOptions_IdentityResolver" data-uid="Swan.AspNetCore.TokenProviderOptions.IdentityResolver">IdentityResolver</h4>
   <div class="markdown level1 summary"><p>Resolves a user identity given a username and password.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -274,15 +274,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.IServiceProvider</span>, <span class="xref">System.String</span>, <span class="xref">System.String</span>, <span class="xref">System.String</span>, <span class="xref">System.String</span>, <span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Security.Claims.ClaimsIdentity</span>&gt;&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.IServiceProvider</span>, <span class="xref">System.String</span>, <span class="xref">System.String</span>, <span class="xref">System.String</span>, <span class="xref">System.String</span>, <span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">ClaimsIdentity</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Unosquare_Swan_AspNetCore_TokenProviderOptions_Issuer_" data-uid="Unosquare.Swan.AspNetCore.TokenProviderOptions.Issuer*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_TokenProviderOptions_Issuer" data-uid="Unosquare.Swan.AspNetCore.TokenProviderOptions.Issuer">Issuer</h4>
+  <a id="Swan_AspNetCore_TokenProviderOptions_Issuer_" data-uid="Swan.AspNetCore.TokenProviderOptions.Issuer*"></a>
+  <h4 id="Swan_AspNetCore_TokenProviderOptions_Issuer" data-uid="Swan.AspNetCore.TokenProviderOptions.Issuer">Issuer</h4>
   <div class="markdown level1 summary"><p>The Issuer (iss) claim for generated tokens.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -307,8 +307,8 @@
   </table>
   
   
-  <a id="Unosquare_Swan_AspNetCore_TokenProviderOptions_NonceGenerator_" data-uid="Unosquare.Swan.AspNetCore.TokenProviderOptions.NonceGenerator*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_TokenProviderOptions_NonceGenerator" data-uid="Unosquare.Swan.AspNetCore.TokenProviderOptions.NonceGenerator">NonceGenerator</h4>
+  <a id="Swan_AspNetCore_TokenProviderOptions_NonceGenerator_" data-uid="Swan.AspNetCore.TokenProviderOptions.NonceGenerator*"></a>
+  <h4 id="Swan_AspNetCore_TokenProviderOptions_NonceGenerator" data-uid="Swan.AspNetCore.TokenProviderOptions.NonceGenerator">NonceGenerator</h4>
   <div class="markdown level1 summary"><p>Generates a random value (nonce) for each generated token.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -331,13 +331,13 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="Unosquare_Swan_AspNetCore_TokenProviderOptions_NonceGenerator_remarks">Remarks</h5>
+  <h5 id="Swan_AspNetCore_TokenProviderOptions_NonceGenerator_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>The default nonce is a random GUID.</p>
 </div>
   
   
-  <a id="Unosquare_Swan_AspNetCore_TokenProviderOptions_Path_" data-uid="Unosquare.Swan.AspNetCore.TokenProviderOptions.Path*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_TokenProviderOptions_Path" data-uid="Unosquare.Swan.AspNetCore.TokenProviderOptions.Path">Path</h4>
+  <a id="Swan_AspNetCore_TokenProviderOptions_Path_" data-uid="Swan.AspNetCore.TokenProviderOptions.Path*"></a>
+  <h4 id="Swan_AspNetCore_TokenProviderOptions_Path" data-uid="Swan.AspNetCore.TokenProviderOptions.Path">Path</h4>
   <div class="markdown level1 summary"><p>The relative request path to listen on.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -360,13 +360,13 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="Unosquare_Swan_AspNetCore_TokenProviderOptions_Path_remarks">Remarks</h5>
+  <h5 id="Swan_AspNetCore_TokenProviderOptions_Path_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>The default path is <code>/api/token</code>.</p>
 </div>
   
   
-  <a id="Unosquare_Swan_AspNetCore_TokenProviderOptions_SigningCredentials_" data-uid="Unosquare.Swan.AspNetCore.TokenProviderOptions.SigningCredentials*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_TokenProviderOptions_SigningCredentials" data-uid="Unosquare.Swan.AspNetCore.TokenProviderOptions.SigningCredentials">SigningCredentials</h4>
+  <a id="Swan_AspNetCore_TokenProviderOptions_SigningCredentials_" data-uid="Swan.AspNetCore.TokenProviderOptions.SigningCredentials*"></a>
+  <h4 id="Swan_AspNetCore_TokenProviderOptions_SigningCredentials" data-uid="Swan.AspNetCore.TokenProviderOptions.SigningCredentials">SigningCredentials</h4>
   <div class="markdown level1 summary"><p>The signing key to use when generating tokens.</p>
 </div>
   <div class="markdown level1 conceptual"></div>

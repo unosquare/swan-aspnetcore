@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IBusinessDbContext
+    <title>Class AuthenticateSchemeMiddleware
    | Unosquare SWAN ASPNetCore </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IBusinessDbContext
+    <meta name="title" content="Class AuthenticateSchemeMiddleware
    | Unosquare SWAN ASPNetCore ">
     <meta name="generator" content="docfx 2.48.1.0">
     
@@ -76,31 +76,60 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Unosquare.Swan.AspNetCore.IBusinessDbContext">
+            <article class="content wrap" id="_content" data-uid="Swan.AspNetCore.AuthenticateSchemeMiddleware">
   
   
-  <h1 id="Unosquare_Swan_AspNetCore_IBusinessDbContext" data-uid="Unosquare.Swan.AspNetCore.IBusinessDbContext" class="text-break">Interface IBusinessDbContext
+  <h1 id="Swan_AspNetCore_AuthenticateSchemeMiddleware" data-uid="Swan.AspNetCore.AuthenticateSchemeMiddleware" class="text-break">Class AuthenticateSchemeMiddleware
   </h1>
-  <div class="markdown level0 summary"><p>Creates a new DbContext with support to run BusinessControllers.</p>
+  <div class="markdown level0 summary"><p>Represents the authenticate scheme to the middleware. </p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Unosquare.Swan.AspNetCore.html">Unosquare.Swan.AspNetCore</a></h6>
-  <h5 id="Unosquare_Swan_AspNetCore_IBusinessDbContext_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IBusinessDbContext</code></pre>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">AuthenticateSchemeMiddleware</span></div>
   </div>
-  <h3 id="methods">Methods
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Swan.AspNetCore.html">Swan.AspNetCore</a></h6>
+  <h5 id="Swan_AspNetCore_AuthenticateSchemeMiddleware_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AuthenticateSchemeMiddleware</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
   </h3>
   
   
-  <a id="Unosquare_Swan_AspNetCore_IBusinessDbContext_AddController_" data-uid="Unosquare.Swan.AspNetCore.IBusinessDbContext.AddController*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_IBusinessDbContext_AddController_Unosquare_Swan_AspNetCore_IBusinessRulesController_" data-uid="Unosquare.Swan.AspNetCore.IBusinessDbContext.AddController(Unosquare.Swan.AspNetCore.IBusinessRulesController)">AddController(IBusinessRulesController)</h4>
-  <div class="markdown level1 summary"><p>Adds the controller.</p>
+  <a id="Swan_AspNetCore_AuthenticateSchemeMiddleware__ctor_" data-uid="Swan.AspNetCore.AuthenticateSchemeMiddleware.#ctor*"></a>
+  <h4 id="Swan_AspNetCore_AuthenticateSchemeMiddleware__ctor_RequestDelegate_System_String_" data-uid="Swan.AspNetCore.AuthenticateSchemeMiddleware.#ctor(RequestDelegate,System.String)">AuthenticateSchemeMiddleware(RequestDelegate, String)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Swan.AspNetCore.AuthenticateSchemeMiddleware.html">AuthenticateSchemeMiddleware</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void AddController(IBusinessRulesController controller)</code></pre>
+    <pre><code class="lang-csharp hljs">public AuthenticateSchemeMiddleware(RequestDelegate next, string scheme)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -113,23 +142,47 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unosquare.Swan.AspNetCore.IBusinessRulesController.html">IBusinessRulesController</a></td>
-        <td><span class="parametername">controller</span></td>
-        <td><p>The controller.</p>
+        <td><span class="xref">RequestDelegate</span></td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">scheme</span></td>
+        <td><p>The scheme.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p>scheme.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
   
   
-  <a id="Unosquare_Swan_AspNetCore_IBusinessDbContext_ContainsController_" data-uid="Unosquare.Swan.AspNetCore.IBusinessDbContext.ContainsController*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_IBusinessDbContext_ContainsController_Unosquare_Swan_AspNetCore_IBusinessRulesController_" data-uid="Unosquare.Swan.AspNetCore.IBusinessDbContext.ContainsController(Unosquare.Swan.AspNetCore.IBusinessRulesController)">ContainsController(IBusinessRulesController)</h4>
-  <div class="markdown level1 summary"><p>Determines whether the specified controller contains controller.</p>
+  <a id="Swan_AspNetCore_AuthenticateSchemeMiddleware_Invoke_" data-uid="Swan.AspNetCore.AuthenticateSchemeMiddleware.Invoke*"></a>
+  <h4 id="Swan_AspNetCore_AuthenticateSchemeMiddleware_Invoke_HttpContext_" data-uid="Swan.AspNetCore.AuthenticateSchemeMiddleware.Invoke(HttpContext)">Invoke(HttpContext)</h4>
+  <div class="markdown level1 summary"><p>Invokes the specified HTTP context.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool ContainsController(IBusinessRulesController controller)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task Invoke(HttpContext httpContext)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -142,9 +195,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Unosquare.Swan.AspNetCore.IBusinessRulesController.html">IBusinessRulesController</a></td>
-        <td><span class="parametername">controller</span></td>
-        <td><p>The controller.</p>
+        <td><span class="xref">HttpContext</span></td>
+        <td><span class="parametername">httpContext</span></td>
+        <td><p>The HTTP context.</p>
 </td>
       </tr>
     </tbody>
@@ -159,37 +212,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><p><code>true</code> if the specified controller contains controller; otherwise, <code>false</code>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Unosquare_Swan_AspNetCore_IBusinessDbContext_RemoveController_" data-uid="Unosquare.Swan.AspNetCore.IBusinessDbContext.RemoveController*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_IBusinessDbContext_RemoveController_Unosquare_Swan_AspNetCore_IBusinessRulesController_" data-uid="Unosquare.Swan.AspNetCore.IBusinessDbContext.RemoveController(Unosquare.Swan.AspNetCore.IBusinessRulesController)">RemoveController(IBusinessRulesController)</h4>
-  <div class="markdown level1 summary"><p>Removes the controller.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void RemoveController(IBusinessRulesController controller)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Unosquare.Swan.AspNetCore.IBusinessRulesController.html">IBusinessRulesController</a></td>
-        <td><span class="parametername">controller</span></td>
-        <td><p>The controller.</p>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>The HTTP Context with the authenticate scheme.</p>
 </td>
       </tr>
     </tbody>

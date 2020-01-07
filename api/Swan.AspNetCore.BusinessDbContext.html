@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class EntityFrameworkLogger&lt;TDbContext, TLog&gt;
+    <title>Class BusinessDbContext
    | Unosquare SWAN ASPNetCore </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class EntityFrameworkLogger&lt;TDbContext, TLog&gt;
+    <meta name="title" content="Class BusinessDbContext
    | Unosquare SWAN ASPNetCore ">
     <meta name="generator" content="docfx 2.48.1.0">
     
@@ -76,58 +76,40 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger`2">
+            <article class="content wrap" id="_content" data-uid="Swan.AspNetCore.BusinessDbContext">
   
   
-  <h1 id="Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLogger_2" data-uid="Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger`2" class="text-break">Class EntityFrameworkLogger&lt;TDbContext, TLog&gt;
+  <h1 id="Swan_AspNetCore_BusinessDbContext" data-uid="Swan.AspNetCore.BusinessDbContext" class="text-break">Class BusinessDbContext
   </h1>
-  <div class="markdown level0 summary"><p>Represents a Logger using EntityFramework</p>
-<p>Based on <a href="https://github.com/staff0rd/entityframework-logging">https://github.com/staff0rd/entityframework-logging</a>.</p>
+  <div class="markdown level0 summary"><p>Represents a abstract class to create DbContext using Business Rules.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">EntityFrameworkLogger&lt;TDbContext, TLog&gt;</span></div>
+    <div class="level1"><span class="xref">BusinessDbContext</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Unosquare.Swan.AspNetCore.Logger.html">Unosquare.Swan.AspNetCore.Logger</a></h6>
-  <h5 id="Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLogger_2_syntax">Syntax</h5>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Swan.AspNetCore.IBusinessDbContext.html">IBusinessDbContext</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Swan.AspNetCore.html">Swan.AspNetCore</a></h6>
+  <h5 id="Swan_AspNetCore_BusinessDbContext_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class EntityFrameworkLogger&lt;TDbContext, TLog&gt; : ILogger where TDbContext : DbContext where TLog : LogEntry, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class BusinessDbContext : DbContext, IBusinessDbContext</code></pre>
   </div>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TDbContext</span></td>
-        <td><p>The type of the database context.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TLog</span></td>
-        <td><p>The type of the log.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="constructors">Constructors
   </h3>
   
   
-  <a id="Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLogger_2__ctor_" data-uid="Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger`2.#ctor*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLogger_2__ctor_System_String_System_Func_System_String_System_LogLevel_System_Boolean__System_IServiceProvider_" data-uid="Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger`2.#ctor(System.String,System.Func{System.String,System.LogLevel,System.Boolean},System.IServiceProvider)">EntityFrameworkLogger(String, Func&lt;String, LogLevel, Boolean&gt;, IServiceProvider)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger-2.html">EntityFrameworkLogger&lt;TDbContext, TLog&gt;</a> class.</p>
+  <a id="Swan_AspNetCore_BusinessDbContext__ctor_" data-uid="Swan.AspNetCore.BusinessDbContext.#ctor*"></a>
+  <h4 id="Swan_AspNetCore_BusinessDbContext__ctor_DbContextOptions_" data-uid="Swan.AspNetCore.BusinessDbContext.#ctor(DbContextOptions)">BusinessDbContext(DbContextOptions)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Swan.AspNetCore.BusinessDbContext.html">BusinessDbContext</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EntityFrameworkLogger(string name, Func&lt;string, LogLevel, bool&gt; filter, IServiceProvider serviceProvider)</code></pre>
+    <pre><code class="lang-csharp hljs">protected BusinessDbContext(DbContextOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -140,21 +122,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-        <td><p>The name.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.LogLevel</span>, <span class="xref">System.Boolean</span>&gt;</td>
-        <td><span class="parametername">filter</span></td>
-        <td><p>The filter.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.IServiceProvider</span></td>
-        <td><span class="parametername">serviceProvider</span></td>
-        <td><p>The service provider.</p>
+        <td><span class="xref">DbContextOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The database connection.</p>
 </td>
       </tr>
     </tbody>
@@ -163,13 +133,14 @@
   </h3>
   
   
-  <a id="Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLogger_2_BeginScope_" data-uid="Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger`2.BeginScope*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLogger_2_BeginScope__1___0_" data-uid="Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger`2.BeginScope``1(``0)">BeginScope&lt;TState&gt;(TState)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Swan_AspNetCore_BusinessDbContext_AddController_" data-uid="Swan.AspNetCore.BusinessDbContext.AddController*"></a>
+  <h4 id="Swan_AspNetCore_BusinessDbContext_AddController_Swan_AspNetCore_IBusinessRulesController_" data-uid="Swan.AspNetCore.BusinessDbContext.AddController(Swan.AspNetCore.IBusinessRulesController)">AddController(IBusinessRulesController)</h4>
+  <div class="markdown level1 summary"><p>Adds the controller.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IDisposable BeginScope&lt;TState&gt;(TState state)</code></pre>
+    <pre><code class="lang-csharp hljs">public void AddController(IBusinessRulesController controller)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -182,51 +153,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TState</span></td>
-        <td><span class="parametername">state</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IDisposable</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TState</span></td>
-        <td></td>
+        <td><a class="xref" href="Swan.AspNetCore.IBusinessRulesController.html">IBusinessRulesController</a></td>
+        <td><span class="parametername">controller</span></td>
+        <td><p>The controller.</p>
+</td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLogger_2_IsEnabled_" data-uid="Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger`2.IsEnabled*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLogger_2_IsEnabled_System_LogLevel_" data-uid="Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger`2.IsEnabled(System.LogLevel)">IsEnabled(LogLevel)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Swan_AspNetCore_BusinessDbContext_ContainsController_" data-uid="Swan.AspNetCore.BusinessDbContext.ContainsController*"></a>
+  <h4 id="Swan_AspNetCore_BusinessDbContext_ContainsController_Swan_AspNetCore_IBusinessRulesController_" data-uid="Swan.AspNetCore.BusinessDbContext.ContainsController(Swan.AspNetCore.IBusinessRulesController)">ContainsController(IBusinessRulesController)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified controller contains controller.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsEnabled(LogLevel logLevel)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool ContainsController(IBusinessRulesController controller)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -239,9 +182,10 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.LogLevel</span></td>
-        <td><span class="parametername">logLevel</span></td>
-        <td></td>
+        <td><a class="xref" href="Swan.AspNetCore.IBusinessRulesController.html">IBusinessRulesController</a></td>
+        <td><span class="parametername">controller</span></td>
+        <td><p>The controller.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -256,19 +200,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p><code>true</code> if the specified controller contains controller; otherwise, <code>false</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLogger_2_Log_" data-uid="Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger`2.Log*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_Logger_EntityFrameworkLogger_2_Log__1_System_LogLevel_EventId___0_System_Exception_System_Func___0_System_Exception_System_String__" data-uid="Unosquare.Swan.AspNetCore.Logger.EntityFrameworkLogger`2.Log``1(System.LogLevel,EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})">Log&lt;TState&gt;(LogLevel, EventId, TState, Exception, Func&lt;TState, Exception, String&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Swan_AspNetCore_BusinessDbContext_RemoveController_" data-uid="Swan.AspNetCore.BusinessDbContext.RemoveController*"></a>
+  <h4 id="Swan_AspNetCore_BusinessDbContext_RemoveController_Swan_AspNetCore_IBusinessRulesController_" data-uid="Swan.AspNetCore.BusinessDbContext.RemoveController(Swan.AspNetCore.IBusinessRulesController)">RemoveController(IBusinessRulesController)</h4>
+  <div class="markdown level1 summary"><p>Removes the controller.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Log&lt;TState&gt;(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func&lt;TState, Exception, string&gt; formatter)</code></pre>
+    <pre><code class="lang-csharp hljs">public void RemoveController(IBusinessRulesController controller)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -281,47 +227,99 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.LogLevel</span></td>
-        <td><span class="parametername">logLevel</span></td>
-        <td></td>
+        <td><a class="xref" href="Swan.AspNetCore.IBusinessRulesController.html">IBusinessRulesController</a></td>
+        <td><span class="parametername">controller</span></td>
+        <td><p>The controller.</p>
+</td>
       </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Swan_AspNetCore_BusinessDbContext_RunBusinessRules_" data-uid="Swan.AspNetCore.BusinessDbContext.RunBusinessRules*"></a>
+  <h4 id="Swan_AspNetCore_BusinessDbContext_RunBusinessRules" data-uid="Swan.AspNetCore.BusinessDbContext.RunBusinessRules">RunBusinessRules()</h4>
+  <div class="markdown level1 summary"><p>Runs the business rules.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RunBusinessRules()</code></pre>
+  </div>
+  
+  
+  <a id="Swan_AspNetCore_BusinessDbContext_SaveChanges_" data-uid="Swan.AspNetCore.BusinessDbContext.SaveChanges*"></a>
+  <h4 id="Swan_AspNetCore_BusinessDbContext_SaveChanges" data-uid="Swan.AspNetCore.BusinessDbContext.SaveChanges">SaveChanges()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int SaveChanges()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td><span class="xref">EventId</span></td>
-        <td><span class="parametername">eventId</span></td>
-        <td></td>
+        <th>Type</th>
+        <th>Description</th>
       </tr>
+    </thead>
+    <tbody>
       <tr>
-        <td><span class="xref">TState</span></td>
-        <td><span class="parametername">state</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Exception</span></td>
-        <td><span class="parametername">exception</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Func</span>&lt;TState, <span class="xref">System.Exception</span>, <span class="xref">System.String</span>&gt;</td>
-        <td><span class="parametername">formatter</span></td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="typeParameters">Type Parameters</h5>
+  
+  
+  <a id="Swan_AspNetCore_BusinessDbContext_SaveChangesAsync_" data-uid="Swan.AspNetCore.BusinessDbContext.SaveChangesAsync*"></a>
+  <h4 id="Swan_AspNetCore_BusinessDbContext_SaveChangesAsync_System_Threading_CancellationToken_" data-uid="Swan.AspNetCore.BusinessDbContext.SaveChangesAsync(System.Threading.CancellationToken)">SaveChangesAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;int&gt; SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
+        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TState</span></td>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Swan.AspNetCore.IBusinessDbContext.html">IBusinessDbContext</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Swan.AspNetCore.IBusinessDbContext.html">IBusinessDbContext</a></div>
+  </div>
 
 <h3 id="disqus_thread">Comments</h3>
 <script>

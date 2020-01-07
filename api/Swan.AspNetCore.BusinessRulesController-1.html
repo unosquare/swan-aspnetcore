@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IAuditTrailEntry
+    <title>Class BusinessRulesController&lt;TDbContext&gt;
    | Unosquare SWAN ASPNetCore </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IAuditTrailEntry
+    <meta name="title" content="Class BusinessRulesController&lt;TDbContext&gt;
    | Unosquare SWAN ASPNetCore ">
     <meta name="generator" content="docfx 2.48.1.0">
     
@@ -76,31 +76,112 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry">
+            <article class="content wrap" id="_content" data-uid="Swan.AspNetCore.BusinessRulesController`1">
   
   
-  <h1 id="Unosquare_Swan_AspNetCore_Models_IAuditTrailEntry" data-uid="Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry" class="text-break">Interface IAuditTrailEntry
+  <h1 id="Swan_AspNetCore_BusinessRulesController_1" data-uid="Swan.AspNetCore.BusinessRulesController`1" class="text-break">Class BusinessRulesController&lt;TDbContext&gt;
   </h1>
-  <div class="markdown level0 summary"><p>Represents an AuditTrail Entry.</p>
+  <div class="markdown level0 summary"><p>Represent the controller of the business rules.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Unosquare.Swan.AspNetCore.Models.html">Unosquare.Swan.AspNetCore.Models</a></h6>
-  <h5 id="Unosquare_Swan_AspNetCore_Models_IAuditTrailEntry_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IAuditTrailEntry</code></pre>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">BusinessRulesController&lt;TDbContext&gt;</span></div>
+      <div class="level2"><a class="xref" href="Swan.AspNetCore.AuditTrailController-2.html">AuditTrailController&lt;TDbContext, TEntity&gt;</a></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Swan.AspNetCore.IBusinessRulesController.html">IBusinessRulesController</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Swan.AspNetCore.html">Swan.AspNetCore</a></h6>
+  <h5 id="Swan_AspNetCore_BusinessRulesController_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class BusinessRulesController&lt;TDbContext&gt; : IBusinessRulesController where TDbContext : DbContext</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TDbContext</span></td>
+        <td><p>The type of database.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Swan_AspNetCore_BusinessRulesController_1__ctor_" data-uid="Swan.AspNetCore.BusinessRulesController`1.#ctor*"></a>
+  <h4 id="Swan_AspNetCore_BusinessRulesController_1__ctor__0_" data-uid="Swan.AspNetCore.BusinessRulesController`1.#ctor(`0)">BusinessRulesController(TDbContext)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Swan.AspNetCore.BusinessRulesController-1.html">BusinessRulesController&lt;TDbContext&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BusinessRulesController(TDbContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TDbContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
   
-  <a id="Unosquare_Swan_AspNetCore_Models_IAuditTrailEntry_Action_" data-uid="Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.Action*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_Models_IAuditTrailEntry_Action" data-uid="Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.Action">Action</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the action.</p>
+  <a id="Swan_AspNetCore_BusinessRulesController_1_Context_" data-uid="Swan.AspNetCore.BusinessRulesController`1.Context*"></a>
+  <h4 id="Swan_AspNetCore_BusinessRulesController_1_Context" data-uid="Swan.AspNetCore.BusinessRulesController`1.Context">Context</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the context.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Action { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public TDbContext Context { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -112,120 +193,33 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>The action.</p>
+        <td><span class="xref">TDbContext</span></td>
+        <td><p>The context.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
   
   
-  <a id="Unosquare_Swan_AspNetCore_Models_IAuditTrailEntry_DateCreated_" data-uid="Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.DateCreated*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_Models_IAuditTrailEntry_DateCreated" data-uid="Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.DateCreated">DateCreated</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the date created.</p>
+  <a id="Swan_AspNetCore_BusinessRulesController_1_RunBusinessRules_" data-uid="Swan.AspNetCore.BusinessRulesController`1.RunBusinessRules*"></a>
+  <h4 id="Swan_AspNetCore_BusinessRulesController_1_RunBusinessRules" data-uid="Swan.AspNetCore.BusinessRulesController`1.RunBusinessRules">RunBusinessRules()</h4>
+  <div class="markdown level1 summary"><p>Runs the business rules.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">DateTime DateCreated { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public void RunBusinessRules()</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.DateTime</span></td>
-        <td><p>The date created.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Unosquare_Swan_AspNetCore_Models_IAuditTrailEntry_JsonBody_" data-uid="Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.JsonBody*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_Models_IAuditTrailEntry_JsonBody" data-uid="Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.JsonBody">JsonBody</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the json body.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string JsonBody { get; set; }</code></pre>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Swan.AspNetCore.IBusinessRulesController.html">IBusinessRulesController</a>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><p>The json body.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Unosquare_Swan_AspNetCore_Models_IAuditTrailEntry_TableName_" data-uid="Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.TableName*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_Models_IAuditTrailEntry_TableName" data-uid="Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.TableName">TableName</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the name of the table.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string TableName { get; set; }</code></pre>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Swan.AspNetCore.IBusinessRulesController.html">IBusinessRulesController</a></div>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><p>The name of the table.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Unosquare_Swan_AspNetCore_Models_IAuditTrailEntry_UserId_" data-uid="Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.UserId*"></a>
-  <h4 id="Unosquare_Swan_AspNetCore_Models_IAuditTrailEntry_UserId" data-uid="Unosquare.Swan.AspNetCore.Models.IAuditTrailEntry.UserId">UserId</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the user identifier.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string UserId { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><p>The user identifier.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
 
 <h3 id="disqus_thread">Comments</h3>
 <script>
