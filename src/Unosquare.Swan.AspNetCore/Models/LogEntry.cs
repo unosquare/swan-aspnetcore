@@ -1,8 +1,8 @@
-﻿namespace Swan.AspNetCore.Models
-{
-    using System;
-    using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
+namespace Swan.AspNetCore.Models
+{
     /// <summary>
     /// Represents a common Log Entry to use with the EF Logger.
     /// </summary>

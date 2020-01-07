@@ -1,9 +1,9 @@
-﻿namespace Swan.AspNetCore.Test.Mocks
-{
-    using System;
-    using System.ComponentModel.DataAnnotations;
-    using Models;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using Swan.AspNetCore.Models;
 
+namespace Swan.AspNetCore.Test.Mocks
+{
     public class AuditTrailMock : IAuditTrailEntry
     {
         [Key]

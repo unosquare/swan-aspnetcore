@@ -368,6 +368,6 @@ namespace Swan.AspNetCore
             return Ok();
         }
 
-        private IActionResult EntityOrNull(object model) => model == null ? (IActionResult) NotFound() : Ok(model);
+        private IActionResult EntityOrNull(object model) => model == null ? (IActionResult)NotFound() : Ok(model);
     }
 }

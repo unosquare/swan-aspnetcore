@@ -1,7 +1,7 @@
-﻿namespace Swan.AspNetCore.Models
-{
-    using System.Security.Claims;
+﻿using System.Security.Claims;
 
+namespace Swan.AspNetCore.Models
+{
     /// <summary>
     /// Represents an User.
     /// </summary>

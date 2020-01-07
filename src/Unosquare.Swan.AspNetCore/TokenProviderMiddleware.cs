@@ -1,13 +1,13 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using Swan.Formatters;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using Swan.Formatters;
 
 namespace Swan.AspNetCore
 {
@@ -142,7 +142,7 @@ namespace Swan.AspNetCore
         private async Task GenerateToken(HttpContext context)
         {
             JwtSecurityToken jwt;
-            ClaimsIdentity? identity = null;
+            ClaimsIdentity identity = null;
             var now = DateTime.UtcNow;
             var grantType = context.Request.Form["grant_type"];
 

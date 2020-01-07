@@ -1,11 +1,11 @@
-﻿namespace Swan.AspNetCore
-{
-    using Microsoft.IdentityModel.Tokens;
-    using System;
-    using System.Collections.Generic;
-    using System.Security.Claims;
-    using System.Threading.Tasks;
+﻿using System;
+using System.Collections.Generic;
+using System.Security.Claims;
+using System.Threading.Tasks;
+using Microsoft.IdentityModel.Tokens;
 
+namespace Swan.AspNetCore
+{
     /// <summary>
     /// Provides options for <see cref="TokenProviderMiddleware"/>.
     /// </summary>
@@ -20,12 +20,12 @@
         /// <summary>
         ///  The Issuer (iss) claim for generated tokens.
         /// </summary>
-        public string? Issuer { get; set; }
+        public string Issuer { get; set; }
 
         /// <summary>
         /// The Audience (aud) claim for the generated tokens.
         /// </summary>
-        public string? Audience { get; set; }
+        public string Audience { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether [force HTTPS].

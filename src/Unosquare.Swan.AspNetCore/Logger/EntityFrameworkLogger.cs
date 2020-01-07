@@ -1,12 +1,13 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
-using Swan.AspNetCore.Models;
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using Swan.AspNetCore.Models;
 
 namespace Swan.AspNetCore.Logger
 {
@@ -17,8 +18,8 @@ namespace Swan.AspNetCore.Logger
     /// </summary>
     /// <typeparam name="TDbContext">The type of the database context.</typeparam>
     /// <typeparam name="TLog">The type of the log.</typeparam>
-    /// <seealso cref="Microsoft.Extensions.Logging.ILogger" />
-    public class EntityFrameworkLogger<TDbContext, TLog> : Microsoft.Extensions.Logging.ILogger
+    /// <seealso cref="ILogger" />
+    public class EntityFrameworkLogger<TDbContext, TLog> : ILogger
         where TLog : LogEntry, new()
         where TDbContext : DbContext
     {
@@ -72,12 +73,12 @@ namespace Swan.AspNetCore.Logger
 
         /// <inheritdoc />
         public bool IsEnabled(Microsoft.Extensions.Logging.LogLevel logLevel) => _filter(_name, logLevel);
-
+        
         /// <inheritdoc />
         public IDisposable BeginScope<TState>(TState state) => new NoopDisposable();
-
+        
         /// <inheritdoc />
-        public void Log<TState>(Microsoft.Extensions.Logging.LogLevel logLevel, Microsoft.Extensions.Logging.EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
+        public void Log<TState>(Microsoft.Extensions.Logging.LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
         {
             if (_name.StartsWith("Microsoft.EntityFrameworkCore") || !IsEnabled(logLevel)) return;
 
@@ -134,7 +135,7 @@ namespace Swan.AspNetCore.Logger
         private static bool GetFilter(EntityFrameworkLoggerOptions options, string category, Microsoft.Extensions.Logging.LogLevel level)
         {
             var filter = options.Filters?.Keys.FirstOrDefault(category.StartsWith);
-            return filter == null || (int)options.Filters![filter] <= (int)level;
+            return filter == null || (int) options.Filters![filter] <= (int) level;
         }
 
         private Func<string, Microsoft.Extensions.Logging.LogLevel, bool> GetFilter(IOptions<EntityFrameworkLoggerOptions> options)

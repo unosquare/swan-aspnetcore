@@ -1,7 +1,7 @@
-﻿namespace Swan.AspNetCore.Models
-{
-    using System;
+﻿using System;
 
+namespace Swan.AspNetCore.Models
+{
     /// <summary>
     /// Represents an AuditTrail Entry.
     /// </summary>
@@ -37,7 +37,7 @@
         /// <value>
         /// The json body.
         /// </value>
-        string? JsonBody { get; set; }
+        string JsonBody { get; set; }
 
         /// <summary>
         /// Gets or sets the date created.

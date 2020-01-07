@@ -1,7 +1,7 @@
-﻿namespace Swan.AspNetCore
-{
-    using System;
+﻿using System;
 
+namespace Swan.AspNetCore
+{
     /// <summary>
     /// defines a combination of actions in a CRUD pattern.
     /// </summary>
@@ -73,7 +73,7 @@
         /// <value>
         /// The entity types.
         /// </value>
-        public Type[]? EntityTypes { get; protected set; }
+        public Type[] EntityTypes { get; protected set; }
 
         /// <summary>
         /// Gets or sets the action.

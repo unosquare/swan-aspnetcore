@@ -1,10 +1,10 @@
-﻿namespace Swan.AspNetCore
-{
-    using Microsoft.EntityFrameworkCore;
-    using System.Linq;
-    using System.Reflection;
-    using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Reflection;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
+namespace Swan.AspNetCore
+{
     /// <summary>
     /// Represent the controller of the business rules.
     /// </summary>

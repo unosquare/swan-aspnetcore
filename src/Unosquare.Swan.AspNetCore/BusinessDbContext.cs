@@ -1,10 +1,10 @@
-﻿namespace Swan.AspNetCore
-{
-    using System.Collections.Generic;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Microsoft.EntityFrameworkCore;
+﻿using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
+namespace Swan.AspNetCore
+{
     /// <summary>
     /// Represents a abstract class to create DbContext using Business Rules.
     /// </summary>

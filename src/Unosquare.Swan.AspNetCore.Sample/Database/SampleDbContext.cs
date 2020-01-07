@@ -1,8 +1,10 @@
-﻿namespace Swan.AspNetCore.Sample.Database
+﻿using Swan.AspNetCore;
+using Swan.AspNetCore.Models;
+
+namespace Swan.AspNetCore.Sample.Database
 {
     using Microsoft.AspNetCore.Http;
     using Microsoft.EntityFrameworkCore;
-    using Models;
 
     public class SampleDbContext : BusinessDbContext
     {
