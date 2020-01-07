@@ -1,0 +1,21 @@
+name: .NET Core CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.100
+    - name: Test with dotnet
+      run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=lcov /p:Exclude=[NUnit3.TestAdapter]* test/Unosquare.Swan.AspNetCore.Test/Swan.AspNetCore.Test.csproj -c Release
+    - uses: codecov/codecov-action@v1
+      with:
+        file: test/Unosquare.Swan.AspNetCore.Test/coverage.info
+        token: ${{ secrets.CODECOV_TOKEN }}

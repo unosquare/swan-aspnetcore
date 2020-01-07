@@ -1,6 +1,5 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/q408tg5jd9bm0jak/branch/master?svg=true)](https://ci.appveyor.com/project/geoperez/swan-aspnetcore/branch/master)
 ![Buils status](https://github.com/unosquare/swan-aspnetcore/workflows/.NET%20Core%20CI/badge.svg)
-[![Coverage Status](https://coveralls.io/repos/github/unosquare/swan-aspnetcore/badge.svg?branch=master)](https://coveralls.io/github/unosquare/swan-aspnetcore?branch=master)
 
 # <img src="https://github.com/unosquare/swan/raw/master/swan-logo-32.png"></img> Swan ASP.NET Core 3: Stuff We All Need
 
@@ -32,35 +31,35 @@ With this configuration, you just need to add the data annotation `[Authorize]` 
 This two are used together because you need to add the bearer token authentication to the services to use the bearer token authentication in your application. You just need to add in your `ConfigureServices` and your `Configure`.
 
 ```csharp
-// This method gets called by the runtime. Use this method to add services to the container
-public void ConfigureServices(IServiceCollection services)
-{
-    // Extension method to add Bearer authentication
-    services.AddBearerTokenAuthentication(ValidationParameters);
-}
+    // This method gets called by the runtime. Use this method to add services to the container
+    public void ConfigureServices(IServiceCollection services)
+    {
+        // Extension method to add Bearer authentication
+        services.AddBearerTokenAuthentication(ValidationParameters);
+    }
 
-// This method gets called by the runtime. Use this method to configure the HTTP request pipeline
-public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
-{
-    // Use the bearer token provider and check Admin and Pass.word as valid credentials
-    app.UseBearerTokenAuthentication(
-        ValidationParameters,
-        (services, username, password, grantType, clientId) =>
-        {
-            if (username != "Admin" || password != "Pass.word")
-                return Task.FromResult<ClaimsIdentity>(null);
+    // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
+    public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+    {
+        // Use the bearer token provider and check Admin and Pass.word as valid credentials
+        app.UseBearerTokenAuthentication(
+            ValidationParameters,
+            (services, username, password, grantType, clientId) =>
+            {
+                if (username != "Admin" || password != "Pass.word")
+                    return Task.FromResult<ClaimsIdentity>(null);
 
-            var claim = new ClaimsIdentity("Bearer");
-            claim.AddClaim(new Claim(ClaimTypes.Name, username));
+                var claim = new ClaimsIdentity("Bearer");
+                claim.AddClaim(new Claim(ClaimTypes.Name, username));
 
-            return Task.FromResult(claim);
-        }, (identity, obj) =>
-        {
-            // This action is optional
-            obj["test"] = "OK";
-            return Task.FromResult(obj);
-        });
-}
+                return Task.FromResult(claim);
+            }, (identity, obj) =>
+            {
+                // This action is optional
+                obj["test"] = "OK";
+                return Task.FromResult(obj);
+            });
+    }
 ```
 
 ### Using EntityFrameworkLogger
@@ -70,13 +69,13 @@ The `EntityFrameworkLogger` represents a Logger based on Entity Framework and ad
 With this you just add your configuration section and then add in the entity framework, your database context and the models that you use for log entries into your database, then you just pass the application services.
 
 ```csharp
-public void ConfigureServices(IServiceCollection services)
-{
-	// Inject your DbContext first.
+    public void ConfigureServices(IServiceCollection services)
+    {
+	    // Inject your DbContext first.
 
-    	//  Add Entity Framework Logging Provider
-	services.AddLoggingEntityFramework<SampleDbContext, Models.LogEntry>();
-}
+    	    //  Add Entity Framework Logging Provider
+	    services.AddLoggingEntityFramework<SampleDbContext, Models.LogEntry>();
+    }
 ```
 
 ### Using BusinessDbContext
@@ -84,7 +83,7 @@ public void ConfigureServices(IServiceCollection services)
 The `BusinessDbContext` run business rules when you save changes to the database. It's helpful because if you want to modify an entity every time you save changes to the database, you can create a controller to do that. Your Db Context must inheritance from the BusinessDbContext in order to have this functionality and then you can add, remove and check for controllers using your context.
 
 ```csharp
- public class SampleDbContext : BusinessDbContext
+    public class SampleDbContext : BusinessDbContext
     {
         public SampleDbContext(DbContextOptions<SampleDbContext> options)
             : base(options)
@@ -98,7 +97,7 @@ The `BusinessDbContext` run business rules when you save changes to the database
 Audit Trails is a business rule to save the changes to any operation performed in a record. In other words, capture what change between any data saving. This operation is important in many systems and you can accomplish with these extensions easily. The `AuditTrailController` can be attached to your `BusinessDbContext` and setup which Entities will be recorded in the three CRUD actions supported, create, update and delete.
 
 ```csharp
-public class SampleDbContext : BusinessDbContext
+    public class SampleDbContext : BusinessDbContext
     {
          public SampleDbContext(DbContextOptions<SampleDbContext> options, IHttpContextAccessor httpContextAccessor)
             : base(options)
