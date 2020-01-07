@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
-using Unosquare.Swan.AspNetCore.Models;
-using Unosquare.Swan.AspNetCore.Test.Mocks;
+using Swan.AspNetCore.Models;
+using Swan.AspNetCore.Test.Mocks;
 using Swan.Formatters;
 
-namespace Unosquare.Swan.AspNetCore.Test
+namespace Swan.AspNetCore.Test
 {
     internal class CustomAuditTrailController : AuditTrailController<BusinessDbContextMock, AuditTrailMock>
     {

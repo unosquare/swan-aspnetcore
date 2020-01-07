@@ -1,4 +1,4 @@
-﻿namespace Unosquare.Swan.AspNetCore.Test.Mocks.StartupMocks
+﻿namespace Swan.AspNetCore.Test.Mocks.StartupMocks
 {
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Http;

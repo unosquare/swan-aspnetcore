@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Unosquare.Swan.AspNetCore\Unosquare.Swan.AspNetCore.csproj" />
+    <ProjectReference Include="..\Unosquare.Swan.AspNetCore\Swan.AspNetCore.csproj" />
   </ItemGroup>
 
 </Project>

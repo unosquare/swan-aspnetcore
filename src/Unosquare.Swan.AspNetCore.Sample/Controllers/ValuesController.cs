@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
-namespace Unosquare.Swan.AspNetCore.Sample.Controllers
+namespace Swan.AspNetCore.Sample.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller

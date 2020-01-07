@@ -1,11 +1,11 @@
-﻿namespace Unosquare.Swan.AspNetCore
-{
-    using Microsoft.IdentityModel.Tokens;
-    using System;
-    using System.Collections.Generic;
-    using System.Security.Claims;
-    using System.Threading.Tasks;
+﻿using System;
+using System.Collections.Generic;
+using System.Security.Claims;
+using System.Threading.Tasks;
+using Microsoft.IdentityModel.Tokens;
 
+namespace Swan.AspNetCore
+{
     /// <summary>
     /// Provides options for <see cref="TokenProviderMiddleware"/>.
     /// </summary>
@@ -57,7 +57,7 @@
         /// <summary>
         /// Resolves the claims from a user.
         /// </summary>
-        public Func<ClaimsIdentity, Task<Claim[]>> ClaimResolver { get; set; } = (identity) => Task.FromResult<Claim[]>(null);
+        public Func<ClaimsIdentity, Task<Claim[]?>> ClaimResolver { get; set; } = (identity) => Task.FromResult<Claim[]?>(null);
 
         /// <summary>
         /// Resolves a bearer token response.

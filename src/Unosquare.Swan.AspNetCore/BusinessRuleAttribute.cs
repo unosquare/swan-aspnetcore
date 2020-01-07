@@ -1,7 +1,7 @@
-﻿namespace Unosquare.Swan.AspNetCore
-{
-    using System;
+﻿using System;
 
+namespace Swan.AspNetCore
+{
     /// <summary>
     /// defines a combination of actions in a CRUD pattern.
     /// </summary>

@@ -1,4 +1,4 @@
-﻿namespace Unosquare.Swan.AspNetCore.Test
+﻿namespace Swan.AspNetCore.Test
 {
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
@@ -14,7 +14,7 @@
 
         public class JsonError
         {
-            public string Message { get; set; }
+            public string? Message { get; set; }
         }
 
         public JsonExceptionHandlerTests()
@@ -24,7 +24,7 @@
                 {
                     app.UseJsonExceptionHandler();
 
-                    app.Run((context) => throw new System.Exception("Test Exception"));
+                    app.Run(context => throw new System.Exception("Test Exception"));
                 }));
             _client = server.CreateClient();
         }

@@ -1,5 +1,4 @@
-﻿using Swan;
-using System;
+﻿using System;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
@@ -8,7 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace Unosquare.Swan.AspNetCore
+namespace Swan.AspNetCore
 {
     /// <inheritdoc />
     /// <summary>
@@ -369,6 +368,6 @@ namespace Unosquare.Swan.AspNetCore
             return Ok();
         }
 
-        private IActionResult EntityOrNull(object model) => model == null ? (IActionResult) NotFound() : Ok(model);
+        private IActionResult EntityOrNull(object model) => model == null ? (IActionResult)NotFound() : Ok(model);
     }
 }

@@ -2,9 +2,9 @@
 using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Unosquare.Swan.AspNetCore.Sample.Database;
+using Swan.AspNetCore.Sample.Database;
 
-namespace Unosquare.Swan.AspNetCore.Sample.Controllers
+namespace Swan.AspNetCore.Sample.Controllers
 {
     [Authorize]
     [Route("api/[controller]")]
@@ -18,18 +18,14 @@ namespace Unosquare.Swan.AspNetCore.Sample.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
-        {
-            var products = new List<Product>()
+        public IActionResult Get() =>
+            Ok(new List<Product>()
             {
                 new Product { Name = "Gatorade" },
                 new Product { Name = "Red Bull"},
                 new Product { Name = "Powerade"},
                 new Product { Name = "Electrolit" }
-            };
-
-            return Ok(products.ToArray());
-        }
+            });
 
         [HttpPost]
         public IActionResult Post([FromBody] Product[] values)

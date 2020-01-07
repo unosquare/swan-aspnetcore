@@ -1,8 +1,9 @@
-﻿namespace Unosquare.Swan.AspNetCore.Sample.Database
+﻿using Swan.AspNetCore.Models;
+
+namespace Swan.AspNetCore.Sample.Database
 {
     using System;
     using System.ComponentModel.DataAnnotations;
-    using Models;
 
     public class AuditTrailEntry :IAuditTrailEntry
     {

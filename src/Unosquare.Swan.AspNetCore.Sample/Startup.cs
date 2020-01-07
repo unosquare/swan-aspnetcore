@@ -1,4 +1,7 @@
-﻿namespace Unosquare.Swan.AspNetCore.Sample
+﻿using Swan.AspNetCore;
+using Swan.AspNetCore.Models;
+
+namespace Swan.AspNetCore.Sample
 {
     using Database;
     using Microsoft.AspNetCore.Builder;
@@ -45,7 +48,7 @@
             services.AddDbContext<SampleDbContext>(options => options.UseSqlServer(Configuration["ConnectionString"]));
 
             // Add Entity Framework Logging Provider
-            services.AddLoggingEntityFramework<SampleDbContext, Models.LogEntry>();
+            services.AddLoggingEntityFramework<SampleDbContext, LogEntry>();
 
             // Extension method to add Bearer authentication
             services.AddBearerTokenAuthentication(ValidationParameters);

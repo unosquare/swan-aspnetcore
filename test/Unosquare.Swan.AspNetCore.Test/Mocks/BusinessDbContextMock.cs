@@ -1,7 +1,8 @@
-﻿namespace Unosquare.Swan.AspNetCore.Test.Mocks
+﻿using Swan.AspNetCore.Models;
+
+namespace Swan.AspNetCore.Test.Mocks
 {
     using Microsoft.EntityFrameworkCore;
-    using Models;
 
     internal class BusinessDbContextMock : BusinessDbContext
     {

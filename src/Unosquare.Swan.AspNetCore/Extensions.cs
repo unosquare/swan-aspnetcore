@@ -1,6 +1,10 @@
-﻿using Swan.Formatters;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Net;
 using System.Net.Http;
-using Unosquare.Swan.AspNetCore.Logger;
+using System.Security.Claims;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
@@ -11,15 +15,11 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using Unosquare.Swan.AspNetCore.Models;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Net;
-using System.Security.Claims;
-using System.Threading.Tasks;
+using Swan.AspNetCore.Logger;
+using Swan.AspNetCore.Models;
+using Swan.Formatters;
 
-namespace Unosquare.Swan.AspNetCore
+namespace Swan.AspNetCore
 {
     /// <summary>
     /// Extensions methods to implement SWAN providers.
@@ -60,7 +60,7 @@ namespace Unosquare.Swan.AspNetCore
         public static ILoggerFactory AddEntityFramework<TDbContext, TLog>(
             this ILoggerFactory factory,
             IServiceProvider serviceProvider,
-            Func<string, LogLevel, bool>? filter = null)
+            Func<string, Microsoft.Extensions.Logging.LogLevel, bool>? filter = null)
             where TDbContext : DbContext
             where TLog : LogEntry, new()
         {
@@ -85,7 +85,7 @@ namespace Unosquare.Swan.AspNetCore
         /// <exception cref="ArgumentNullException">builder.</exception>
         public static ILoggingBuilder AddEntityFramework<TDbContext, TLog>(
             this ILoggingBuilder builder,
-            Func<string, LogLevel, bool>? filter = null)
+            Func<string, Microsoft.Extensions.Logging.LogLevel, bool>? filter = null)
             where TDbContext : DbContext
             where TLog : LogEntry, new()
         {
@@ -108,7 +108,7 @@ namespace Unosquare.Swan.AspNetCore
         /// <param name="filter">The filter.</param>
         /// <returns>The services collection.</returns>
         public static IServiceCollection AddLoggingEntityFramework<TDbContext, TLog>(this IServiceCollection services,
-            Func<string, LogLevel, bool>? filter = null)
+            Func<string, Microsoft.Extensions.Logging.LogLevel, bool>? filter = null)
             where TDbContext : DbContext
             where TLog : LogEntry, new()
         {

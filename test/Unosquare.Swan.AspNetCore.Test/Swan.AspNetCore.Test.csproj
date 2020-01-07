@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Unosquare.Swan.AspNetCore\Unosquare.Swan.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\src\Unosquare.Swan.AspNetCore\Swan.AspNetCore.csproj" />
   </ItemGroup>
 
 </Project>

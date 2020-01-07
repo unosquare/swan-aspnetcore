@@ -1,4 +1,4 @@
-﻿namespace Unosquare.Swan.AspNetCore
+﻿namespace Swan.AspNetCore
 {
     /// <summary>
     /// Represents a Business Rules Controller.

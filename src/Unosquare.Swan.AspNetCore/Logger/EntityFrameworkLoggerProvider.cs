@@ -1,11 +1,11 @@
-﻿namespace Unosquare.Swan.AspNetCore.Logger
-{
-    using Microsoft.EntityFrameworkCore;
-    using Microsoft.Extensions.Logging;
-    using System;
-    using System.Collections.Generic;
-    using Models;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using Swan.AspNetCore.Models;
 
+namespace Swan.AspNetCore.Logger
+{
     /// <summary>
     /// Represents a EF logger provider.
     /// </summary>
@@ -16,7 +16,7 @@
         where TLog : LogEntry, new()
         where TDbContext : DbContext
     {
-        private readonly Func<string, LogLevel, bool>? _filter;
+        private readonly Func<string, Microsoft.Extensions.Logging.LogLevel, bool>? _filter;
         private readonly IServiceProvider _serviceProvider;
 
         /// <summary>
@@ -24,7 +24,7 @@
         /// </summary>
         /// <param name="serviceProvider">The service provider.</param>
         /// <param name="filter">The filter.</param>
-        public EntityFrameworkLoggerProvider(IServiceProvider serviceProvider, Func<string, LogLevel, bool>? filter)
+        public EntityFrameworkLoggerProvider(IServiceProvider serviceProvider, Func<string, Microsoft.Extensions.Logging.LogLevel, bool>? filter)
         {
             _filter = filter;
             _serviceProvider = serviceProvider;
@@ -48,6 +48,6 @@
         /// <summary>
         /// Gets or sets the filters.
         /// </summary>
-        public IDictionary<string, LogLevel> Filters { get; set; }
+        public IDictionary<string, Microsoft.Extensions.Logging.LogLevel> Filters { get; set; }
     }
 }

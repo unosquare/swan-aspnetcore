@@ -1,4 +1,4 @@
-﻿namespace Unosquare.Swan.AspNetCore.Test.Mocks
+﻿namespace Swan.AspNetCore.Test.Mocks
 {
     using System;
     using System.ComponentModel.DataAnnotations;

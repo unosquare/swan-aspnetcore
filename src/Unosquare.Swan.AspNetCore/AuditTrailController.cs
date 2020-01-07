@@ -1,11 +1,11 @@
-﻿using Swan.Formatters;
-using Microsoft.EntityFrameworkCore;
-using Unosquare.Swan.AspNetCore.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using Swan.AspNetCore.Models;
+using Swan.Formatters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Unosquare.Swan.AspNetCore
+namespace Swan.AspNetCore
 {
     /// <inheritdoc />
     /// <summary>
@@ -13,7 +13,7 @@ namespace Unosquare.Swan.AspNetCore
     /// </summary>
     /// <typeparam name="TDbContext">The type of database.</typeparam>
     /// <typeparam name="TEntity">The type of the entity.</typeparam>
-    public class AuditTrailController<TDbContext, TEntity> : BusinessRulesController<TDbContext> 
+    public class AuditTrailController<TDbContext, TEntity> : BusinessRulesController<TDbContext>
         where TDbContext : DbContext
     {
         private readonly List<Type> _validCreateTypes = new List<Type>();
@@ -25,7 +25,7 @@ namespace Unosquare.Swan.AspNetCore
         /// </summary>
         /// <param name="context">The context.</param>
         /// <param name="currentUserId">The current user identifier.</param>
-        public AuditTrailController(TDbContext context, string currentUserId) 
+        public AuditTrailController(TDbContext context, string currentUserId)
             : base(context)
         {
             CurrentUserId = currentUserId;
@@ -113,10 +113,10 @@ namespace Unosquare.Swan.AspNetCore
         {
             if (string.IsNullOrWhiteSpace(CurrentUserId)) return;
 
-            var instance = (IAuditTrailEntry) Activator.CreateInstance<TEntity>();
+            var instance = (IAuditTrailEntry)Activator.CreateInstance<TEntity>();
             instance.TableName = name;
             instance.DateCreated = DateTime.UtcNow;
-            instance.Action = (int) flag;
+            instance.Action = (int)flag;
             instance.UserId = CurrentUserId;
             instance.JsonBody = Json.Serialize(entity);
 

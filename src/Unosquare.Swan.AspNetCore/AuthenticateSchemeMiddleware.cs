@@ -1,10 +1,10 @@
-﻿namespace Unosquare.Swan.AspNetCore
-{
-    using Microsoft.AspNetCore.Authentication;
-    using Microsoft.AspNetCore.Http;
-    using System;
-    using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Http;
 
+namespace Swan.AspNetCore
+{
     /// <summary>
     /// Represents the authenticate scheme to the middleware. 
     /// </summary>

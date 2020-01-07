@@ -1,7 +1,7 @@
-﻿namespace Unosquare.Swan.AspNetCore.Models
-{
-    using System;
+﻿using System;
 
+namespace Swan.AspNetCore.Models
+{
     /// <summary>
     /// Represents an AuditTrail Entry.
     /// </summary>
