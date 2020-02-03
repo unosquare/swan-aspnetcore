@@ -9,8 +9,6 @@ notifications:
     secure: Q+xg4/yU5OR9BVF14cw4yZ+3qlhMeYDsAhUQyOIszmF1mHvq44tIvQpWByBJCd/cgUIZk3SwBpk4hh1MrkQIk6rnaOZ2LNBTev4zrq36oXk=
   channel: '#builds'
 environment:
-  COVERALLS_REPO_TOKEN:  
-       secure: 2yZ5f+NUK4ORlnzwMrs8Yua8AUBcT4Hlk+Me6IL5My54AJZOgBsGHa1/3lhACMRL
   op_build_user: "Geo Perez"
   op_build_user_email: "geovanni.perez@gmail.com"
   access_token:
@@ -23,7 +21,7 @@ before_build:
             cinst docfx -y
         }
 test_script:
-- dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:Exclude=[NUnit3.TestAdapter]* test/Unosquare.Swan.AspNetCore.Test/Swan.AspNetCore.Test.csproj -c %CONFIGURATION%
+- dotnet test test/Unosquare.Swan.AspNetCore.Test/Swan.AspNetCore.Test.csproj -c %CONFIGURATION%
 after_build:
 - ps: |
         if(-Not $env:APPVEYOR_PULL_REQUEST_TITLE -And $isWindows)
