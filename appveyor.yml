@@ -1,7 +1,5 @@
 version: '0.15.{build}'
-image: 
-- Visual Studio 2019
-- Ubuntu
+image: Visual Studio 2019
 configuration: Release
 notifications:
 - provider: Slack
@@ -15,7 +13,7 @@ environment:
        secure: HzWdswNyfQbQ0vLk9IQyO+Ei9mxoPYp9rvv6HPhtC9J/Fm7EHRzyV953pbPRXI9I
 before_build:
 - ps: |
-        if(-Not $env:APPVEYOR_PULL_REQUEST_TITLE -And $isWindows)
+        if(-Not $env:APPVEYOR_PULL_REQUEST_TITLE)
         {
             git checkout $env:APPVEYOR_REPO_BRANCH -q
             cinst docfx -y
@@ -24,7 +22,7 @@ test_script:
 - dotnet test test/Unosquare.Swan.AspNetCore.Test/Swan.AspNetCore.Test.csproj -c %CONFIGURATION%
 after_build:
 - ps: |
-        if(-Not $env:APPVEYOR_PULL_REQUEST_TITLE -And $isWindows)
+        if(-Not $env:APPVEYOR_PULL_REQUEST_TITLE)
         {
             docfx docfx.json --logLevel Error
             git config --global credential.helper store
